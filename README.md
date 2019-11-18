@@ -39,3 +39,16 @@
 ## Keywords
 
 <p> Keywords are used to create more dynamic messages for your commands. Here is a list of the available ones. <br><br> <b>$name</b> - This mentions the user who sent the message <br><br> <b>$channel</b> - Adds the channel name to the message <br><br> <b>$server</b> - Adds the server name to the message <br><br> <b>$message</b> - This adds the message content of the message sent. <br><br> <b>$rollnum(min,max)</b> - This generates a random number where you replace min with the smallest number and max with the largest one. For example, if you made a dice command that uses $rollnum(1,6) it would show replace where you put the $rollnum(1,6) with the result. If your command was to reply with "$rollnum(1,6) is the roll of your dice." it would appear as below.  <br> <img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20214354.png" width="300px" /> <br> But if you made a mistake in your command and put in a number larger than the max in the min spot like "$rollnum(55,12)" You could get an error that appears like so. <br> <img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20214831.png" width="300px" />   <p>
+  
+## Disabling Battery Optimizations
+
+<p> <b>Steps</b> </p>
+<ol>
+  <li>Go to settings</li>
+  <li>Find battery optimizations</li>
+  <li>View all apps</li>
+  <li>Find discord bots</li>
+  <li>Disable battery optimizations</li>
+</ol>  
+  
+  
