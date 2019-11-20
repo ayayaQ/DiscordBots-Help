@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|PT+Sans|Roboto&display=swap');
+
+html {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+}
+
+h1, h2 {
+    font-family: 'PT Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0px;
+    background-color: #62727b;
+    color: white;
+    width: 100%;
+}
+
+img {
+    display: block;
+    width: 300px;
+    border-radius: 16px;
+}
+
+img + h2 {
+    margin-top: 8px;
+}
+
+body > * {
+    padding-left: 16px;
+}
+
+header {
+    background: #37474f;
+    color: white;
+    padding-left: 0;
+}
+
+h1#headingMargin {
+    margin: 0px;
+    padding: 16px;
+    z-index: 10;
+}
+
+h2 {
+    background: #448aff;
+    color: white;
+    padding: 8px 16px;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.315) 0 2px 2px;
+}
+
+ol {
+    margin-left: 16px;
+}
+
+@media only screen and (max-width: 480px) {
+    img {
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    body {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        box-shadow: rgba(0, 0, 0, 0.192) 0 0 5px 5px;
+        
+    }
+}
+
