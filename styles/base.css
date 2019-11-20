@@ -16,6 +16,11 @@ body {
     width: 100%;
 }
 
+a {
+    text-decoration: underline;
+    color: white;
+}
+
 img {
     display: block;
     width: 300px;
