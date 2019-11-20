@@ -54,12 +54,34 @@ ol {
     margin-left: 16px;
 }
 
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    padding: 0;
+    background: #37474f;
+    text-decoration: underline;
+}
+
+footer a {
+    display: block;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    border-top: 10px solid #448aff;
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0 2px 2px;
+    padding: 16px 0;
+    text-decoration: none;
+    color: white;
+}
+
 @media only screen and (max-width: 480px) {
     img {
         padding: 0;
         width: 80%;
         margin: 0 auto;
     }
+    
 }
 
 @media only screen and (min-width: 481px) {
