@@ -33,6 +33,7 @@ img + h2 {
 
 body > * {
     padding-left: 16px;
+    padding-right: 16px;
 }
 
 header {
