@@ -1,5 +1,7 @@
 # DiscordBots-Help
 
+https://ayayaq.github.io/DiscordBots-Help/
+
 ## Getting Your Own Bot
 
 <p> 1. Go to https://discordapp.com/developers/applications/ and login. </p>
