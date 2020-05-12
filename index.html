@@ -28,6 +28,8 @@
 
         <a href="#battery-optimization" class="contents">Disabling Battery Optimizations</a>
 
+        <a href="#whats-new" class="contents">What's new?</a>
+
     </div>
 
     <h2 id="getting-your-bot">Getting Your Own Bot</h2>
@@ -84,7 +86,7 @@
     <p>The command field is used for what will trigger the command.<br><b>NOTE 1:</b> * in the command field will mean
         anything will trigger the command.<br><b>NOTE 2:</b> For custom emojis in the reaction add type you will use the
         name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular emojis will
-        just use the emoji in the command field. </p>
+        just use the emoji 😊 in the command field. </p>
 
     <p>Phrase means what is in the command field can appear anywhere in a message to trigger a command. Eg. Command is
         "hello" with phrase checked, if someone says "Hello there!" the command will trigger.</p>
@@ -97,7 +99,7 @@
     <p>Private message will send a private message to someone who triggers a command. You can also use <a
             href="#keywords">keywords</a> in this field.</p>
 
-    <p>The moderation section (kick, ban, voice mute) works in a special way. Usage is what ever your command is with a
+    <p id="moderation">The moderation section (kick, ban, voice mute) works in a special way. Usage is whatever your command is with a
         mention directly after it. For example if you had kick checked and named your command "remove" you would call it
         will "remove @user" to kick the user.</p>
 
@@ -145,6 +147,21 @@
         <li>Find Bot Commander for Discord</li>
         <li>Disable battery optimizations</li>
     </ol>
+
+    <h2 id="whats-new">What's new? (1.1)</h2>
+
+    <p>This update added a few features.</p>
+    
+    <ul>
+        <li>Moderation kick, ban, voice mute. These work in a special way see <a href="#moderation">here.</a></li>
+        <li>Wildcard keyword. * in the command field will mean
+            anything will trigger the command.</li>
+        <li>Reaction add command type. This type is triggered by someone adding a reaction to a message. For custom emojis in the reaction add type you will use the
+            name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular emojis will
+            just use the emoji 😊 in the command field.</li>
+        <li>Tutorial dialogs to mention some important details.</li>
+        <li>New keyword $avatar which adds the user avatar to the message.</li>
+    </ul>
 
     <footer><a href="https://ayayaQ.github.io">Home</a><a
             href="https://github.com/ayayaQ/DiscordBots-Help">Repository</a> </footer>

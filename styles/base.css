@@ -60,6 +60,14 @@ ol {
     margin-left: 16px;
 }
 
+ul {
+    margin-left: 16px;
+}
+
+ul li {
+    margin: 4px auto;
+}
+
 footer {
     display: flex;
     flex-flow: row wrap;
