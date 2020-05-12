@@ -81,6 +81,22 @@ footer a {
     color: white;
 }
 
+div#contents {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+div#contents a {
+    margin: 8px;
+    width: 80%;
+    text-decoration-line: none;
+    padding: 8px;
+    background-color: #37474f;
+    border-radius: 5px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
     img {
         padding: 0;

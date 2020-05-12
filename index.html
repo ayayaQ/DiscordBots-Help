@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting">
-    <title>DiscordBots Help</title>
+    <title>Bot Commander for Discord Help</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
 
 <body>
     <header>
-        <h1 id="headingMargin">DiscordBots-Help</h1>
+        <h1 id="headingMargin">Bot Commander Help</h1>
     </header>
+
+    <h2>Contents</h2>
+
+    <div id="contents">
+        <a href="#getting-your-bot" class="contents">Getting Your Own Bot</a>
+
+        <a href="#inviting-bot" class="contents">Inviting the Bot</a>
+
+        <a href="#creating-commands">Creating Commands</a>
+
+        <a href="#keywords" class="contents">Keywords</a>
+
+        <a href="#battery-optimization" class="contents">Disabling Battery Optimizations</a>
+
+    </div>
 
     <h2 id="getting-your-bot">Getting Your Own Bot</h2>
 
@@ -56,12 +71,51 @@
     <p> Scroll back up to the scopes and copy then open the link. Note: You must have the "Manage Server" permission in
         the server you wish to add the bot to. </p>
 
+
+    <h2 id="creating-commands">Creating Commands</h2>
+
+    <p>First, navigate to the commands section and press the floating action button in the bottom right. This opens a
+        menu to create your commands</p>
+
+    <p>This starts in basic mode, but it is recommended to use advanced mode to to get the most out of your commands</p>
+
+    <p>You can use the dropdown menu to select which type you want for your command.</p>
+
+    <p>The command field is used for what will trigger the command.<br><b>NOTE 1:</b> * in the command field will mean
+        anything will trigger the command.<br><b>NOTE 2:</b> For custom emojis in the reaction add type you will use the
+        name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular emojis will
+        just use the emoji in the command field. </p>
+
+    <p>Phrase means what is in the command field can appear anywhere in a message to trigger a command. Eg. Command is
+        "hello" with phrase checked, if someone says "Hello there!" the command will trigger.</p>
+
+    <p>The command description field is optional and can be used to remind you what a command does.</p>
+
+    <p>Channel message will send a message in the channel where the command is triggered. You can use <a
+            href="#keywords">keywords</a> in this field. </p>
+
+    <p>Private message will send a private message to someone who triggers a command. You can also use <a
+            href="#keywords">keywords</a> in this field.</p>
+
+    <p>The moderation section (kick, ban, voice mute) works in a special way. Usage is what ever your command is with a
+        mention directly after it. For example if you had kick checked and named your command "remove" you would call it
+        will "remove @user" to kick the user.</p>
+
     <h2 id="keywords">Keywords</h2>
 
-    <p> Keywords are used to create more dynamic messages for your commands. Here is a list of the available ones.
-        <br><br> <b>$name (Compatible with all)</b> - This mentions the user who sent the message.  NOTE: If you use it in the channel send part of an event where the user leaves you will receive an invalid user mention.  <br><br> <b>$channel (Compatible with Message Received)</b> - Adds the channel
-        name to the message.<br><br> <b>$server (Not compatible with Private Message Received) </b> - Adds the server name to the message <br><br> <b>$message (Compatible with Message Received and Private Message Received)</b> -
-        This adds the message content of the message sent. <br><br> <b>$rollnum(min,max) (Compatible with all)</b> - This generates a random
+    <p>Keywords are used to create more dynamic messages for your commands. They go into the output fields of your
+        command like channel message or private message. Here is a list of the available ones. <b>NOTE: * is an
+            exception. It is a wildcard keyword for the command field. This means any message or reaction can trigger
+            your
+            command.</b> </p>
+
+    <p> <b>$name (Compatible with all)</b> - This mentions the user who sent the message. NOTE: If you use it in the
+        channel send part of an event where the user leaves you will receive an invalid user mention. <br><br>
+        <b>$channel (Compatible with Message Received)</b> - Adds the channel
+        name to the message.<br><br> <b>$server (Not compatible with Private Message Received) </b> - Adds the server
+        name to the message <br><br> <b>$message (Compatible with Message Received and Private Message Received)</b> -
+        This adds the message content of the message sent. <br><br> <b>$rollnum(min,max) (Compatible with all)</b> -
+        This generates a random
         number where you replace min with the smallest number and max with the largest one. For example, if you made a
         dice command that uses $rollnum(1,6) it would show replace where you put the $rollnum(1,6) with the result. If
         your command was to reply with "$rollnum(1,6) is the roll of your dice." it would appear as below. </p> <img
@@ -70,13 +124,15 @@
         "$rollnum(55,12)" You could get an error that appears like so. </p> <img
         src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20214831.png?raw=true" />
 
-        <p><b>$date (Compatible with all)</b> - The current date. </p>
+    <p><b>$date (Compatible with all)</b> - The current date. </p>
 
-        <p><b>$defaultAvatar (Compatible with all)</b> - The default avatar of the user. </p>
+    <p><b>$avatar (Compatible with all)</b> - The current avatar of the user who called the command.</p>
 
-        <p><b>$memberCount (Not compatible with pm recieved)</b> - Gives the number of members currently in the server.</p>
+    <p><b>$defaultAvatar (Compatible with all)</b> - The default avatar of the user. </p>
 
-        <p><b>$serverCreateTime (Not compatible with pm recieved)</b> - Gives the time the server was created.</p>
+    <p><b>$memberCount (Not compatible with pm recieved)</b> - Gives the number of members currently in the server.</p>
+
+    <p><b>$serverCreateTime (Not compatible with pm recieved)</b> - Gives the time the server was created.</p>
 
 
     <h2 id="battery-optimization">Disabling Battery Optimizations</h2>
@@ -90,7 +146,8 @@
         <li>Disable battery optimizations</li>
     </ol>
 
-    <footer><a href="https://ayayaQ.github.io">Home</a><a href="https://github.com/ayayaQ/DiscordBots-Help">Repository</a> </footer>
+    <footer><a href="https://ayayaQ.github.io">Home</a><a
+            href="https://github.com/ayayaQ/DiscordBots-Help">Repository</a> </footer>
 
 </body>
 
