@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting">
+    <title>Bot Commander for Discord Tutorials</title>
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="headingMargin">Bot Commander Tutorials</h1>
+    </header>
+
+    <h2>Contents</h2>
+
+    <div id="contents">
+        <a href="#dice-command" class="contents">Dice Command</a>
+
+        <a href="#kick-command" class="contents">Kick Command</a>
+
+        <a href="#phrase-command">Phrase Command</a>
+
+        <a href="#keyword-command" class="contents">Command Using Keywords</a>
+    </div>
+
+    <h2 id="dice-command">Dice Command</h2>
+
+    <p>This command will simulate a dice roll which could be used for something like D&D.</p>
+
+    <ol>
+        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+
+        <li>We will name the command "!dice"</li>
+
+        <li>In the channel message field we will put "You rolled a $rollnum(1,6)"</li>
+
+        <li>Save the command, host your bot and test out the command</li>
+    </ol>
+
+    <h2 id="kick-command">Kick Command</h2>
+
+    <p>This command will let someone with kick user privalege kick users with the bot.</p>
+
+    <ol>
+        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+
+        <li>We will name the command "!kick"</li>
+
+        <li>In moderation section check the "kick" checkbox</li>
+
+        <li>Save the command, host your bot and test out the command. Usage for command that use moderation is your
+            command name and a mention of the user receiving that action like "!kick @user"</li>
+    </ol>
+
+    <h2 id="phrase-command">Phrase Command</h2>
+
+    <p>This command will show how to make use of the phrase checkbox.</p>
+
+    <ol>
+        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+
+        <li>We will name the command "dog"</li>
+
+        <li>In the channel message field we will put "I like dogs!"</li>
+
+        <li>Save the command, host your bot and test out the command. Now when anyone mentions the word dog the bot will react.</li>
+    </ol>
+
+    <h2 id="keyword-command">Command Using Keywords</h2>
+
+    <p>This command will show usage of a few keywords.</p>
+
+    <ol>
+        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+
+        <li>We will name the command "!date"</li>
+
+        <li>In the channel message field we will put "Hello $name, it is $date"</li>
+
+        <li>Save the command, host your bot and test out the command</li>
+    </ol>
+
+
+    <footer><a href="https://ayayaQ.github.io">Home</a><a href="https://ayayaq.github.io/DiscordBots-Help">Help</a>
+    </footer>
+</body>
+
+</html>
