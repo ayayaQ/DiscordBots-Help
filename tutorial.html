@@ -22,9 +22,11 @@
 
         <a href="#kick-command" class="contents">Kick Command</a>
 
-        <a href="#phrase-command">Phrase Command</a>
+        <a href="#phrase-command"class="contents">Phrase Command</a>
 
         <a href="#keyword-command" class="contents">Command Using Keywords</a>
+
+        <a href="#adding-roles" class="contents">Add Role on User Join</a>
     </div>
 
     <h2 id="dice-command">Dice Command</h2>
@@ -32,7 +34,7 @@
     <p>This command will simulate a dice roll which could be used for something like D&D.</p>
 
     <ol>
-        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+        <li>Go to the create command screen and set the type to "Message Receive"</li>
 
         <li>We will name the command "!dice"</li>
 
@@ -46,7 +48,7 @@
     <p>This command will let someone with kick user privalege kick users with the bot.</p>
 
     <ol>
-        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+        <li>Go to the create command screen and set the type to "Message Receive"</li>
 
         <li>We will name the command "!kick"</li>
 
@@ -61,7 +63,7 @@
     <p>This command will show how to make use of the phrase checkbox.</p>
 
     <ol>
-        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+        <li>Go to the create command screenand set the type to "Message Receive"</li>
 
         <li>We will name the command "dog"</li>
 
@@ -75,13 +77,24 @@
     <p>This command will show usage of a few keywords.</p>
 
     <ol>
-        <li>Go to the create command screen and switch to advanced mode and set the type to "Message Receive"</li>
+        <li>Go to the create command screen and set the type to "Message Receive"</li>
 
         <li>We will name the command "!date"</li>
 
         <li>In the channel message field we will put "Hello $name, it is $date"</li>
 
         <li>Save the command, host your bot and test out the command</li>
+    </ol>
+
+    <h2 id="adding-roles">Add Role on User Join</h2>
+
+    <p>This command will add a role to a user when they join the Discord Server</p>
+
+    <ol>
+        <li>Go to the create command screen and set the type to "Member Join" This type is used for when a user joins a server.</li>
+        <li>We're going to check the "Assign/Remove Role" checkbox. This action assigns a role when activated the first time and removes it if activated again. With us using "Member Join" its only ever activated once.</li>
+        <li>Lets put our role into the "Role Name" field. This is case sensitive.</li>
+        <li>Try out the command with someone joining your server!</li>
     </ol>
 
 
