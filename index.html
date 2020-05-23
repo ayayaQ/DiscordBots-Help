@@ -114,7 +114,8 @@
             your
             command.</b> </p>
 
-    <p> <b>$name (Compatible with all except member leave and member ban)</b> - This mentions the user who sent the message. NOTE: If you use it in the
+    <p> <b>$name (Compatible with all except member leave and member ban)</b> - This mentions the user who sent the
+        message. NOTE: If you use it in the
         channel send part of an event where the user leaves you will receive an invalid user mention. <br><br>
         <b>$channel (Compatible with Message Received)</b> - Adds the channel
         name to the message.<br><br> <b>$server (Not compatible with Private Message Received) </b> - Adds the server
@@ -131,13 +132,39 @@
 
     <p><b>$date (Compatible with all)</b> - The current date. </p>
 
-    <p><b>$avatar (Compatible with all except member leave and member ban)</b> - The current avatar of the user who called the command.</p>
+    <p><b>$avatar (Compatible with all except member leave and member ban)</b> - The current avatar of the user who
+        called the command.</p>
 
-    <p><b>$defaultAvatar (Compatible with all except member leave and member ban)</b> - The default avatar of the user. </p>
+    <p><b>$defaultAvatar (Compatible with all except member leave and member ban)</b> - The default avatar of the user.
+    </p>
 
     <p><b>$memberCount (Not compatible with pm recieved)</b> - Gives the number of members currently in the server.</p>
 
     <p><b>$serverCreateTime (Not compatible with pm recieved)</b> - Gives the time the server was created.</p>
+
+    <p><b>$messageAfterCommand</b> - gives all raw message content after command.</p>
+
+    <p><b>$commandCount</b> - gives the number of commands bot has.</p>
+
+    <p><b>$namePlain</b> - name of user who called command without mention.</p>
+
+    <p><b>$serverIcon (Not compatible with pm recieved)</b> - icon of the server</p>
+
+    <p><b>$serverBanner (Not compatible with pm recieved)</b> - banner of the server, if it exists</p>
+
+    <p><b>$serverDescription (Not compatible with pm recieved)</b> - description of the server, if it exists</p>
+
+    <p><b>$serverSplash (Not compatible with pm recieved)</b> - splash of the server, if it exists</p>
+
+    <p><b>$botAvatar</b> - avatar of the bot</p>
+
+    <p><b>$botName</b> - name of the bot</p>
+
+    <p><b>$mentionedAvatar (Only message recieved)</b> - avatar of mentioned user</p>
+
+    <p><b>$mentionedName (Only message recieved)</b> - name of mentioned user in a mention</p>
+
+    <p><b>$mentionedNamePlain (Only message recieved)</b> - name of a mentioned user in plain format</p>
 
 
     <h2 id="battery-optimization">Disabling Battery Optimizations</h2>
@@ -152,6 +179,15 @@
     </ol>
 
     <h2 id="whats-new">What's new?</h2>
+
+
+    <p>1.4</p>
+
+    <ul>
+        <li>Added Require Role for commands of certain types.</li>
+        <li>Added Send in Specific Channel for commands of certain types.</li>
+        <li>Added keywords related to mentioned user info, bot info, server info, and a few more.</li>
+    </ul>
 
     <p>1.3</p>
 
