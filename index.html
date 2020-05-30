@@ -142,7 +142,8 @@
 
     <p><b>$serverCreateTime (Not compatible with pm recieved)</b> - Gives the time the server was created.</p>
 
-    <p><b>$messageAfterCommand (Compatible with Message Received and Private Message Received)</b> - gives all raw message content after command.</p>
+    <p><b>$messageAfterCommand (Compatible with Message Received and Private Message Received)</b> - gives all raw
+        message content after command.</p>
 
     <p><b>$commandCount</b> - gives the number of commands bot has.</p>
 
@@ -166,6 +167,9 @@
 
     <p><b>$mentionedNamePlain (Only message recieved)</b> - name of a mentioned user in plain format</p>
 
+    <p><b>$random{}</b> - Used to select a random message or link for embed images. Used like $random{abc|def|ghi} where
+        | is the seperator between choices to be picked.</p>
+
 
     <h2 id="battery-optimization">Disabling Battery Optimizations</h2>
 
@@ -180,6 +184,15 @@
 
     <h2 id="whats-new">What's new?</h2>
 
+
+    <p>1.5</p>
+
+    <ul>
+        <li>Added require specific message ID for react add events.</li>
+        <li>Added Ignore error messages for commands.</li>
+        <li>Added $random{} keyword to select random string.</li>
+        <li>Added icon for PM receive type.</li>
+    </ul>
 
     <p>1.4</p>
 
