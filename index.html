@@ -170,6 +170,57 @@
     <p><b>$random{}</b> - Used to select a random message or link for embed images. Used like $random{abc|def|ghi} where
         | is the seperator between choices to be picked.</p>
 
+        <p><b>$discriminator - </b> discriminator of command caller</p>
+
+        <p><b>$tag - </b> tag of command caller</p>
+
+        <p><b>$timeCreated - </b> account creation time of command caller</p>
+
+        <p><b>$ID - </b> id of command caller</p>
+
+        <p><b>$serversSharedWithBot - </b> number of servers shared with command caller</p>
+
+        <p><b>$channelID (Only message recieved or react add) - </b> id of channel where message is</p>
+
+        <p><b>$channelCreateDate (Only message recieved or react add) - </b> date of the creation of the channel</p>
+
+        <p><b>$channelAsMention (Only message recieved or react add) - </b> mention of channel</p>
+
+        <p><b>$botDiscriminator - </b> discriminator of the bot</p>
+
+        <p><b>$botTag - </b> tag of bot</p>
+
+        <p><b>$botDefaultAvatar - </b> default avatar of bot</p>
+
+        <p><b>$botTimeCreated - </b> creation time of bot</p>
+
+        <p><b>$botID - </b> id of bot</p>
+
+        <p><b>$ping - </b> ping to gateway</p>
+
+        <p><b>$inviteURL - </b> url to invite the bot</p>
+
+        <p><b>$serverCount - </b> amount of servers bot is in</p>
+
+        <p><b>$allMemberCount - </b> amount of users in all servers the bot is in</p>
+
+        <p><b>$mentionedDiscriminator (Only message recieved) - </b> discriminator of mentioned user</p>
+
+        <p><b>$mentionedTag (Only message recieved) - </b> tag of mentioned user</p>
+
+        <p><b>$mentionedIsBot (Only message recieved) - </b> is the mentioned user a bot?</p>
+
+        <p><b>$mentionedDefaultAvatar (Only message recieved) - </b> default avatar of mentioned user</p>
+
+        <p><b>$mentionedTimeCreated (Only message recieved) - </b> account creation date of mentioned user</p>
+
+        <p><b>$mentionedID (Only message recieved) - </b> id of mentioned user</p>
+
+        <p><b>$mentionedServersSharedWithBot (Only message recieved) - </b> how many servers the mentioned user shares with the bot.</p>
+
+
+
+
 
     <h2 id="battery-optimization">Disabling Battery Optimizations</h2>
 
@@ -184,6 +235,14 @@
 
     <h2 id="whats-new">What's new?</h2>
 
+    <p>1.6</p>
+
+    <ul>
+        <li>New delete actions including delete command after, delete x messages, and delete if contains.</li>
+        <li>24 new keywords have been added including $ping and $inviteURL.</li>
+        <li>Action to filter not safe for work commands.</li>
+        <li>Multi-line support for some fields.</li>
+    </ul>
 
     <p>1.5</p>
 
