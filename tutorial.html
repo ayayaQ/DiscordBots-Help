@@ -29,6 +29,8 @@
         <a href="#adding-roles" class="contents">Add Role on User Join</a>
 
         <a href="#embed-message">Creating Embed Messages</a>
+
+        <a href="#code-message">Using JavaScript in Messages</a>
     </div>
 
     <h2 id="dice-command">Dice Command</h2>
@@ -158,6 +160,19 @@
     <p>Output Example</p>
 
     <img src="https://i.imgur.com/eAOFrVR.png" alt="Image of ouput">
+    
+    <h2 id="code-message">Using JavaScript in messages</h2>
+
+    <p>To use JavaScript we must make use of keywords like $eval and $halt</p>
+
+    <ol>
+        <li>Create a command with any name you want, maybe call it "Hello world"</li>
+        <li>Check channel send</li>
+        <li>Insert the $eval keyword with the $halt keyword afterwards.</li>
+        <li>Inbetween we'll put our code. For this simple example lets put "var hello = "Hello world";"</li>
+        <li>After the $halt keyword or before the $eval, we can put the rest of our message. Lets put "Our output is $get(hello)".</li>
+        <li>Run the bot, and test the command.</li>
+    </ol>
 
 
 
