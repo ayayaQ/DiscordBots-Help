@@ -218,6 +218,14 @@
 
         <p><b>$mentionedServersSharedWithBot (Only message recieved) - </b> how many servers the mentioned user shares with the bot.</p>
 
+        <p><b>$eval (version 1.7+)</b> Used to mark the start of a block of javascript code.</p>
+
+        <p><b>$halt (version 1.7+)</b> MUST be used after done writing javascript section of command to mark the end of the code.</p>
+
+        <p><b>$get(var) (version 1.7+)</b> Used to get variables created by either in javascript block or $set()</p>
+
+        <p><b>$set(var,value) (version 1.7+)</b> Used to set values. Types include numbers, strings, and boolean(true or false).</p>
+
 
 
 
@@ -234,6 +242,14 @@
     </ol>
 
     <h2 id="whats-new">What's new?</h2>
+
+    <p>1.7</p>
+
+    <ul>
+        <li>Added $eval and $halt keywords to allow for the use of JavaScript.</li>
+        <li>Added $get() and $set() keywords to set and retrieve values.</li>
+        <li>Changed token field text type.</li>
+    </ul>
 
     <p>1.6</p>
 
