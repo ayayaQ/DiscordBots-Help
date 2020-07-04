@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Commander Keywords</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/keyword.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="headingMargin">Commands</h1>
+    </header>
+
+    <button class="collapsible"><img class="menu" src="images/menu.svg" /></button>
+    <div class="content">
+        <div id="contents">
+            <a href="index.html" class="contents">Home</a>
+
+            <a href="commands.html" class="contents">Commands</a>
+
+            <a href="keywords.html" class="contents">Keywords</a>
+
+            <a href="creating.html" class="contents">Starting out with the bot</a>
+
+            <a href="tutorial.html">Tutorials</a>
+
+        </div>
+
+    </div>
+
+    <button class="collapsible">Command Types<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+
+        <div class="keyword">
+            <h2>Message Receive</h2> <!-- type -->
+            <p>Indicates that the command will trigger when a message is recieved in a server the bot is in.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Private Message</h2> <!-- type -->
+            <p>Indicates that the command will trigger when a message is recieved through direct message with the bot.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Member Join</h2> <!-- type -->
+            <p>Indicates the command will trigger when a member joins a server the bot is in.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Member Leave</h2> <!-- type -->
+            <p>Indicates the command will trigger when a member leaves a server the bot is in.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Member Ban</h2> <!-- type -->
+            <p>Indicates the command will trigger when a member is banned from a server the bot is in.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Reaction Add</h2> <!-- type -->
+            <p>Indicates the command will trigger when a reaction is added to a message in a server the bot is in. Command field for this type must be filled with an emoji or name of a custom emoji to trigger, or * can be used so it always triggers.</p> <!-- Description -->
+        </div>
+
+    </div>
+
+    <button class="collapsible">Command and Description<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+
+        <div class="keyword">
+            <h2>Command</h2> <!-- field -->
+            <p>The string (or emoji for Reaction Add) that will cause the actions of the command to happen. If * is placed in this field the command's actions will always happen.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Command Description</h2> <!-- field -->
+            <p>An optional description you can write to remember what your command does.</p> <!-- Description -->
+        </div>
+
+    </div>
+
+    <button class="collapsible">Actions<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+
+        <div class="keyword">
+            <h2>Phrase</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message</h3>
+            <!-- Compatibility -->
+            <p>The command string can be anywhere in the message to activate the command.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Requires Role</h2> <!-- Keyword -->
+            <h3>Message Receive, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>The command will only activate with the given role.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Send Channel Message</h2> <!-- Keyword -->
+            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Sends a messsage in the channel where the command is called.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Send Channel Message Embed</h2> <!-- Keyword -->
+            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Creates an embed. Image URL and Thumbnail URL must be valid if used.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Send in specific channel</h2> <!-- Keyword -->
+            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Overrides what channel the channel message and embed actions get sent to.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Send Private Message</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Sends a private message to the user who called the command.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Send Private Message Embed</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Creates an embed. Image URL and Thumbnail URL must be valid if used.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>React to received message</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message</h3>
+            <!-- Compatibility -->
+            <p>Reacts to the message that triggered the command. If you're using a custom emoji, then just use the name of it.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Ignore error messages</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Ignores most error messages that are not fatal to the functions of the command.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Require specific message ID</h2> <!-- Keyword -->
+            <h3>Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Requires a specific message ID for the React Add type command to function.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Delete if contains</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Removes the message if it contains a certain string. Different strings must be separated with |.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Delete command message after</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Deletes the message that called the command.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Delete X messages</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Deletes the number indicated in the field amount of messsages.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>NSFW only</h2> <!-- Keyword -->
+            <h3>Message Receive, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>The command can only be called in NSFW channels.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Kick</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Kicks a user. Requires kicking permissions. Usage: if command is "kick" usage is "kick @user"</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Ban</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Bans a user. Requires banning permissions. Usage: if command is "ban" usage is "kban @user"</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Voice Mute</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Voice mutes a user if called first time, else unmutes them. Requires muting permissions. Usage: if command is "mute" usage is "mute @user"</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>Assign/Remove Role</h2> <!-- Keyword -->
+            <h3>Message Receive, Member Join, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Assigns a role when called the if user has the role, else it removes the role.</p> <!-- Description -->
+        </div>
+
+    </div>
+
+    <footer><a href="https://ayayaQ.github.io">My page</a><a
+        href="https://ayayaq.github.io/DiscordBots-Help/">Help</a> </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        var imgs = document.getElementsByClassName("expand");
+
+        for (i = 0; i < coll.length; i++) {
+
+            let currImg = imgs[i-1];
+
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    try {
+                        currImg.src = "images/expand_more.svg";
+                    } catch(error) {
+
+                    }
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    try {
+                        currImg.src = "images/expand_less.svg";
+                    } catch(error) {
+
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

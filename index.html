@@ -8,6 +8,8 @@
     <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting">
     <title>Bot Commander for Discord Help</title>
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/keyword.css">
 </head>
 
 <body>
@@ -15,299 +17,170 @@
         <h1 id="headingMargin">Bot Commander Help</h1>
     </header>
 
-    <h2>Contents</h2>
+    <button class="collapsible"><img class="menu" src="images/menu.svg" /></button>
+    <div class="content">
+        <div id="contents">
+            <a href="index.html" class="contents">Home</a>
 
-    <div id="contents">
-        <a href="#getting-your-bot" class="contents">Getting Your Own Bot</a>
+            <a href="commands.html" class="contents">Commands</a>
 
-        <a href="#inviting-bot" class="contents">Inviting the Bot</a>
+            <a href="keywords.html" class="contents">Keywords</a>
 
-        <a href="#creating-commands">Creating Commands</a>
+            <a href="creating.html" class="contents">Starting out with the bot</a>
 
-        <a href="#keywords" class="contents">Keywords</a>
+            <a href="tutorial.html">Tutorials</a>
 
-        <a href="#battery-optimization" class="contents">Disabling Battery Optimizations</a>
-
-        <a href="#whats-new" class="contents">What's new?</a>
+        </div>
 
     </div>
 
-    <h2 id="getting-your-bot">Getting Your Own Bot</h2>
-
-    <p> 1. Go <a href="https://discordapp.com/developers/applications/">here</a> and login. </p>
-
-    <p> 2. Once on the dashboard click the "New Application" button. </p>
-
-    <img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182201.png" />
-
-    <p> 3. Name the application whatever you want. </p>
-
-    <img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182242.png" />
-
-    <p> 4. In the app dashboard press the menu button and select "Bot" </p>
-
-    <img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182456.png" />
-
-    <p> 5. Press "Add Bot". </p>
-
-    <img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182507.png" />
-
-    <p> 6. Now you can copy your token and change other aspects of the bot account. </p>
-
-    <img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Screenshot_20191110-182542.png?raw=true" />
-
-    <h2 id="inviting-bot">Inviting The Bot</h2>
-
-    <p> Inviting the bot is also done from <a href="https://discordapp.com/developers/applications/">here!</a> </p>
-
-    <p> Click on the OAuth2 button from the menu </p>
-    <img
-        src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215344.png?raw=true" />
-    <p> In scopes check "bot" </p>
-    <img
-        src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215410.png?raw=true" />
-    <p> Scroll down and select your bot permissions, "Administrator" counts for all permissions if you need them all."
-    </p>
-    <img
-        src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215908.png?raw=true" />
-    <p> Scroll back up to the scopes and copy then open the link. Note: You must have the "Manage Server" permission in
-        the server you wish to add the bot to. </p>
-
-
-    <h2 id="creating-commands">Creating Commands</h2>
-
-    <p>First, navigate to the commands section and press the floating action button in the bottom right. This opens a
-        menu to create your commands</p>
-
-    <p>You can use the dropdown menu to select which type you want for your command.</p>
-
-    <p>The command field is used for what will trigger the command.<br><b>NOTE 1:</b> * in the command field will mean
-        anything will trigger the command.<br><b>NOTE 2:</b> For custom emojis in the reaction add type you will use the
-        name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular emojis will
-        just use the emoji 😊 in the command field. </p>
-
-    <p>Phrase means what is in the command field can appear anywhere in a message to trigger a command. Eg. Command is
-        "hello" with phrase checked, if someone says "Hello there!" the command will trigger.</p>
-
-    <p>The command description field is optional and can be used to remind you what a command does.</p>
-
-    <p>Channel message will send a message in the channel where the command is triggered. You can use <a
-            href="#keywords">keywords</a> in this field. </p>
-
-    <p>Private message will send a private message to someone who triggers a command. You can also use <a
-            href="#keywords">keywords</a> in this field.</p>
-
-    <p id="moderation">The moderation section (kick, ban, voice mute) works in a special way. Usage is whatever your
-        command is with a
-        mention directly after it. For example if you had kick checked and named your command "remove" you would call it
-        will "remove @user" to kick the user.</p>
-
-    <p>Assign/Remove Role can assign and remove roles. The role name field is case sensitive and must match the name of
-        the roles you want to assign. When this command is called the first time, it adds the roles to the user who
-        called it. On the second time, it removes the role from the user who called it.</p>
-
-    <h2 id="keywords">Keywords</h2>
-
-    <p>Keywords are used to create more dynamic messages for your commands. They go into the output fields of your
-        command like channel message or private message. Here is a list of the available ones. <b>NOTE: * is an
-            exception. It is a wildcard keyword for the command field. This means any message or reaction can trigger
-            your
-            command.</b> </p>
-
-    <p> <b>$name (Compatible with all except member leave and member ban)</b> - This mentions the user who sent the
-        message. NOTE: If you use it in the
-        channel send part of an event where the user leaves you will receive an invalid user mention. <br><br>
-        <b>$channel (Compatible with Message Received)</b> - Adds the channel
-        name to the message.<br><br> <b>$server (Not compatible with Private Message Received) </b> - Adds the server
-        name to the message <br><br> <b>$message (Compatible with Message Received and Private Message Received)</b> -
-        This adds the message content of the message sent. <br><br> <b>$rollnum(min,max) (Compatible with all)</b> -
-        This generates a random
-        number where you replace min with the smallest number and max with the largest one. For example, if you made a
-        dice command that uses $rollnum(1,6) it would show replace where you put the $rollnum(1,6) with the result. If
-        your command was to reply with "$rollnum(1,6) is the roll of your dice." it would appear as below. </p> <img
-        src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20214354.png?raw=true" />
-    <p> But if you made a mistake in your command and put in a number larger than the max in the min spot like
-        "$rollnum(55,12)" You could get an error that appears like so. </p> <img
-        src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20214831.png?raw=true" />
-
-    <p><b>$date (Compatible with all)</b> - The current date. </p>
-
-    <p><b>$avatar (Compatible with all except member leave and member ban)</b> - The current avatar of the user who
-        called the command.</p>
-
-    <p><b>$defaultAvatar (Compatible with all except member leave and member ban)</b> - The default avatar of the user.
-    </p>
-
-    <p><b>$memberCount (Not compatible with pm recieved)</b> - Gives the number of members currently in the server.</p>
-
-    <p><b>$serverCreateTime (Not compatible with pm recieved)</b> - Gives the time the server was created.</p>
-
-    <p><b>$messageAfterCommand (Compatible with Message Received and Private Message Received)</b> - gives all raw
-        message content after command.</p>
-
-    <p><b>$commandCount</b> - gives the number of commands bot has.</p>
-
-    <p><b>$namePlain</b> - name of user who called command without mention.</p>
-
-    <p><b>$serverIcon (Not compatible with pm recieved)</b> - icon of the server</p>
-
-    <p><b>$serverBanner (Not compatible with pm recieved)</b> - banner of the server, if it exists</p>
-
-    <p><b>$serverDescription (Not compatible with pm recieved)</b> - description of the server, if it exists</p>
-
-    <p><b>$serverSplash (Not compatible with pm recieved)</b> - splash of the server, if it exists</p>
-
-    <p><b>$botAvatar</b> - avatar of the bot</p>
-
-    <p><b>$botName</b> - name of the bot</p>
-
-    <p><b>$mentionedAvatar (Only message recieved)</b> - avatar of mentioned user</p>
-
-    <p><b>$mentionedName (Only message recieved)</b> - name of mentioned user in a mention</p>
-
-    <p><b>$mentionedNamePlain (Only message recieved)</b> - name of a mentioned user in plain format</p>
-
-    <p><b>$random{}</b> - Used to select a random message or link for embed images. Used like $random{abc|def|ghi} where
-        | is the seperator between choices to be picked.</p>
-
-        <p><b>$discriminator - </b> discriminator of command caller</p>
-
-        <p><b>$tag - </b> tag of command caller</p>
-
-        <p><b>$timeCreated - </b> account creation time of command caller</p>
-
-        <p><b>$ID - </b> id of command caller</p>
-
-        <p><b>$serversSharedWithBot - </b> number of servers shared with command caller</p>
-
-        <p><b>$channelID (Only message recieved or react add) - </b> id of channel where message is</p>
-
-        <p><b>$channelCreateDate (Only message recieved or react add) - </b> date of the creation of the channel</p>
-
-        <p><b>$channelAsMention (Only message recieved or react add) - </b> mention of channel</p>
-
-        <p><b>$botDiscriminator - </b> discriminator of the bot</p>
-
-        <p><b>$botTag - </b> tag of bot</p>
-
-        <p><b>$botDefaultAvatar - </b> default avatar of bot</p>
-
-        <p><b>$botTimeCreated - </b> creation time of bot</p>
-
-        <p><b>$botID - </b> id of bot</p>
-
-        <p><b>$ping - </b> ping to gateway</p>
-
-        <p><b>$inviteURL - </b> url to invite the bot</p>
-
-        <p><b>$serverCount - </b> amount of servers bot is in</p>
-
-        <p><b>$allMemberCount - </b> amount of users in all servers the bot is in</p>
-
-        <p><b>$mentionedDiscriminator (Only message recieved) - </b> discriminator of mentioned user</p>
-
-        <p><b>$mentionedTag (Only message recieved) - </b> tag of mentioned user</p>
-
-        <p><b>$mentionedIsBot (Only message recieved) - </b> is the mentioned user a bot?</p>
-
-        <p><b>$mentionedDefaultAvatar (Only message recieved) - </b> default avatar of mentioned user</p>
-
-        <p><b>$mentionedTimeCreated (Only message recieved) - </b> account creation date of mentioned user</p>
-
-        <p><b>$mentionedID (Only message recieved) - </b> id of mentioned user</p>
-
-        <p><b>$mentionedServersSharedWithBot (Only message recieved) - </b> how many servers the mentioned user shares with the bot.</p>
-
-        <p><b>$eval (version 1.7+)</b> Used to mark the start of a block of javascript code.</p>
-
-        <p><b>$halt (version 1.7+)</b> MUST be used after done writing javascript section of command to mark the end of the code.</p>
-
-        <p><b>$get(var) (version 1.7+)</b> Used to get variables created by either in javascript block or $set()</p>
-
-        <p><b>$set(var,value) (version 1.7+)</b> Used to set values. Types include numbers, strings, and boolean(true or false).</p>
-
-
-
-
-
-    <h2 id="battery-optimization">Disabling Battery Optimizations</h2>
-
-    <p> <b>Steps</b> </p>
-    <ol>
-        <li>Go to settings</li>
-        <li>Find battery optimizations</li>
-        <li>View all apps</li>
-        <li>Find Bot Commander for Discord</li>
-        <li>Disable battery optimizations</li>
-    </ol>
-
-    <h2 id="whats-new">What's new?</h2>
-
-    <p>1.7</p>
-
-    <ul>
-        <li>Added $eval and $halt keywords to allow for the use of JavaScript.</li>
-        <li>Added $get() and $set() keywords to set and retrieve values.</li>
-        <li>Changed token field text type.</li>
-    </ul>
-
-    <p>1.6</p>
-
-    <ul>
-        <li>New delete actions including delete command after, delete x messages, and delete if contains.</li>
-        <li>24 new keywords have been added including $ping and $inviteURL.</li>
-        <li>Action to filter not safe for work commands.</li>
-        <li>Multi-line support for some fields.</li>
-    </ul>
-
-    <p>1.5</p>
-
-    <ul>
-        <li>Added require specific message ID for react add events.</li>
-        <li>Added Ignore error messages for commands.</li>
-        <li>Added $random{} keyword to select random string.</li>
-        <li>Added icon for PM receive type.</li>
-    </ul>
-
-    <p>1.4</p>
-
-    <ul>
-        <li>Added Require Role for commands of certain types.</li>
-        <li>Added Send in Specific Channel for commands of certain types.</li>
-        <li>Added keywords related to mentioned user info, bot info, server info, and a few more.</li>
-    </ul>
-
-    <p>1.3</p>
-
-    <ul>
-        <li>Added support for "Streaming..." and "Watching..." status types.</li>
-        <li>ability to send embed messages.</li>
-        <li>Added ability to react to messages.</li>
-        <li>Added help button in command creation screen.</li>
-    </ul>
-
-    <p>1.2</p>
-    <ul>
-        <li>Revamped the command creation screen for ease of use.</li>
-        <li>Added role assignment function.</li>
-        <li>Added links to tutorial and a discord in other menu.</li>
-    </ul>
-    <p>1.1</p>
-    <ul>
-        <li>Moderation kick, ban, voice mute. These work in a special way see <a href="#moderation">here.</a></li>
-        <li>Wildcard keyword. * in the command field will mean
-            anything will trigger the command.</li>
-        <li>Reaction add command type. This type is triggered by someone adding a reaction to a message. For custom
-            emojis in the reaction add type you will use the
-            name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular emojis
-            will
-            just use the emoji 😊 in the command field.</li>
-        <li>Tutorial dialogs to mention some important details.</li>
-        <li>New keyword $avatar which adds the user avatar to the message.</li>
-    </ul>
-
-    <footer><a href="https://ayayaQ.github.io">Home</a><a
-            href="https://ayayaq.github.io/DiscordBots-Help/tutorial.html">Tutorials</a> </footer>
+    <button class="collapsible">Disabling Battery Optimizations<img class="expand"
+            src="images/expand_more.svg" /></button>
+    <div class="content">
+        <div class="update">
+            <p>Why?</p>
+            <p class="subtext">Some different manufacturer's flavors of Android can be really strict with how they
+                manage
+                battery and lifetime of apps. This could cause your bot to be not responsive once you exit the
+                application.
+                Usually this can be solved by disabling battery optimizations, although there could be more to stop your
+                OS
+                from killing your apps. To find out if you need to do more it is a good idea to do research on Google
+                searching how to stop apps from being killed on your specific device.
+            </p>
+        </div>
+
+        <div class="update">
+            <p> Steps</p>
+            <ol>
+                <li>Go to settings</li>
+                <li>Find battery optimizations</li>
+                <li>View all apps</li>
+                <li>Find Bot Commander for Discord</li>
+                <li>Disable battery optimizations</li>
+            </ol>
+            <p class="subtext">*these vary by device.</p>
+        </div>
+
+    </div>
+
+    <button class="collapsible">What's new?<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+        <div class="update">
+            <p>1.7</p>
+            <ul>
+                <li>Added $eval and $halt keywords to allow for the use of JavaScript.</li>
+                <li>Added $get() and $set() keywords to set and retrieve values.</li>
+                <li>Changed token field text type.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.6</p>
+
+            <ul>
+                <li>New delete actions including delete command after, delete x messages, and delete if contains.</li>
+                <li>24 new keywords have been added including $ping and $inviteURL.</li>
+                <li>Action to filter not safe for work commands.</li>
+                <li>Multi-line support for some fields.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.5</p>
+
+            <ul>
+                <li>Added require specific message ID for react add events.</li>
+                <li>Added Ignore error messages for commands.</li>
+                <li>Added $random{} keyword to select random string.</li>
+                <li>Added icon for PM receive type.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.4</p>
+
+            <ul>
+                <li>Added Require Role for commands of certain types.</li>
+                <li>Added Send in Specific Channel for commands of certain types.</li>
+                <li>Added keywords related to mentioned user info, bot info, server info, and a few more.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.3</p>
+
+            <ul>
+                <li>Added support for "Streaming..." and "Watching..." status types.</li>
+                <li>ability to send embed messages.</li>
+                <li>Added ability to react to messages.</li>
+                <li>Added help button in command creation screen.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.2</p>
+            <ul>
+                <li>Revamped the command creation screen for ease of use.</li>
+                <li>Added role assignment function.</li>
+                <li>Added links to tutorial and a discord in other menu.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.1</p>
+            <ul>
+                <li>Moderation kick, ban, voice mute. These work in a special way see <a href="#moderation">here.</a>
+                </li>
+                <li>Wildcard keyword. * in the command field will mean
+                    anything will trigger the command.</li>
+                <li>Reaction add command type. This type is triggered by someone adding a reaction to a message. For
+                    custom
+                    emojis in the reaction add type you will use the
+                    name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular
+                    emojis
+                    will
+                    just use the emoji 😊 in the command field.</li>
+                <li>Tutorial dialogs to mention some important details.</li>
+                <li>New keyword $avatar which adds the user avatar to the message.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><a href="https://ayayaQ.github.io">My page</a><a
+        href="https://ayayaq.github.io/DiscordBots-Help/">Help</a> </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        var imgs = document.getElementsByClassName("expand");
+
+        for (i = 0; i < coll.length; i++) {
+
+            let currImg = imgs[i - 1];
+
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    try {
+                        currImg.src = "images/expand_more.svg";
+                    } catch (error) {
+
+                    }
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    try {
+                        currImg.src = "images/expand_less.svg";
+                    } catch (error) {
+
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 

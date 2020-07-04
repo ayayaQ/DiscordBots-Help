@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Commander Keywords</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/keyword.css">
+    <link rel="stylesheet" href="styles/creating.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="headingMargin">Starting out with the bot</h1>
+    </header>
+
+    <button class="collapsible"><img class="menu" src="images/menu.svg" /></button>
+    <div class="content">
+        <div id="contents">
+            <a href="index.html" class="contents">Home</a>
+
+            <a href="commands.html" class="contents">Commands</a>
+
+            <a href="keywords.html" class="contents">Keywords</a>
+
+            <a href="creating.html" class="contents">Starting out with the bot</a>
+
+            <a href="tutorial.html">Tutorials</a>
+
+        </div>
+
+    </div>
+
+    <button class="collapsible">Creating the bot<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+
+        <div class="card">
+            <p> 1. Go <a href="https://discordapp.com/developers/applications/">here</a> and login. </p>
+        </div>
+
+        <div class="card">
+            <p> 2. Once on the dashboard click the "New Application" button. </p>
+
+            <img
+                src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182201.png" />
+        </div>
+
+        <div class="card">
+            <p> 3. Name the application whatever you want. </p>
+
+            <img
+                src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182242.png" />
+        </div>
+        <div class="card">
+            <p> 4. In the app dashboard press the menu button and select "Bot" </p>
+
+            <img
+                src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182456.png" />
+        </div>
+        <div class="card">
+            <p> 5. Press "Add Bot". </p>
+
+            <img
+                src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182507.png" />
+        </div>
+        <div class="card">
+            <p> 6. Now you can copy your token and change other aspects of the bot account. </p>
+
+            <img
+                src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Screenshot_20191110-182542.png?raw=true" />
+        </div>
+    </div>
+
+    <button class="collapsible">Inviting the bot<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+
+        <div class="card">
+            <p> Inviting the bot is also done from <a href="https://discordapp.com/developers/applications/">here!</a>
+            </p>
+        </div>
+        <div class="card">
+            <p> Click on the OAuth2 button from the menu </p>
+            <img
+                src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215344.png?raw=true" />
+        </div>
+        <div class="card">
+            <p> In scopes check "bot" </p>
+            <img
+                src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215410.png?raw=true" />
+        </div>
+        <div class="card">
+            <p> Scroll down and select your bot permissions, "Administrator" counts for all permissions if you need them
+                all."
+            </p>
+            <img
+                src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215908.png?raw=true" />
+        </div>
+        <div class="card">
+            <p> Scroll back up to the scopes and copy then open the link. Note: You must have the "Manage Server"
+                permission
+                in
+                the server you wish to add the bot to. </p>
+        </div>
+    </div>
+
+
+    </div>
+
+    <footer><a href="https://ayayaQ.github.io">My page</a><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        var imgs = document.getElementsByClassName("expand");
+
+        for (i = 0; i < coll.length; i++) {
+
+            let currImg = imgs[i-1];
+
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    try {
+                        currImg.src = "images/expand_more.svg";
+                    } catch(error) {
+
+                    }
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    try {
+                        currImg.src = "images/expand_less.svg";
+                    } catch(error) {
+
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

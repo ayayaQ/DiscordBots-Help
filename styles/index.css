@@ -1,0 +1,22 @@
+div.update {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.315) 0 2px 2px;
+}
+
+div.update * {
+    color: rgba(0, 0, 0, 0.815);
+}
+
+div.update p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 8px;
+}
+
+div.update p.subtext {
+    font-size: 16px;
+    font-weight: normal;
+}

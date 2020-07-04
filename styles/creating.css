@@ -1,0 +1,16 @@
+div.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.315) 0 2px 2px;
+}
+
+div.card * {
+    color: rgba(0, 0, 0, 0.815);
+    font-weight: 600;
+}
+
+div.card p {
+    margin: 8px;
+}
