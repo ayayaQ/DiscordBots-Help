@@ -66,39 +66,45 @@
 
     </div>
 
-    <button class="collapsible">Importing and Exporting<img class="expand"
-        src="images/expand_more.svg" /></button>
-<div class="content">
-    <div class="update">
-        <p>Exporting</p>
-        <p class="subtext">Exporting puts a commands.json file in Android/data/com.ayayaQ.discordbots/files/commands.json, afterwards you can copy the file somewhere else and share it with people if you wish.
-        </p>
+    <button class="collapsible">Importing and Exporting<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+        <div class="update">
+            <p>Exporting</p>
+            <p class="subtext">Exporting puts a commands.json file in
+                Android/data/com.ayayaQ.discordbots/files/commands.json, afterwards you can copy the file somewhere else
+                and share it with people if you wish. You could also use these exported commands if you made your own
+                bot through something like <a href="https://discord.js.org/#/">discord.js</a>. Further explanation on
+                the json file can be seen on the <a href="commands.html">commands</a> page.
+            </p>
+        </div>
+
+        <div class="update">
+            <p>Importing</p>
+
+            <p class="subtext">To import you need to put a commands.json file in
+                Android/data/com.ayayaQ.discordbots/files/</p>
+        </div>
+
     </div>
 
-    <div class="update">
-        <p>Importing</p>
-        
-        <p class="subtext">To import you need to put a commands.json file in Android/data/com.ayayaQ.discordbots/files/</p>
+    <button class="collapsible">Enable Gateway Intents<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+        <div class="update">
+            <p>Why?</p>
+            <p class="subtext">Some newer changes to the Discord API require you to enable certain intents to recieve
+                certain actions on your bot. Some actions like member join and member leave won't work without a certain
+                intent enabled on the Discord developer site.
+            </p>
+        </div>
+
+        <div class="update">
+            <p>How?</p>
+
+            <p class="subtext">Go to your bot on the Discord developer site and scroll down to Privaleged Gateway
+                Intents. Enable the Server Members Intent. This will allow your bot to be hosted on the app.</p>
+        </div>
+
     </div>
-
-</div>
-
-<button class="collapsible">Enable Gateway Intents<img class="expand"
-    src="images/expand_more.svg" /></button>
-<div class="content">
-<div class="update">
-    <p>Why?</p>
-    <p class="subtext">Some newer changes to the Discord API require you to enable certain intents to recieve certain actions on your bot. Some actions like member join and member leave won't work without a certain intent enabled on the Discord developer site.
-    </p>
-</div>
-
-<div class="update">
-    <p>How?</p>
-    
-    <p class="subtext">Go to your bot on the Discord developer site and scroll down to Privaleged Gateway Intents. Enable the Server Members Intent. This will allow your bot to be hosted on the app.</p>
-</div>
-
-</div>
 
     <button class="collapsible">What's new?<img class="expand" src="images/expand_more.svg" /></button>
     <div class="content">
