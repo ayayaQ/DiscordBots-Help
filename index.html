@@ -71,7 +71,8 @@
         <div class="update">
             <p>Exporting</p>
             <p class="subtext">Exporting puts a commands.json file in
-                Android/ data/ com.ayayaQ.discordbots/ files/ commands.json, afterwards you can copy the file somewhere else
+                Android/ data/ com.ayayaQ.discordbots/ files/ commands.json, afterwards you can copy the file somewhere
+                else
                 and share it with people if you wish. You could also use these exported commands if you made your own
                 bot through something like <a href="https://discord.js.org/#/">discord.js</a>. Further explanation on
                 the json file can be seen on the <a href="commands.html">commands</a> page.
@@ -95,6 +96,9 @@
                 certain actions on your bot. Some actions like member join and member leave won't work without a certain
                 intent enabled on the Discord developer site.
             </p>
+            <p class="subtext">If you don't want to bother with this you can go into the settings on Bot Commander and check "Disable
+                Server Member Intent" and you will not need to enable it for your bot. The downside of doing this will
+                make it so Member Join, Leave, and Ban command won't function.</p>
         </div>
 
         <div class="update">
@@ -109,6 +113,16 @@
     <button class="collapsible">What's new?<img class="expand" src="images/expand_more.svg" /></button>
     <div class="content">
 
+
+        <div class="update">
+            <p>1.9.5</p>
+            <ul>
+                <li>Added "require administrator privilege" for commands.</li>
+                <li>Added option to hide output in command list.</li>
+                <li>Added option to remove the need to enable server member intents at the cost of not being able to use some commands.</li>
+                <li>Performance and bug fixes</li>
+            </ul>
+        </div>
 
         <div class="update">
             <p>1.9</p>
