@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting">
+    <title>Bot Commander Webhooks</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/keyword.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="headingMargin">Webhooks</h1>
+    </header>
+
+    <button class="collapsible">Using Webhooks<img class="expand" src="images/expand_more.svg" /></button>
+    <div class="content">
+        <div class="update">
+            <p>What can you do?</p>
+            <p class="subtext">These allow you to send messages to a certain channel using the built-in webhooks
+                integration on Discord. You can send either a regular message or an embed.
+            </p>
+        </div>
+
+        <div class="update">
+            <p>How do I create a webhook for my server?</p>
+
+            <p class="subtext">Go to your desired server and click on "Server Settings", from there you click on
+                "Integrations" and then "Create Webhook". This will create the webhook for you and all you need to do is
+                copy the webhook URL to the Bot Commander app.</p>
+        </div>
+
+        </div>
+
+        <footer><a href="https://ayayaQ.github.io">My page</a><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+        </footer>
+        
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+    
+            var imgs = document.getElementsByClassName("expand");
+    
+            for (i = 0; i < coll.length; i++) {
+    
+                let currImg = imgs[i - 1];
+    
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        try {
+                            currImg.src = "images/expand_more.svg";
+                        } catch (error) {
+    
+                        }
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        try {
+                            currImg.src = "images/expand_less.svg";
+                        } catch (error) {
+    
+                        }
+                    }
+                });
+            }
+        </script>
+</body>
+
+</html>
