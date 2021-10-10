@@ -20,3 +20,21 @@ div.update p.subtext {
     font-size: 16px;
     font-weight: normal;
 }
+
+a.join {
+    text-decoration: none;
+    text-align: center;
+    background-color: #37474f;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: block;
+    width: 80%;
+    padding: 8px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.315) 0 2px 2px;
+    transition-duration: 200ms;
+}
