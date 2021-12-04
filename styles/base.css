@@ -105,6 +105,24 @@ div#contents a {
     text-align: center;
 }
 
+.button-dark {
+    text-decoration: none;
+    text-align: center;
+    background-color: #37474fd0;
+    color:rgba(255, 255, 255, 0.9) !important;
+    margin: auto;
+    margin-top: 8px;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition-duration: 100ms;
+}
+
+.button-dark:active {
+    background-color: #37474f;
+}
+
 @media only screen and (max-width: 480px) {
     img {
         padding: 0;
