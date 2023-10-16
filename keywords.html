@@ -101,6 +101,65 @@
         </div>
     </div>
 
+    <button class="collapsible">Member Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <div class="content">
+        <div class="keyword">
+            <h2>$memberIsOwner</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Is the member of the event the owner of the server.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberEffectiveName</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>This is the name the member goes by within the server.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberEffectiveAvatar</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>This is the avatar that the user has displayed within this specific server.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberID</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>The unique ID of the member.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberHasTimeJoined</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Gives "true" or "false" denoting whether the user has a time they joined the server.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberTimeJoined</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>The time the member joined the server.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberHasBoosted</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>Has this member boosted the server?. Returns "true" or "false".</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$memberTimeBoosted</h2> <!-- Keyword -->
+            <h3>Message Receive</h3>
+            <!-- Compatibility -->
+            <p>What is the time the user boosted the server? If there is none we will get "null".</p> <!-- Description -->
+        </div>
+    </div>
+
     <button class="collapsible">Mentioned User Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
     <div class="content">
 
@@ -393,6 +452,27 @@
             <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
             <!-- Compatibility -->
             <p>Inserts the current date.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$hour</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Inserts the current hour.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$minute</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Inserts the current minute.</p> <!-- Description -->
+        </div>
+
+        <div class="keyword">
+            <h2>$second</h2> <!-- Keyword -->
+            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
+            <!-- Compatibility -->
+            <p>Inserts the current second.</p> <!-- Description -->
         </div>
 
         <div class="keyword">

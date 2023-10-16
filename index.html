@@ -46,10 +46,10 @@
 
             <p class="subtext">Visit the official support Discord server and get help or just chat with others who use
                 Bot Commander.</p>
-                <a href="https://discord.com/invite/mZp54sZ" class="button-dark">JOIN</a>
+            <a href="https://discord.com/invite/mZp54sZ" class="button-dark">JOIN</a>
         </div>
 
-        
+
 
     </div>
 
@@ -82,20 +82,19 @@
     <div class="content">
         <div class="update">
             <p>Exporting</p>
-            <p class="subtext">Exporting puts a commands.json file in
-                Android/ data/ com.ayayaQ.discordbots/ files/ commands.json, afterwards you can copy the file somewhere
-                else
-                and share it with people if you wish. You could also use these exported commands if you made your own
-                bot through something like <a href="https://discord.js.org/#/">discord.js</a>. Further explanation on
-                the json file can be seen on the <a href="commands.html">commands</a> page.
+            <p class="subtext">You can export a command by pressing the "Export" button when you have a command selected
+                in the command list.
+                This will copy a JSON string to your clipboard that contains all the information about your command.
             </p>
         </div>
 
         <div class="update">
             <p>Importing</p>
 
-            <p class="subtext">To import you need to put a commands.json file in
-                Android/ data/ com.ayayaQ.discordbots/ files/</p>
+            <p class="subtext">To import a command, go to the add new command area. From here, you'll select the
+                "Import" command type and paste
+                in your JSON string from exporting.
+            </p>
         </div>
 
     </div>
@@ -142,6 +141,44 @@
     <button class="collapsible">What's new?<img class="expand" src="images/expand_more.svg"
             alt="Expand Content" /></button>
     <div class="content">
+
+        <div class="update">
+            <p>1.11</p>
+            <ul>
+                <li>Commands are now also updated while hosting, this means you will not have to restart the bot in
+                    order to get and test your latest changes in your bot.</li>
+                <li>Status changes are now also updated while hosting.</li>
+                <li>Furthermore, new status options have been added. You can now set the online status (Online, Idle, Do
+                    Not Disturb, Invisible) as well as some other activity statuses such as "Competing"</li>
+                <li>The import / export system has been overhauled. The old one was quite obtuse and hard to use, so it
+                    has been replaced with a simpler and easier to use system. When in the command list, you can click
+                    the export button on a command and it will copy to your clipboard. To import, you go to the add
+                    command menu and set the type to import, and paste in the command you wish to import.</li>
+                <li>Various new keywords have been added related to time and members. These include some keywords such
+                    as $hour, $memberTimeJoined, $memberHasBoosted, and more.</li>
+                <li>The UI has been updated to Material 3. In general this gives the app a new and more modern look. A
+                    new addition included with this for users with devices which support it is Dynamic Color. With
+                    Dynamic Color, the app's UI will match that of the pallete of your device.</li>
+                <li>Ads have been completely removed from the app. You will no longer see ads in the help section.</li>
+                <li>Fixed a bug where if you entered and tried to sign in with an incorrect token, the app would crash.
+                </li>
+                <li>Fixed a bug where some keywords were not showing up in the keyword searcher.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.10.6</p>
+            <ul>
+                <li>Enabled the MESSAGE_CONTENT gateway intent.</li>
+            </ul>
+        </div>
+
+        <div class="update">
+            <p>1.10.5</p>
+            <ul>
+                <li>Updated Important Libraries.</li>
+            </ul>
+        </div>
 
         <div class="update">
             <p>1.10.4</p>
