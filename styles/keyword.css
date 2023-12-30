@@ -40,7 +40,7 @@ button.collapsible {
     border: none;
     text-align: left;
     outline: none;
-    background: #448aff;
+    background: #525252;
     color: white;
     padding: 8px 16px;
     margin: 0;
@@ -48,7 +48,7 @@ button.collapsible {
 }
 
 button.collapsible:hover {
-    background: #3e77d8;
+    background: #414141;
 }
 
 button.collapsible img {

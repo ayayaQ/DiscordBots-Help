@@ -2,7 +2,7 @@
 
 html {
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #102027;
+    background: #202020;
 }
 
 h1, h2 {
@@ -11,7 +11,7 @@ h1, h2 {
 
 body {
     margin: 0px;
-    background-color: #62727b;
+    background-color: #313131;
     color: white;
     width: 100%;
 }
@@ -37,7 +37,7 @@ body > * {
 }
 
 header {
-    background: #37474f;
+    background: #313131;
     color: white;
     padding-left: 0;
 }
@@ -49,7 +49,7 @@ h1#headingMargin {
 }
 
 h2 {
-    background: #448aff;
+    background: #525252;
     color: white;
     padding: 8px 16px;
     margin: 0;
@@ -73,7 +73,7 @@ footer {
     flex-flow: row wrap;
     justify-content: stretch;
     padding: 0;
-    background: #37474f;
+    background: #313131;
     text-decoration: underline;
 }
 
@@ -82,7 +82,7 @@ footer a {
     justify-content: center;
     width: 50%;
     text-align: center;
-    border-top: 10px solid #448aff;
+    border-top: 10px solid #525252;
     box-shadow: inset rgba(0, 0, 0, 0.24) 0 2px 2px;
     padding: 16px 0;
     text-decoration: none;
@@ -100,7 +100,7 @@ div#contents a {
     width: 80%;
     text-decoration-line: none;
     padding: 8px;
-    background-color: #37474f;
+    background-color: #202020;
     border-radius: 5px;
     text-align: center;
 }
@@ -108,7 +108,7 @@ div#contents a {
 .button-dark {
     text-decoration: none;
     text-align: center;
-    background-color: #37474fd0;
+    background-color: #313131d0;
     color:rgba(255, 255, 255, 0.9) !important;
     margin: auto;
     margin-top: 8px;
@@ -120,7 +120,7 @@ div#contents a {
 }
 
 .button-dark:active {
-    background-color: #37474f;
+    background-color: 313131;
 }
 
 @media only screen and (max-width: 480px) {
