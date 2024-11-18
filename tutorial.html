@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting, Tutorials">
-    <meta name="description" content="Tutorials on how to use some of the functions and make commands in Bot Commander for Discord">
+    <meta name="description"
+        content="Tutorials on how to use some of the functions and make commands in Bot Commander for Discord">
     <title>Bot Commander for Discord Tutorials</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/keyword.css">
@@ -17,7 +18,7 @@
         <h1 id="headingMargin">Tutorials</h1>
     </header>
 
-    <button class="collapsible"><img class="menu" src="images/menu.svg" alt="Menu image"/></button>
+    <button class="collapsible"><img class="menu" src="images/menu.svg" alt="Menu image" /></button>
     <div class="content">
         <div id="contents">
             <a href="index.html" class="contents">Home</a>
@@ -34,7 +35,29 @@
 
     </div>
 
-    <button class="collapsible">Dice Command<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Persisting State<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
+    <div class="content">
+
+        <div class="keyword">
+            <h2>The Basics</h2>
+            <p>If you have information you want to save between bot sessions that is calculated at runtime, there is a
+                solution that can be used. It is something I call decided to call "botState". It is very simple to use.</p>
+
+            <ol>
+                <li>Go to the create command screen and create a command that will use JS. If you don't know how to do this yet, see the tutorial on <b>"Using Javascript in messages"</b>.</li>
+
+                <li>If we want to store some information we set that on a variable named <b>"botState"</b>. This variable is already defined when you start hosting your bot. To store something inside, just set a property as you would in JS, for example we could do <b>"botState.x = 'my saved string'"</b>.</li>
+
+                <li>To read some information and insert it in a message, you can just do <b>$get(botState.x)</b> as an example based on our previous saving example. This will print <b>"my saved string"</b> in your response.</li>
+
+                <li>This is all you have to worry about. From here, the app should handle saving the <b>"botState"</b> on application close or cancelling of hosting.</li>
+            </ol>
+        </div>
+    </div>
+
+    <button class="collapsible">Dice Command<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
 
         <div class="keyword">
@@ -65,7 +88,8 @@
 
     </div>
 
-    <button class="collapsible">Kick Command<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Kick Command<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
             <p>This command will let someone with kick user privalege kick users with the bot.</p>
@@ -94,7 +118,8 @@
         </div>
     </div>
 
-    <button class="collapsible">Phrase Command<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Phrase Command<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
 
@@ -126,7 +151,8 @@
         </div>
     </div>
 
-    <button class="collapsible">Command Using Keywords<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Command Using Keywords<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
 
@@ -155,7 +181,8 @@
         </div>
     </div>
 
-    <button class="collapsible">Add Role on User Join<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Add Role on User Join<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
 
@@ -182,7 +209,8 @@
         </div>
     </div>
 
-    <button class="collapsible">Creating Embed Messages<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Creating Embed Messages<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
 
@@ -220,7 +248,8 @@
         </div>
     </div>
 
-    <button class="collapsible">Reaction Roles<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Reaction Roles<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
 
@@ -249,7 +278,8 @@
         </div>
     </div>
 
-    <button class="collapsible">Using Javascript in messages<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
+    <button class="collapsible">Using Javascript in messages<img class="expand" src="images/expand_more.svg"
+            alt="Expand Content" /></button>
     <div class="content">
         <div class="keyword">
 
