@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="keywords" content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, ウェブフック">
-	<meta name="description" content="Bot Commander for Discordでウェブフック機能を利用する方法">
-	<title>Bot Commander ウェブフック</title>
-	<link rel="stylesheet" href="../styles/base.css">
-	<link rel="stylesheet" href="../styles/index.css">
-	<link rel="stylesheet" href="../styles/keyword.css">
-</head>
-<body>
-	<header>
-		<h1 id="headingMargin">ウェブフック</h1>
-	</header>
-	<button class="collapsible"><img class="menu" src="../images/menu.svg" alt="メニュー画像"/></button>
-	<div class="content">
-		<div id="contents">
-			<a href="index.html" class="contents">ホーム</a>
-			<a href="commands.html" class="contents">コマンド</a>
-			<a href="keywords.html" class="contents">キーワード</a>
-			<a href="creating.html" class="contents">ボットの開始方法</a>
-			<a href="tutorial.html">チュートリアル</a>
-			<a href="webhooks.html">ウェブフック</a>
-		</div>
-	</div>
-	<button class="collapsible">ウェブフックの利用方法<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
-	<div class="content">
-		<div class="update">
-			<p>できること</p>
-			<p class="subtext">Discordの組み込みウェブフック機能を使用して、特定のチャンネルにメッセージを送信できます。通常のメッセージまたは埋め込みメッセージのいずれかを送信可能です。</p>
-		</div>
-		<div class="update">
-			<p>サーバー用ウェブフックの作成方法</p>
-			<p class="subtext">ご希望のサーバーで「サーバー設定」をクリックし、「インテグレーション」から「ウェブフックを作成」を選択してください。ウェブフックが作成されますので、Bot CommanderアプリにウェブフックURLをコピーしてください。</p>
-		</div>
-	</div>
-	<footer><a href="https://ayayaQ.github.io">マイページ</a><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a></footer>
-	<script>
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-		var imgs = document.getElementsByClassName("expand");
-		for (i = 0; i < coll.length; i++) {
-			let currImg = imgs[i - 1];
-			coll[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var content = this.nextElementSibling;
-				if (content.style.maxHeight) {
-					content.style.maxHeight = null;
-					try {
-						currImg.src = "../images/expand_more.svg";
-					} catch (error) {}
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-					try {
-						currImg.src = "../images/expand_less.svg";
-					} catch (error) {}
-				}
-			});
-		}
-	</script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="keywords"
+            content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, ウェブフック"
+        />
+        <meta
+            name="description"
+            content="Bot Commander for Discordでウェブフック機能を利用する方法"
+        />
+        <title>Bot Commander ウェブフック</title>
+        <link rel="stylesheet" href="../styles/base.css" />
+        <link rel="stylesheet" href="../styles/index.css" />
+        <link rel="stylesheet" href="../styles/keyword.css" />
+    </head>
+    <body>
+        <header>
+            <h1 id="headingMargin">ウェブフック</h1>
+        </header>
+        <button class="collapsible">
+            <img class="menu" src="../images/menu.svg" alt="メニュー画像" />
+        </button>
+        <div class="content">
+            <div id="contents">
+                <a href="index.html" class="contents">ホーム</a>
+                <a href="commands.html" class="contents">コマンド</a>
+                <a href="keywords.html" class="contents">キーワード</a>
+                <a href="creating.html" class="contents">ボットの開始方法</a>
+                <a href="tutorial.html">チュートリアル</a>
+                <a href="webhooks.html">ウェブフック</a>
+            </div>
+        </div>
+        <button class="collapsible">
+            ウェブフックの利用方法<img
+                class="expand"
+                src="../images/expand_more.svg"
+                alt="内容を展開"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>できること</p>
+                <p class="subtext">
+                    Discordの組み込みウェブフック機能を使用して、特定のチャンネルにメッセージを送信できます。通常のメッセージまたは埋め込みメッセージのいずれかを送信可能です。
+                </p>
+            </div>
+            <div class="update">
+                <p>サーバー用ウェブフックの作成方法</p>
+                <p class="subtext">
+                    ご希望のサーバーで「サーバー設定」をクリックし、「インテグレーション」から「ウェブフックを作成」を選択してください。ウェブフックが作成されますので、Bot
+                    CommanderアプリにウェブフックURLをコピーしてください。
+                </p>
+            </div>
+        </div>
+        <footer>
+            <a href="https://ayayaQ.github.io">マイページ</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a>
+        </footer>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            var imgs = document.getElementsByClassName("expand");
+            for (i = 0; i < coll.length; i++) {
+                let currImg = imgs[i - 1];
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        try {
+                            currImg.src = "../images/expand_more.svg";
+                        } catch (error) {}
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        try {
+                            currImg.src = "../images/expand_less.svg";
+                        } catch (error) {}
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>

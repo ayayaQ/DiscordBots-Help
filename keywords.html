@@ -1,582 +1,977 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Keywords">
-    <meta name="description" content="Documentation of all the keywords in Bot Commander for Discord and how to use them">
-    <title>Bot Commander Keywords</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/keyword.css">
-<script>
-    // Supported languages and their subdirectory
-    const supportedLangs = { jp: 'jp' };
-    const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    // Only redirect if not already in a language subdirectory
-    const pathParts = window.location.pathname.split('/');
-    const inLangDir = Object.values(supportedLangs).some(dir => pathParts.includes(dir));
-    if (!inLangDir) {
-        if (userLang.startsWith('ja')) {
-            window.location.replace('./jp/keywords.html');
-        }
-        // Future: add more languages here
-    }
-</script>
-</head>
-
-<body>
-    <header>
-        <h1 id="headingMargin">Keywords</h1>
-    </header>
-
-    <button class="collapsible" alt="Menu"><img class="menu" src="images/menu.svg" alt="Menu image"/></button>
-    <div class="content">
-        <div id="contents">
-            <a href="index.html" class="contents">Home</a>
-
-            <a href="commands.html" class="contents">Commands</a>
-
-            <a href="keywords.html" class="contents">Keywords</a>
-
-            <a href="creating.html" class="contents">Starting out with the bot</a>
-
-            <a href="tutorial.html">Tutorials</a>
-            <a href="webhooks.html">Webhooks</a>
-        </div>
-
-    </div>
-
-    <button class="collapsible">User Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$name</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Reaction Add</h3> <!-- Compatibility -->
-            <p>Inserts a mention of the user who called the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$avatar</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the avatar URL of the user who called the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$defaultAvatar</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the default avatar URL of the user who called the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$namePlain</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the plain text username of the user who called the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$discriminator</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the discriminator (the numbers after the #) of the user who called the command.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$tag</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the tag (in the form Username#1234) of the user who called the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$ID</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the unique ID number of the user who called the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$serversSharedWithBot</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the number of servers shared with the bot the user who called the command has.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$timeCreated</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the account creation time of the user who called the command.</p> <!-- Description -->
-        </div>
-    </div>
-
-    <button class="collapsible">Member Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-        <div class="keyword">
-            <h2>$memberIsOwner</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Is the member of the event the owner of the server.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberEffectiveName</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>This is the name the member goes by within the server.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberEffectiveAvatar</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>This is the avatar that the user has displayed within this specific server.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberID</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>The unique ID of the member.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberHasTimeJoined</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Gives "true" or "false" denoting whether the user has a time they joined the server.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberTimeJoined</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>The time the member joined the server.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberHasBoosted</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Has this member boosted the server?. Returns "true" or "false".</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberTimeBoosted</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>What is the time the user boosted the server? If there is none we will get "null".</p> <!-- Description -->
-        </div>
-    </div>
-
-    <button class="collapsible">Mentioned User Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$mentionedName</h2> <!-- Keyword -->
-            <h3>Message Receive</h3> <!-- Compatibility -->
-            <p>Inserts a mention of the user mentioned in the call of the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedAvatar</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the avatar URL of the user mentioned in the call of the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedDefaultAvatar</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the default avatar URL of the user mentioned in the call of the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedNamePlain</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the plain text username of the user mentioned in the call of the command.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedDiscriminator</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the discriminator (the numbers after the #) of the user mentioned in the call of the command.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedTag</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the tag (in the form Username#1234) of the user mentioned in the call of the command.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedID</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the unique ID number of the user mentioned in the call of the command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedServersSharedWithBot</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the number of servers shared with the bot the user mentioned in the call of the command.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$mentionedTimeCreated</h2> <!-- Keyword -->
-            <h3>Message Receive</h3>
-            <!-- Compatibility -->
-            <p>Inserts the account creation time of the user mentioned in the call of the command.</p>
-            <!-- Description -->
-        </div>
-    </div>
-
-    <button class="collapsible">Bot Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$botName</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts a mention of your bot.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$botAvatar</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the avatar URL of your bot.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$botDefaultAvatar</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the default avatar URL of your bot.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$botNamePlain</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the plain text username of your bot.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$botDiscriminator</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the discriminator (the numbers after the #) of your bot.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$botTag</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the tag (in the form Username#1234) of your bot.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$botID</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the unique ID number of your bot.</p> <!-- Description -->
-        </div>
-
-
-        <div class="keyword">
-            <h2>$botTimeCreated</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the account creation time of your bot.</p> <!-- Description -->
-        </div>
-
-    </div>
-
-    <button class="collapsible">Server Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$server</h2> <!-- Keyword -->
-            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the name of the server where the command was called.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$serverCount</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the number of the servers the bot is in.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$memberCount</h2> <!-- Keyword -->
-            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the number of users in the server where the command was called.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$allMemberCount</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the number of users in all server where the bot is.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$serverIcon</h2> <!-- Keyword -->
-            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the URL of the icon of the server where the command was called.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$serverBanner</h2> <!-- Keyword -->
-            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the URL of the server banner of the server where the command was called.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$serverDescription</h2> <!-- Keyword -->
-            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the description of the server where the command was called.</p>
-            <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$serverSplash</h2> <!-- Keyword -->
-            <h3>Message Receive, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the URL of the splash of the server where the command was called.</p>
-            <!-- Description -->
-        </div>
-
-    </div>
-
-    <button class="collapsible">Channel Info<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$channel</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Reaction Add</h3> <!-- Compatibility -->
-            <p>Inserts the name of the channel where the message was sent.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$channelID</h2> <!-- Keyword -->
-            <h3>Message Receive, Reaction Add</h3> <!-- Compatibility -->
-            <p>Inserts the ID of the channel where the message was sent.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$channelCreateDate</h2> <!-- Keyword -->
-            <h3>Message Receive, Reaction Add</h3> <!-- Compatibility -->
-            <p>Inserts the time of creation of the channel where the message was sent.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$channelAsMention</h2> <!-- Keyword -->
-            <h3>Message Receive, Reaction Add</h3> <!-- Compatibility -->
-            <p>Inserts the mention of the channel where the message was sent.</p> <!-- Description -->
-        </div>
-
-    </div>
-
-    <button class="collapsible">Message<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$message</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message</h3> <!-- Compatibility -->
-            <p>Inserts the whole message of the called command.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$messageAfterCommand</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message</h3> <!-- Compatibility -->
-            <p>Inserts the message after the command part of the called command.</p> <!-- Description -->
-        </div>
-
-    </div>
-
-    <button class="collapsible">JavaScript<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$eval</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Used to mark the start of a js code block. Must be followed by a $halt statement after the code is
-                finished</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$halt</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Used to mark the end of a js code block.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$get(name)</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the value of the js variable with that name.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$set(name,value)</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Used to set a js variable. Supports boolean "true" and "false" as well as numbers and strings.</p>
-            <!-- Description -->
-        </div>
-
-    </div>
-
-    <button class="collapsible">Misc<img class="expand" src="images/expand_more.svg" alt="Expand Content"/></button>
-    <div class="content">
-
-        <div class="keyword">
-            <h2>$date</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the current date.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$hour</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the current hour.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$minute</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the current minute.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$second</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the current second.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$random{a|b|c}</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts a randomly selected string from the arguments located in the brackets {}. Strings must be
-                separated using |.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$sum{1|2|3}</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the sum of its arguments located in the brackets {}. Numbers must be
-                separated using |.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$commandCount</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the amount of commands the bot has.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$rollnum(min,max)</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts a random number between min and max inclusive.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$ping</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts the gateway ping.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$inviteURL</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Inserts URL to invite the bot to a server.</p> <!-- Description -->
-        </div>
-
-        <div class="keyword">
-            <h2>$setStatus{online|playing|games}</h2> <!-- Keyword -->
-            <h3>Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add</h3>
-            <!-- Compatibility -->
-            <p>Use to set status in commands. Values for first parameter include online, idle, dnd. Second parameter values are watching, playing, listening. The third parameter is the string of whatever. Important note is this is evaluated before $eval so you can not use $eval type keywords this.</p> <!-- Description -->
-        </div>
-
-    </div>
-
-    <footer><a href="https://ayayaQ.github.io">My page</a><a
-        href="https://ayayaq.github.io/DiscordBots-Help/">Help</a> </footer>
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        var imgs = document.getElementsByClassName("expand");
-
-        for (i = 0; i < coll.length; i++) {
-
-            let currImg = imgs[i-1];
-
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    try {
-                        currImg.src = "images/expand_more.svg";
-                    } catch(error) {
-
-                    }
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    try {
-                        currImg.src = "images/expand_less.svg";
-                    } catch(error) {
-
-                    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Keywords"
+        />
+        <meta
+            name="description"
+            content="Documentation of all the keywords in Bot Commander for Discord and how to use them"
+        />
+        <title>Bot Commander Keywords</title>
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/keyword.css" />
+        <script>
+            // Supported languages and their subdirectory
+            const supportedLangs = { jp: "jp" };
+            const userLang = (
+                navigator.language ||
+                navigator.userLanguage ||
+                ""
+            ).toLowerCase();
+            // Only redirect if not already in a language subdirectory
+            const pathParts = window.location.pathname.split("/");
+            const inLangDir = Object.values(supportedLangs).some((dir) =>
+                pathParts.includes(dir)
+            );
+            if (!inLangDir) {
+                if (userLang.startsWith("ja")) {
+                    window.location.replace("./jp/keywords.html");
                 }
-            });
-        }
-    </script>
+                // Future: add more languages here
+            }
+        </script>
+    </head>
 
-</body>
+    <body>
+        <header>
+            <h1 id="headingMargin">Keywords</h1>
+        </header>
 
+        <button class="collapsible" alt="Menu">
+            <img class="menu" src="images/menu.svg" alt="Menu image" />
+        </button>
+        <div class="content">
+            <div id="contents">
+                <a href="index.html" class="contents">Home</a>
+
+                <a href="commands.html" class="contents">Commands</a>
+
+                <a href="keywords.html" class="contents">Keywords</a>
+
+                <a href="creating.html" class="contents"
+                    >Starting out with the bot</a
+                >
+
+                <a href="tutorial.html">Tutorials</a>
+                <a href="webhooks.html">Webhooks</a>
+            </div>
+        </div>
+
+        <button class="collapsible">
+            User Info<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$name</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts a mention of the user who called the command.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$avatar</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the avatar URL of the user who called the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$defaultAvatar</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the default avatar URL of the user who called the
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$namePlain</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the plain text username of the user who called the
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$discriminator</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the discriminator (the numbers after the #) of the
+                    user who called the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$tag</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the tag (in the form Username#1234) of the user who
+                    called the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$ID</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the unique ID number of the user who called the
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$serversSharedWithBot</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the number of servers shared with the bot the user
+                    who called the command has.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$timeCreated</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the account creation time of the user who called the
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Member Info<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$memberIsOwner</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>Is the member of the event the owner of the server.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberEffectiveName</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>This is the name the member goes by within the server.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberEffectiveAvatar</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    This is the avatar that the user has displayed within this
+                    specific server.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberID</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>The unique ID of the member.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberHasTimeJoined</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Gives "true" or "false" denoting whether the user has a time
+                    they joined the server.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberTimeJoined</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>The time the member joined the server.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberHasBoosted</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Has this member boosted the server?. Returns "true" or
+                    "false".
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberTimeBoosted</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    What is the time the user boosted the server? If there is
+                    none we will get "null".
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Mentioned User Info<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$mentionedName</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts a mention of the user mentioned in the call of the
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedAvatar</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the avatar URL of the user mentioned in the call of
+                    the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedDefaultAvatar</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the default avatar URL of the user mentioned in the
+                    call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedNamePlain</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the plain text username of the user mentioned in the
+                    call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedDiscriminator</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the discriminator (the numbers after the #) of the
+                    user mentioned in the call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedTag</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the tag (in the form Username#1234) of the user
+                    mentioned in the call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedID</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the unique ID number of the user mentioned in the
+                    call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedServersSharedWithBot</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the number of servers shared with the bot the user
+                    mentioned in the call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$mentionedTimeCreated</h2>
+                <!-- Keyword -->
+                <h3>Message Receive</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the account creation time of the user mentioned in
+                    the call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Bot Info<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$botName</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts a mention of your bot.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botAvatar</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the avatar URL of your bot.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botDefaultAvatar</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the default avatar URL of your bot.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botNamePlain</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the plain text username of your bot.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botDiscriminator</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the discriminator (the numbers after the #) of your
+                    bot.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botTag</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the tag (in the form Username#1234) of your bot.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botID</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the unique ID number of your bot.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$botTimeCreated</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the account creation time of your bot.</p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Server Info<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$server</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the name of the server where the command was called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$serverCount</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the number of the servers the bot is in.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$memberCount</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the number of users in the server where the command
+                    was called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$allMemberCount</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the number of users in all server where the bot is.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$serverIcon</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the URL of the icon of the server where the command
+                    was called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$serverBanner</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the URL of the server banner of the server where the
+                    command was called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$serverDescription</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the description of the server where the command was
+                    called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$serverSplash</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the URL of the splash of the server where the
+                    command was called.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Channel Info<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$channel</h2>
+                <!-- Keyword -->
+                <h3>Message Receive, Private Message, Reaction Add</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the name of the channel where the message was sent.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$channelID</h2>
+                <!-- Keyword -->
+                <h3>Message Receive, Reaction Add</h3>
+                <!-- Compatibility -->
+                <p>Inserts the ID of the channel where the message was sent.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$channelCreateDate</h2>
+                <!-- Keyword -->
+                <h3>Message Receive, Reaction Add</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the time of creation of the channel where the
+                    message was sent.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$channelAsMention</h2>
+                <!-- Keyword -->
+                <h3>Message Receive, Reaction Add</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the mention of the channel where the message was
+                    sent.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Message<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$message</h2>
+                <!-- Keyword -->
+                <h3>Message Receive, Private Message</h3>
+                <!-- Compatibility -->
+                <p>Inserts the whole message of the called command.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$messageAfterCommand</h2>
+                <!-- Keyword -->
+                <h3>Message Receive, Private Message</h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the message after the command part of the called
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            JavaScript<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$eval</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Used to mark the start of a js code block. Must be followed
+                    by a $halt statement after the code is finished
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$halt</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Used to mark the end of a js code block.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$get(name)</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the value of the js variable with that name.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$set(name,value)</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Used to set a js variable. Supports boolean "true" and
+                    "false" as well as numbers and strings.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Misc<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2>$date</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the current date.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$hour</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the current hour.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$minute</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the current minute.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$second</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the current second.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$random{a|b|c}</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts a randomly selected string from the arguments
+                    located in the brackets {}. Strings must be separated using
+                    |.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$sum{1|2|3}</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Inserts the sum of its arguments located in the brackets {}.
+                    Numbers must be separated using |.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$commandCount</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the amount of commands the bot has.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$rollnum(min,max)</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts a random number between min and max inclusive.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$ping</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts the gateway ping.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$inviteURL</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>Inserts URL to invite the bot to a server.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2>$setStatus{online|playing|games}</h2>
+                <!-- Keyword -->
+                <h3>
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p>
+                    Use to set status in commands. Values for first parameter
+                    include online, idle, dnd. Second parameter values are
+                    watching, playing, listening. The third parameter is the
+                    string of whatever. Important note is this is evaluated
+                    before $eval so you can not use $eval type keywords this.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://ayayaQ.github.io">My page</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+        </footer>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            var imgs = document.getElementsByClassName("expand");
+
+            for (i = 0; i < coll.length; i++) {
+                let currImg = imgs[i - 1];
+
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        try {
+                            currImg.src = "images/expand_more.svg";
+                        } catch (error) {}
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        try {
+                            currImg.src = "images/expand_less.svg";
+                        } catch (error) {}
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>

@@ -1,104 +1,172 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, ホスティング">
-	<meta name="description" content="Bot Commander for Discordアプリでボットを作成・設定する方法">
-	<title>Bot Commander ボット作成</title>
-	<link rel="stylesheet" href="../styles/base.css">
-	<link rel="stylesheet" href="../styles/keyword.css">
-	<link rel="stylesheet" href="../styles/creating.css">
-</head>
-<body>
-	<header>
-		<h1 id="headingMargin">ボットの開始方法</h1>
-	</header>
-	<button class="collapsible"><img class="menu" src="../images/menu.svg" alt="メニュー画像"/></button>
-	<div class="content">
-		<div id="contents">
-			<a href="index.html" class="contents">ホーム</a>
-			<a href="commands.html" class="contents">コマンド</a>
-			<a href="keywords.html" class="contents">キーワード</a>
-			<a href="creating.html" class="contents">ボットの開始方法</a>
-			<a href="tutorial.html">チュートリアル</a>
-			<a href="webhooks.html">ウェブフック</a>
-		</div>
-	</div>
-	<button class="collapsible">ボットの作成<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
-	<div class="content">
-		<div class="card">
-			<p>1. <a href="https://discordapp.com/developers/applications/">こちら</a>にアクセスし、ログインしてください。</p>
-		</div>
-		<div class="card">
-			<p>2. ダッシュボードで「New Application」ボタンをクリックしてください。</p>
-			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182201.png" />
-		</div>
-		<div class="card">
-			<p>3. アプリケーション名は任意で設定してください。</p>
-			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182242.png" />
-		</div>
-		<div class="card">
-			<p>4. アプリダッシュボードでメニューボタンを押し、「Bot」を選択してください。</p>
-			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182456.png" />
-		</div>
-		<div class="card">
-			<p>5. 「Add Bot」を押してください。</p>
-			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182507.png" />
-		</div>
-		<div class="card">
-			<p>6. トークンをコピーし、ボットアカウントの各種設定を変更できます。</p>
-			<img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Screenshot_20191110-182542.png?raw=true" />
-		</div>
-		<div class="card">
-			<p>7. 重要：必ず「Server Members Intent」を有効にしてください。これを有効にしない場合、ボットが正常に動作しない可能性があります。</p>
-			<img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202020-07-12%20025757.png?raw=true" />
-		</div>
-	</div>
-	<button class="collapsible">ボットの招待<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
-	<div class="content">
-		<div class="card">
-			<p>ボットの招待も<a href="https://discordapp.com/developers/applications/">こちら</a>から行います。</p>
-		</div>
-		<div class="card">
-			<p>メニューから「OAuth2」ボタンをクリックしてください。</p>
-			<img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215344.png?raw=true" />
-		</div>
-		<div class="card">
-			<p>「scopes」で「bot」にチェックを入れてください。</p>
-			<img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215410.png?raw=true" />
-		</div>
-		<div class="card">
-			<p>下にスクロールし、必要なボット権限を選択してください。「Administrator」はすべての権限を含みます。</p>
-			<img src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215908.png?raw=true" />
-		</div>
-		<div class="card">
-			<p>再度「scopes」に戻り、リンクをコピーして開いてください。ボットを追加するサーバーでは「Manage Server」権限が必要です。</p>
-		</div>
-	</div>
-	<footer><a href="https://ayayaQ.github.io">マイページ</a><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a></footer>
-	<script>
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-		var imgs = document.getElementsByClassName("expand");
-		for (i = 0; i < coll.length; i++) {
-			let currImg = imgs[i-1];
-			coll[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var content = this.nextElementSibling;
-				if (content.style.maxHeight) {
-					content.style.maxHeight = null;
-					try {
-						currImg.src = "../images/expand_more.svg";
-					} catch(error) {}
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-					try {
-						currImg.src = "../images/expand_less.svg";
-					} catch(error) {}
-				}
-			});
-		}
-	</script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, ホスティング"
+        />
+        <meta
+            name="description"
+            content="Bot Commander for Discordアプリでボットを作成・設定する方法"
+        />
+        <title>Bot Commander ボット作成</title>
+        <link rel="stylesheet" href="../styles/base.css" />
+        <link rel="stylesheet" href="../styles/keyword.css" />
+        <link rel="stylesheet" href="../styles/creating.css" />
+    </head>
+    <body>
+        <header>
+            <h1 id="headingMargin">ボットの開始方法</h1>
+        </header>
+        <button class="collapsible">
+            <img class="menu" src="../images/menu.svg" alt="メニュー画像" />
+        </button>
+        <div class="content">
+            <div id="contents">
+                <a href="index.html" class="contents">ホーム</a>
+                <a href="commands.html" class="contents">コマンド</a>
+                <a href="keywords.html" class="contents">キーワード</a>
+                <a href="creating.html" class="contents">ボットの開始方法</a>
+                <a href="tutorial.html">チュートリアル</a>
+                <a href="webhooks.html">ウェブフック</a>
+            </div>
+        </div>
+        <button class="collapsible">
+            ボットの作成<img
+                class="expand"
+                src="../images/expand_more.svg"
+                alt="内容を展開"
+            />
+        </button>
+        <div class="content">
+            <div class="card">
+                <p>
+                    1.
+                    <a href="https://discordapp.com/developers/applications/"
+                        >こちら</a
+                    >にアクセスし、ログインしてください。
+                </p>
+            </div>
+            <div class="card">
+                <p>
+                    2. ダッシュボードで「New
+                    Application」ボタンをクリックしてください。
+                </p>
+                <img
+                    src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182201.png"
+                />
+            </div>
+            <div class="card">
+                <p>3. アプリケーション名は任意で設定してください。</p>
+                <img
+                    src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182242.png"
+                />
+            </div>
+            <div class="card">
+                <p>
+                    4.
+                    アプリダッシュボードでメニューボタンを押し、「Bot」を選択してください。
+                </p>
+                <img
+                    src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182456.png"
+                />
+            </div>
+            <div class="card">
+                <p>5. 「Add Bot」を押してください。</p>
+                <img
+                    src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20191110-182507.png"
+                />
+            </div>
+            <div class="card">
+                <p>
+                    6.
+                    トークンをコピーし、ボットアカウントの各種設定を変更できます。
+                </p>
+                <img
+                    src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Screenshot_20191110-182542.png?raw=true"
+                />
+            </div>
+            <div class="card">
+                <p>
+                    7. 重要：必ず「Server Members
+                    Intent」を有効にしてください。これを有効にしない場合、ボットが正常に動作しない可能性があります。
+                </p>
+                <img
+                    src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202020-07-12%20025757.png?raw=true"
+                />
+            </div>
+        </div>
+        <button class="collapsible">
+            ボットの招待<img
+                class="expand"
+                src="../images/expand_more.svg"
+                alt="内容を展開"
+            />
+        </button>
+        <div class="content">
+            <div class="card">
+                <p>
+                    ボットの招待も<a
+                        href="https://discordapp.com/developers/applications/"
+                        >こちら</a
+                    >から行います。
+                </p>
+            </div>
+            <div class="card">
+                <p>メニューから「OAuth2」ボタンをクリックしてください。</p>
+                <img
+                    src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215344.png?raw=true"
+                />
+            </div>
+            <div class="card">
+                <p>「scopes」で「bot」にチェックを入れてください。</p>
+                <img
+                    src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215410.png?raw=true"
+                />
+            </div>
+            <div class="card">
+                <p>
+                    下にスクロールし、必要なボット権限を選択してください。「Administrator」はすべての権限を含みます。
+                </p>
+                <img
+                    src="https://github.com/ayayaQ/DiscordBots-Help/blob/master/docs/Annotation%202019-11-16%20215908.png?raw=true"
+                />
+            </div>
+            <div class="card">
+                <p>
+                    再度「scopes」に戻り、リンクをコピーして開いてください。ボットを追加するサーバーでは「Manage
+                    Server」権限が必要です。
+                </p>
+            </div>
+        </div>
+        <footer>
+            <a href="https://ayayaQ.github.io">マイページ</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a>
+        </footer>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            var imgs = document.getElementsByClassName("expand");
+            for (i = 0; i < coll.length; i++) {
+                let currImg = imgs[i - 1];
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        try {
+                            currImg.src = "../images/expand_more.svg";
+                        } catch (error) {}
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        try {
+                            currImg.src = "../images/expand_less.svg";
+                        } catch (error) {}
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>

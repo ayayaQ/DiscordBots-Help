@@ -1,429 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting">
-    <meta name="description" content="The home of the help page of the Android based bot hoster for Discord">
-    <title>Bot Commander for Discord Help</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/keyword.css">
-<script>
-    // Supported languages and their subdirectory
-    const supportedLangs = { jp: 'jp' };
-    const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    // Only redirect if not already in a language subdirectory
-    const pathParts = window.location.pathname.split('/');
-    const inLangDir = Object.values(supportedLangs).some(dir => pathParts.includes(dir));
-    if (!inLangDir) {
-        if (userLang.startsWith('ja')) {
-            window.location.replace('./jp/index.html');
-        }
-        // Future: add more languages here
-    }
-</script>
-</head>
-
-<body>
-    <header>
-        <h1 id="headingMargin">Bot Commander Help</h1>
-    </header>
-
-    <button class="collapsible"><img class="menu" src="images/menu.svg" alt="Menu image" /></button>
-    <div class="content">
-        <div id="contents">
-            <a href="index.html" class="contents">Home</a>
-
-            <a href="commands.html" class="contents">Commands</a>
-
-            <a href="keywords.html" class="contents">Keywords</a>
-
-            <a href="creating.html" class="contents">Starting out with the bot</a>
-
-            <a href="tutorial.html">Tutorials</a>
-            <a href="webhooks.html">Webhooks</a>
-            <a href="privacypolicy.html">Privacy Policy</a>
-
-        </div>
-
-    </div>
-
-    <button class="collapsible">Join the Support Discord<img class="expand" src="images/expand_more.svg"
-            alt="Expand Content" /></button>
-    <div class="content">
-
-        <div class="update">
-            <p>Get help from other users!</p>
-
-            <p class="subtext">Visit the official support Discord server and get help or just chat with others who use
-                Bot Commander.</p>
-            <a href="https://discord.com/invite/mZp54sZ" class="button-dark">JOIN</a>
-        </div>
-
-
-
-    </div>
-
-    <button class="collapsible">Disabling Battery Optimizations<img class="expand" src="images/expand_more.svg"
-            alt="Expand Content" /></button>
-    <div class="content">
-        <div class="update">
-            <p>Why?</p>
-            <p class="subtext">Some different manufacturer's flavors of Android can be really strict with how they
-                manage
-                battery and lifetime of apps. This could cause your bot to be not responsive once you exit the
-                application.
-                Usually this can be solved by disabling battery optimizations, although there could be more to stop your
-                OS
-                from killing your apps. To find out if you need to do more it is a good idea to do research on Google
-                searching how to stop apps from being killed on your specific device.
-            </p>
-        </div>
-
-        <div class="update">
-            <p>How?</p>
-            <p class="subtext">Visit <a href="https://dontkillmyapp.com/">this website</a> and select your device maker.
-                From there look at the "solution for users" section on how to stop the app from being killed.</p>
-        </div>
-
-    </div>
-
-    <button class="collapsible">Importing and Exporting<img class="expand" src="images/expand_more.svg"
-            alt="Expand Content" /></button>
-    <div class="content">
-        <div class="update">
-            <p>Exporting</p>
-            <p class="subtext">You can export a command by pressing the "Export" button when you have a command selected
-                in the command list.
-                This will copy a JSON string to your clipboard that contains all the information about your command.
-            </p>
-        </div>
-
-        <div class="update">
-            <p>Importing</p>
-
-            <p class="subtext">To import a command, go to the add new command area. From here, you'll select the
-                "Import" command type and paste
-                in your JSON string from exporting.
-            </p>
-        </div>
-
-    </div>
-
-    <button class="collapsible">Enable Gateway Intents<img class="expand" src="images/expand_more.svg"
-            alt="Expand Content" /></button>
-    <div class="content">
-        <div class="update">
-            <p>Why?</p>
-            <p class="subtext">Some newer changes to the Discord API require you to enable certain intents to recieve
-                certain actions on your bot. Some actions like member join and member leave won't work without a certain
-                intent enabled on the Discord developer site.
-            </p>
-            <p class="subtext">If you don't want to bother with this you can go into the settings on Bot Commander and
-                check "Disable
-                Server Member Intent" and you will not need to enable it for your bot. The downside of doing this will
-                make it so Member Join, Leave, and Ban command won't function.</p>
-        </div>
-
-        <div class="update">
-            <p>How?</p>
-
-            <p class="subtext">Go to your bot on the Discord developer site and scroll down to Privaleged Gateway
-                Intents. Enable the Server Members Intent. This will allow your bot to be hosted on the app.</p>
-        </div>
-
-    </div>
-
-    <button class="collapsible">Russian Note<img class="expand" src="images/expand_more.svg"
-            alt="Expand Content" /></button>
-    <div class="content">
-        <div class="update">
-            <p>Credit</p>
-            <p class="subtext">
-                Thanks to PadowYT2 for taking the time to translate the contents of the app into Russian making Bot
-                Commander more accessible.
-            </p>
-            <p>Note from PadowYT2</p>
-            <p class="subtext">Если нужна помощь по приложение, пожалуйста зайдите на сервер и спросите в канале
-                #non-english-support . Буду рад помочь. -S | PadowYT2 (Server Supporter, App Supporter)</p>
-        </div>
-    </div>
-
-    <button class="collapsible">What's new?<img class="expand" src="images/expand_more.svg"
-            alt="Expand Content" /></button>
-    <div class="content">
-
-        <div class="update">
-            <p>1.12</p>
-            <ul>
-                <li>Add persistent state to allow bots to remember information between sessions.</li>
-                <li>Fixed various bugs.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.11.1</p>
-            <ul>
-                <li>Fixed various bugs.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.11.1</p>
-            <ul>
-                <li>Help site theming changed to be neutral colored.</li>
-                <li>Fixed various bugs.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.11</p>
-            <ul>
-                <li>Commands are now also updated while hosting, this means you will not have to restart the bot in
-                    order to get and test your latest changes in your bot.</li>
-                <li>Status changes are now also updated while hosting.</li>
-                <li>Furthermore, new status options have been added. You can now set the online status (Online, Idle, Do
-                    Not Disturb, Invisible) as well as some other activity statuses such as "Competing"</li>
-                <li>The import / export system has been overhauled. The old one was quite obtuse and hard to use, so it
-                    has been replaced with a simpler and easier to use system. When in the command list, you can click
-                    the export button on a command and it will copy to your clipboard. To import, you go to the add
-                    command menu and set the type to import, and paste in the command you wish to import.</li>
-                <li>Various new keywords have been added related to time and members. These include some keywords such
-                    as $hour, $memberTimeJoined, $memberHasBoosted, and more.</li>
-                <li>The UI has been updated to Material 3. In general this gives the app a new and more modern look. A
-                    new addition included with this for users with devices which support it is Dynamic Color. With
-                    Dynamic Color, the app's UI will match that of the pallete of your device.</li>
-                <li>Ads have been completely removed from the app. You will no longer see ads in the help section.</li>
-                <li>Fixed a bug where if you entered and tried to sign in with an incorrect token, the app would crash.
-                </li>
-                <li>Fixed a bug where some keywords were not showing up in the keyword searcher.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10.6</p>
-            <ul>
-                <li>Enabled the MESSAGE_CONTENT gateway intent.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10.5</p>
-            <ul>
-                <li>Updated Important Libraries.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10.4</p>
-            <ul>
-                <li>Added $setStatus keyword.</li>
-                <li>Fixed some crashes.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10.3</p>
-            <ul>
-                <li>Added a keyword searcher in the create command menu.</li>
-                <li>Improved the command search bar.</li>
-                <li>Various fixes and small changes.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10.2</p>
-            <ul>
-                <li>Removed language selection, instead left up to system.</li>
-                <li>Various fixes.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10.1</p>
-            <ul>
-                <li>Russian Language, thanks to PadowYT2.</li>
-                <li>Japanese Language</li>
-                <li>Added language selection in settings.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.10</p>
-            <ul>
-                <li>Added the ability to use webhooks.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.9.7</p>
-            <ul>
-                <li>$sum keyword.</li>
-                <li>Various fixes.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.9.6</p>
-            <ul>
-                <li>Color for embeds.</li>
-                <li>Bug fixes.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.9.5</p>
-            <ul>
-                <li>Added "require administrator privilege" for commands.</li>
-                <li>Added option to hide output in command list.</li>
-                <li>Added option to remove the need to enable server member intents at the cost of not being able to use
-                    some commands.</li>
-                <li>Performance and bug fixes</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.9</p>
-            <ul>
-                <li>Added search bar to command list.</li>
-                <li>Added ability to swipe either direction to delete a command.</li>
-                <li>Added option to hide token text.</li>
-                <li>Added Export button to export your commands in a file.</li>
-                <li>Added Import button to load commands from a file.</li>
-                <li>Fixed many bugs such as bottom navigation moving up with keyboard, some command list bugs, as well
-                    as
-                    some bot service bugs.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.8</p>
-            <ul>
-                <li>Revamped how the help section and the help website look.</li>
-                <li>Added and adjusted tabs for the help section.</li>
-                <li>Removed help and tutorial button options from the other menu.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.7</p>
-            <ul>
-                <li>Added $eval and $halt keywords to allow for the use of JavaScript.</li>
-                <li>Added $get() and $set() keywords to set and retrieve values.</li>
-                <li>Changed token field text type.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.6</p>
-
-            <ul>
-                <li>New delete actions including delete command after, delete x messages, and delete if contains.</li>
-                <li>24 new keywords have been added including $ping and $inviteURL.</li>
-                <li>Action to filter not safe for work commands.</li>
-                <li>Multi-line support for some fields.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.5</p>
-
-            <ul>
-                <li>Added require specific message ID for react add events.</li>
-                <li>Added Ignore error messages for commands.</li>
-                <li>Added $random{} keyword to select random string.</li>
-                <li>Added icon for PM receive type.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.4</p>
-
-            <ul>
-                <li>Added Require Role for commands of certain types.</li>
-                <li>Added Send in Specific Channel for commands of certain types.</li>
-                <li>Added keywords related to mentioned user info, bot info, server info, and a few more.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.3</p>
-
-            <ul>
-                <li>Added support for "Streaming..." and "Watching..." status types.</li>
-                <li>ability to send embed messages.</li>
-                <li>Added ability to react to messages.</li>
-                <li>Added help button in command creation screen.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.2</p>
-            <ul>
-                <li>Revamped the command creation screen for ease of use.</li>
-                <li>Added role assignment function.</li>
-                <li>Added links to tutorial and a discord in other menu.</li>
-            </ul>
-        </div>
-
-        <div class="update">
-            <p>1.1</p>
-            <ul>
-                <li>Moderation kick, ban, voice mute. These work in a special way see <a href="#moderation">here.</a>
-                </li>
-                <li>Wildcard keyword. * in the command field will mean
-                    anything will trigger the command.</li>
-                <li>Reaction add command type. This type is triggered by someone adding a reaction to a message. For
-                    custom
-                    emojis in the reaction add type you will use the
-                    name of the emoji (eg. your emote is named WeirdChamp, you would then put WeirdChamp), and regular
-                    emojis
-                    will
-                    just use the emoji 😊 in the command field.</li>
-                <li>Tutorial dialogs to mention some important details.</li>
-                <li>New keyword $avatar which adds the user avatar to the message.</li>
-            </ul>
-        </div>
-    </div>
-
-    <footer><a href="https://ayayaQ.github.io">My page</a><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
-    </footer>
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        var imgs = document.getElementsByClassName("expand");
-
-        for (i = 0; i < coll.length; i++) {
-
-            let currImg = imgs[i - 1];
-
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    try {
-                        currImg.src = "images/expand_more.svg";
-                    } catch (error) {
-
-                    }
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    try {
-                        currImg.src = "images/expand_less.svg";
-                    } catch (error) {
-
-                    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="keywords"
+            content="Android, Discord, Bot, Bots, Help, Documentation, Instructions, Hosting"
+        />
+        <meta
+            name="description"
+            content="The home of the help page of the Android based bot hoster for Discord"
+        />
+        <title>Bot Commander for Discord Help</title>
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="stylesheet" href="styles/keyword.css" />
+        <script>
+            // Supported languages and their subdirectory
+            const supportedLangs = { jp: "jp" };
+            const userLang = (
+                navigator.language ||
+                navigator.userLanguage ||
+                ""
+            ).toLowerCase();
+            // Only redirect if not already in a language subdirectory
+            const pathParts = window.location.pathname.split("/");
+            const inLangDir = Object.values(supportedLangs).some((dir) =>
+                pathParts.includes(dir)
+            );
+            if (!inLangDir) {
+                if (userLang.startsWith("ja")) {
+                    window.location.replace("./jp/index.html");
                 }
-            });
-        }
-    </script>
+                // Future: add more languages here
+            }
+        </script>
+    </head>
 
-</body>
+    <body>
+        <header>
+            <h1 id="headingMargin">Bot Commander Help</h1>
+        </header>
 
+        <button class="collapsible">
+            <img class="menu" src="images/menu.svg" alt="Menu image" />
+        </button>
+        <div class="content">
+            <div id="contents">
+                <a href="index.html" class="contents">Home</a>
+
+                <a href="commands.html" class="contents">Commands</a>
+
+                <a href="keywords.html" class="contents">Keywords</a>
+
+                <a href="creating.html" class="contents"
+                    >Starting out with the bot</a
+                >
+
+                <a href="tutorial.html">Tutorials</a>
+                <a href="webhooks.html">Webhooks</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Join the Support Discord<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>Get help from other users!</p>
+
+                <p class="subtext">
+                    Visit the official support Discord server and get help or
+                    just chat with others who use Bot Commander.
+                </p>
+                <a href="https://discord.com/invite/mZp54sZ" class="button-dark"
+                    >JOIN</a
+                >
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Disabling Battery Optimizations<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>Why?</p>
+                <p class="subtext">
+                    Some different manufacturer's flavors of Android can be
+                    really strict with how they manage battery and lifetime of
+                    apps. This could cause your bot to be not responsive once
+                    you exit the application. Usually this can be solved by
+                    disabling battery optimizations, although there could be
+                    more to stop your OS from killing your apps. To find out if
+                    you need to do more it is a good idea to do research on
+                    Google searching how to stop apps from being killed on your
+                    specific device.
+                </p>
+            </div>
+
+            <div class="update">
+                <p>How?</p>
+                <p class="subtext">
+                    Visit
+                    <a href="https://dontkillmyapp.com/">this website</a> and
+                    select your device maker. From there look at the "solution
+                    for users" section on how to stop the app from being killed.
+                </p>
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Importing and Exporting<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>Exporting</p>
+                <p class="subtext">
+                    You can export a command by pressing the "Export" button
+                    when you have a command selected in the command list. This
+                    will copy a JSON string to your clipboard that contains all
+                    the information about your command.
+                </p>
+            </div>
+
+            <div class="update">
+                <p>Importing</p>
+
+                <p class="subtext">
+                    To import a command, go to the add new command area. From
+                    here, you'll select the "Import" command type and paste in
+                    your JSON string from exporting.
+                </p>
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Enable Gateway Intents<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>Why?</p>
+                <p class="subtext">
+                    Some newer changes to the Discord API require you to enable
+                    certain intents to recieve certain actions on your bot. Some
+                    actions like member join and member leave won't work without
+                    a certain intent enabled on the Discord developer site.
+                </p>
+                <p class="subtext">
+                    If you don't want to bother with this you can go into the
+                    settings on Bot Commander and check "Disable Server Member
+                    Intent" and you will not need to enable it for your bot. The
+                    downside of doing this will make it so Member Join, Leave,
+                    and Ban command won't function.
+                </p>
+            </div>
+
+            <div class="update">
+                <p>How?</p>
+
+                <p class="subtext">
+                    Go to your bot on the Discord developer site and scroll down
+                    to Privaleged Gateway Intents. Enable the Server Members
+                    Intent. This will allow your bot to be hosted on the app.
+                </p>
+            </div>
+        </div>
+
+        <button class="collapsible">
+            Russian Note<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>Credit</p>
+                <p class="subtext">
+                    Thanks to PadowYT2 for taking the time to translate the
+                    contents of the app into Russian making Bot Commander more
+                    accessible.
+                </p>
+                <p>Note from PadowYT2</p>
+                <p class="subtext">
+                    Если нужна помощь по приложение, пожалуйста зайдите на
+                    сервер и спросите в канале #non-english-support . Буду рад
+                    помочь. -S | PadowYT2 (Server Supporter, App Supporter)
+                </p>
+            </div>
+        </div>
+
+        <button class="collapsible">
+            What's new?<img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="update">
+                <p>1.12</p>
+                <ul>
+                    <li>
+                        Add persistent state to allow bots to remember
+                        information between sessions.
+                    </li>
+                    <li>Fixed various bugs.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.11.1</p>
+                <ul>
+                    <li>Fixed various bugs.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.11.1</p>
+                <ul>
+                    <li>Help site theming changed to be neutral colored.</li>
+                    <li>Fixed various bugs.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.11</p>
+                <ul>
+                    <li>
+                        Commands are now also updated while hosting, this means
+                        you will not have to restart the bot in order to get and
+                        test your latest changes in your bot.
+                    </li>
+                    <li>Status changes are now also updated while hosting.</li>
+                    <li>
+                        Furthermore, new status options have been added. You can
+                        now set the online status (Online, Idle, Do Not Disturb,
+                        Invisible) as well as some other activity statuses such
+                        as "Competing"
+                    </li>
+                    <li>
+                        The import / export system has been overhauled. The old
+                        one was quite obtuse and hard to use, so it has been
+                        replaced with a simpler and easier to use system. When
+                        in the command list, you can click the export button on
+                        a command and it will copy to your clipboard. To import,
+                        you go to the add command menu and set the type to
+                        import, and paste in the command you wish to import.
+                    </li>
+                    <li>
+                        Various new keywords have been added related to time and
+                        members. These include some keywords such as $hour,
+                        $memberTimeJoined, $memberHasBoosted, and more.
+                    </li>
+                    <li>
+                        The UI has been updated to Material 3. In general this
+                        gives the app a new and more modern look. A new addition
+                        included with this for users with devices which support
+                        it is Dynamic Color. With Dynamic Color, the app's UI
+                        will match that of the pallete of your device.
+                    </li>
+                    <li>
+                        Ads have been completely removed from the app. You will
+                        no longer see ads in the help section.
+                    </li>
+                    <li>
+                        Fixed a bug where if you entered and tried to sign in
+                        with an incorrect token, the app would crash.
+                    </li>
+                    <li>
+                        Fixed a bug where some keywords were not showing up in
+                        the keyword searcher.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10.6</p>
+                <ul>
+                    <li>Enabled the MESSAGE_CONTENT gateway intent.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10.5</p>
+                <ul>
+                    <li>Updated Important Libraries.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10.4</p>
+                <ul>
+                    <li>Added $setStatus keyword.</li>
+                    <li>Fixed some crashes.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10.3</p>
+                <ul>
+                    <li>
+                        Added a keyword searcher in the create command menu.
+                    </li>
+                    <li>Improved the command search bar.</li>
+                    <li>Various fixes and small changes.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10.2</p>
+                <ul>
+                    <li>
+                        Removed language selection, instead left up to system.
+                    </li>
+                    <li>Various fixes.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10.1</p>
+                <ul>
+                    <li>Russian Language, thanks to PadowYT2.</li>
+                    <li>Japanese Language</li>
+                    <li>Added language selection in settings.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.10</p>
+                <ul>
+                    <li>Added the ability to use webhooks.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.9.7</p>
+                <ul>
+                    <li>$sum keyword.</li>
+                    <li>Various fixes.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.9.6</p>
+                <ul>
+                    <li>Color for embeds.</li>
+                    <li>Bug fixes.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.9.5</p>
+                <ul>
+                    <li>
+                        Added "require administrator privilege" for commands.
+                    </li>
+                    <li>Added option to hide output in command list.</li>
+                    <li>
+                        Added option to remove the need to enable server member
+                        intents at the cost of not being able to use some
+                        commands.
+                    </li>
+                    <li>Performance and bug fixes</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.9</p>
+                <ul>
+                    <li>Added search bar to command list.</li>
+                    <li>
+                        Added ability to swipe either direction to delete a
+                        command.
+                    </li>
+                    <li>Added option to hide token text.</li>
+                    <li>
+                        Added Export button to export your commands in a file.
+                    </li>
+                    <li>Added Import button to load commands from a file.</li>
+                    <li>
+                        Fixed many bugs such as bottom navigation moving up with
+                        keyboard, some command list bugs, as well as some bot
+                        service bugs.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.8</p>
+                <ul>
+                    <li>
+                        Revamped how the help section and the help website look.
+                    </li>
+                    <li>Added and adjusted tabs for the help section.</li>
+                    <li>
+                        Removed help and tutorial button options from the other
+                        menu.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.7</p>
+                <ul>
+                    <li>
+                        Added $eval and $halt keywords to allow for the use of
+                        JavaScript.
+                    </li>
+                    <li>
+                        Added $get() and $set() keywords to set and retrieve
+                        values.
+                    </li>
+                    <li>Changed token field text type.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.6</p>
+
+                <ul>
+                    <li>
+                        New delete actions including delete command after,
+                        delete x messages, and delete if contains.
+                    </li>
+                    <li>
+                        24 new keywords have been added including $ping and
+                        $inviteURL.
+                    </li>
+                    <li>Action to filter not safe for work commands.</li>
+                    <li>Multi-line support for some fields.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.5</p>
+
+                <ul>
+                    <li>
+                        Added require specific message ID for react add events.
+                    </li>
+                    <li>Added Ignore error messages for commands.</li>
+                    <li>Added $random{} keyword to select random string.</li>
+                    <li>Added icon for PM receive type.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.4</p>
+
+                <ul>
+                    <li>Added Require Role for commands of certain types.</li>
+                    <li>
+                        Added Send in Specific Channel for commands of certain
+                        types.
+                    </li>
+                    <li>
+                        Added keywords related to mentioned user info, bot info,
+                        server info, and a few more.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.3</p>
+
+                <ul>
+                    <li>
+                        Added support for "Streaming..." and "Watching..."
+                        status types.
+                    </li>
+                    <li>ability to send embed messages.</li>
+                    <li>Added ability to react to messages.</li>
+                    <li>Added help button in command creation screen.</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.2</p>
+                <ul>
+                    <li>
+                        Revamped the command creation screen for ease of use.
+                    </li>
+                    <li>Added role assignment function.</li>
+                    <li>
+                        Added links to tutorial and a discord in other menu.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <p>1.1</p>
+                <ul>
+                    <li>
+                        Moderation kick, ban, voice mute. These work in a
+                        special way see <a href="#moderation">here.</a>
+                    </li>
+                    <li>
+                        Wildcard keyword. * in the command field will mean
+                        anything will trigger the command.
+                    </li>
+                    <li>
+                        Reaction add command type. This type is triggered by
+                        someone adding a reaction to a message. For custom
+                        emojis in the reaction add type you will use the name of
+                        the emoji (eg. your emote is named WeirdChamp, you would
+                        then put WeirdChamp), and regular emojis will just use
+                        the emoji 😊 in the command field.
+                    </li>
+                    <li>Tutorial dialogs to mention some important details.</li>
+                    <li>
+                        New keyword $avatar which adds the user avatar to the
+                        message.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://ayayaQ.github.io">My page</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+        </footer>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            var imgs = document.getElementsByClassName("expand");
+
+            for (i = 0; i < coll.length; i++) {
+                let currImg = imgs[i - 1];
+
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        try {
+                            currImg.src = "images/expand_more.svg";
+                        } catch (error) {}
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        try {
+                            currImg.src = "images/expand_less.svg";
+                        } catch (error) {}
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
