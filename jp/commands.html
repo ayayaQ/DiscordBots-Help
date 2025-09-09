@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, コマンド">
+	<meta name="description" content="Bot Commander for Discordのコマンドの基本説明">
+	<title>Bot Commander コマンド</title>
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="../styles/keyword.css">
+</head>
+<body>
+	<header>
+		<h1 id="headingMargin">コマンド</h1>
+	</header>
+	<button class="collapsible"><img class="menu" src="../images/menu.svg" alt="メニュー画像"/></button>
+	<div class="content">
+		<div id="contents">
+			<a href="index.html" class="contents">ホーム</a>
+			<a href="commands.html" class="contents">コマンド</a>
+			<a href="keywords.html" class="contents">キーワード</a>
+			<a href="creating.html" class="contents">ボットの開始方法</a>
+			<a href="tutorial.html">チュートリアル</a>
+			<a href="webhooks.html">ウェブフック</a>
+		</div>
+	</div>
+	<button class="collapsible">コマンドタイプ<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
+	<div class="content">
+		<div class="keyword">
+			<h2>メッセージ受信</h2>
+			<p>ボットが参加しているサーバーでメッセージが受信された際にコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>プライベートメッセージ</h2>
+			<p>ボットとのダイレクトメッセージでメッセージが受信された際にコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>メンバー参加</h2>
+			<p>ボットが参加しているサーバーにメンバーが参加した際にコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>メンバー退出</h2>
+			<p>ボットが参加しているサーバーからメンバーが退出した際にコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>メンバーBAN</h2>
+			<p>ボットが参加しているサーバーでメンバーがBANされた際にコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>リアクション追加</h2>
+			<p>ボットが参加しているサーバーでメッセージにリアクションが追加された際にコマンドが発動します。コマンドフィールドには絵文字またはカスタム絵文字名を指定する必要があります。*を使用すると常に発動します。</p>
+		</div>
+	</div>
+	<button class="collapsible">コマンドと説明<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
+	<div class="content">
+		<div class="keyword">
+			<h2>コマンド</h2>
+			<p>コマンドの動作を引き起こす文字列（リアクション追加の場合は絵文字）。*を入力すると常に動作します。</p>
+		</div>
+		<div class="keyword">
+			<h2>コマンド説明</h2>
+			<p>コマンドの内容を記憶するための任意の説明を記載できます。</p>
+		</div>
+	</div>
+	<button class="collapsible">アクション<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
+	<div class="content">
+		<div class="keyword">
+			<h2>フレーズ</h2>
+			<h3>メッセージ受信、プライベートメッセージ</h3>
+			<p>コマンド文字列がメッセージ内のどこにあってもコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>ロール必須</h2>
+			<h3>メッセージ受信、リアクション追加</h3>
+			<p>指定されたロールを持つ場合のみコマンドが発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>管理者権限必須</h2>
+			<h3>メッセージ受信、リアクション追加</h3>
+			<p>コマンドを呼び出すユーザーが管理者権限を持つ場合のみ発動します。</p>
+		</div>
+		<div class="keyword">
+			<h2>チャンネルメッセージ送信</h2>
+			<h3>メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加</h3>
+			<p>コマンドが呼び出されたチャンネルにメッセージを送信します。</p>
+		</div>
+		<div class="keyword">
+			<h2>チャンネル埋め込みメッセージ送信</h2>
+			<h3>メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加</h3>
+			<p>埋め込みメッセージを作成します。画像URLやサムネイルURLは有効なものを指定してください。</p>
+		</div>
+		<div class="keyword">
+			<h2>特定チャンネルに送信</h2>
+			<h3>メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加</h3>
+			<p>チャンネルメッセージや埋め込みメッセージの送信先チャンネルを上書きします。</p>
+		</div>
+		<div class="keyword">
+			<h2>プライベートメッセージ送信</h2>
+			<h3>メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加</h3>
+			<p>コマンドを呼び出したユーザーにプライベートメッセージを送信します。</p>
+		</div>
+		<div class="keyword">
+			<h2>プライベート埋め込みメッセージ送信</h2>
+			<h3>メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加</h3>
+			<p>埋め込みメッセージを作成します。画像URLやサムネイルURLは有効なものを指定してください。</p>
+		</div>
+		<div class="keyword">
+			<h2>受信メッセージにリアクション</h2>
+			<h3>メッセージ受信、プライベートメッセージ</h3>
+			<p>コマンドを発動したメッセージにリアクションを付けます。カスタム絵文字の場合は名前のみ指定してください。</p>
+		</div>
+		<div class="keyword">
+			<h2>エラーメッセージを無視</h2>
+			<h3>メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加</h3>
+			<p>致命的でないエラーメッセージを無視します。</p>
+		</div>
+		<div class="keyword">
+			<h2>特定メッセージID必須</h2>
+			<h3>リアクション追加</h3>
+			<p>リアクション追加タイプのコマンドは特定のメッセージIDが必要です。</p>
+		</div>
+		<div class="keyword">
+			<h2>含む場合削除</h2>
+			<h3>メッセージ受信</h3>
+			<p>特定の文字列を含む場合、メッセージを削除します。複数の文字列は|で区切ってください。</p>
+		</div>
+		<div class="keyword">
+			<h2>コマンドメッセージ削除</h2>
+			<h3>メッセージ受信</h3>
+			<p>コマンドを呼び出したメッセージを削除します。</p>
+		</div>
+		<div class="keyword">
+			<h2>X件メッセージ削除</h2>
+			<h3>メッセージ受信</h3>
+			<p>指定した件数分のメッセージを削除します。</p>
+		</div>
+		<div class="keyword">
+			<h2>NSFWのみ</h2>
+			<h3>メッセージ受信、リアクション追加</h3>
+			<p>NSFWチャンネルでのみコマンドを呼び出せます。</p>
+		</div>
+		<div class="keyword">
+			<h2>キック</h2>
+			<h3>メッセージ受信</h3>
+			<p>ユーザーをキックします。キック権限が必要です。使用例：「kick @user」</p>
+		</div>
+		<div class="keyword">
+			<h2>BAN</h2>
+			<h3>メッセージ受信</h3>
+			<p>ユーザーをBANします。BAN権限が必要です。使用例：「ban @user」</p>
+		</div>
+		<div class="keyword">
+			<h2>ボイスミュート</h2>
+			<h3>メッセージ受信</h3>
+			<p>初回呼び出し時はボイスミュート、再度呼び出すとミュート解除します。ミュート権限が必要です。使用例：「mute @user」</p>
+		</div>
+		<div class="keyword">
+			<h2>ロール付与/削除</h2>
+			<h3>メッセージ受信、メンバー参加、リアクション追加</h3>
+			<p>ロールを付与します。既にロールがある場合は削除します。</p>
+		</div>
+	</div>
+	<button class="collapsible">commands.json<img class="expand" src="../images/expand_more.svg" alt="内容を展開"/></button>
+	<div class="content">
+		<div class="keyword">
+			<h2>commands.jsonとは</h2>
+			<p>コマンドをエクスポートした際に出力されるファイルです。他の方と共有したり、独自のボット作成の基礎として利用できます。各値の意味と用途を説明します。</p>
+		</div>
+		<div class="keyword">
+			<h2>actionArr[bool, bool]</h2>
+			<p>配列です。最初のインデックスはチャンネルメッセージ送信、2番目はプライベートメッセージ送信を示します。</p>
+		</div>
+		<div class="keyword">
+			<h2>channelMessage</h2>
+			<p>送信されるチャンネルメッセージです。</p>
+		</div>
+		<div class="keyword">
+			<h2>command</h2>
+			<p>コマンド発動に必要なメッセージ内容。リアクション追加タイプの場合は絵文字またはカスタム絵文字名です。</p>
+		</div>
+		<div class="keyword">
+			<h2>commandDescription</h2>
+			<p>コマンドの説明です。</p>
+		</div>
+		<div class="keyword">
+			<h2>deleteAfter</h2>
+			<p>コマンド発動後にメッセージを削除するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>deleteIf</h2>
+			<p>特定の文字列を含む場合に削除するかどうかの真偽値です。</p>
+		</div>
+		<div class="keyword">
+			<h2>commandIfStrings</h2>
+			<p>deleteIfがtrueの場合に削除対象となる文字列です。</p>
+		</div>
+		<div class="keyword">
+			<h2>commandNum</h2>
+			<p>deleteXがtrueの場合に削除するメッセージ数です。</p>
+		</div>
+		<div class="keyword">
+			<h2>deleteX</h2>
+			<p>一括削除コマンドかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>ignoreErrorMessage</h2>
+			<p>エラーメッセージを無視するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isBan</h2>
+			<p>ユーザーをBANするかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isKick</h2>
+			<p>ユーザーをキックするかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isNSFW</h2>
+			<p>NSFWチャンネルのみで送信するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isReact</h2>
+			<p>受信メッセージにリアクションするかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isRequiredRole</h2>
+			<p>ロール必須かどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isRoleAssigner</h2>
+			<p>ロールを付与するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isSpecificChannel</h2>
+			<p>特定チャンネルにメッセージや埋め込みを送信するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isSpecificMessage</h2>
+			<p>リアクション追加タイプの場合、特定メッセージIDのみで動作するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>isVoiceMute</h2>
+			<p>ボイスミュートするかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>phrase</h2>
+			<p>受信メッセージにコマンド以外の内容が含まれている場合も発動するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>privateMessage</h2>
+			<p>送信されるプライベートメッセージの内容です。</p>
+		</div>
+		<div class="keyword">
+			<h2>reaction</h2>
+			<p>isReactがtrueの場合に使用される絵文字です。</p>
+		</div>
+		<div class="keyword">
+			<h2>requiredRole</h2>
+			<p>isRoleRequiredがtrueの場合に必要なロールです。</p>
+		</div>
+		<div class="keyword">
+			<h2>roleToAssign</h2>
+			<p>isRoleAssignerがtrueの場合に付与されるロールです。</p>
+		</div>
+		<div class="keyword">
+			<h2>sendChannelEmbed</h2>
+			<p>チャンネル埋め込みメッセージを送信するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>sendPrivateEmbed</h2>
+			<p>プライベート埋め込みメッセージを送信するかどうか。</p>
+		</div>
+		<div class="keyword">
+			<h2>specificChannel</h2>
+			<p>メッセージ送信先の特定チャンネル名です。</p>
+		</div>
+		<div class="keyword">
+			<h2>specificMessage</h2>
+			<p>リアクション対象となる特定メッセージIDです。</p>
+		</div>
+		<div class="keyword">
+			<h2>type</h2>
+			<p>コマンドタイプ。<br>TYPE_MESSAGE_RECEIVED = 0<br> TYPE_PM_RECEIVED = 1<br> TYPE_MEMBER_JOIN = 2<br> TYPE_MEMBER_LEAVE = 3<br> TYPE_MEMBER_BAN = 4<br> TYPE_REACTION_ADD = 5</p>
+		</div>
+		<div class="keyword">
+			<h2>channelEmbed</h2>
+			<p>送信されるチャンネル埋め込みメッセージ（タイトル、説明、フッター、画像、サムネイルを含む）。</p>
+		</div>
+		<div class="keyword">
+			<h2>privateEmbed</h2>
+			<p>送信されるプライベート埋め込みメッセージ（タイトル、説明、フッター、画像、サムネイルを含む）。</p>
+		</div>
+	</div>
+	<footer><a href="https://ayayaQ.github.io">マイページ</a><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a></footer>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		var imgs = document.getElementsByClassName("expand");
+		for (i = 0; i < coll.length; i++) {
+			let currImg = imgs[i - 1];
+			coll[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+					try {
+						currImg.src = "../images/expand_more.svg";
+					} catch (error) {}
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+					try {
+						currImg.src = "../images/expand_less.svg";
+					} catch (error) {}
+				}
+			});
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, ホスティング">
+	<meta name="description" content="Android向けDiscordボットホスティングのヘルプページ">
+	<title>Bot Commander for Discord ヘルプ</title>
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="../styles/index.css">
+	<link rel="stylesheet" href="../styles/keyword.css">
+</head>
+<body>
+	<header>
+		<h1 id="headingMargin">Bot Commander ヘルプ</h1>
+	</header>
+	<button class="collapsible"><img class="menu" src="../images/menu.svg" alt="メニュー画像" /></button>
+	<div class="content">
+		<div id="contents">
+			<a href="index.html" class="contents">ホーム</a>
+			<a href="commands.html" class="contents">コマンド</a>
+			<a href="keywords.html" class="contents">キーワード</a>
+			<a href="creating.html" class="contents">ボットの開始方法</a>
+			<a href="tutorial.html">チュートリアル</a>
+			<a href="webhooks.html">ウェブフック</a>
+			<a href="../privacypolicy.html">プライバシーポリシー</a>
+		</div>
+	</div>
+	<button class="collapsible">サポートDiscordに参加<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="update">
+			<p>他のユーザーからサポートを受けましょう！</p>
+			<p class="subtext">公式サポートDiscordサーバーで質問したり、Bot Commander利用者同士で交流できます。</p>
+			<a href="https://discord.com/invite/mZp54sZ" class="button-dark">参加</a>
+		</div>
+	</div>
+	<button class="collapsible">バッテリー最適化の無効化<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="update">
+			<p>なぜ必要か</p>
+			<p class="subtext">一部のAndroid端末では、アプリのバッテリー管理が厳しく、アプリ終了後にボットが反応しなくなる場合があります。バッテリー最適化を無効化することで解決できる場合があります。端末ごとの詳細はGoogleで調べてください。</p>
+		</div>
+		<div class="update">
+			<p>方法</p>
+			<p class="subtext"><a href="https://dontkillmyapp.com/">こちらのサイト</a>で端末メーカーを選択し、「solution for users」セクションを参照してください。</p>
+		</div>
+	</div>
+	<button class="collapsible">インポート・エクスポート<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="update">
+			<p>エクスポート</p>
+			<p class="subtext">コマンドリストで「エクスポート」ボタンを押すと、コマンド情報を含むJSON文字列がクリップボードにコピーされます。</p>
+		</div>
+		<div class="update">
+			<p>インポート</p>
+			<p class="subtext">新規コマンド追加画面で「インポート」タイプを選択し、エクスポートしたJSON文字列を貼り付けてください。</p>
+		</div>
+	</div>
+	<button class="collapsible">Gateway Intentsの有効化<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="update">
+			<p>なぜ必要か</p>
+			<p class="subtext">Discord APIの仕様変更により、特定のIntentを有効化しないと一部のアクション（メンバー参加・退出等）が動作しません。Bot Commanderの設定で「Server Member Intentを無効化」も可能ですが、その場合一部コマンドが利用できなくなります。</p>
+		</div>
+		<div class="update">
+			<p>方法</p>
+			<p class="subtext">Discord開発者サイトでボットの「Privaleged Gateway Intents」から「Server Members Intent」を有効化してください。</p>
+		</div>
+	</div>
+	<button class="collapsible">ロシア語について<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="update">
+			<p>謝辞</p>
+			<p class="subtext">PadowYT2様によるロシア語翻訳に感謝します。Bot Commanderがより多くの方に利用いただけるようになりました。</p>
+			<p>メッセージ</p>
+			<p class="subtext">Если нужна помощь по приложение, пожалуйста зайдите на сервер и спросите в канале #non-english-support . Буду рад помочь. -S | PadowYT2 (Server Supporter, App Supporter)</p>
+		</div>
+	</div>
+	<button class="collapsible">新着情報<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="update">
+			<p>1.12</p>
+			<ul>
+				<li>ボットの永続状態保存機能追加</li>
+				<li>各種バグ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.11.1</p>
+			<ul>
+				<li>各種バグ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.11.1</p>
+			<ul>
+				<li>ヘルプサイトのテーマをニュートラルカラーに変更</li>
+				<li>各種バグ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.11</p>
+			<ul>
+				<li>ホスティング中のコマンド・ステータス更新機能追加</li>
+				<li>新しいステータスオプション追加（オンライン、アイドル、取り込み中、不可視等）</li>
+				<li>インポート/エクスポート機能の刷新</li>
+				<li>時間・メンバー関連の新キーワード追加</li>
+				<li>UIをMaterial 3に更新。Dynamic Color対応端末ではUIが端末パレットに合わせて変化</li>
+				<li>ヘルプセクションの広告完全廃止</li>
+				<li>トークン入力ミス時のクラッシュ修正</li>
+				<li>キーワード検索機能の不具合修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10.6</p>
+			<ul>
+				<li>MESSAGE_CONTENT gateway intent有効化</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10.5</p>
+			<ul>
+				<li>重要ライブラリの更新</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10.4</p>
+			<ul>
+				<li>$setStatusキーワード追加</li>
+				<li>クラッシュ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10.3</p>
+			<ul>
+				<li>コマンド作成画面にキーワード検索機能追加</li>
+				<li>コマンド検索バー改善</li>
+				<li>各種修正・微調整</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10.2</p>
+			<ul>
+				<li>言語選択機能廃止（システム依存に変更）</li>
+				<li>各種修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10.1</p>
+			<ul>
+				<li>ロシア語対応（PadowYT2様）</li>
+				<li>日本語対応</li>
+				<li>設定に言語選択追加</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.10</p>
+			<ul>
+				<li>ウェブフック機能追加</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.9.7</p>
+			<ul>
+				<li>$sumキーワード追加</li>
+				<li>各種修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.9.6</p>
+			<ul>
+				<li>埋め込みの色指定機能追加</li>
+				<li>バグ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.9.5</p>
+			<ul>
+				<li>管理者権限必須コマンド追加</li>
+				<li>コマンドリストの出力非表示オプション追加</li>
+				<li>Server Member Intents無効化オプション追加（利用不可コマンドあり）</li>
+				<li>パフォーマンス・バグ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.9</p>
+			<ul>
+				<li>コマンドリストに検索バー追加</li>
+				<li>左右スワイプでコマンド削除機能追加</li>
+				<li>トークン非表示オプション追加</li>
+				<li>コマンドのエクスポート・インポート機能追加</li>
+				<li>各種バグ修正</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.8</p>
+			<ul>
+				<li>ヘルプセクション・サイトのデザイン刷新</li>
+				<li>タブ追加・調整</li>
+				<li>他メニューからヘルプ・チュートリアルボタン削除</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.7</p>
+			<ul>
+				<li>$eval, $haltキーワード追加（JavaScript利用可能）</li>
+				<li>$get(), $set()キーワード追加</li>
+				<li>トークンフィールドのテキストタイプ変更</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.6</p>
+			<ul>
+				<li>新しい削除アクション追加（コマンド後削除、X件削除、含む場合削除）</li>
+				<li>新キーワード24種追加（$ping, $inviteURL等）</li>
+				<li>NSFWコマンドフィルタ機能追加</li>
+				<li>一部フィールドの複数行対応</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.5</p>
+			<ul>
+				<li>リアクション追加イベント用特定メッセージID必須機能追加</li>
+				<li>コマンドのエラーメッセージ無視機能追加</li>
+				<li>$random{}キーワード追加</li>
+				<li>PM受信タイプ用アイコン追加</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.4</p>
+			<ul>
+				<li>特定タイプ用ロール必須機能追加</li>
+				<li>特定チャンネル送信機能追加</li>
+				<li>メンションユーザー情報、ボット情報、サーバー情報等の新キーワード追加</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.3</p>
+			<ul>
+				<li>「Streaming...」「Watching...」ステータスタイプ対応</li>
+				<li>埋め込みメッセージ送信機能追加</li>
+				<li>メッセージへのリアクション機能追加</li>
+				<li>コマンド作成画面にヘルプボタン追加</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.2</p>
+			<ul>
+				<li>コマンド作成画面刷新</li>
+				<li>ロール付与機能追加</li>
+				<li>チュートリアル・Discordリンク追加</li>
+			</ul>
+		</div>
+		<div class="update">
+			<p>1.1</p>
+			<ul>
+				<li>キック・BAN・ボイスミュート機能追加（詳細は<a href="#moderation">こちら</a>）</li>
+				<li>ワイルドカードキーワード（*で全てのコマンド発動）</li>
+				<li>リアクション追加コマンドタイプ追加（カスタム絵文字は名前のみ、通常絵文字は絵文字自体を指定）</li>
+				<li>重要事項を説明するチュートリアルダイアログ追加</li>
+				<li>$avatarキーワード追加（ユーザーのアバターをメッセージに追加）</li>
+			</ul>
+		</div>
+	</div>
+	<footer><a href="https://ayayaQ.github.io">マイページ</a><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a></footer>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		var imgs = document.getElementsByClassName("expand");
+		for (i = 0; i < coll.length; i++) {
+			let currImg = imgs[i - 1];
+			coll[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+					try {
+						currImg.src = "../images/expand_more.svg";
+					} catch (error) {}
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+					try {
+						currImg.src = "../images/expand_less.svg";
+					} catch (error) {}
+				}
+			});
+		}
+	</script>
+</body>
+</html>

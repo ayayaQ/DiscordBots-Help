@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/keyword.css">
+<script>
+    // Supported languages and their subdirectory
+    const supportedLangs = { jp: 'jp' };
+    const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    // Only redirect if not already in a language subdirectory
+    const pathParts = window.location.pathname.split('/');
+    const inLangDir = Object.values(supportedLangs).some(dir => pathParts.includes(dir));
+    if (!inLangDir) {
+        if (userLang.startsWith('ja')) {
+            window.location.replace('./jp/index.html');
+        }
+        // Future: add more languages here
+    }
+</script>
 </head>
 
 <body>

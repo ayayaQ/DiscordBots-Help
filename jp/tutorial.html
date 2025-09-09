@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="Android, Discord, Bot, Bots, ヘルプ, ドキュメント, 説明, ホスティング, チュートリアル">
+	<meta name="description" content="Bot Commander for Discordの機能やコマンド作成方法のチュートリアル">
+	<title>Bot Commander チュートリアル</title>
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="../styles/keyword.css">
+</head>
+<body>
+	<header>
+		<h1 id="headingMargin">チュートリアル</h1>
+	</header>
+	<button class="collapsible"><img class="menu" src="../images/menu.svg" alt="メニュー画像" /></button>
+	<div class="content">
+		<div id="contents">
+			<a href="index.html" class="contents">ホーム</a>
+			<a href="commands.html" class="contents">コマンド</a>
+			<a href="keywords.html" class="contents">キーワード</a>
+			<a href="creating.html" class="contents">ボットの開始方法</a>
+			<a href="tutorial.html">チュートリアル</a>
+			<a href="webhooks.html">ウェブフック</a>
+		</div>
+	</div>
+	<button class="collapsible">状態の永続化<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<h2>基本</h2>
+			<p>ボットのセッション間で保存したい情報がある場合、"botState"という変数を利用できます。使い方は非常に簡単です。</p>
+			<ol>
+				<li>コマンド作成画面でJavaScriptを使用するコマンドを作成してください。方法が分からない場合は「メッセージでJavaScriptを使う」チュートリアルを参照してください。</li>
+				<li>情報を保存したい場合は<b>botState</b>変数にプロパティを設定します。例：<b>botState.x = '保存した文字列'</b></li>
+				<li>保存した情報をメッセージに挿入するには、<b>$get(botState.x)</b>を使用します。これで「保存した文字列」が表示されます。</li>
+				<li>これだけでOKです。アプリはホスティング終了時やアプリ終了時にbotStateを自動保存します。</li>
+			</ol>
+		</div>
+	</div>
+	<button class="collapsible">サイコロコマンド<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>このコマンドはD&Dなどで使えるサイコロの出目をシミュレートします。</p>
+			<ol>
+				<li>コマンド作成画面でタイプを「メッセージ受信」に設定します。</li>
+				<li>コマンド名は「!dice」とします。</li>
+				<li>チャンネルメッセージ欄に「You rolled a $rollnum(1,6)」と入力します。</li>
+				<li>コマンドを保存し、ボットをホストしてテストしてください。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://i.imgur.com/aOxLG9Y.png" alt="コマンド画像">
+		</div>
+		<div class="keyword">
+			<h2>出力例</h2>
+			<img src="https://i.imgur.com/blSofXq.png" alt="出力画像">
+		</div>
+	</div>
+	<button class="collapsible">キックコマンド<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>このコマンドはキック権限を持つユーザーが他ユーザーをキックできます。</p>
+			<ol>
+				<li>コマンド作成画面でタイプを「メッセージ受信」に設定します。</li>
+				<li>コマンド名は「!kick」とします。</li>
+				<li>モデレーション欄で「kick」にチェックを入れます。</li>
+				<li>コマンドを保存し、ボットをホストしてテストしてください。使用例：「!kick @user」</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://i.imgur.com/EfIxIER.png" alt="コマンド画像">
+		</div>
+		<div class="keyword">
+			<h2>使用例</h2>
+			<img src="https://i.imgur.com/ffgq191.png" alt="使用例画像">
+		</div>
+	</div>
+	<button class="collapsible">フレーズコマンド<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>このコマンドはフレーズチェックボックスの使い方を示します。</p>
+			<ol>
+				<li>コマンド作成画面でタイプを「メッセージ受信」に設定します。</li>
+				<li>コマンド名は「dog」とします。</li>
+				<li>チャンネルメッセージ欄に「I like dogs!」と入力します。</li>
+				<li>コマンドを保存し、ボットをホストしてテストしてください。誰かが「dog」と言うと反応します。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://i.imgur.com/XNABgoS.png" alt="コマンド画像">
+		</div>
+		<div class="keyword">
+			<h2>出力例</h2>
+			<img src="https://i.imgur.com/jxjP6YK.png" alt="出力画像">
+		</div>
+	</div>
+	<button class="collapsible">キーワード利用コマンド<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>このコマンドは複数キーワードの使い方を示します。</p>
+			<ol>
+				<li>コマンド作成画面でタイプを「メッセージ受信」に設定します。</li>
+				<li>コマンド名は「!date」とします。</li>
+				<li>チャンネルメッセージ欄に「Hello $name it is $date」と入力します。</li>
+				<li>コマンドを保存し、ボットをホストしてテストしてください。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://i.imgur.com/Rq6Gkix.png" alt="コマンド画像">
+		</div>
+		<div class="keyword">
+			<h2>出力例</h2>
+			<img src="https://i.imgur.com/5OPeDoG.png" alt="出力画像">
+		</div>
+	</div>
+	<button class="collapsible">ユーザー参加時ロール付与<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>このコマンドはユーザーがサーバーに参加した際にロールを付与します。</p>
+			<ol>
+				<li>コマンド作成画面でタイプを「メンバー参加」に設定します。</li>
+				<li>「Assign/Remove Role」にチェックを入れます。初回はロール付与、再度はロール削除となります。「メンバー参加」タイプでは一度のみ発動します。</li>
+				<li>「Role Name」欄にロール名を入力します（例：New user）。大文字小文字は区別されます。</li>
+				<li>誰かがサーバーに参加した際にコマンドをテストしてください。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://i.imgur.com/1eLmKBL.png" alt="コマンド画像">
+		</div>
+	</div>
+	<button class="collapsible">埋め込みメッセージ作成<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>埋め込みメッセージは特別なタイプのメッセージです。作成方法を説明します。</p>
+			<ol>
+				<li>コマンド作成画面でタイプを「メッセージ受信」、コマンド名を「!embed」に設定します。</li>
+				<li>「Send Channel Message Embed」にチェックを入れます。</li>
+				<li>5つのフィールドが表示されます。最低1つ入力すればOKです。</li>
+				<li>タイトル欄に「My Embed」と入力します。</li>
+				<li>説明欄に「$name is who called this command」と入力します。</li>
+				<li>フッター欄に「$date」と入力します（タイムスタンプとして利用可能）。</li>
+				<li>画像URL欄に「https://i.redd.it/9hs5qf7qulz41.png」と入力します。任意の画像リンクを指定可能です。</li>
+				<li>サムネイル欄に「$avatar」と入力します。コマンド呼び出し者のアバターURLが入ります。任意の画像リンクも指定可能です。</li>
+				<li>コマンドを保存し、テストしてください。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://i.imgur.com/4gOVtAy.png" alt="コマンド画像">
+		</div>
+		<div class="keyword">
+			<h2>出力例</h2>
+			<img src="https://i.imgur.com/eAOFrVR.png" alt="出力画像">
+		</div>
+	</div>
+	<button class="collapsible">リアクションロール<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>このコマンドは特定メッセージにリアクションしてロールを付与・削除します。</p>
+			<ol>
+				<li>タイプを「リアクション追加」でコマンドを作成します。</li>
+				<li>コマンド欄にロール付与用の絵文字を入力します（例：😊）。カスタム絵文字は名前のみ指定してください。</li>
+				<li>「Require specific message ID」にチェックを入れ、対象メッセージIDを入力します。</li>
+				<li>「Assign/Remove Role」にチェックを入れ、付与するロール名を入力します（例：Tester）。</li>
+				<li>コマンドをテストし、他のロールも同様に設定できます。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20200720-175002_2.jpg" alt="コマンド画像">
+		</div>
+	</div>
+	<button class="collapsible">メッセージでJavaScriptを使う<img class="expand" src="../images/expand_more.svg" alt="内容を展開" /></button>
+	<div class="content">
+		<div class="keyword">
+			<p>JavaScriptを使うには$evalや$haltなどのキーワードを利用します。</p>
+			<ol>
+				<li>任意の名前でコマンドを作成します（例：「Hello world」）。</li>
+				<li>チャンネル送信にチェックを入れます。</li>
+				<li>$evalキーワードと$haltキーワードを挿入します。</li>
+				<li>間にコードを記述します（例：「var hello = "Hello world";」）。</li>
+				<li>$haltの後または$evalの前に残りのメッセージを記述します（例：「Our output is $get(hello)」）。</li>
+				<li>ボットを実行し、コマンドをテストしてください。</li>
+			</ol>
+		</div>
+		<div class="keyword">
+			<h2>コマンド例</h2>
+			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20200720-174830.jpg" alt="コマンド画像">
+		</div>
+		<div class="keyword">
+			<h2>出力例</h2>
+			<img src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Annotation%202020-07-20%20175303.png" alt="出力画像">
+		</div>
+	</div>
+	<footer><a href="https://ayayaQ.github.io">マイページ</a><a href="https://ayayaq.github.io/DiscordBots-Help/">ヘルプ</a></footer>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		var imgs = document.getElementsByClassName("expand");
+		for (i = 0; i < coll.length; i++) {
+			let currImg = imgs[i - 1];
+			coll[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+					try {
+						currImg.src = "../images/expand_more.svg";
+					} catch (error) {}
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+					try {
+						currImg.src = "../images/expand_less.svg";
+					} catch (error) {}
+				}
+			});
+		}
+	</script>
+</body>
+</html>
