@@ -14,56 +14,102 @@
         />
         <title>Bot Commander for Discord Tutorials</title>
         <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/keyword.css" />
-        <script>
-            // Supported languages and their subdirectory
-            const supportedLangs = { jp: "jp" };
-            const userLang = (
-                navigator.language ||
-                navigator.userLanguage ||
-                ""
-            ).toLowerCase();
-            // Only redirect if not already in a language subdirectory
-            const pathParts = window.location.pathname.split("/");
-            const inLangDir = Object.values(supportedLangs).some((dir) =>
-                pathParts.includes(dir)
-            );
-            if (!inLangDir) {
-                if (userLang.startsWith("ja")) {
-                    window.location.replace("./jp/tutorial.html");
-                }
-                // Future: add more languages here
-            }
-        </script>
+        <link rel="stylesheet" href="styles/components.css" />
     </head>
 
     <body>
+        <!-- Navigation Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- Navigation Drawer -->
+        <nav class="nav-drawer" id="navDrawer" aria-label="Main navigation">
+            <div class="nav-drawer-header">
+                <span class="nav-drawer-title">Navigation</span>
+                <button class="nav-drawer-close" id="navClose" aria-label="Close navigation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-drawer-content">
+                <div class="nav-drawer-items">
+                    <a href="index.html" class="nav-drawer-item" data-i18n="common.home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="commands.html" class="nav-drawer-item" data-i18n="common.commands">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span>Commands</span>
+                    </a>
+                    <a href="keywords.html" class="nav-drawer-item" data-i18n="common.keywords">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                        </svg>
+                        <span>Keywords</span>
+                    </a>
+                    <a href="creating.html" class="nav-drawer-item" data-i18n="common.startingOut">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        <span>Getting Started</span>
+                    </a>
+                    <a href="tutorial.html" class="nav-drawer-item active" data-i18n="common.tutorials">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>Tutorials</span>
+                    </a>
+                    <a href="webhooks.html" class="nav-drawer-item" data-i18n="common.webhooks">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <span>Webhooks</span>
+                    </a>
+                    <a href="privacypolicy.html" class="nav-drawer-item" data-i18n="common.privacyPolicy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>Privacy Policy</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-drawer-footer">
+                <button class="nav-drawer-lang lang-toggle" aria-label="Switch language">
+                    <span>Language</span>
+                    <span class="nav-drawer-lang-badge">EN</span>
+                </button>
+            </div>
+        </nav>
+
         <header>
-            <h1 id="headingMargin">Tutorials</h1>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 id="headingMargin" data-i18n="tutorial.title">Tutorials</h1>
+            <button class="lang-toggle" aria-label="Switch language">EN</button>
         </header>
 
-        <button class="collapsible">
-            <img class="menu" src="images/menu.svg" alt="Menu image" />
-        </button>
-        <div class="content">
-            <div id="contents">
-                <a href="index.html" class="contents">Home</a>
-
-                <a href="commands.html" class="contents">Commands</a>
-
-                <a href="keywords.html" class="contents">Keywords</a>
-
-                <a href="creating.html" class="contents"
-                    >Starting out with the bot</a
-                >
-
-                <a href="tutorial.html">Tutorials</a>
-                <a href="webhooks.html">Webhooks</a>
-            </div>
-        </div>
-
-        <button class="collapsible">
-            Persisting State<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.persistState.title">Persisting State</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -71,8 +117,8 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>The Basics</h2>
-                <p>
+                <h2 data-i18n="tutorial.persistState.heading">The Basics</h2>
+                <p data-i18n="tutorial.persistState.intro">
                     If you have information you want to save between bot
                     sessions that is calculated at runtime, there is a solution
                     that can be used. It is something I call decided to call
@@ -80,14 +126,14 @@
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.persistState.step1">
                         Go to the create command screen and create a command
                         that will use JS. If you don't know how to do this yet,
                         see the tutorial on
                         <b>"Using Javascript in messages"</b>.
                     </li>
 
-                    <li>
+                    <li data-i18n="tutorial.persistState.step2">
                         If we want to store some information we set that on a
                         variable named <b>"botState"</b>. This variable is
                         already defined when you start hosting your bot. To
@@ -96,14 +142,14 @@
                         <b>"botState.x = 'my saved string'"</b>.
                     </li>
 
-                    <li>
+                    <li data-i18n="tutorial.persistState.step3">
                         To read some information and insert it in a message, you
                         can just do <b>$get(botState.x)</b> as an example based
                         on our previous saving example. This will print
                         <b>"my saved string"</b> in your response.
                     </li>
 
-                    <li>
+                    <li data-i18n="tutorial.persistState.step4">
                         This is all you have to worry about. From here, the app
                         should handle saving the <b>"botState"</b> on
                         application close or cancelling of hosting.
@@ -112,8 +158,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Dice Command<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.dice.title">Dice Command</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -121,32 +167,32 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.dice.intro">
                     This command will simulate a dice roll which could be used
                     for something like D&D.
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.dice.step1">
                         Go to the create command screen and set the type to
                         "Message Receive"
                     </li>
 
-                    <li>We will name the command "!dice"</li>
+                    <li data-i18n="tutorial.dice.step2">We will name the command "!dice"</li>
 
-                    <li>
+                    <li data-i18n="tutorial.dice.step3">
                         In the channel message field we will put "You rolled a
                         $rollnum(1,6)"
                     </li>
 
-                    <li>
+                    <li data-i18n="tutorial.dice.step4">
                         Save the command, host your bot and test out the command
                     </li>
                 </ol>
             </div>
 
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.dice.commandHeading">Command</h2>
 
                 <img
                     src="https://i.imgur.com/aOxLG9Y.png"
@@ -155,7 +201,7 @@
             </div>
 
             <div class="keyword">
-                <h2>Output Example</h2>
+                <h2 data-i18n="tutorial.dice.outputHeading">Output Example</h2>
 
                 <img
                     src="https://i.imgur.com/blSofXq.png"
@@ -164,8 +210,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Kick Command<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.kick.title">Kick Command</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -173,22 +219,22 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.kick.intro">
                     This command will let someone with kick user privalege kick
                     users with the bot.
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.kick.step1">
                         Go to the create command screen and set the type to
                         "Message Receive"
                     </li>
 
-                    <li>We will name the command "!kick"</li>
+                    <li data-i18n="tutorial.kick.step2">We will name the command "!kick"</li>
 
-                    <li>In moderation section check the "kick" checkbox</li>
+                    <li data-i18n="tutorial.kick.step3">In moderation section check the "kick" checkbox</li>
 
-                    <li>
+                    <li data-i18n="tutorial.kick.step4">
                         Save the command, host your bot and test out the
                         command. Usage for command that use moderation is your
                         command name and a mention of the user receiving that
@@ -197,7 +243,7 @@
                 </ol>
             </div>
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.kick.commandHeading">Command</h2>
 
                 <img
                     src="https://i.imgur.com/EfIxIER.png"
@@ -205,7 +251,7 @@
                 />
             </div>
             <div class="keyword">
-                <h2>Usage Example</h2>
+                <h2 data-i18n="tutorial.kick.usageHeading">Usage Example</h2>
 
                 <img
                     src="https://i.imgur.com/ffgq191.png"
@@ -214,8 +260,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Phrase Command<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.phrase.title">Phrase Command</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -223,24 +269,24 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.phrase.intro">
                     This command will show how to make use of the phrase
                     checkbox.
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.phrase.step1">
                         Go to the create command screenand set the type to
                         "Message Receive"
                     </li>
 
-                    <li>We will name the command "dog"</li>
+                    <li data-i18n="tutorial.phrase.step2">We will name the command "dog"</li>
 
-                    <li>
+                    <li data-i18n="tutorial.phrase.step3">
                         In the channel message field we will put "I like dogs!"
                     </li>
 
-                    <li>
+                    <li data-i18n="tutorial.phrase.step4">
                         Save the command, host your bot and test out the
                         command. Now when anyone mentions the word dog the bot
                         will react.
@@ -248,7 +294,7 @@
                 </ol>
             </div>
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.phrase.commandHeading">Command</h2>
 
                 <img
                     src="https://i.imgur.com/XNABgoS.png"
@@ -256,7 +302,7 @@
                 />
             </div>
             <div class="keyword">
-                <h2>Output Example</h2>
+                <h2 data-i18n="tutorial.phrase.outputHeading">Output Example</h2>
 
                 <img
                     src="https://i.imgur.com/jxjP6YK.png"
@@ -265,8 +311,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Command Using Keywords<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.keywords.title">Command Using Keywords</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -274,29 +320,29 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>This command will show usage of a few keywords.</p>
+                <p data-i18n="tutorial.keywords.intro">This command will show usage of a few keywords.</p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.keywords.step1">
                         Go to the create command screen and set the type to
                         "Message Receive"
                     </li>
 
-                    <li>We will name the command "!date"</li>
+                    <li data-i18n="tutorial.keywords.step2">We will name the command "!date"</li>
 
-                    <li>
+                    <li data-i18n="tutorial.keywords.step3">
                         In the channel message field we will put "Hello $name it
                         is $date"
                     </li>
 
-                    <li>
+                    <li data-i18n="tutorial.keywords.step4">
                         Save the command, host your bot and test out the command
                     </li>
                 </ol>
             </div>
 
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.keywords.commandHeading">Command</h2>
 
                 <img
                     src="https://i.imgur.com/Rq6Gkix.png"
@@ -304,7 +350,7 @@
                 />
             </div>
             <div class="keyword">
-                <h2>Output Example</h2>
+                <h2 data-i18n="tutorial.keywords.outputHeading">Output Example</h2>
 
                 <img
                     src="https://i.imgur.com/5OPeDoG.png"
@@ -313,8 +359,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Add Role on User Join<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.roleOnJoin.title">Add Role on User Join</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -322,34 +368,34 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.roleOnJoin.intro">
                     This command will add a role to a user when they join the
                     Discord Server
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.roleOnJoin.step1">
                         Go to the create command screen and set the type to
                         "Member Join" This type is used for when a user joins a
                         server.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.roleOnJoin.step2">
                         We're going to check the "Assign/Remove Role" checkbox.
                         This action assigns a role when activated the first time
                         and removes it if activated again. With us using "Member
                         Join" its only ever activated once.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.roleOnJoin.step3">
                         Lets put our role into the "Role Name" field, my role is
                         called New user. This is case sensitive.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.roleOnJoin.step4">
                         Try out the command with someone joining your server!
                     </li>
                 </ol>
             </div>
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.roleOnJoin.commandHeading">Command</h2>
 
                 <img
                     src="https://i.imgur.com/1eLmKBL.png"
@@ -358,8 +404,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Creating Embed Messages<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.embed.title">Creating Embed Messages</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -367,45 +413,45 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.embed.intro">
                     Embed messages are a special type of message. This will show
                     you how to make them.
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.embed.step1">
                         Go to the create commmand screen and set the type to
                         "Message Receive" and set command to "!embed"
                     </li>
-                    <li>Check the "Send Channel Message Embed" checkbox.</li>
-                    <li>
+                    <li data-i18n="tutorial.embed.step2">Check the "Send Channel Message Embed" checkbox.</li>
+                    <li data-i18n="tutorial.embed.step3">
                         Now we get 5 fields to fill in. All of them are optional
                         as long as you fill in at least one of them.
                     </li>
-                    <li>Lets put "My Embed" in the title field.</li>
-                    <li>
+                    <li data-i18n="tutorial.embed.step4">Lets put "My Embed" in the title field.</li>
+                    <li data-i18n="tutorial.embed.step5">
                         "$name is who called this command" will go in the
                         description field.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.embed.step6">
                         "$date" will go in the footer. This can work like a
                         timestamp.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.embed.step7">
                         I am going to put "https://i.redd.it/9hs5qf7qulz41.png"
                         in the image url field. You can put any link to an image
                         you want.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.embed.step8">
                         In the thumbnail field lets put "$avatar" as this puts
                         the url of the person who called this commands avatar
                         there. You can put any link to an image you want though.
                     </li>
-                    <li>Save and test the command.</li>
+                    <li data-i18n="tutorial.embed.step9">Save and test the command.</li>
                 </ol>
             </div>
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.embed.commandHeading">Command</h2>
 
                 <img
                     src="https://i.imgur.com/4gOVtAy.png"
@@ -413,7 +459,7 @@
                 />
             </div>
             <div class="keyword">
-                <h2>Output Example</h2>
+                <h2 data-i18n="tutorial.embed.outputHeading">Output Example</h2>
 
                 <img
                     src="https://i.imgur.com/eAOFrVR.png"
@@ -422,8 +468,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Reaction Roles<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.reactionRoles.title">Reaction Roles</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -431,30 +477,30 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.reactionRoles.intro">
                     This command will make use of a specific message in order to
                     allow users to react to gain and remove roles.
                 </p>
 
                 <ol>
-                    <li>Create a command with type reaction add.</li>
-                    <li>
+                    <li data-i18n="tutorial.reactionRoles.step1">Create a command with type reaction add.</li>
+                    <li data-i18n="tutorial.reactionRoles.step2">
                         In the command field we will put the emoji that will be
                         used to gain the role. I'll use 😊. Note: If you want to
                         use custom emojis just put the name and do not include
                         the surrounding :.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.reactionRoles.step3">
                         Check "Require specific message ID" and put the ID of
                         the message you would like to use for people to gain
                         roles.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.reactionRoles.step4">
                         Check "Assign/Remove Role" and put the name of the role
                         you are going to assign. I'll just put "Tester" for
                         mine.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.reactionRoles.step5">
                         Test your command to see if it works, and then repeat
                         for any other roles you would like to assign this way.
                     </li>
@@ -462,7 +508,7 @@
             </div>
 
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.reactionRoles.commandHeading">Command</h2>
 
                 <img
                     src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20200720-175002_2.jpg"
@@ -471,8 +517,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Using Javascript in messages<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.javascript.title">Using Javascript in messages</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -480,36 +526,36 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <p>
+                <p data-i18n="tutorial.javascript.intro">
                     To use JavaScript we must make use of keywords like $eval
                     and $halt
                 </p>
 
                 <ol>
-                    <li>
+                    <li data-i18n="tutorial.javascript.step1">
                         Create a command with any name you want, maybe call it
                         "Hello world"
                     </li>
-                    <li>Check channel send</li>
-                    <li>
+                    <li data-i18n="tutorial.javascript.step2">Check channel send</li>
+                    <li data-i18n="tutorial.javascript.step3">
                         Insert the $eval keyword with the $halt keyword
                         afterwards.
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.javascript.step4">
                         Inbetween we'll put our code. For this simple example
                         lets put "var hello = "Hello world";"
                     </li>
-                    <li>
+                    <li data-i18n="tutorial.javascript.step5">
                         After the $halt keyword or before the $eval, we can put
                         the rest of our message. Lets put "Our output is
                         $get(hello)".
                     </li>
-                    <li>Run the bot, and test the command.</li>
+                    <li data-i18n="tutorial.javascript.step6">Run the bot, and test the command.</li>
                 </ol>
             </div>
 
             <div class="keyword">
-                <h2>Command</h2>
+                <h2 data-i18n="tutorial.javascript.commandHeading">Command</h2>
 
                 <img
                     src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Screenshot_20200720-174830.jpg"
@@ -517,7 +563,7 @@
                 />
             </div>
             <div class="keyword">
-                <h2>Output Example</h2>
+                <h2 data-i18n="tutorial.javascript.outputHeading">Output Example</h2>
 
                 <img
                     src="https://raw.githubusercontent.com/ayayaQ/DiscordBots-Help/master/docs/Annotation%202020-07-20%20175303.png"
@@ -527,35 +573,44 @@
         </div>
 
         <footer>
-            <a href="https://ayayaQ.github.io">My page</a
-            ><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+            <a href="https://ayayaQ.github.io" data-i18n="common.myPage">My page</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/" data-i18n="common.help">Help</a>
         </footer>
 
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/main.js"></script>
         <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
+            // Navigation drawer functionality
+            (function() {
+                const navToggle = document.getElementById('navToggle');
+                const navClose = document.getElementById('navClose');
+                const navOverlay = document.getElementById('navOverlay');
+                const navDrawer = document.getElementById('navDrawer');
 
-            var imgs = document.getElementsByClassName("expand");
+                function openNav() {
+                    navDrawer.classList.add('active');
+                    navOverlay.classList.add('active');
+                    document.body.classList.add('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'true');
+                }
 
-            for (i = 0; i < coll.length; i++) {
-                let currImg = imgs[i - 1];
+                function closeNav() {
+                    navDrawer.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
 
-                coll[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        try {
-                            currImg.src = "images/expand_more.svg";
-                        } catch (error) {}
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        try {
-                            currImg.src = "images/expand_less.svg";
-                        } catch (error) {}
+                navToggle.addEventListener('click', openNav);
+                navClose.addEventListener('click', closeNav);
+                navOverlay.addEventListener('click', closeNav);
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navDrawer.classList.contains('active')) {
+                        closeNav();
                     }
                 });
-            }
+            })();
         </script>
     </body>
 </html>

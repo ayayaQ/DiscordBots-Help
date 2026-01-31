@@ -13,56 +13,102 @@
         />
         <title>Bot Commander Keywords</title>
         <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/keyword.css" />
-        <script>
-            // Supported languages and their subdirectory
-            const supportedLangs = { jp: "jp" };
-            const userLang = (
-                navigator.language ||
-                navigator.userLanguage ||
-                ""
-            ).toLowerCase();
-            // Only redirect if not already in a language subdirectory
-            const pathParts = window.location.pathname.split("/");
-            const inLangDir = Object.values(supportedLangs).some((dir) =>
-                pathParts.includes(dir)
-            );
-            if (!inLangDir) {
-                if (userLang.startsWith("ja")) {
-                    window.location.replace("./jp/keywords.html");
-                }
-                // Future: add more languages here
-            }
-        </script>
+        <link rel="stylesheet" href="styles/components.css" />
     </head>
 
     <body>
+        <!-- Navigation Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- Navigation Drawer -->
+        <nav class="nav-drawer" id="navDrawer" aria-label="Main navigation">
+            <div class="nav-drawer-header">
+                <span class="nav-drawer-title">Navigation</span>
+                <button class="nav-drawer-close" id="navClose" aria-label="Close navigation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-drawer-content">
+                <div class="nav-drawer-items">
+                    <a href="index.html" class="nav-drawer-item" data-i18n="common.home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="commands.html" class="nav-drawer-item" data-i18n="common.commands">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span>Commands</span>
+                    </a>
+                    <a href="keywords.html" class="nav-drawer-item active" data-i18n="common.keywords">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                        </svg>
+                        <span>Keywords</span>
+                    </a>
+                    <a href="creating.html" class="nav-drawer-item" data-i18n="common.startingOut">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        <span>Getting Started</span>
+                    </a>
+                    <a href="tutorial.html" class="nav-drawer-item" data-i18n="common.tutorials">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>Tutorials</span>
+                    </a>
+                    <a href="webhooks.html" class="nav-drawer-item" data-i18n="common.webhooks">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <span>Webhooks</span>
+                    </a>
+                    <a href="privacypolicy.html" class="nav-drawer-item" data-i18n="common.privacyPolicy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>Privacy Policy</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-drawer-footer">
+                <button class="nav-drawer-lang lang-toggle" aria-label="Switch language">
+                    <span>Language</span>
+                    <span class="nav-drawer-lang-badge">EN</span>
+                </button>
+            </div>
+        </nav>
+
         <header>
-            <h1 id="headingMargin">Keywords</h1>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 id="headingMargin" data-i18n="keywords.title">Keywords</h1>
+            <button class="lang-toggle" aria-label="Switch language">EN</button>
         </header>
 
-        <button class="collapsible" alt="Menu">
-            <img class="menu" src="images/menu.svg" alt="Menu image" />
-        </button>
-        <div class="content">
-            <div id="contents">
-                <a href="index.html" class="contents">Home</a>
-
-                <a href="commands.html" class="contents">Commands</a>
-
-                <a href="keywords.html" class="contents">Keywords</a>
-
-                <a href="creating.html" class="contents"
-                    >Starting out with the bot</a
-                >
-
-                <a href="tutorial.html">Tutorials</a>
-                <a href="webhooks.html">Webhooks</a>
-            </div>
-        </div>
-
-        <button class="collapsible">
-            User Info<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.userInfo.title">User Info</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -70,39 +116,39 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$name</h2>
+                <h2 data-i18n="keywords.userInfo.name.name">$name</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.name.compat">
                     Message Receive, Private Message, Member Join, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts a mention of the user who called the command.</p>
+                <p data-i18n="keywords.userInfo.name.desc">Inserts a mention of the user who called the command.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$avatar</h2>
+                <h2 data-i18n="keywords.userInfo.avatar.name">$avatar</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.avatar.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.avatar.desc">
                     Inserts the avatar URL of the user who called the command.
                 </p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$defaultAvatar</h2>
+                <h2 data-i18n="keywords.userInfo.defaultAvatar.name">$defaultAvatar</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.defaultAvatar.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.defaultAvatar.desc">
                     Inserts the default avatar URL of the user who called the
                     command.
                 </p>
@@ -110,14 +156,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$namePlain</h2>
+                <h2 data-i18n="keywords.userInfo.namePlain.name">$namePlain</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.namePlain.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.namePlain.desc">
                     Inserts the plain text username of the user who called the
                     command.
                 </p>
@@ -125,14 +171,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$discriminator</h2>
+                <h2 data-i18n="keywords.userInfo.discriminator.name">$discriminator</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.discriminator.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.discriminator.desc">
                     Inserts the discriminator (the numbers after the #) of the
                     user who called the command.
                 </p>
@@ -140,14 +186,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$tag</h2>
+                <h2 data-i18n="keywords.userInfo.tag.name">$tag</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.tag.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.tag.desc">
                     Inserts the tag (in the form Username#1234) of the user who
                     called the command.
                 </p>
@@ -155,14 +201,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$ID</h2>
+                <h2 data-i18n="keywords.userInfo.id.name">$ID</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.id.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.id.desc">
                     Inserts the unique ID number of the user who called the
                     command.
                 </p>
@@ -170,14 +216,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$serversSharedWithBot</h2>
+                <h2 data-i18n="keywords.userInfo.serversShared.name">$serversSharedWithBot</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.serversShared.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.serversShared.desc">
                     Inserts the number of servers shared with the bot the user
                     who called the command has.
                 </p>
@@ -185,14 +231,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$timeCreated</h2>
+                <h2 data-i18n="keywords.userInfo.timeCreated.name">$timeCreated</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.userInfo.timeCreated.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.userInfo.timeCreated.desc">
                     Inserts the account creation time of the user who called the
                     command.
                 </p>
@@ -200,8 +246,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Member Info<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.memberInfo.title">Member Info</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -209,29 +255,29 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$memberIsOwner</h2>
+                <h2 data-i18n="keywords.memberInfo.isOwner.name">$memberIsOwner</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.isOwner.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>Is the member of the event the owner of the server.</p>
+                <p data-i18n="keywords.memberInfo.isOwner.desc">Is the member of the event the owner of the server.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$memberEffectiveName</h2>
+                <h2 data-i18n="keywords.memberInfo.effectiveName.name">$memberEffectiveName</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.effectiveName.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>This is the name the member goes by within the server.</p>
+                <p data-i18n="keywords.memberInfo.effectiveName.desc">This is the name the member goes by within the server.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$memberEffectiveAvatar</h2>
+                <h2 data-i18n="keywords.memberInfo.effectiveAvatar.name">$memberEffectiveAvatar</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.effectiveAvatar.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.memberInfo.effectiveAvatar.desc">
                     This is the avatar that the user has displayed within this
                     specific server.
                 </p>
@@ -239,20 +285,20 @@
             </div>
 
             <div class="keyword">
-                <h2>$memberID</h2>
+                <h2 data-i18n="keywords.memberInfo.memberId.name">$memberID</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.memberId.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>The unique ID of the member.</p>
+                <p data-i18n="keywords.memberInfo.memberId.desc">The unique ID of the member.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$memberHasTimeJoined</h2>
+                <h2 data-i18n="keywords.memberInfo.hasTimeJoined.name">$memberHasTimeJoined</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.hasTimeJoined.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.memberInfo.hasTimeJoined.desc">
                     Gives "true" or "false" denoting whether the user has a time
                     they joined the server.
                 </p>
@@ -260,20 +306,20 @@
             </div>
 
             <div class="keyword">
-                <h2>$memberTimeJoined</h2>
+                <h2 data-i18n="keywords.memberInfo.timeJoined.name">$memberTimeJoined</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.timeJoined.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>The time the member joined the server.</p>
+                <p data-i18n="keywords.memberInfo.timeJoined.desc">The time the member joined the server.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$memberHasBoosted</h2>
+                <h2 data-i18n="keywords.memberInfo.hasBoosted.name">$memberHasBoosted</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.hasBoosted.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.memberInfo.hasBoosted.desc">
                     Has this member boosted the server?. Returns "true" or
                     "false".
                 </p>
@@ -281,11 +327,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$memberTimeBoosted</h2>
+                <h2 data-i18n="keywords.memberInfo.timeBoosted.name">$memberTimeBoosted</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.memberInfo.timeBoosted.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.memberInfo.timeBoosted.desc">
                     What is the time the user boosted the server? If there is
                     none we will get "null".
                 </p>
@@ -293,8 +339,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Mentioned User Info<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.mentionedInfo.title">Mentioned User Info</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -302,11 +348,11 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$mentionedName</h2>
+                <h2 data-i18n="keywords.mentionedInfo.name.name">$mentionedName</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.name.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.name.desc">
                     Inserts a mention of the user mentioned in the call of the
                     command.
                 </p>
@@ -314,11 +360,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedAvatar</h2>
+                <h2 data-i18n="keywords.mentionedInfo.avatar.name">$mentionedAvatar</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.avatar.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.avatar.desc">
                     Inserts the avatar URL of the user mentioned in the call of
                     the command.
                 </p>
@@ -326,11 +372,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedDefaultAvatar</h2>
+                <h2 data-i18n="keywords.mentionedInfo.defaultAvatar.name">$mentionedDefaultAvatar</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.defaultAvatar.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.defaultAvatar.desc">
                     Inserts the default avatar URL of the user mentioned in the
                     call of the command.
                 </p>
@@ -338,11 +384,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedNamePlain</h2>
+                <h2 data-i18n="keywords.mentionedInfo.namePlain.name">$mentionedNamePlain</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.namePlain.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.namePlain.desc">
                     Inserts the plain text username of the user mentioned in the
                     call of the command.
                 </p>
@@ -350,11 +396,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedDiscriminator</h2>
+                <h2 data-i18n="keywords.mentionedInfo.discriminator.name">$mentionedDiscriminator</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.discriminator.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.discriminator.desc">
                     Inserts the discriminator (the numbers after the #) of the
                     user mentioned in the call of the command.
                 </p>
@@ -362,11 +408,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedTag</h2>
+                <h2 data-i18n="keywords.mentionedInfo.tag.name">$mentionedTag</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.tag.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.tag.desc">
                     Inserts the tag (in the form Username#1234) of the user
                     mentioned in the call of the command.
                 </p>
@@ -374,11 +420,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedID</h2>
+                <h2 data-i18n="keywords.mentionedInfo.id.name">$mentionedID</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.id.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.id.desc">
                     Inserts the unique ID number of the user mentioned in the
                     call of the command.
                 </p>
@@ -386,11 +432,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedServersSharedWithBot</h2>
+                <h2 data-i18n="keywords.mentionedInfo.serversShared.name">$mentionedServersSharedWithBot</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.serversShared.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.serversShared.desc">
                     Inserts the number of servers shared with the bot the user
                     mentioned in the call of the command.
                 </p>
@@ -398,11 +444,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$mentionedTimeCreated</h2>
+                <h2 data-i18n="keywords.mentionedInfo.timeCreated.name">$mentionedTimeCreated</h2>
                 <!-- Keyword -->
-                <h3>Message Receive</h3>
+                <h3 data-i18n="keywords.mentionedInfo.timeCreated.compat">Message Receive</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.mentionedInfo.timeCreated.desc">
                     Inserts the account creation time of the user mentioned in
                     the call of the command.
                 </p>
@@ -410,8 +456,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Bot Info<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.botInfo.title">Bot Info</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -419,62 +465,62 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$botName</h2>
+                <h2 data-i18n="keywords.botInfo.name.name">$botName</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.name.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts a mention of your bot.</p>
+                <p data-i18n="keywords.botInfo.name.desc">Inserts a mention of your bot.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$botAvatar</h2>
+                <h2 data-i18n="keywords.botInfo.avatar.name">$botAvatar</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.avatar.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the avatar URL of your bot.</p>
+                <p data-i18n="keywords.botInfo.avatar.desc">Inserts the avatar URL of your bot.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$botDefaultAvatar</h2>
+                <h2 data-i18n="keywords.botInfo.defaultAvatar.name">$botDefaultAvatar</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.defaultAvatar.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the default avatar URL of your bot.</p>
+                <p data-i18n="keywords.botInfo.defaultAvatar.desc">Inserts the default avatar URL of your bot.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$botNamePlain</h2>
+                <h2 data-i18n="keywords.botInfo.namePlain.name">$botNamePlain</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.namePlain.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the plain text username of your bot.</p>
+                <p data-i18n="keywords.botInfo.namePlain.desc">Inserts the plain text username of your bot.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$botDiscriminator</h2>
+                <h2 data-i18n="keywords.botInfo.discriminator.name">$botDiscriminator</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.discriminator.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.botInfo.discriminator.desc">
                     Inserts the discriminator (the numbers after the #) of your
                     bot.
                 </p>
@@ -482,44 +528,44 @@
             </div>
 
             <div class="keyword">
-                <h2>$botTag</h2>
+                <h2 data-i18n="keywords.botInfo.tag.name">$botTag</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.tag.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the tag (in the form Username#1234) of your bot.</p>
+                <p data-i18n="keywords.botInfo.tag.desc">Inserts the tag (in the form Username#1234) of your bot.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$botID</h2>
+                <h2 data-i18n="keywords.botInfo.id.name">$botID</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.id.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the unique ID number of your bot.</p>
+                <p data-i18n="keywords.botInfo.id.desc">Inserts the unique ID number of your bot.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$botTimeCreated</h2>
+                <h2 data-i18n="keywords.botInfo.timeCreated.name">$botTimeCreated</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.botInfo.timeCreated.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the account creation time of your bot.</p>
+                <p data-i18n="keywords.botInfo.timeCreated.desc">Inserts the account creation time of your bot.</p>
                 <!-- Description -->
             </div>
         </div>
 
-        <button class="collapsible">
-            Server Info<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.serverInfo.title">Server Info</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -527,40 +573,40 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$server</h2>
+                <h2 data-i18n="keywords.serverInfo.server.name">$server</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.server.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.server.desc">
                     Inserts the name of the server where the command was called.
                 </p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$serverCount</h2>
+                <h2 data-i18n="keywords.serverInfo.serverCount.name">$serverCount</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.serverCount.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the number of the servers the bot is in.</p>
+                <p data-i18n="keywords.serverInfo.serverCount.desc">Inserts the number of the servers the bot is in.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$memberCount</h2>
+                <h2 data-i18n="keywords.serverInfo.memberCount.name">$memberCount</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.memberCount.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.memberCount.desc">
                     Inserts the number of users in the server where the command
                     was called.
                 </p>
@@ -568,28 +614,28 @@
             </div>
 
             <div class="keyword">
-                <h2>$allMemberCount</h2>
+                <h2 data-i18n="keywords.serverInfo.allMemberCount.name">$allMemberCount</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.allMemberCount.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.allMemberCount.desc">
                     Inserts the number of users in all server where the bot is.
                 </p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$serverIcon</h2>
+                <h2 data-i18n="keywords.serverInfo.icon.name">$serverIcon</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.icon.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.icon.desc">
                     Inserts the URL of the icon of the server where the command
                     was called.
                 </p>
@@ -597,14 +643,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$serverBanner</h2>
+                <h2 data-i18n="keywords.serverInfo.banner.name">$serverBanner</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.banner.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.banner.desc">
                     Inserts the URL of the server banner of the server where the
                     command was called.
                 </p>
@@ -612,14 +658,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$serverDescription</h2>
+                <h2 data-i18n="keywords.serverInfo.description.name">$serverDescription</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.description.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.description.desc">
                     Inserts the description of the server where the command was
                     called.
                 </p>
@@ -627,14 +673,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$serverSplash</h2>
+                <h2 data-i18n="keywords.serverInfo.splash.name">$serverSplash</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.serverInfo.splash.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.serverInfo.splash.desc">
                     Inserts the URL of the splash of the server where the
                     command was called.
                 </p>
@@ -642,8 +688,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Channel Info<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.channelInfo.title">Channel Info</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -651,31 +697,31 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$channel</h2>
+                <h2 data-i18n="keywords.channelInfo.channel.name">$channel</h2>
                 <!-- Keyword -->
-                <h3>Message Receive, Private Message, Reaction Add</h3>
+                <h3 data-i18n="keywords.channelInfo.channel.compat">Message Receive, Private Message, Reaction Add</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.channelInfo.channel.desc">
                     Inserts the name of the channel where the message was sent.
                 </p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$channelID</h2>
+                <h2 data-i18n="keywords.channelInfo.channelId.name">$channelID</h2>
                 <!-- Keyword -->
-                <h3>Message Receive, Reaction Add</h3>
+                <h3 data-i18n="keywords.channelInfo.channelId.compat">Message Receive, Reaction Add</h3>
                 <!-- Compatibility -->
-                <p>Inserts the ID of the channel where the message was sent.</p>
+                <p data-i18n="keywords.channelInfo.channelId.desc">Inserts the ID of the channel where the message was sent.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$channelCreateDate</h2>
+                <h2 data-i18n="keywords.channelInfo.createDate.name">$channelCreateDate</h2>
                 <!-- Keyword -->
-                <h3>Message Receive, Reaction Add</h3>
+                <h3 data-i18n="keywords.channelInfo.createDate.compat">Message Receive, Reaction Add</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.channelInfo.createDate.desc">
                     Inserts the time of creation of the channel where the
                     message was sent.
                 </p>
@@ -683,11 +729,11 @@
             </div>
 
             <div class="keyword">
-                <h2>$channelAsMention</h2>
+                <h2 data-i18n="keywords.channelInfo.asMention.name">$channelAsMention</h2>
                 <!-- Keyword -->
-                <h3>Message Receive, Reaction Add</h3>
+                <h3 data-i18n="keywords.channelInfo.asMention.compat">Message Receive, Reaction Add</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.channelInfo.asMention.desc">
                     Inserts the mention of the channel where the message was
                     sent.
                 </p>
@@ -695,8 +741,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Message<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.message.title">Message</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -704,20 +750,20 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$message</h2>
+                <h2 data-i18n="keywords.message.message.name">$message</h2>
                 <!-- Keyword -->
-                <h3>Message Receive, Private Message</h3>
+                <h3 data-i18n="keywords.message.message.compat">Message Receive, Private Message</h3>
                 <!-- Compatibility -->
-                <p>Inserts the whole message of the called command.</p>
+                <p data-i18n="keywords.message.message.desc">Inserts the whole message of the called command.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$messageAfterCommand</h2>
+                <h2 data-i18n="keywords.message.afterCommand.name">$messageAfterCommand</h2>
                 <!-- Keyword -->
-                <h3>Message Receive, Private Message</h3>
+                <h3 data-i18n="keywords.message.afterCommand.compat">Message Receive, Private Message</h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.message.afterCommand.desc">
                     Inserts the message after the command part of the called
                     command.
                 </p>
@@ -725,8 +771,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            JavaScript<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.javascript.title">JavaScript</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -734,14 +780,14 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$eval</h2>
+                <h2 data-i18n="keywords.javascript.eval.name">$eval</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.javascript.eval.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.javascript.eval.desc">
                     Used to mark the start of a js code block. Must be followed
                     by a $halt statement after the code is finished
                 </p>
@@ -749,38 +795,38 @@
             </div>
 
             <div class="keyword">
-                <h2>$halt</h2>
+                <h2 data-i18n="keywords.javascript.halt.name">$halt</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.javascript.halt.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Used to mark the end of a js code block.</p>
+                <p data-i18n="keywords.javascript.halt.desc">Used to mark the end of a js code block.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$get(name)</h2>
+                <h2 data-i18n="keywords.javascript.get.name">$get(name)</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.javascript.get.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the value of the js variable with that name.</p>
+                <p data-i18n="keywords.javascript.get.desc">Inserts the value of the js variable with that name.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$set(name,value)</h2>
+                <h2 data-i18n="keywords.javascript.set.name">$set(name,value)</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.javascript.set.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.javascript.set.desc">
                     Used to set a js variable. Supports boolean "true" and
                     "false" as well as numbers and strings.
                 </p>
@@ -788,8 +834,8 @@
             </div>
         </div>
 
-        <button class="collapsible">
-            Misc<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.misc.title">Misc</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -797,62 +843,62 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>$date</h2>
+                <h2 data-i18n="keywords.misc.date.name">$date</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.date.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the current date.</p>
+                <p data-i18n="keywords.misc.date.desc">Inserts the current date.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$hour</h2>
+                <h2 data-i18n="keywords.misc.hour.name">$hour</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.hour.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the current hour.</p>
+                <p data-i18n="keywords.misc.hour.desc">Inserts the current hour.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$minute</h2>
+                <h2 data-i18n="keywords.misc.minute.name">$minute</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.minute.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the current minute.</p>
+                <p data-i18n="keywords.misc.minute.desc">Inserts the current minute.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$second</h2>
+                <h2 data-i18n="keywords.misc.second.name">$second</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.second.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the current second.</p>
+                <p data-i18n="keywords.misc.second.desc">Inserts the current second.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$random{a|b|c}</h2>
+                <h2 data-i18n="keywords.misc.random.name">$random{a|b|c}</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.random.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.misc.random.desc">
                     Inserts a randomly selected string from the arguments
                     located in the brackets {}. Strings must be separated using
                     |.
@@ -861,14 +907,14 @@
             </div>
 
             <div class="keyword">
-                <h2>$sum{1|2|3}</h2>
+                <h2 data-i18n="keywords.misc.sum.name">$sum{1|2|3}</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.sum.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.misc.sum.desc">
                     Inserts the sum of its arguments located in the brackets {}.
                     Numbers must be separated using |.
                 </p>
@@ -876,62 +922,62 @@
             </div>
 
             <div class="keyword">
-                <h2>$commandCount</h2>
+                <h2 data-i18n="keywords.misc.commandCount.name">$commandCount</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.commandCount.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the amount of commands the bot has.</p>
+                <p data-i18n="keywords.misc.commandCount.desc">Inserts the amount of commands the bot has.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$rollnum(min,max)</h2>
+                <h2 data-i18n="keywords.misc.rollnum.name">$rollnum(min,max)</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.rollnum.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts a random number between min and max inclusive.</p>
+                <p data-i18n="keywords.misc.rollnum.desc">Inserts a random number between min and max inclusive.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$ping</h2>
+                <h2 data-i18n="keywords.misc.ping.name">$ping</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.ping.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts the gateway ping.</p>
+                <p data-i18n="keywords.misc.ping.desc">Inserts the gateway ping.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$inviteURL</h2>
+                <h2 data-i18n="keywords.misc.inviteUrl.name">$inviteURL</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.inviteUrl.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>Inserts URL to invite the bot to a server.</p>
+                <p data-i18n="keywords.misc.inviteUrl.desc">Inserts URL to invite the bot to a server.</p>
                 <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>$setStatus{online|playing|games}</h2>
+                <h2 data-i18n="keywords.misc.setStatus.name">$setStatus{online|playing|games}</h2>
                 <!-- Keyword -->
-                <h3>
+                <h3 data-i18n="keywords.misc.setStatus.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
                 <!-- Compatibility -->
-                <p>
+                <p data-i18n="keywords.misc.setStatus.desc">
                     Use to set status in commands. Values for first parameter
                     include online, idle, dnd. Second parameter values are
                     watching, playing, listening. The third parameter is the
@@ -943,35 +989,44 @@
         </div>
 
         <footer>
-            <a href="https://ayayaQ.github.io">My page</a
-            ><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+            <a href="https://ayayaQ.github.io" data-i18n="common.myPage">My page</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/" data-i18n="common.help">Help</a>
         </footer>
 
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/main.js"></script>
         <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
+            // Navigation drawer functionality
+            (function() {
+                const navToggle = document.getElementById('navToggle');
+                const navClose = document.getElementById('navClose');
+                const navOverlay = document.getElementById('navOverlay');
+                const navDrawer = document.getElementById('navDrawer');
 
-            var imgs = document.getElementsByClassName("expand");
+                function openNav() {
+                    navDrawer.classList.add('active');
+                    navOverlay.classList.add('active');
+                    document.body.classList.add('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'true');
+                }
 
-            for (i = 0; i < coll.length; i++) {
-                let currImg = imgs[i - 1];
+                function closeNav() {
+                    navDrawer.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
 
-                coll[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        try {
-                            currImg.src = "images/expand_more.svg";
-                        } catch (error) {}
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        try {
-                            currImg.src = "images/expand_less.svg";
-                        } catch (error) {}
+                navToggle.addEventListener('click', openNav);
+                navClose.addEventListener('click', closeNav);
+                navOverlay.addEventListener('click', closeNav);
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navDrawer.classList.contains('active')) {
+                        closeNav();
                     }
                 });
-            }
+            })();
         </script>
     </body>
 </html>

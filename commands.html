@@ -11,63 +11,104 @@
             name="description"
             content="All the basics of commands in Bot Commander for Discord"
         />
-        <title>Bot Commander Keywords</title>
+        <title data-i18n="commands.title">Bot Commander Keywords</title>
         <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/keyword.css" />
-        <script>
-            // Supported languages and their subdirectory
-            const supportedLangs = { jp: "jp" };
-            const userLang = (
-                navigator.language ||
-                navigator.userLanguage ||
-                ""
-            ).toLowerCase();
-            // Only redirect if not already in a language subdirectory
-            const pathParts = window.location.pathname.split("/");
-            const inLangDir = Object.values(supportedLangs).some((dir) =>
-                pathParts.includes(dir)
-            );
-            if (!inLangDir) {
-                if (userLang.startsWith("ja")) {
-                    window.location.replace("./jp/commands.html");
-                }
-                // Future: add more languages here
-            }
-        </script>
+        <link rel="stylesheet" href="styles/components.css" />
     </head>
 
     <body>
+        <!-- Navigation Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- Navigation Drawer -->
+        <nav class="nav-drawer" id="navDrawer" aria-label="Main navigation">
+            <div class="nav-drawer-header">
+                <span class="nav-drawer-title">Navigation</span>
+                <button class="nav-drawer-close" id="navClose" aria-label="Close navigation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-drawer-content">
+                <div class="nav-drawer-items">
+                    <a href="index.html" class="nav-drawer-item" data-i18n="common.home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="commands.html" class="nav-drawer-item active" data-i18n="common.commands">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span>Commands</span>
+                    </a>
+                    <a href="keywords.html" class="nav-drawer-item" data-i18n="common.keywords">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                        </svg>
+                        <span>Keywords</span>
+                    </a>
+                    <a href="creating.html" class="nav-drawer-item" data-i18n="common.startingOut">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        <span>Getting Started</span>
+                    </a>
+                    <a href="tutorial.html" class="nav-drawer-item" data-i18n="common.tutorials">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>Tutorials</span>
+                    </a>
+                    <a href="webhooks.html" class="nav-drawer-item" data-i18n="common.webhooks">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <span>Webhooks</span>
+                    </a>
+                    <a href="privacypolicy.html" class="nav-drawer-item" data-i18n="common.privacyPolicy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>Privacy Policy</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-drawer-footer">
+                <button class="nav-drawer-lang lang-toggle" aria-label="Switch language">
+                    <span>Language</span>
+                    <span class="nav-drawer-lang-badge">EN</span>
+                </button>
+            </div>
+        </nav>
+
         <header>
-            <h1 id="headingMargin">Commands</h1>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 id="headingMargin" data-i18n="commands.title">Commands</h1>
+            <button class="lang-toggle" aria-label="Switch language">EN</button>
         </header>
 
-        <button class="collapsible">
-            <img
-                class="menu"
-                src="images/menu.svg"
-                alt="Menu image"
-                alt="Menu Image"
-            />
-        </button>
-        <div class="content">
-            <div id="contents">
-                <a href="index.html" class="contents">Home</a>
-
-                <a href="commands.html" class="contents">Commands</a>
-
-                <a href="keywords.html" class="contents">Keywords</a>
-
-                <a href="creating.html" class="contents"
-                    >Starting out with the bot</a
-                >
-
-                <a href="tutorial.html">Tutorials</a>
-                <a href="webhooks.html">Webhooks</a>
-            </div>
-        </div>
-
-        <button class="collapsible">
-            Command Types<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="commands.types.title">Command Types</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -75,70 +116,58 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>Message Receive</h2>
-                <!-- type -->
-                <p>
+                <h2 data-i18n="commands.types.messageReceive.name">Message Receive</h2>
+                <p data-i18n="commands.types.messageReceive.desc">
                     Indicates that the command will trigger when a message is
                     recieved in a server the bot is in.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Private Message</h2>
-                <!-- type -->
-                <p>
+                <h2 data-i18n="commands.types.privateMessage.name">Private Message</h2>
+                <p data-i18n="commands.types.privateMessage.desc">
                     Indicates that the command will trigger when a message is
                     recieved through direct message with the bot.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Member Join</h2>
-                <!-- type -->
-                <p>
+                <h2 data-i18n="commands.types.memberJoin.name">Member Join</h2>
+                <p data-i18n="commands.types.memberJoin.desc">
                     Indicates the command will trigger when a member joins a
                     server the bot is in.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Member Leave</h2>
-                <!-- type -->
-                <p>
+                <h2 data-i18n="commands.types.memberLeave.name">Member Leave</h2>
+                <p data-i18n="commands.types.memberLeave.desc">
                     Indicates the command will trigger when a member leaves a
                     server the bot is in.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Member Ban</h2>
-                <!-- type -->
-                <p>
+                <h2 data-i18n="commands.types.memberBan.name">Member Ban</h2>
+                <p data-i18n="commands.types.memberBan.desc">
                     Indicates the command will trigger when a member is banned
                     from a server the bot is in.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Reaction Add</h2>
-                <!-- type -->
-                <p>
+                <h2 data-i18n="commands.types.reactionAdd.name">Reaction Add</h2>
+                <p data-i18n="commands.types.reactionAdd.desc">
                     Indicates the command will trigger when a reaction is added
                     to a message in a server the bot is in. Command field for
                     this type must be filled with an emoji or name of a custom
                     emoji to trigger, or * can be used so it always triggers.
                 </p>
-                <!-- Description -->
             </div>
         </div>
 
-        <button class="collapsible">
-            Command and Description<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="commands.commandDesc.title">Command and Description</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -146,29 +175,25 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>Command</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.commandDesc.command.name">Command</h2>
+                <p data-i18n="commands.commandDesc.command.desc">
                     The string (or emoji for Reaction Add) that will cause the
                     actions of the command to happen. If * is placed in this
                     field the command's actions will always happen.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Command Description</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.commandDesc.description.name">Command Description</h2>
+                <p data-i18n="commands.commandDesc.description.desc">
                     An optional description you can write to remember what your
                     command does.
                 </p>
-                <!-- Description -->
             </div>
         </div>
 
-        <button class="collapsible">
-            Actions<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="commands.actions.title">Actions</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -176,244 +201,187 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>Phrase</h2>
-                <!-- Keyword -->
-                <h3>Message Receive, Private Message</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.phrase.name">Phrase</h2>
+                <h3 data-i18n="commands.actions.phrase.compat">Message Receive, Private Message</h3>
+                <p data-i18n="commands.actions.phrase.desc">
                     The command string can be anywhere in the message to
                     activate the command.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Requires Role</h2>
-                <!-- Keyword -->
-                <h3>Message Receive, Reaction Add</h3>
-                <!-- Compatibility -->
-                <p>The command will only activate with the given role.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.actions.requiresRole.name">Requires Role</h2>
+                <h3 data-i18n="commands.actions.requiresRole.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="commands.actions.requiresRole.desc">The command will only activate with the given role.</p>
             </div>
 
             <div class="keyword">
-                <h2>Requires Administrator Privilege</h2>
-                <!-- Keyword -->
-                <h3>Message Receive, Reaction Add</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.requiresAdmin.name">Requires Administrator Privilege</h2>
+                <h3 data-i18n="commands.actions.requiresAdmin.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="commands.actions.requiresAdmin.desc">
                     The command will only activate if the user who calls it has
                     admin privileges.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Send Channel Message</h2>
-                <!-- Keyword -->
-                <h3>
+                <h2 data-i18n="commands.actions.sendChannel.name">Send Channel Message</h2>
+                <h3 data-i18n="commands.actions.sendChannel.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
-                <!-- Compatibility -->
-                <p>
+                <p data-i18n="commands.actions.sendChannel.desc">
                     Sends a messsage in the channel where the command is called.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Send Channel Message Embed</h2>
-                <!-- Keyword -->
-                <h3>
+                <h2 data-i18n="commands.actions.sendChannelEmbed.name">Send Channel Message Embed</h2>
+                <h3 data-i18n="commands.actions.sendChannelEmbed.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
-                <!-- Compatibility -->
-                <p>
+                <p data-i18n="commands.actions.sendChannelEmbed.desc">
                     Creates an embed. Image URL and Thumbnail URL must be valid
                     if used.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Send in specific channel</h2>
-                <!-- Keyword -->
-                <h3>
+                <h2 data-i18n="commands.actions.sendSpecificChannel.name">Send in specific channel</h2>
+                <h3 data-i18n="commands.actions.sendSpecificChannel.compat">
                     Message Receive, Member Join, Member Leave, Member Ban,
                     Reaction Add
                 </h3>
-                <!-- Compatibility -->
-                <p>
+                <p data-i18n="commands.actions.sendSpecificChannel.desc">
                     Overrides what channel the channel message and embed actions
                     get sent to.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Send Private Message</h2>
-                <!-- Keyword -->
-                <h3>
+                <h2 data-i18n="commands.actions.sendPrivate.name">Send Private Message</h2>
+                <h3 data-i18n="commands.actions.sendPrivate.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
-                <!-- Compatibility -->
-                <p>
+                <p data-i18n="commands.actions.sendPrivate.desc">
                     Sends a private message to the user who called the command.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Send Private Message Embed</h2>
-                <!-- Keyword -->
-                <h3>
+                <h2 data-i18n="commands.actions.sendPrivateEmbed.name">Send Private Message Embed</h2>
+                <h3 data-i18n="commands.actions.sendPrivateEmbed.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
-                <!-- Compatibility -->
-                <p>
+                <p data-i18n="commands.actions.sendPrivateEmbed.desc">
                     Creates an embed. Image URL and Thumbnail URL must be valid
                     if used.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>React to received message</h2>
-                <!-- Keyword -->
-                <h3>Message Receive, Private Message</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.react.name">React to received message</h2>
+                <h3 data-i18n="commands.actions.react.compat">Message Receive, Private Message</h3>
+                <p data-i18n="commands.actions.react.desc">
                     Reacts to the message that triggered the command. If you're
                     using a custom emoji, then just use the name of it.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Ignore error messages</h2>
-                <!-- Keyword -->
-                <h3>
+                <h2 data-i18n="commands.actions.ignoreError.name">Ignore error messages</h2>
+                <h3 data-i18n="commands.actions.ignoreError.compat">
                     Message Receive, Private Message, Member Join, Member Leave,
                     Member Ban, Reaction Add
                 </h3>
-                <!-- Compatibility -->
-                <p>
+                <p data-i18n="commands.actions.ignoreError.desc">
                     Ignores most error messages that are not fatal to the
                     functions of the command.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Require specific message ID</h2>
-                <!-- Keyword -->
-                <h3>Reaction Add</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.requireMessageId.name">Require specific message ID</h2>
+                <h3 data-i18n="commands.actions.requireMessageId.compat">Reaction Add</h3>
+                <p data-i18n="commands.actions.requireMessageId.desc">
                     Requires a specific message ID for the React Add type
                     command to function.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Delete if contains</h2>
-                <!-- Keyword -->
-                <h3>Message Receive</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.deleteIfContains.name">Delete if contains</h2>
+                <h3 data-i18n="commands.actions.deleteIfContains.compat">Message Receive</h3>
+                <p data-i18n="commands.actions.deleteIfContains.desc">
                     Removes the message if it contains a certain string.
                     Different strings must be separated with |.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Delete command message after</h2>
-                <!-- Keyword -->
-                <h3>Message Receive</h3>
-                <!-- Compatibility -->
-                <p>Deletes the message that called the command.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.actions.deleteAfter.name">Delete command message after</h2>
+                <h3 data-i18n="commands.actions.deleteAfter.compat">Message Receive</h3>
+                <p data-i18n="commands.actions.deleteAfter.desc">Deletes the message that called the command.</p>
             </div>
 
             <div class="keyword">
-                <h2>Delete X messages</h2>
-                <!-- Keyword -->
-                <h3>Message Receive</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.deleteX.name">Delete X messages</h2>
+                <h3 data-i18n="commands.actions.deleteX.compat">Message Receive</h3>
+                <p data-i18n="commands.actions.deleteX.desc">
                     Deletes the number indicated in the field amount of
                     messsages.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>NSFW only</h2>
-                <!-- Keyword -->
-                <h3>Message Receive, Reaction Add</h3>
-                <!-- Compatibility -->
-                <p>The command can only be called in NSFW channels.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.actions.nsfw.name">NSFW only</h2>
+                <h3 data-i18n="commands.actions.nsfw.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="commands.actions.nsfw.desc">The command can only be called in NSFW channels.</p>
             </div>
 
             <div class="keyword">
-                <h2>Kick</h2>
-                <!-- Keyword -->
-                <h3>Message Receive</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.kick.name">Kick</h2>
+                <h3 data-i18n="commands.actions.kick.compat">Message Receive</h3>
+                <p data-i18n="commands.actions.kick.desc">
                     Kicks a user. Requires kicking permissions. Usage: if
                     command is "kick" usage is "kick @user"
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Ban</h2>
-                <!-- Keyword -->
-                <h3>Message Receive</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.ban.name">Ban</h2>
+                <h3 data-i18n="commands.actions.ban.compat">Message Receive</h3>
+                <p data-i18n="commands.actions.ban.desc">
                     Bans a user. Requires banning permissions. Usage: if command
                     is "ban" usage is "kban @user"
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Voice Mute</h2>
-                <!-- Keyword -->
-                <h3>Message Receive</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.voiceMute.name">Voice Mute</h2>
+                <h3 data-i18n="commands.actions.voiceMute.compat">Message Receive</h3>
+                <p data-i18n="commands.actions.voiceMute.desc">
                     Voice mutes a user if called first time, else unmutes them.
                     Requires muting permissions. Usage: if command is "mute"
                     usage is "mute @user"
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>Assign/Remove Role</h2>
-                <!-- Keyword -->
-                <h3>Message Receive, Member Join, Reaction Add</h3>
-                <!-- Compatibility -->
-                <p>
+                <h2 data-i18n="commands.actions.assignRole.name">Assign/Remove Role</h2>
+                <h3 data-i18n="commands.actions.assignRole.compat">Message Receive, Member Join, Reaction Add</h3>
+                <p data-i18n="commands.actions.assignRole.desc">
                     Assigns a role when called the if user has the role, else it
                     removes the role.
                 </p>
-                <!-- Description -->
             </div>
         </div>
 
-        <button class="collapsible">
-            commands.json<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="commands.json.title">commands.json</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -421,250 +389,191 @@
         </button>
         <div class="content">
             <div class="keyword">
-                <h2>What is it?</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.whatIs.name">What is it?</h2>
+                <p data-i18n="commands.json.whatIs.desc">
                     This is the file that is outputted when you export your
                     commands. You could upload and send it to other people to
                     use with the app, but you could also use these commands as
                     the basis for a bot you decide to write yourself. I've tried
                     to describe what each value is and what it is used for here.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>actionArr[bool, bool]</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.actionArr.name">actionArr[bool, bool]</h2>
+                <p data-i18n="commands.json.actionArr.desc">
                     This is an array. The first index represents if the command
                     should send a channel message. The second represents if a
                     private message should be sent.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>channelMessage</h2>
-                <!-- field -->
-                <p>The channel message that will be sent.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.channelMessage.name">channelMessage</h2>
+                <p data-i18n="commands.json.channelMessage.desc">The channel message that will be sent.</p>
             </div>
 
             <div class="keyword">
-                <h2>command</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.command.name">command</h2>
+                <p data-i18n="commands.json.command.desc">
                     The command that the message must equal inorder for the
                     command to trigger. This will be an emoji or name of custom
                     emoji for the react add type.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>commandDescription</h2>
-                <!-- field -->
-                <p>A description of the command.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.commandDescription.name">commandDescription</h2>
+                <p data-i18n="commands.json.commandDescription.desc">A description of the command.</p>
             </div>
 
             <div class="keyword">
-                <h2>deleteAfter</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.deleteAfter.name">deleteAfter</h2>
+                <p data-i18n="commands.json.deleteAfter.desc">
                     If the message that triggered the command should be deleted
                     afterwards.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>deleteIf</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.deleteIf.name">deleteIf</h2>
+                <p data-i18n="commands.json.deleteIf.desc">
                     A boolean that is used to determine if the command should be
                     deleted if it contains certain strings.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>commandIfStrings</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.commandIfStrings.name">commandIfStrings</h2>
+                <p data-i18n="commands.json.commandIfStrings.desc">
                     The strings that will be used if deleteIf is true to delete
                     a message.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>commandNum</h2>
-                <!-- field -->
-                <p>The number of messages to delete if deleteX is true.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.commandNum.name">commandNum</h2>
+                <p data-i18n="commands.json.commandNum.desc">The number of messages to delete if deleteX is true.</p>
             </div>
 
             <div class="keyword">
-                <h2>deleteX</h2>
-                <!-- field -->
-                <p>If this is a mass delete command.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.deleteX.name">deleteX</h2>
+                <p data-i18n="commands.json.deleteX.desc">If this is a mass delete command.</p>
             </div>
 
             <div class="keyword">
-                <h2>ignoreErrorMessage</h2>
-                <!-- field -->
-                <p>If the command should ignore error messages.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.ignoreErrorMessage.name">ignoreErrorMessage</h2>
+                <p data-i18n="commands.json.ignoreErrorMessage.desc">If the command should ignore error messages.</p>
             </div>
 
             <div class="keyword">
-                <h2>isBan</h2>
-                <!-- field -->
-                <p>If the command should ban someone.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.isBan.name">isBan</h2>
+                <p data-i18n="commands.json.isBan.desc">If the command should ban someone.</p>
             </div>
 
             <div class="keyword">
-                <h2>isKick</h2>
-                <!-- field -->
-                <p>If the command should kick someone.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.isKick.name">isKick</h2>
+                <p data-i18n="commands.json.isKick.desc">If the command should kick someone.</p>
             </div>
 
             <div class="keyword">
-                <h2>isNSFW</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.isNSFW.name">isNSFW</h2>
+                <p data-i18n="commands.json.isNSFW.desc">
                     If the command is NSFW and should only be sent in NSFW
                     channels.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>isReact</h2>
-                <!-- field -->
-                <p>If the command should react to the message received.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.isReact.name">isReact</h2>
+                <p data-i18n="commands.json.isReact.desc">If the command should react to the message received.</p>
             </div>
 
             <div class="keyword">
-                <h2>isRequiredRole</h2>
-                <!-- field -->
-                <p>If the command should require a role to be used.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.isRequiredRole.name">isRequiredRole</h2>
+                <p data-i18n="commands.json.isRequiredRole.desc">If the command should require a role to be used.</p>
             </div>
 
             <div class="keyword">
-                <h2>isRoleAssigner</h2>
-                <!-- field -->
-                <p>If the command should assign a role.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.isRoleAssigner.name">isRoleAssigner</h2>
+                <p data-i18n="commands.json.isRoleAssigner.desc">If the command should assign a role.</p>
             </div>
 
             <div class="keyword">
-                <h2>isSpecificChannel</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.isSpecificChannel.name">isSpecificChannel</h2>
+                <p data-i18n="commands.json.isSpecificChannel.desc">
                     If the command should send channel or embed messages into a
                     specific channel.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>isSpecificMessage</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.isSpecificMessage.name">isSpecificMessage</h2>
+                <p data-i18n="commands.json.isSpecificMessage.desc">
                     If the command should, if react add type, only work on a
                     specific message ID.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>isVoiceMute</h2>
-                <!-- field -->
-                <p>If the command should voice mute a user.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.isVoiceMute.name">isVoiceMute</h2>
+                <p data-i18n="commands.json.isVoiceMute.desc">If the command should voice mute a user.</p>
             </div>
 
             <div class="keyword">
-                <h2>phrase</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.phrase.name">phrase</h2>
+                <p data-i18n="commands.json.phrase.desc">
                     If the command should activate if there is more than just
                     the command in the recieved message.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>privateMessage</h2>
-                <!-- field -->
-                <p>The content of the private message that will send.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.privateMessage.name">privateMessage</h2>
+                <p data-i18n="commands.json.privateMessage.desc">The content of the private message that will send.</p>
             </div>
 
             <div class="keyword">
-                <h2>reaction</h2>
-                <!-- field -->
-                <p>The emote that will be used to react if isReact is true.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.reaction.name">reaction</h2>
+                <p data-i18n="commands.json.reaction.desc">The emote that will be used to react if isReact is true.</p>
             </div>
 
             <div class="keyword">
-                <h2>requiredRole</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.requiredRole.name">requiredRole</h2>
+                <p data-i18n="commands.json.requiredRole.desc">
                     The role that is required to send certain messages if
                     isRoleRequired is true.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>roleToAssign</h2>
-                <!-- field -->
-                <p>The role that will be assigned if isRoleAssigner is true.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.roleToAssign.name">roleToAssign</h2>
+                <p data-i18n="commands.json.roleToAssign.desc">The role that will be assigned if isRoleAssigner is true.</p>
             </div>
 
             <div class="keyword">
-                <h2>sendChannelEmbed</h2>
-                <!-- field -->
-                <p>If a channel embed should be sent.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.sendChannelEmbed.name">sendChannelEmbed</h2>
+                <p data-i18n="commands.json.sendChannelEmbed.desc">If a channel embed should be sent.</p>
             </div>
 
             <div class="keyword">
-                <h2>sendPrivateEmbed</h2>
-                <!-- field -->
-                <p>If a private embed should be sent.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.sendPrivateEmbed.name">sendPrivateEmbed</h2>
+                <p data-i18n="commands.json.sendPrivateEmbed.desc">If a private embed should be sent.</p>
             </div>
 
             <div class="keyword">
-                <h2>specificChannel</h2>
-                <!-- field -->
-                <p>The name of the specific channel to send a message to.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.specificChannel.name">specificChannel</h2>
+                <p data-i18n="commands.json.specificChannel.desc">The name of the specific channel to send a message to.</p>
             </div>
 
             <div class="keyword">
-                <h2>specificMessage</h2>
-                <!-- field -->
-                <p>The ID of a certain message that must be reacted to.</p>
-                <!-- Description -->
+                <h2 data-i18n="commands.json.specificMessage.name">specificMessage</h2>
+                <p data-i18n="commands.json.specificMessage.desc">The ID of a certain message that must be reacted to.</p>
             </div>
 
             <div class="keyword">
-                <h2>type</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.type.name">type</h2>
+                <p data-i18n="commands.json.type.desc">
                     The command type.<br />TYPE_MESSAGE_RECEIVED = 0<br />
                     TYPE_PM_RECEIVED = 1<br />
                     TYPE_MEMBER_JOIN = 2<br />
@@ -672,60 +581,63 @@
                     TYPE_MEMBER_BAN = 4<br />
                     TYPE_REACTION_ADD = 5
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>channelEmbed</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.channelEmbed.name">channelEmbed</h2>
+                <p data-i18n="commands.json.channelEmbed.desc">
                     The channel embed to be sent, includes a title, description,
                     footer, image, and thumbnail.
                 </p>
-                <!-- Description -->
             </div>
 
             <div class="keyword">
-                <h2>privateEmbed</h2>
-                <!-- field -->
-                <p>
+                <h2 data-i18n="commands.json.privateEmbed.name">privateEmbed</h2>
+                <p data-i18n="commands.json.privateEmbed.desc">
                     The private embed to be sent, includes a title, description,
                     footer, image, and thumbnail.
                 </p>
-                <!-- Description -->
             </div>
         </div>
 
         <footer>
-            <a href="https://ayayaQ.github.io">My page</a
-            ><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+            <a href="https://ayayaQ.github.io" data-i18n="common.myPage">My page</a><a href="https://ayayaq.github.io/DiscordBots-Help/" data-i18n="common.help">Help</a>
         </footer>
 
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/main.js"></script>
         <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
+            // Navigation drawer functionality
+            (function() {
+                const navToggle = document.getElementById('navToggle');
+                const navClose = document.getElementById('navClose');
+                const navOverlay = document.getElementById('navOverlay');
+                const navDrawer = document.getElementById('navDrawer');
 
-            var imgs = document.getElementsByClassName("expand");
+                function openNav() {
+                    navDrawer.classList.add('active');
+                    navOverlay.classList.add('active');
+                    document.body.classList.add('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'true');
+                }
 
-            for (i = 0; i < coll.length; i++) {
-                let currImg = imgs[i - 1];
+                function closeNav() {
+                    navDrawer.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
 
-                coll[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        try {
-                            currImg.src = "images/expand_more.svg";
-                        } catch (error) {}
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        try {
-                            currImg.src = "images/expand_less.svg";
-                        } catch (error) {}
+                navToggle.addEventListener('click', openNav);
+                navClose.addEventListener('click', closeNav);
+                navOverlay.addEventListener('click', closeNav);
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navDrawer.classList.contains('active')) {
+                        closeNav();
                     }
                 });
-            }
+            })();
         </script>
     </body>
 </html>

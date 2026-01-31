@@ -14,58 +14,102 @@
         />
         <title>Bot Commander Webhooks</title>
         <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/index.css" />
-        <link rel="stylesheet" href="styles/keyword.css" />
-        <script>
-            // Supported languages and their subdirectory
-            const supportedLangs = { jp: "jp" };
-            const userLang = (
-                navigator.language ||
-                navigator.userLanguage ||
-                ""
-            ).toLowerCase();
-            // Only redirect if not already in a language subdirectory
-            const pathParts = window.location.pathname.split("/");
-            const inLangDir = Object.values(supportedLangs).some((dir) =>
-                pathParts.includes(dir)
-            );
-            if (!inLangDir) {
-                if (userLang.startsWith("ja")) {
-                    window.location.replace("./jp/webhooks.html");
-                }
-                // Future: add more languages here
-            }
-        </script>
+        <link rel="stylesheet" href="styles/components.css" />
     </head>
 
     <body>
+        <!-- Navigation Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- Navigation Drawer -->
+        <nav class="nav-drawer" id="navDrawer" aria-label="Main navigation">
+            <div class="nav-drawer-header">
+                <span class="nav-drawer-title">Navigation</span>
+                <button class="nav-drawer-close" id="navClose" aria-label="Close navigation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-drawer-content">
+                <div class="nav-drawer-items">
+                    <a href="index.html" class="nav-drawer-item" data-i18n="common.home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="commands.html" class="nav-drawer-item" data-i18n="common.commands">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span>Commands</span>
+                    </a>
+                    <a href="keywords.html" class="nav-drawer-item" data-i18n="common.keywords">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                        </svg>
+                        <span>Keywords</span>
+                    </a>
+                    <a href="creating.html" class="nav-drawer-item" data-i18n="common.startingOut">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        <span>Getting Started</span>
+                    </a>
+                    <a href="tutorial.html" class="nav-drawer-item" data-i18n="common.tutorials">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>Tutorials</span>
+                    </a>
+                    <a href="webhooks.html" class="nav-drawer-item active" data-i18n="common.webhooks">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        <span>Webhooks</span>
+                    </a>
+                    <a href="privacypolicy.html" class="nav-drawer-item" data-i18n="common.privacyPolicy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>Privacy Policy</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-drawer-footer">
+                <button class="nav-drawer-lang lang-toggle" aria-label="Switch language">
+                    <span>Language</span>
+                    <span class="nav-drawer-lang-badge">EN</span>
+                </button>
+            </div>
+        </nav>
+
         <header>
-            <h1 id="headingMargin">Webhooks</h1>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 id="headingMargin" data-i18n="webhooks.title">Webhooks</h1>
+            <button class="lang-toggle" aria-label="Switch language">EN</button>
         </header>
 
-        <button class="collapsible">
-            <img class="menu" src="images/menu.svg" alt="Menu image" />
-        </button>
-        <div class="content">
-            <div id="contents">
-                <a href="index.html" class="contents">Home</a>
-
-                <a href="commands.html" class="contents">Commands</a>
-
-                <a href="keywords.html" class="contents">Keywords</a>
-
-                <a href="creating.html" class="contents"
-                    >Starting out with the bot</a
-                >
-
-                <a href="tutorial.html">Tutorials</a>
-
-                <a href="webhooks.html">Webhooks</a>
-            </div>
-        </div>
-
-        <button class="collapsible">
-            Using Webhooks<img
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="webhooks.using.title">Using Webhooks</span><img
                 class="expand"
                 src="images/expand_more.svg"
                 alt="Expand Content"
@@ -73,8 +117,8 @@
         </button>
         <div class="content">
             <div class="update">
-                <p>What can you do?</p>
-                <p class="subtext">
+                <p data-i18n="webhooks.using.whatHeading">What can you do?</p>
+                <p class="subtext" data-i18n="webhooks.using.whatText">
                     These allow you to send messages to a certain channel using
                     the built-in webhooks integration on Discord. You can send
                     either a regular message or an embed.
@@ -82,9 +126,9 @@
             </div>
 
             <div class="update">
-                <p>How do I create a webhook for my server?</p>
+                <p data-i18n="webhooks.using.howHeading">How do I create a webhook for my server?</p>
 
-                <p class="subtext">
+                <p class="subtext" data-i18n="webhooks.using.howText">
                     Go to your desired server and click on "Server Settings",
                     from there you click on "Integrations" and then "Create
                     Webhook". This will create the webhook for you and all you
@@ -94,35 +138,44 @@
         </div>
 
         <footer>
-            <a href="https://ayayaQ.github.io">My page</a
-            ><a href="https://ayayaq.github.io/DiscordBots-Help/">Help</a>
+            <a href="https://ayayaQ.github.io" data-i18n="common.myPage">My page</a
+            ><a href="https://ayayaq.github.io/DiscordBots-Help/" data-i18n="common.help">Help</a>
         </footer>
 
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/main.js"></script>
         <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
+            // Navigation drawer functionality
+            (function() {
+                const navToggle = document.getElementById('navToggle');
+                const navClose = document.getElementById('navClose');
+                const navOverlay = document.getElementById('navOverlay');
+                const navDrawer = document.getElementById('navDrawer');
 
-            var imgs = document.getElementsByClassName("expand");
+                function openNav() {
+                    navDrawer.classList.add('active');
+                    navOverlay.classList.add('active');
+                    document.body.classList.add('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'true');
+                }
 
-            for (i = 0; i < coll.length; i++) {
-                let currImg = imgs[i - 1];
+                function closeNav() {
+                    navDrawer.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
 
-                coll[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        try {
-                            currImg.src = "images/expand_more.svg";
-                        } catch (error) {}
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        try {
-                            currImg.src = "images/expand_less.svg";
-                        } catch (error) {}
+                navToggle.addEventListener('click', openNav);
+                navClose.addEventListener('click', closeNav);
+                navOverlay.addEventListener('click', closeNav);
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navDrawer.classList.contains('active')) {
+                        closeNav();
                     }
                 });
-            }
+            })();
         </script>
     </body>
 </html>

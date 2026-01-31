@@ -1,0 +1,662 @@
+{
+  "common": {
+    "home": "ホーム",
+    "commands": "コマンド",
+    "keywords": "キーワード",
+    "startingOut": "ボットの開始方法",
+    "tutorials": "チュートリアル",
+    "webhooks": "ウェブフック",
+    "privacyPolicy": "プライバシーポリシー",
+    "myPage": "マイページ",
+    "help": "ヘルプ",
+    "menuAlt": "メニュー画像",
+    "expandAlt": "内容を展開",
+    "compatibleWith": "対応: "
+  },
+  "index": {
+    "title": "Bot Commander ヘルプ",
+    "pageTitle": "Bot Commander for Discord ヘルプ",
+    "metaDesc": "Android向けDiscordボットホスティングのヘルプページ",
+    "supportDiscord": {
+      "title": "サポートDiscordに参加",
+      "heading": "他のユーザーからサポートを受けましょう!",
+      "text": "公式サポートDiscordサーバーで質問したり、Bot Commander利用者同士で交流できます。",
+      "button": "参加"
+    },
+    "battery": {
+      "title": "バッテリー最適化の無効化",
+      "whyHeading": "なぜ必要か",
+      "whyText": "一部のAndroid端末では、アプリのバッテリー管理が厳しく、アプリ終了後にボットが反応しなくなる場合があります。バッテリー最適化を無効化することで解決できる場合があります。端末ごとの詳細はGoogleで調べてください。",
+      "howHeading": "方法",
+      "howText": "<a href=\"https://dontkillmyapp.com/\">こちらのサイト</a>で端末メーカーを選択し、「solution for users」セクションを参照してください。"
+    },
+    "importExport": {
+      "title": "インポート・エクスポート",
+      "exportHeading": "エクスポート",
+      "exportText": "コマンドリストで「エクスポート」ボタンを押すと、コマンド情報を含むJSON文字列がクリップボードにコピーされます。",
+      "importHeading": "インポート",
+      "importText": "新規コマンド追加画面で「インポート」タイプを選択し、エクスポートしたJSON文字列を貼り付けてください。"
+    },
+    "intents": {
+      "title": "Gateway Intentsの有効化",
+      "whyHeading": "なぜ必要か",
+      "whyText": "Discord APIの仕様変更により、特定のIntentを有効化しないと一部のアクション（メンバー参加・退出等）が動作しません。",
+      "whyText2": "Bot Commanderの設定で「Server Member Intentを無効化」も可能ですが、その場合一部コマンドが利用できなくなります。",
+      "howHeading": "方法",
+      "howText": "Discord開発者サイトでボットの「Privaleged Gateway Intents」から「Server Members Intent」を有効化してください。"
+    },
+    "russian": {
+      "title": "ロシア語について",
+      "creditHeading": "謝辞",
+      "creditText": "PadowYT2様によるロシア語翻訳に感謝します。Bot Commanderがより多くの方に利用いただけるようになりました。",
+      "noteHeading": "メッセージ",
+      "noteText": "Если нужна помощь по приложение, пожалуйста зайдите на сервер и спросите в канале #non-english-support . Буду рад помочь. -S | PadowYT2 (Server Supporter, App Supporter)"
+    },
+    "whatsNew": {
+      "title": "新着情報",
+      "v112": {
+        "title": "1.12",
+        "items": ["ボットの永続状態保存機能追加", "各種バグ修正"]
+      },
+      "v1111": {
+        "title": "1.11.1",
+        "items": ["各種バグ修正"]
+      },
+      "v1111b": {
+        "title": "1.11.1",
+        "items": ["ヘルプサイトのテーマをニュートラルカラーに変更", "各種バグ修正"]
+      },
+      "v111": {
+        "title": "1.11",
+        "items": [
+          "ホスティング中のコマンド・ステータス更新機能追加",
+          "新しいステータスオプション追加（オンライン、アイドル、取り込み中、不可視等）",
+          "インポート/エクスポート機能の刷新",
+          "時間・メンバー関連の新キーワード追加",
+          "UIをMaterial 3に更新。Dynamic Color対応端末ではUIが端末パレットに合わせて変化",
+          "ヘルプセクションの広告完全廃止",
+          "トークン入力ミス時のクラッシュ修正",
+          "キーワード検索機能の不具合修正"
+        ]
+      },
+      "v1106": {
+        "title": "1.10.6",
+        "items": ["MESSAGE_CONTENT gateway intent有効化"]
+      },
+      "v1105": {
+        "title": "1.10.5",
+        "items": ["重要ライブラリの更新"]
+      },
+      "v1104": {
+        "title": "1.10.4",
+        "items": ["$setStatusキーワード追加", "クラッシュ修正"]
+      },
+      "v1103": {
+        "title": "1.10.3",
+        "items": ["コマンド作成画面にキーワード検索機能追加", "コマンド検索バー改善", "各種修正・微調整"]
+      },
+      "v1102": {
+        "title": "1.10.2",
+        "items": ["言語選択機能廃止（システム依存に変更）", "各種修正"]
+      },
+      "v1101": {
+        "title": "1.10.1",
+        "items": ["ロシア語対応（PadowYT2様）", "日本語対応", "設定に言語選択追加"]
+      },
+      "v110": {
+        "title": "1.10",
+        "items": ["ウェブフック機能追加"]
+      },
+      "v197": {
+        "title": "1.9.7",
+        "items": ["$sumキーワード追加", "各種修正"]
+      },
+      "v196": {
+        "title": "1.9.6",
+        "items": ["埋め込みの色指定機能追加", "バグ修正"]
+      },
+      "v195": {
+        "title": "1.9.5",
+        "items": ["管理者権限必須コマンド追加", "コマンドリストの出力非表示オプション追加", "Server Member Intents無効化オプション追加（利用不可コマンドあり）", "パフォーマンス・バグ修正"]
+      },
+      "v19": {
+        "title": "1.9",
+        "items": ["コマンドリストに検索バー追加", "左右スワイプでコマンド削除機能追加", "トークン非表示オプション追加", "コマンドのエクスポート・インポート機能追加", "各種バグ修正"]
+      },
+      "v18": {
+        "title": "1.8",
+        "items": ["ヘルプセクション・サイトのデザイン刷新", "タブ追加・調整", "他メニューからヘルプ・チュートリアルボタン削除"]
+      },
+      "v17": {
+        "title": "1.7",
+        "items": ["$eval, $haltキーワード追加（JavaScript利用可能）", "$get(), $set()キーワード追加", "トークンフィールドのテキストタイプ変更"]
+      },
+      "v16": {
+        "title": "1.6",
+        "items": ["新しい削除アクション追加（コマンド後削除、X件削除、含む場合削除）", "新キーワード24種追加（$ping, $inviteURL等）", "NSFWコマンドフィルタ機能追加", "一部フィールドの複数行対応"]
+      },
+      "v15": {
+        "title": "1.5",
+        "items": ["リアクション追加イベント用特定メッセージID必須機能追加", "コマンドのエラーメッセージ無視機能追加", "$random{}キーワード追加", "PM受信タイプ用アイコン追加"]
+      },
+      "v14": {
+        "title": "1.4",
+        "items": ["特定タイプ用ロール必須機能追加", "特定チャンネル送信機能追加", "メンションユーザー情報、ボット情報、サーバー情報等の新キーワード追加"]
+      },
+      "v13": {
+        "title": "1.3",
+        "items": ["「Streaming...」「Watching...」ステータスタイプ対応", "埋め込みメッセージ送信機能追加", "メッセージへのリアクション機能追加", "コマンド作成画面にヘルプボタン追加"]
+      },
+      "v12": {
+        "title": "1.2",
+        "items": ["コマンド作成画面刷新", "ロール付与機能追加", "チュートリアル・Discordリンク追加"]
+      },
+      "v11": {
+        "title": "1.1",
+        "items": ["キック・BAN・ボイスミュート機能追加（詳細は<a href=\"#moderation\">こちら</a>）", "ワイルドカードキーワード（*で全てのコマンド発動）", "リアクション追加コマンドタイプ追加（カスタム絵文字は名前のみ、通常絵文字は絵文字自体を指定）", "重要事項を説明するチュートリアルダイアログ追加", "$avatarキーワード追加（ユーザーのアバターをメッセージに追加）"]
+      }
+    }
+  },
+  "commands": {
+    "title": "コマンド",
+    "pageTitle": "Bot Commander コマンド",
+    "metaDesc": "Bot Commander for Discordのコマンドの基本説明",
+    "types": {
+      "title": "コマンドタイプ",
+      "messageReceive": {
+        "name": "メッセージ受信",
+        "desc": "ボットが参加しているサーバーでメッセージが受信された際にコマンドが発動します。"
+      },
+      "privateMessage": {
+        "name": "プライベートメッセージ",
+        "desc": "ボットとのダイレクトメッセージでメッセージが受信された際にコマンドが発動します。"
+      },
+      "memberJoin": {
+        "name": "メンバー参加",
+        "desc": "ボットが参加しているサーバーにメンバーが参加した際にコマンドが発動します。"
+      },
+      "memberLeave": {
+        "name": "メンバー退出",
+        "desc": "ボットが参加しているサーバーからメンバーが退出した際にコマンドが発動します。"
+      },
+      "memberBan": {
+        "name": "メンバーBAN",
+        "desc": "ボットが参加しているサーバーでメンバーがBANされた際にコマンドが発動します。"
+      },
+      "reactionAdd": {
+        "name": "リアクション追加",
+        "desc": "ボットが参加しているサーバーでメッセージにリアクションが追加された際にコマンドが発動します。コマンドフィールドには絵文字またはカスタム絵文字名を指定する必要があります。*を使用すると常に発動します。"
+      }
+    },
+    "commandDesc": {
+      "title": "コマンドと説明",
+      "command": {
+        "name": "コマンド",
+        "desc": "コマンドの動作を引き起こす文字列（リアクション追加の場合は絵文字）。*を入力すると常に動作します。"
+      },
+      "description": {
+        "name": "コマンド説明",
+        "desc": "コマンドの内容を記憶するための任意の説明を記載できます。"
+      }
+    },
+    "actions": {
+      "title": "アクション",
+      "phrase": {
+        "name": "フレーズ",
+        "compat": "メッセージ受信、プライベートメッセージ",
+        "desc": "コマンド文字列がメッセージ内のどこにあってもコマンドが発動します。"
+      },
+      "requiresRole": {
+        "name": "ロール必須",
+        "compat": "メッセージ受信、リアクション追加",
+        "desc": "指定されたロールを持つ場合のみコマンドが発動します。"
+      },
+      "requiresAdmin": {
+        "name": "管理者権限必須",
+        "compat": "メッセージ受信、リアクション追加",
+        "desc": "コマンドを呼び出すユーザーが管理者権限を持つ場合のみ発動します。"
+      },
+      "sendChannel": {
+        "name": "チャンネルメッセージ送信",
+        "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
+        "desc": "コマンドが呼び出されたチャンネルにメッセージを送信します。"
+      },
+      "sendChannelEmbed": {
+        "name": "チャンネル埋め込みメッセージ送信",
+        "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
+        "desc": "埋め込みメッセージを作成します。画像URLやサムネイルURLは有効なものを指定してください。"
+      },
+      "sendSpecificChannel": {
+        "name": "特定チャンネルに送信",
+        "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
+        "desc": "チャンネルメッセージや埋め込みメッセージの送信先チャンネルを上書きします。"
+      },
+      "sendPrivate": {
+        "name": "プライベートメッセージ送信",
+        "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
+        "desc": "コマンドを呼び出したユーザーにプライベートメッセージを送信します。"
+      },
+      "sendPrivateEmbed": {
+        "name": "プライベート埋め込みメッセージ送信",
+        "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
+        "desc": "埋め込みメッセージを作成します。画像URLやサムネイルURLは有効なものを指定してください。"
+      },
+      "react": {
+        "name": "受信メッセージにリアクション",
+        "compat": "メッセージ受信、プライベートメッセージ",
+        "desc": "コマンドを発動したメッセージにリアクションを付けます。カスタム絵文字の場合は名前のみ指定してください。"
+      },
+      "ignoreError": {
+        "name": "エラーメッセージを無視",
+        "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
+        "desc": "致命的でないエラーメッセージを無視します。"
+      },
+      "requireMessageId": {
+        "name": "特定メッセージID必須",
+        "compat": "リアクション追加",
+        "desc": "リアクション追加タイプのコマンドは特定のメッセージIDが必要です。"
+      },
+      "deleteIfContains": {
+        "name": "含む場合削除",
+        "compat": "メッセージ受信",
+        "desc": "特定の文字列を含む場合、メッセージを削除します。複数の文字列は|で区切ってください。"
+      },
+      "deleteAfter": {
+        "name": "コマンドメッセージ削除",
+        "compat": "メッセージ受信",
+        "desc": "コマンドを呼び出したメッセージを削除します。"
+      },
+      "deleteX": {
+        "name": "X件メッセージ削除",
+        "compat": "メッセージ受信",
+        "desc": "指定した件数分のメッセージを削除します。"
+      },
+      "nsfw": {
+        "name": "NSFWのみ",
+        "compat": "メッセージ受信、リアクション追加",
+        "desc": "NSFWチャンネルでのみコマンドを呼び出せます。"
+      },
+      "kick": {
+        "name": "キック",
+        "compat": "メッセージ受信",
+        "desc": "ユーザーをキックします。キック権限が必要です。使用例：「kick @user」"
+      },
+      "ban": {
+        "name": "BAN",
+        "compat": "メッセージ受信",
+        "desc": "ユーザーをBANします。BAN権限が必要です。使用例：「ban @user」"
+      },
+      "voiceMute": {
+        "name": "ボイスミュート",
+        "compat": "メッセージ受信",
+        "desc": "初回呼び出し時はボイスミュート、再度呼び出すとミュート解除します。ミュート権限が必要です。使用例：「mute @user」"
+      },
+      "assignRole": {
+        "name": "ロール付与/削除",
+        "compat": "メッセージ受信、メンバー参加、リアクション追加",
+        "desc": "ロールを付与します。既にロールがある場合は削除します。"
+      }
+    },
+    "json": {
+      "title": "commands.json",
+      "whatIs": {
+        "name": "commands.jsonとは",
+        "desc": "コマンドをエクスポートした際に出力されるファイルです。他の方と共有したり、独自のボット作成の基礎として利用できます。各値の意味と用途を説明します。"
+      },
+      "actionArr": {
+        "name": "actionArr[bool, bool]",
+        "desc": "配列です。最初のインデックスはチャンネルメッセージ送信、2番目はプライベートメッセージ送信を示します。"
+      },
+      "channelMessage": {
+        "name": "channelMessage",
+        "desc": "送信されるチャンネルメッセージです。"
+      },
+      "command": {
+        "name": "command",
+        "desc": "コマンド発動に必要なメッセージ内容。リアクション追加タイプの場合は絵文字またはカスタム絵文字名です。"
+      },
+      "commandDescription": {
+        "name": "commandDescription",
+        "desc": "コマンドの説明です。"
+      },
+      "deleteAfter": {
+        "name": "deleteAfter",
+        "desc": "コマンド発動後にメッセージを削除するかどうか。"
+      },
+      "deleteIf": {
+        "name": "deleteIf",
+        "desc": "特定の文字列を含む場合に削除するかどうかの真偽値です。"
+      },
+      "commandIfStrings": {
+        "name": "commandIfStrings",
+        "desc": "deleteIfがtrueの場合に削除対象となる文字列です。"
+      },
+      "commandNum": {
+        "name": "commandNum",
+        "desc": "deleteXがtrueの場合に削除するメッセージ数です。"
+      },
+      "deleteX": {
+        "name": "deleteX",
+        "desc": "一括削除コマンドかどうか。"
+      },
+      "ignoreErrorMessage": {
+        "name": "ignoreErrorMessage",
+        "desc": "エラーメッセージを無視するかどうか。"
+      },
+      "isBan": {
+        "name": "isBan",
+        "desc": "ユーザーをBANするかどうか。"
+      },
+      "isKick": {
+        "name": "isKick",
+        "desc": "ユーザーをキックするかどうか。"
+      },
+      "isNSFW": {
+        "name": "isNSFW",
+        "desc": "NSFWチャンネルのみで送信するかどうか。"
+      },
+      "isReact": {
+        "name": "isReact",
+        "desc": "受信メッセージにリアクションするかどうか。"
+      },
+      "isRequiredRole": {
+        "name": "isRequiredRole",
+        "desc": "ロール必須かどうか。"
+      },
+      "isRoleAssigner": {
+        "name": "isRoleAssigner",
+        "desc": "ロールを付与するかどうか。"
+      },
+      "isSpecificChannel": {
+        "name": "isSpecificChannel",
+        "desc": "特定チャンネルにメッセージや埋め込みを送信するかどうか。"
+      },
+      "isSpecificMessage": {
+        "name": "isSpecificMessage",
+        "desc": "リアクション追加タイプの場合、特定メッセージIDのみで動作するかどうか。"
+      },
+      "isVoiceMute": {
+        "name": "isVoiceMute",
+        "desc": "ボイスミュートするかどうか。"
+      },
+      "phrase": {
+        "name": "phrase",
+        "desc": "受信メッセージにコマンド以外の内容が含まれている場合も発動するかどうか。"
+      },
+      "privateMessage": {
+        "name": "privateMessage",
+        "desc": "送信されるプライベートメッセージの内容です。"
+      },
+      "reaction": {
+        "name": "reaction",
+        "desc": "isReactがtrueの場合に使用される絵文字です。"
+      },
+      "requiredRole": {
+        "name": "requiredRole",
+        "desc": "isRoleRequiredがtrueの場合に必要なロールです。"
+      },
+      "roleToAssign": {
+        "name": "roleToAssign",
+        "desc": "isRoleAssignerがtrueの場合に付与されるロールです。"
+      },
+      "sendChannelEmbed": {
+        "name": "sendChannelEmbed",
+        "desc": "チャンネル埋め込みメッセージを送信するかどうか。"
+      },
+      "sendPrivateEmbed": {
+        "name": "sendPrivateEmbed",
+        "desc": "プライベート埋め込みメッセージを送信するかどうか。"
+      },
+      "specificChannel": {
+        "name": "specificChannel",
+        "desc": "メッセージ送信先の特定チャンネル名です。"
+      },
+      "specificMessage": {
+        "name": "specificMessage",
+        "desc": "リアクション対象となる特定メッセージIDです。"
+      },
+      "type": {
+        "name": "type",
+        "desc": "コマンドタイプ。<br>TYPE_MESSAGE_RECEIVED = 0<br>TYPE_PM_RECEIVED = 1<br>TYPE_MEMBER_JOIN = 2<br>TYPE_MEMBER_LEAVE = 3<br>TYPE_MEMBER_BAN = 4<br>TYPE_REACTION_ADD = 5"
+      },
+      "channelEmbed": {
+        "name": "channelEmbed",
+        "desc": "送信されるチャンネル埋め込みメッセージ（タイトル、説明、フッター、画像、サムネイルを含む）。"
+      },
+      "privateEmbed": {
+        "name": "privateEmbed",
+        "desc": "送信されるプライベート埋め込みメッセージ（タイトル、説明、フッター、画像、サムネイルを含む）。"
+      }
+    }
+  },
+  "keywords": {
+    "title": "キーワード",
+    "pageTitle": "Bot Commander キーワード",
+    "metaDesc": "Bot Commander for Discordの全キーワードと使い方の説明",
+    "userInfo": {
+      "title": "ユーザー情報",
+      "name": { "name": "$name", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、リアクション追加", "desc": "コマンドを呼び出したユーザーへのメンションを挿入します。" },
+      "avatar": { "name": "$avatar", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのアバターURLを挿入します。" },
+      "defaultAvatar": { "name": "$defaultAvatar", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのデフォルトアバターURLを挿入します。" },
+      "namePlain": { "name": "$namePlain", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのユーザー名（テキスト）を挿入します。" },
+      "discriminator": { "name": "$discriminator", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーの識別子（#の後の数字）を挿入します。" },
+      "tag": { "name": "$tag", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのタグ（例：ユーザー名#1234）を挿入します。" },
+      "id": { "name": "$ID", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーの固有ID番号を挿入します。" },
+      "serversShared": { "name": "$serversSharedWithBot", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーがボットと共有しているサーバー数を挿入します。" },
+      "timeCreated": { "name": "$timeCreated", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのアカウント作成日時を挿入します。" }
+    },
+    "memberInfo": {
+      "title": "メンバー情報",
+      "isOwner": { "name": "$memberIsOwner", "compat": "メッセージ受信", "desc": "イベントのメンバーがサーバーのオーナーかどうかを示します。" },
+      "effectiveName": { "name": "$memberEffectiveName", "compat": "メッセージ受信", "desc": "サーバー内でのメンバーの表示名です。" },
+      "effectiveAvatar": { "name": "$memberEffectiveAvatar", "compat": "メッセージ受信", "desc": "サーバー内で表示されるユーザーのアバターです。" },
+      "memberId": { "name": "$memberID", "compat": "メッセージ受信", "desc": "メンバーの固有IDです。" },
+      "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "メッセージ受信", "desc": "ユーザーがサーバーに参加した日時があるかどうか（true/false）。" },
+      "timeJoined": { "name": "$memberTimeJoined", "compat": "メッセージ受信", "desc": "メンバーがサーバーに参加した日時です。" },
+      "hasBoosted": { "name": "$memberHasBoosted", "compat": "メッセージ受信", "desc": "メンバーがサーバーをブーストしたかどうか（true/false）。" },
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "メッセージ受信", "desc": "ユーザーがサーバーをブーストした日時（なければnull）。" }
+    },
+    "mentionedInfo": {
+      "title": "メンションユーザー情報",
+      "name": { "name": "$mentionedName", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーへのメンションを挿入します。" },
+      "avatar": { "name": "$mentionedAvatar", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのアバターURLを挿入します。" },
+      "defaultAvatar": { "name": "$mentionedDefaultAvatar", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのデフォルトアバターURLを挿入します。" },
+      "namePlain": { "name": "$mentionedNamePlain", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのユーザー名（テキスト）を挿入します。" },
+      "discriminator": { "name": "$mentionedDiscriminator", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーの識別子（#の後の数字）を挿入します。" },
+      "tag": { "name": "$mentionedTag", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのタグ（例：ユーザー名#1234）を挿入します。" },
+      "id": { "name": "$mentionedID", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーの固有ID番号を挿入します。" },
+      "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーがボットと共有しているサーバー数を挿入します。" },
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのアカウント作成日時を挿入します。" }
+    },
+    "botInfo": {
+      "title": "ボット情報",
+      "name": { "name": "$botName", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットへのメンションを挿入します。" },
+      "avatar": { "name": "$botAvatar", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットのアバターURLを挿入します。" },
+      "defaultAvatar": { "name": "$botDefaultAvatar", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットのデフォルトアバターURLを挿入します。" },
+      "namePlain": { "name": "$botNamePlain", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットのユーザー名（テキスト）を挿入します。" },
+      "discriminator": { "name": "$botDiscriminator", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットの識別子（#の後の数字）を挿入します。" },
+      "tag": { "name": "$botTag", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットのタグ（例：ユーザー名#1234）を挿入します。" },
+      "id": { "name": "$botID", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットの固有ID番号を挿入します。" },
+      "timeCreated": { "name": "$botTimeCreated", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットのアカウント作成日時を挿入します。" }
+    },
+    "serverInfo": {
+      "title": "サーバー情報",
+      "server": { "name": "$server", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバー名を挿入します。" },
+      "serverCount": { "name": "$serverCount", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットが参加しているサーバー数を挿入します。" },
+      "memberCount": { "name": "$memberCount", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのユーザー数を挿入します。" },
+      "allMemberCount": { "name": "$allMemberCount", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットが参加している全サーバーのユーザー数を挿入します。" },
+      "icon": { "name": "$serverIcon", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのアイコンURLを挿入します。" },
+      "banner": { "name": "$serverBanner", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのバナーURLを挿入します。" },
+      "description": { "name": "$serverDescription", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーの説明文を挿入します。" },
+      "splash": { "name": "$serverSplash", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのスプラッシュ画像URLを挿入します。" }
+    },
+    "channelInfo": {
+      "title": "チャンネル情報",
+      "channel": { "name": "$channel", "compat": "メッセージ受信、プライベートメッセージ、リアクション追加", "desc": "メッセージが送信されたチャンネル名を挿入します。" },
+      "channelId": { "name": "$channelID", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルのIDを挿入します。" },
+      "createDate": { "name": "$channelCreateDate", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルの作成日時を挿入します。" },
+      "asMention": { "name": "$channelAsMention", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルへのメンションを挿入します。" }
+    },
+    "message": {
+      "title": "メッセージ",
+      "message": { "name": "$message", "compat": "メッセージ受信、プライベートメッセージ", "desc": "コマンド呼び出し時の全メッセージ内容を挿入します。" },
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "メッセージ受信、プライベートメッセージ", "desc": "コマンド部分以降のメッセージ内容を挿入します。" }
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "eval": { "name": "$eval", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "JavaScriptコードブロックの開始を示します。コード終了時は$haltを記述してください。" },
+      "halt": { "name": "$halt", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "JavaScriptコードブロックの終了を示します。" },
+      "get": { "name": "$get(name)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定した名前のJavaScript変数の値を挿入します。" },
+      "set": { "name": "$set(name,value)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "JavaScript変数を設定します。true/falseや数値、文字列に対応しています。" }
+    },
+    "misc": {
+      "title": "その他",
+      "date": { "name": "$date", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "現在の日付を挿入します。" },
+      "hour": { "name": "$hour", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "現在の時刻（時）を挿入します。" },
+      "minute": { "name": "$minute", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "現在の時刻（分）を挿入します。" },
+      "second": { "name": "$second", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "現在の時刻（秒）を挿入します。" },
+      "random": { "name": "$random{a|b|c}", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "{}内の引数からランダムに文字列を選択して挿入します。文字列は|で区切ります。" },
+      "sum": { "name": "$sum{1|2|3}", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "{}内の引数の合計値を挿入します。数値は|で区切ります。" },
+      "commandCount": { "name": "$commandCount", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットが持つコマンド数を挿入します。" },
+      "rollnum": { "name": "$rollnum(min,max)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "minからmaxまでの範囲でランダムな数値を挿入します。" },
+      "ping": { "name": "$ping", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ゲートウェイのping値を挿入します。" },
+      "inviteUrl": { "name": "$inviteURL", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットをサーバーに招待するためのURLを挿入します。" },
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンド内でステータスを設定します。第1引数はonline, idle, dnd、第2引数はwatching, playing, listening、第3引数は任意の文字列です。$evalより前に評価されるため、$eval系キーワードは使用できません。" }
+    }
+  },
+  "creating": {
+    "title": "ボットの開始方法",
+    "pageTitle": "Bot Commander ボット作成",
+    "metaDesc": "Bot Commander for Discordアプリでボットを作成・設定する方法",
+    "creatingBot": {
+      "title": "ボットの作成",
+      "step1": "1. <a href=\"https://discordapp.com/developers/applications/\">こちら</a>にアクセスし、ログインしてください。",
+      "step2": "2. ダッシュボードで「New Application」ボタンをクリックしてください。",
+      "step3": "3. アプリケーション名は任意で設定してください。",
+      "step4": "4. アプリダッシュボードでメニューボタンを押し、「Bot」を選択してください。",
+      "step5": "5. 「Add Bot」を押してください。",
+      "step6": "6. トークンをコピーし、ボットアカウントの各種設定を変更できます。",
+      "step7": "7. 重要：必ず「Server Members Intent」を有効にしてください。これを有効にしない場合、ボットが正常に動作しない可能性があります。"
+    },
+    "invitingBot": {
+      "title": "ボットの招待",
+      "step1": "ボットの招待も<a href=\"https://discordapp.com/developers/applications/\">こちら</a>から行います。",
+      "step2": "メニューから「OAuth2」ボタンをクリックしてください。",
+      "step3": "「scopes」で「bot」にチェックを入れてください。",
+      "step4": "下にスクロールし、必要なボット権限を選択してください。「Administrator」はすべての権限を含みます。",
+      "step5": "再度「scopes」に戻り、リンクをコピーして開いてください。ボットを追加するサーバーでは「Manage Server」権限が必要です。"
+    }
+  },
+  "tutorial": {
+    "title": "チュートリアル",
+    "pageTitle": "Bot Commander チュートリアル",
+    "metaDesc": "Bot Commander for Discordの機能やコマンド作成方法のチュートリアル",
+    "persistState": {
+      "title": "状態の永続化",
+      "heading": "基本",
+      "intro": "ボットのセッション間で保存したい情報がある場合、\"botState\"という変数を利用できます。使い方は非常に簡単です。",
+      "step1": "コマンド作成画面でJavaScriptを使用するコマンドを作成してください。方法が分からない場合は「メッセージでJavaScriptを使う」チュートリアルを参照してください。",
+      "step2": "情報を保存したい場合は<b>botState</b>変数にプロパティを設定します。例：<b>botState.x = '保存した文字列'</b>",
+      "step3": "保存した情報をメッセージに挿入するには、<b>$get(botState.x)</b>を使用します。これで「保存した文字列」が表示されます。",
+      "step4": "これだけでOKです。アプリはホスティング終了時やアプリ終了時にbotStateを自動保存します。"
+    },
+    "dice": {
+      "title": "サイコロコマンド",
+      "intro": "このコマンドはD&Dなどで使えるサイコロの出目をシミュレートします。",
+      "step1": "コマンド作成画面でタイプを「メッセージ受信」に設定します。",
+      "step2": "コマンド名は「!dice」とします。",
+      "step3": "チャンネルメッセージ欄に「You rolled a $rollnum(1,6)」と入力します。",
+      "step4": "コマンドを保存し、ボットをホストしてテストしてください。",
+      "commandHeading": "コマンド例",
+      "outputHeading": "出力例"
+    },
+    "kick": {
+      "title": "キックコマンド",
+      "intro": "このコマンドはキック権限を持つユーザーが他ユーザーをキックできます。",
+      "step1": "コマンド作成画面でタイプを「メッセージ受信」に設定します。",
+      "step2": "コマンド名は「!kick」とします。",
+      "step3": "モデレーション欄で「kick」にチェックを入れます。",
+      "step4": "コマンドを保存し、ボットをホストしてテストしてください。使用例：「!kick @user」",
+      "commandHeading": "コマンド例",
+      "usageHeading": "使用例"
+    },
+    "phrase": {
+      "title": "フレーズコマンド",
+      "intro": "このコマンドはフレーズチェックボックスの使い方を示します。",
+      "step1": "コマンド作成画面でタイプを「メッセージ受信」に設定します。",
+      "step2": "コマンド名は「dog」とします。",
+      "step3": "チャンネルメッセージ欄に「I like dogs!」と入力します。",
+      "step4": "コマンドを保存し、ボットをホストしてテストしてください。誰かが「dog」と言うと反応します。",
+      "commandHeading": "コマンド例",
+      "outputHeading": "出力例"
+    },
+    "keywords": {
+      "title": "キーワード利用コマンド",
+      "intro": "このコマンドは複数キーワードの使い方を示します。",
+      "step1": "コマンド作成画面でタイプを「メッセージ受信」に設定します。",
+      "step2": "コマンド名は「!date」とします。",
+      "step3": "チャンネルメッセージ欄に「Hello $name it is $date」と入力します。",
+      "step4": "コマンドを保存し、ボットをホストしてテストしてください。",
+      "commandHeading": "コマンド例",
+      "outputHeading": "出力例"
+    },
+    "roleOnJoin": {
+      "title": "ユーザー参加時ロール付与",
+      "intro": "このコマンドはユーザーがサーバーに参加した際にロールを付与します。",
+      "step1": "コマンド作成画面でタイプを「メンバー参加」に設定します。",
+      "step2": "「Assign/Remove Role」にチェックを入れます。初回はロール付与、再度はロール削除となります。「メンバー参加」タイプでは一度のみ発動します。",
+      "step3": "「Role Name」欄にロール名を入力します（例：New user）。大文字小文字は区別されます。",
+      "step4": "誰かがサーバーに参加した際にコマンドをテストしてください。",
+      "commandHeading": "コマンド例"
+    },
+    "embed": {
+      "title": "埋め込みメッセージ作成",
+      "intro": "埋め込みメッセージは特別なタイプのメッセージです。作成方法を説明します。",
+      "step1": "コマンド作成画面でタイプを「メッセージ受信」、コマンド名を「!embed」に設定します。",
+      "step2": "「Send Channel Message Embed」にチェックを入れます。",
+      "step3": "5つのフィールドが表示されます。最低1つ入力すればOKです。",
+      "step4": "タイトル欄に「My Embed」と入力します。",
+      "step5": "説明欄に「$name is who called this command」と入力します。",
+      "step6": "フッター欄に「$date」と入力します（タイムスタンプとして利用可能）。",
+      "step7": "画像URL欄に「https://i.redd.it/9hs5qf7qulz41.png」と入力します。任意の画像リンクを指定可能です。",
+      "step8": "サムネイル欄に「$avatar」と入力します。コマンド呼び出し者のアバターURLが入ります。任意の画像リンクも指定可能です。",
+      "step9": "コマンドを保存し、テストしてください。",
+      "commandHeading": "コマンド例",
+      "outputHeading": "出力例"
+    },
+    "reactionRoles": {
+      "title": "リアクションロール",
+      "intro": "このコマンドは特定メッセージにリアクションしてロールを付与・削除します。",
+      "step1": "タイプを「リアクション追加」でコマンドを作成します。",
+      "step2": "コマンド欄にロール付与用の絵文字を入力します（例：smiling face）。カスタム絵文字は名前のみ指定してください。",
+      "step3": "「Require specific message ID」にチェックを入れ、対象メッセージIDを入力します。",
+      "step4": "「Assign/Remove Role」にチェックを入れ、付与するロール名を入力します（例：Tester）。",
+      "step5": "コマンドをテストし、他のロールも同様に設定できます。",
+      "commandHeading": "コマンド例"
+    },
+    "javascript": {
+      "title": "メッセージでJavaScriptを使う",
+      "intro": "JavaScriptを使うには$evalや$haltなどのキーワードを利用します。",
+      "step1": "任意の名前でコマンドを作成します（例：「Hello world」）。",
+      "step2": "チャンネル送信にチェックを入れます。",
+      "step3": "$evalキーワードと$haltキーワードを挿入します。",
+      "step4": "間にコードを記述します（例：「var hello = \"Hello world\";」）。",
+      "step5": "$haltの後または$evalの前に残りのメッセージを記述します（例：「Our output is $get(hello)」）。",
+      "step6": "ボットを実行し、コマンドをテストしてください。",
+      "commandHeading": "コマンド例",
+      "outputHeading": "出力例"
+    }
+  },
+  "webhooks": {
+    "title": "ウェブフック",
+    "pageTitle": "Bot Commander ウェブフック",
+    "metaDesc": "Bot Commander for Discordでウェブフック機能を利用する方法",
+    "using": {
+      "title": "ウェブフックの利用方法",
+      "whatHeading": "できること",
+      "whatText": "Discordの組み込みウェブフック機能を使用して、特定のチャンネルにメッセージを送信できます。通常のメッセージまたは埋め込みメッセージのいずれかを送信可能です。",
+      "howHeading": "サーバー用ウェブフックの作成方法",
+      "howText": "ご希望のサーバーで「サーバー設定」をクリックし、「インテグレーション」から「ウェブフックを作成」を選択してください。ウェブフックが作成されますので、Bot CommanderアプリにウェブフックURLをコピーしてください。"
+    }
+  }
+}

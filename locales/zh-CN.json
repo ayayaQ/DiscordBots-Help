@@ -1,0 +1,663 @@
+{
+  "common": {
+    "home": "首页",
+    "commands": "命令",
+    "keywords": "关键词",
+    "startingOut": "机器人入门",
+    "tutorials": "教程",
+    "webhooks": "Webhooks",
+    "privacyPolicy": "隐私政策",
+    "myPage": "我的页面",
+    "help": "帮助",
+    "menuAlt": "菜单图片",
+    "expandAlt": "展开内容",
+    "compatibleWith": "兼容: "
+  },
+  "index": {
+    "title": "Bot Commander 帮助",
+    "pageTitle": "Bot Commander Discord 帮助",
+    "metaDesc": "基于Android的Discord机器人托管应用帮助页面",
+    "supportDiscord": {
+      "title": "加入支持Discord服务器",
+      "heading": "从其他用户获取帮助!",
+      "text": "访问官方支持Discord服务器,获取帮助或与其他Bot Commander用户聊天。",
+      "button": "加入"
+    },
+    "battery": {
+      "title": "禁用电池优化",
+      "whyHeading": "为什么?",
+      "whyText": "一些不同厂商的Android版本对电池管理和应用生命周期非常严格。这可能导致您退出应用后机器人无响应。通常可以通过禁用电池优化来解决,但可能需要更多设置来阻止系统关闭您的应用。建议在Google上搜索如何在您的特定设备上防止应用被关闭。",
+      "howHeading": "如何操作?",
+      "howText": "访问<a href=\"https://dontkillmyapp.com/\">此网站</a>并选择您的设备制造商。然后查看\"solution for users\"部分了解如何防止应用被关闭。"
+    },
+    "importExport": {
+      "title": "导入和导出",
+      "exportHeading": "导出",
+      "exportText": "您可以在命令列表中选择一个命令后按\"导出\"按钮来导出命令。这会将包含命令所有信息的JSON字符串复制到剪贴板。",
+      "importHeading": "导入",
+      "importText": "要导入命令,请转到添加新命令区域。在这里选择\"导入\"命令类型并粘贴您导出的JSON字符串。"
+    },
+    "intents": {
+      "title": "启用Gateway Intents",
+      "whyHeading": "为什么?",
+      "whyText": "Discord API的一些新更改要求您启用某些intent才能在机器人上接收某些操作。如果没有在Discord开发者网站上启用某些intent,成员加入和成员离开等操作将无法工作。",
+      "whyText2": "如果您不想处理这个问题,可以在Bot Commander设置中勾选\"禁用Server Member Intent\",这样就不需要为您的机器人启用它。这样做的缺点是成员加入、离开和封禁命令将无法使用。",
+      "howHeading": "如何操作?",
+      "howText": "在Discord开发者网站上转到您的机器人,向下滚动到Privaleged Gateway Intents。启用Server Members Intent。这将允许您的机器人在应用中托管。"
+    },
+    "russian": {
+      "title": "俄语说明",
+      "creditHeading": "致谢",
+      "creditText": "感谢PadowYT2花时间将应用内容翻译成俄语,使Bot Commander更易于访问。",
+      "noteHeading": "PadowYT2的留言",
+      "noteText": "Если нужна помощь по приложение, пожалуйста зайдите на сервер и спросите в канале #non-english-support . Буду рад помочь. -S | PadowYT2 (Server Supporter, App Supporter)"
+    },
+    "whatsNew": {
+      "title": "新功能",
+      "v112": {
+        "title": "1.12",
+        "items": ["添加持久状态以允许机器人在会话之间记住信息。", "修复了各种错误。"]
+      },
+      "v1111": {
+        "title": "1.11.1",
+        "items": ["修复了各种错误。"]
+      },
+      "v1111b": {
+        "title": "1.11.1",
+        "items": ["帮助网站主题更改为中性色。", "修复了各种错误。"]
+      },
+      "v111": {
+        "title": "1.11",
+        "items": [
+          "命令现在也会在托管时更新,这意味着您不必重启机器人就能获取和测试最新更改。",
+          "状态更改现在也会在托管时更新。",
+          "此外,添加了新的状态选项。您现在可以设置在线状态(在线、闲置、请勿打扰、隐身)以及其他活动状态如\"竞技中\"",
+          "导入/导出系统已经改进。旧系统相当难用,所以已被更简单易用的系统取代。在命令列表中,您可以点击命令上的导出按钮,它会复制到剪贴板。要导入,转到添加命令菜单并将类型设置为导入,然后粘贴您想导入的命令。",
+          "添加了与时间和成员相关的各种新关键词。包括$hour、$memberTimeJoined、$memberHasBoosted等关键词。",
+          "UI已更新到Material 3。总体上这给应用带来了全新的现代外观。对于支持的设备用户,新增了动态颜色功能。使用动态颜色,应用UI将匹配您设备的调色板。",
+          "应用中的广告已完全移除。您将不再在帮助部分看到广告。",
+          "修复了输入错误token并尝试登录时应用崩溃的错误。",
+          "修复了某些关键词未显示在关键词搜索器中的错误。"
+        ]
+      },
+      "v1106": {
+        "title": "1.10.6",
+        "items": ["启用了MESSAGE_CONTENT gateway intent。"]
+      },
+      "v1105": {
+        "title": "1.10.5",
+        "items": ["更新了重要库。"]
+      },
+      "v1104": {
+        "title": "1.10.4",
+        "items": ["添加了$setStatus关键词。", "修复了一些崩溃。"]
+      },
+      "v1103": {
+        "title": "1.10.3",
+        "items": ["在创建命令菜单中添加了关键词搜索器。", "改进了命令搜索栏。", "各种修复和小改动。"]
+      },
+      "v1102": {
+        "title": "1.10.2",
+        "items": ["移除了语言选择,改为由系统决定。", "各种修复。"]
+      },
+      "v1101": {
+        "title": "1.10.1",
+        "items": ["俄语,感谢PadowYT2。", "日语", "在设置中添加了语言选择。"]
+      },
+      "v110": {
+        "title": "1.10",
+        "items": ["添加了使用webhooks的功能。"]
+      },
+      "v197": {
+        "title": "1.9.7",
+        "items": ["$sum关键词。", "各种修复。"]
+      },
+      "v196": {
+        "title": "1.9.6",
+        "items": ["嵌入消息颜色。", "错误修复。"]
+      },
+      "v195": {
+        "title": "1.9.5",
+        "items": ["为命令添加了\"需要管理员权限\"。", "添加了在命令列表中隐藏输出的选项。", "添加了无需启用server member intents的选项,但代价是无法使用某些命令。", "性能和错误修复"]
+      },
+      "v19": {
+        "title": "1.9",
+        "items": ["在命令列表中添加了搜索栏。", "添加了向任意方向滑动删除命令的功能。", "添加了隐藏token文本的选项。", "添加了导出按钮以将命令导出到文件。", "添加了导入按钮以从文件加载命令。", "修复了许多错误,如底部导航随键盘移动、一些命令列表错误以及一些机器人服务错误。"]
+      },
+      "v18": {
+        "title": "1.8",
+        "items": ["改进了帮助部分和帮助网站的外观。", "添加和调整了帮助部分的标签。", "从其他菜单中移除了帮助和教程按钮选项。"]
+      },
+      "v17": {
+        "title": "1.7",
+        "items": ["添加了$eval和$halt关键词以允许使用JavaScript。", "添加了$get()和$set()关键词来设置和检索值。", "更改了token字段文本类型。"]
+      },
+      "v16": {
+        "title": "1.6",
+        "items": ["新的删除操作,包括延后删除命令、删除x条消息和包含时删除。", "添加了24个新关键词,包括$ping和$inviteURL。", "过滤不适宜内容命令的操作。", "某些字段支持多行。"]
+      },
+      "v15": {
+        "title": "1.5",
+        "items": ["为添加反应事件添加了需要特定消息ID。", "为命令添加了忽略错误消息。", "添加了$random{}关键词以选择随机字符串。", "添加了PM接收类型的图标。"]
+      },
+      "v14": {
+        "title": "1.4",
+        "items": ["为某些类型的命令添加了需要角色。", "为某些类型的命令添加了在特定频道发送。", "添加了与提及用户信息、机器人信息、服务器信息等相关的关键词。"]
+      },
+      "v13": {
+        "title": "1.3",
+        "items": ["添加了对\"直播中...\"和\"观看中...\"状态类型的支持。", "发送嵌入消息的功能。", "添加了对消息做出反应的功能。", "在命令创建屏幕中添加了帮助按钮。"]
+      },
+      "v12": {
+        "title": "1.2",
+        "items": ["改进了命令创建屏幕以便于使用。", "添加了角色分配功能。", "在其他菜单中添加了教程和Discord链接。"]
+      },
+      "v11": {
+        "title": "1.1",
+        "items": ["管理功能:踢出、封禁、语音静音。这些以特殊方式工作,见<a href=\"#moderation\">这里。</a>", "通配符关键词。命令字段中的*表示任何内容都会触发命令。", "添加反应命令类型。当有人给消息添加反应时触发此类型。对于添加反应类型中的自定义表情,您将使用表情的名称(例如:您的表情名为WeirdChamp,您就输入WeirdChamp),常规表情只需在命令字段中使用表情本身。", "教程对话框提及一些重要细节。", "新关键词$avatar将用户头像添加到消息中。"]
+      }
+    }
+  },
+  "commands": {
+    "title": "命令",
+    "pageTitle": "Bot Commander 命令",
+    "metaDesc": "Bot Commander Discord中命令的所有基础知识",
+    "types": {
+      "title": "命令类型",
+      "messageReceive": {
+        "name": "消息接收",
+        "desc": "表示当机器人所在服务器收到消息时命令将触发。"
+      },
+      "privateMessage": {
+        "name": "私信",
+        "desc": "表示当通过与机器人的私信收到消息时命令将触发。"
+      },
+      "memberJoin": {
+        "name": "成员加入",
+        "desc": "表示当成员加入机器人所在服务器时命令将触发。"
+      },
+      "memberLeave": {
+        "name": "成员离开",
+        "desc": "表示当成员离开机器人所在服务器时命令将触发。"
+      },
+      "memberBan": {
+        "name": "成员封禁",
+        "desc": "表示当成员被机器人所在服务器封禁时命令将触发。"
+      },
+      "reactionAdd": {
+        "name": "添加反应",
+        "desc": "表示当在机器人所在服务器的消息上添加反应时命令将触发。此类型的命令字段必须填写表情或自定义表情名称才能触发,或可使用*使其始终触发。"
+      }
+    },
+    "commandDesc": {
+      "title": "命令和描述",
+      "command": {
+        "name": "命令",
+        "desc": "将导致命令操作发生的字符串(或添加反应的表情)。如果在此字段中放置*,命令的操作将始终发生。"
+      },
+      "description": {
+        "name": "命令描述",
+        "desc": "您可以编写的可选描述,以记住您的命令的作用。"
+      }
+    },
+    "actions": {
+      "title": "操作",
+      "phrase": {
+        "name": "短语",
+        "compat": "消息接收, 私信",
+        "desc": "命令字符串可以在消息的任何位置以激活命令。"
+      },
+      "requiresRole": {
+        "name": "需要角色",
+        "compat": "消息接收, 添加反应",
+        "desc": "命令仅在具有给定角色时激活。"
+      },
+      "requiresAdmin": {
+        "name": "需要管理员权限",
+        "compat": "消息接收, 添加反应",
+        "desc": "命令仅在调用它的用户具有管理员权限时激活。"
+      },
+      "sendChannel": {
+        "name": "发送频道消息",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "在调用命令的频道中发送消息。"
+      },
+      "sendChannelEmbed": {
+        "name": "发送频道嵌入消息",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "创建嵌入消息。如果使用,图片URL和缩略图URL必须有效。"
+      },
+      "sendSpecificChannel": {
+        "name": "发送到特定频道",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "覆盖频道消息和嵌入操作发送到的频道。"
+      },
+      "sendPrivate": {
+        "name": "发送私信",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "向调用命令的用户发送私信。"
+      },
+      "sendPrivateEmbed": {
+        "name": "发送私信嵌入消息",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "创建嵌入消息。如果使用,图片URL和缩略图URL必须有效。"
+      },
+      "react": {
+        "name": "对收到的消息做出反应",
+        "compat": "消息接收, 私信",
+        "desc": "对触发命令的消息做出反应。如果您使用自定义表情,只需使用其名称。"
+      },
+      "ignoreError": {
+        "name": "忽略错误消息",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "忽略对命令功能非致命的大多数错误消息。"
+      },
+      "requireMessageId": {
+        "name": "需要特定消息ID",
+        "compat": "添加反应",
+        "desc": "添加反应类型命令需要特定消息ID才能工作。"
+      },
+      "deleteIfContains": {
+        "name": "包含时删除",
+        "compat": "消息接收",
+        "desc": "如果消息包含某个字符串则删除。不同字符串必须用|分隔。"
+      },
+      "deleteAfter": {
+        "name": "之后删除命令消息",
+        "compat": "消息接收",
+        "desc": "删除调用命令的消息。"
+      },
+      "deleteX": {
+        "name": "删除X条消息",
+        "compat": "消息接收",
+        "desc": "删除字段中指定数量的消息。"
+      },
+      "nsfw": {
+        "name": "仅限NSFW",
+        "compat": "消息接收, 添加反应",
+        "desc": "命令只能在NSFW频道中调用。"
+      },
+      "kick": {
+        "name": "踢出",
+        "compat": "消息接收",
+        "desc": "踢出用户。需要踢出权限。用法:如果命令是\"kick\",用法是\"kick @用户\""
+      },
+      "ban": {
+        "name": "封禁",
+        "compat": "消息接收",
+        "desc": "封禁用户。需要封禁权限。用法:如果命令是\"ban\",用法是\"ban @用户\""
+      },
+      "voiceMute": {
+        "name": "语音静音",
+        "compat": "消息接收",
+        "desc": "第一次调用时语音静音用户,否则取消静音。需要静音权限。用法:如果命令是\"mute\",用法是\"mute @用户\""
+      },
+      "assignRole": {
+        "name": "分配/移除角色",
+        "compat": "消息接收, 成员加入, 添加反应",
+        "desc": "调用时分配角色,如果用户已有该角色则移除。"
+      }
+    },
+    "json": {
+      "title": "commands.json",
+      "whatIs": {
+        "name": "这是什么?",
+        "desc": "这是导出命令时输出的文件。您可以上传并发送给其他人使用该应用,但您也可以使用这些命令作为您自己编写机器人的基础。我在这里尝试描述每个值是什么以及它的用途。"
+      },
+      "actionArr": {
+        "name": "actionArr[bool, bool]",
+        "desc": "这是一个数组。第一个索引表示命令是否应发送频道消息。第二个表示是否应发送私信。"
+      },
+      "channelMessage": {
+        "name": "channelMessage",
+        "desc": "将发送的频道消息。"
+      },
+      "command": {
+        "name": "command",
+        "desc": "消息必须等于此命令才能触发。对于添加反应类型,这将是表情或自定义表情名称。"
+      },
+      "commandDescription": {
+        "name": "commandDescription",
+        "desc": "命令的描述。"
+      },
+      "deleteAfter": {
+        "name": "deleteAfter",
+        "desc": "触发命令的消息是否应在之后删除。"
+      },
+      "deleteIf": {
+        "name": "deleteIf",
+        "desc": "用于确定命令是否应在包含某些字符串时删除的布尔值。"
+      },
+      "commandIfStrings": {
+        "name": "commandIfStrings",
+        "desc": "如果deleteIf为true,将用于删除消息的字符串。"
+      },
+      "commandNum": {
+        "name": "commandNum",
+        "desc": "如果deleteX为true,要删除的消息数量。"
+      },
+      "deleteX": {
+        "name": "deleteX",
+        "desc": "这是否是批量删除命令。"
+      },
+      "ignoreErrorMessage": {
+        "name": "ignoreErrorMessage",
+        "desc": "命令是否应忽略错误消息。"
+      },
+      "isBan": {
+        "name": "isBan",
+        "desc": "命令是否应封禁某人。"
+      },
+      "isKick": {
+        "name": "isKick",
+        "desc": "命令是否应踢出某人。"
+      },
+      "isNSFW": {
+        "name": "isNSFW",
+        "desc": "命令是否为NSFW且只应在NSFW频道发送。"
+      },
+      "isReact": {
+        "name": "isReact",
+        "desc": "命令是否应对收到的消息做出反应。"
+      },
+      "isRequiredRole": {
+        "name": "isRequiredRole",
+        "desc": "命令是否需要角色才能使用。"
+      },
+      "isRoleAssigner": {
+        "name": "isRoleAssigner",
+        "desc": "命令是否应分配角色。"
+      },
+      "isSpecificChannel": {
+        "name": "isSpecificChannel",
+        "desc": "命令是否应将频道或嵌入消息发送到特定频道。"
+      },
+      "isSpecificMessage": {
+        "name": "isSpecificMessage",
+        "desc": "如果是添加反应类型,命令是否只对特定消息ID有效。"
+      },
+      "isVoiceMute": {
+        "name": "isVoiceMute",
+        "desc": "命令是否应对用户进行语音静音。"
+      },
+      "phrase": {
+        "name": "phrase",
+        "desc": "如果收到的消息中不仅仅有命令,命令是否应激活。"
+      },
+      "privateMessage": {
+        "name": "privateMessage",
+        "desc": "将发送的私信内容。"
+      },
+      "reaction": {
+        "name": "reaction",
+        "desc": "如果isReact为true,将用于反应的表情。"
+      },
+      "requiredRole": {
+        "name": "requiredRole",
+        "desc": "如果isRoleRequired为true,发送某些消息所需的角色。"
+      },
+      "roleToAssign": {
+        "name": "roleToAssign",
+        "desc": "如果isRoleAssigner为true,将分配的角色。"
+      },
+      "sendChannelEmbed": {
+        "name": "sendChannelEmbed",
+        "desc": "是否应发送频道嵌入消息。"
+      },
+      "sendPrivateEmbed": {
+        "name": "sendPrivateEmbed",
+        "desc": "是否应发送私信嵌入消息。"
+      },
+      "specificChannel": {
+        "name": "specificChannel",
+        "desc": "发送消息的特定频道名称。"
+      },
+      "specificMessage": {
+        "name": "specificMessage",
+        "desc": "必须对其做出反应的特定消息ID。"
+      },
+      "type": {
+        "name": "type",
+        "desc": "命令类型。<br>TYPE_MESSAGE_RECEIVED = 0<br>TYPE_PM_RECEIVED = 1<br>TYPE_MEMBER_JOIN = 2<br>TYPE_MEMBER_LEAVE = 3<br>TYPE_MEMBER_BAN = 4<br>TYPE_REACTION_ADD = 5"
+      },
+      "channelEmbed": {
+        "name": "channelEmbed",
+        "desc": "要发送的频道嵌入消息,包括标题、描述、页脚、图片和缩略图。"
+      },
+      "privateEmbed": {
+        "name": "privateEmbed",
+        "desc": "要发送的私信嵌入消息,包括标题、描述、页脚、图片和缩略图。"
+      }
+    }
+  },
+  "keywords": {
+    "title": "关键词",
+    "pageTitle": "Bot Commander 关键词",
+    "metaDesc": "Bot Commander Discord中所有关键词的文档及其使用方法",
+    "userInfo": {
+      "title": "用户信息",
+      "name": { "name": "$name", "compat": "消息接收, 私信, 成员加入, 添加反应", "desc": "插入调用命令的用户的提及。" },
+      "avatar": { "name": "$avatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的头像URL。" },
+      "defaultAvatar": { "name": "$defaultAvatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的默认头像URL。" },
+      "namePlain": { "name": "$namePlain", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的纯文本用户名。" },
+      "discriminator": { "name": "$discriminator", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的识别码(#后的数字)。" },
+      "tag": { "name": "$tag", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的标签(格式为用户名#1234)。" },
+      "id": { "name": "$ID", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的唯一ID号。" },
+      "serversShared": { "name": "$serversSharedWithBot", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户与机器人共享的服务器数量。" },
+      "timeCreated": { "name": "$timeCreated", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的账户创建时间。" }
+    },
+    "memberInfo": {
+      "title": "成员信息",
+      "isOwner": { "name": "$memberIsOwner", "compat": "消息接收", "desc": "事件的成员是否是服务器所有者。" },
+      "effectiveName": { "name": "$memberEffectiveName", "compat": "消息接收", "desc": "这是成员在服务器中使用的名称。" },
+      "effectiveAvatar": { "name": "$memberEffectiveAvatar", "compat": "消息接收", "desc": "这是用户在此特定服务器中显示的头像。" },
+      "memberId": { "name": "$memberID", "compat": "消息接收", "desc": "成员的唯一ID。" },
+      "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "消息接收", "desc": "返回\"true\"或\"false\",表示用户是否有加入服务器的时间。" },
+      "timeJoined": { "name": "$memberTimeJoined", "compat": "消息接收", "desc": "成员加入服务器的时间。" },
+      "hasBoosted": { "name": "$memberHasBoosted", "compat": "消息接收", "desc": "此成员是否助力了服务器?返回\"true\"或\"false\"。" },
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "消息接收", "desc": "用户助力服务器的时间是什么?如果没有,我们将得到\"null\"。" }
+    },
+    "mentionedInfo": {
+      "title": "被提及用户信息",
+      "name": { "name": "$mentionedName", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的提及。" },
+      "avatar": { "name": "$mentionedAvatar", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的头像URL。" },
+      "defaultAvatar": { "name": "$mentionedDefaultAvatar", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的默认头像URL。" },
+      "namePlain": { "name": "$mentionedNamePlain", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的纯文本用户名。" },
+      "discriminator": { "name": "$mentionedDiscriminator", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的识别码(#后的数字)。" },
+      "tag": { "name": "$mentionedTag", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的标签(格式为用户名#1234)。" },
+      "id": { "name": "$mentionedID", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的唯一ID号。" },
+      "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户与机器人共享的服务器数量。" },
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的账户创建时间。" }
+    },
+    "botInfo": {
+      "title": "机器人信息",
+      "name": { "name": "$botName", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的提及。" },
+      "avatar": { "name": "$botAvatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的头像URL。" },
+      "defaultAvatar": { "name": "$botDefaultAvatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的默认头像URL。" },
+      "namePlain": { "name": "$botNamePlain", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的纯文本用户名。" },
+      "discriminator": { "name": "$botDiscriminator", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的识别码(#后的数字)。" },
+      "tag": { "name": "$botTag", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的标签(格式为用户名#1234)。" },
+      "id": { "name": "$botID", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的唯一ID号。" },
+      "timeCreated": { "name": "$botTimeCreated", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的账户创建时间。" }
+    },
+    "serverInfo": {
+      "title": "服务器信息",
+      "server": { "name": "$server", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器名称。" },
+      "serverCount": { "name": "$serverCount", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入机器人所在的服务器数量。" },
+      "memberCount": { "name": "$memberCount", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器中的用户数量。" },
+      "allMemberCount": { "name": "$allMemberCount", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入机器人所在所有服务器中的用户数量。" },
+      "icon": { "name": "$serverIcon", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器图标的URL。" },
+      "banner": { "name": "$serverBanner", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器横幅的URL。" },
+      "description": { "name": "$serverDescription", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的描述。" },
+      "splash": { "name": "$serverSplash", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器闪屏的URL。" }
+    },
+    "channelInfo": {
+      "title": "频道信息",
+      "channel": { "name": "$channel", "compat": "消息接收, 私信, 添加反应", "desc": "插入发送消息的频道名称。" },
+      "channelId": { "name": "$channelID", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道ID。" },
+      "createDate": { "name": "$channelCreateDate", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的创建时间。" },
+      "asMention": { "name": "$channelAsMention", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的提及。" }
+    },
+    "message": {
+      "title": "消息",
+      "message": { "name": "$message", "compat": "消息接收, 私信", "desc": "插入调用命令的整个消息。" },
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "消息接收, 私信", "desc": "插入调用命令中命令部分之后的消息。" }
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "eval": { "name": "$eval", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于标记js代码块的开始。代码完成后必须跟随$halt语句" },
+      "halt": { "name": "$halt", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于标记js代码块的结束。" },
+      "get": { "name": "$get(name)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入具有该名称的js变量的值。" },
+      "set": { "name": "$set(name,value)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于设置js变量。支持布尔值\"true\"和\"false\"以及数字和字符串。" }
+    },
+    "misc": {
+      "title": "杂项",
+      "date": { "name": "$date", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前日期。" },
+      "hour": { "name": "$hour", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前小时。" },
+      "minute": { "name": "$minute", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前分钟。" },
+      "second": { "name": "$second", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前秒。" },
+      "random": { "name": "$random{a|b|c}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "从大括号{}中的参数随机选择一个字符串插入。字符串必须用|分隔。" },
+      "sum": { "name": "$sum{1|2|3}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入大括号{}中参数的总和。数字必须用|分隔。" },
+      "commandCount": { "name": "$commandCount", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入机器人拥有的命令数量。" },
+      "rollnum": { "name": "$rollnum(min,max)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入min和max之间(包含)的随机数。" },
+      "ping": { "name": "$ping", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入网关ping。" },
+      "inviteUrl": { "name": "$inviteURL", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入邀请机器人到服务器的URL。" },
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于在命令中设置状态。第一个参数的值包括online、idle、dnd。第二个参数的值是watching、playing、listening。第三个参数是任意字符串。重要提示:这在$eval之前计算,所以您不能在此使用$eval类型的关键词。" }
+    }
+  },
+  "creating": {
+    "title": "机器人入门",
+    "pageTitle": "Bot Commander - 入门",
+    "metaDesc": "如何为Bot Commander Discord应用创建和设置机器人",
+    "creatingBot": {
+      "title": "创建机器人",
+      "step1": "1. 前往<a href=\"https://discordapp.com/developers/applications/\">这里</a>并登录。",
+      "step2": "2. 在仪表板上点击\"New Application\"按钮。",
+      "step3": "3. 为应用程序命名任意名称。",
+      "step4": "4. 在应用仪表板中按菜单按钮并选择\"Bot\"",
+      "step5": "5. 按\"Add Bot\"。",
+      "step6": "6. 现在您可以复制您的token并更改机器人账户的其他方面。",
+      "step7": "7. 重要:向下滚动并在您的机器人上启用Server Members Intent。如果不这样做,您的机器人可能无法正常运行或根本无法在应用中托管。"
+    },
+    "invitingBot": {
+      "title": "邀请机器人",
+      "step1": "邀请机器人也是从<a href=\"https://discordapp.com/developers/applications/\">这里</a>完成的!",
+      "step2": "从菜单点击OAuth2按钮",
+      "step3": "在scopes中勾选\"bot\"",
+      "step4": "向下滚动并选择您的机器人权限,如果您需要所有权限,\"Administrator\"包含所有权限。\"",
+      "step5": "滚动回scopes并复制然后打开链接。注意:您必须在您希望添加机器人的服务器中拥有\"Manage Server\"权限。"
+    }
+  },
+  "tutorial": {
+    "title": "教程",
+    "pageTitle": "Bot Commander 教程",
+    "metaDesc": "关于如何使用Bot Commander Discord中的某些功能和创建命令的教程",
+    "persistState": {
+      "title": "持久化状态",
+      "heading": "基础",
+      "intro": "如果您有想要在机器人会话之间保存的运行时计算的信息,有一个可以使用的解决方案。我决定称之为\"botState\"。它非常简单易用。",
+      "step1": "转到创建命令屏幕并创建一个使用JS的命令。如果您还不知道如何做到这一点,请参阅<b>\"在消息中使用Javascript\"</b>教程。",
+      "step2": "如果我们想存储一些信息,我们将其设置在名为<b>\"botState\"</b>的变量上。当您开始托管机器人时,此变量已经定义。要在其中存储内容,只需像在JS中那样设置属性,例如我们可以做<b>\"botState.x = '我保存的字符串'\"</b>。",
+      "step3": "要读取一些信息并将其插入消息中,您可以根据我们之前的保存示例做<b>$get(botState.x)</b>。这将在您的响应中打印<b>\"我保存的字符串\"</b>。",
+      "step4": "这就是您需要担心的全部。从这里开始,应用程序应该在应用程序关闭或取消托管时处理保存<b>\"botState\"</b>。"
+    },
+    "dice": {
+      "title": "骰子命令",
+      "intro": "此命令将模拟骰子掷骰,可用于D&D等游戏。",
+      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
+      "step2": "我们将命名命令为\"!dice\"",
+      "step3": "在频道消息字段中我们将输入\"你掷出了 $rollnum(1,6)\"",
+      "step4": "保存命令,托管您的机器人并测试命令",
+      "commandHeading": "命令",
+      "outputHeading": "输出示例"
+    },
+    "kick": {
+      "title": "踢出命令",
+      "intro": "此命令将允许拥有踢出用户权限的人使用机器人踢出用户。",
+      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
+      "step2": "我们将命名命令为\"!kick\"",
+      "step3": "在管理部分勾选\"kick\"复选框",
+      "step4": "保存命令,托管您的机器人并测试命令。使用管理的命令的用法是您的命令名称和接收该操作的用户的提及,如\"!kick @用户\"",
+      "commandHeading": "命令",
+      "usageHeading": "用法示例"
+    },
+    "phrase": {
+      "title": "短语命令",
+      "intro": "此命令将展示如何使用短语复选框。",
+      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
+      "step2": "我们将命名命令为\"狗\"",
+      "step3": "在频道消息字段中我们将输入\"我喜欢狗!\"",
+      "step4": "保存命令,托管您的机器人并测试命令。现在当任何人提到狗这个词时,机器人就会做出反应。",
+      "commandHeading": "命令",
+      "outputHeading": "输出示例"
+    },
+    "keywords": {
+      "title": "使用关键词的命令",
+      "intro": "此命令将展示几个关键词的用法。",
+      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
+      "step2": "我们将命名命令为\"!date\"",
+      "step3": "在频道消息字段中我们将输入\"你好 $name 现在是 $date\"",
+      "step4": "保存命令,托管您的机器人并测试命令",
+      "commandHeading": "命令",
+      "outputHeading": "输出示例"
+    },
+    "roleOnJoin": {
+      "title": "用户加入时添加角色",
+      "intro": "此命令将在用户加入Discord服务器时为其添加角色",
+      "step1": "转到创建命令屏幕并将类型设置为\"成员加入\"。此类型用于用户加入服务器时。",
+      "step2": "我们将勾选\"分配/移除角色\"复选框。此操作在第一次激活时分配角色,如果再次激活则移除它。由于我们使用\"成员加入\",它只会激活一次。",
+      "step3": "让我们将角色放入\"角色名称\"字段,我的角色叫做新用户。这区分大小写。",
+      "step4": "用某人加入您的服务器来测试命令!",
+      "commandHeading": "命令"
+    },
+    "embed": {
+      "title": "创建嵌入消息",
+      "intro": "嵌入消息是一种特殊类型的消息。这将向您展示如何制作它们。",
+      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\",命令设置为\"!embed\"",
+      "step2": "勾选\"发送频道消息嵌入\"复选框。",
+      "step3": "现在我们有5个字段要填写。只要您至少填写其中一个,它们都是可选的。",
+      "step4": "让我们在标题字段中输入\"我的嵌入\"。",
+      "step5": "\"$name 是调用此命令的人\"将放入描述字段。",
+      "step6": "\"$date\"将放入页脚。这可以像时间戳一样工作。",
+      "step7": "我将在图片URL字段中输入\"https://i.redd.it/9hs5qf7qulz41.png\"。您可以放入任何您想要的图片链接。",
+      "step8": "在缩略图字段中让我们输入\"$avatar\",因为这会将调用此命令的人的头像URL放在那里。不过您也可以放入任何您想要的图片链接。",
+      "step9": "保存并测试命令。",
+      "commandHeading": "命令",
+      "outputHeading": "输出示例"
+    },
+    "reactionRoles": {
+      "title": "反应角色",
+      "intro": "此命令将使用特定消息允许用户通过反应来获取和移除角色。",
+      "step1": "创建一个类型为添加反应的命令。",
+      "step2": "在命令字段中我们将放入用于获取角色的表情。我将使用笑脸。注意:如果您想使用自定义表情,只需输入名称,不要包含周围的:。",
+      "step3": "勾选\"需要特定消息ID\"并输入您想用于人们获取角色的消息ID。",
+      "step4": "勾选\"分配/移除角色\"并输入您要分配的角色名称。我的就输入\"Tester\"。",
+      "step5": "测试您的命令看看是否有效,然后对您想以这种方式分配的任何其他角色重复此操作。",
+      "commandHeading": "命令"
+    },
+    "javascript": {
+      "title": "在消息中使用Javascript",
+      "intro": "要使用JavaScript,我们必须使用$eval和$halt等关键词",
+      "step1": "创建一个任意名称的命令,也许叫它\"Hello world\"",
+      "step2": "勾选频道发送",
+      "step3": "插入$eval关键词,后面跟着$halt关键词。",
+      "step4": "在中间我们将放入我们的代码。对于这个简单的例子,让我们输入\"var hello = \"Hello world\";\"",
+      "step5": "在$halt关键词之后或$eval之前,我们可以放入消息的其余部分。让我们输入\"我们的输出是 $get(hello)\"。",
+      "step6": "运行机器人,并测试命令。",
+      "commandHeading": "命令",
+      "outputHeading": "输出示例"
+    }
+  },
+  "webhooks": {
+    "title": "Webhooks",
+    "pageTitle": "Bot Commander Webhooks",
+    "metaDesc": "如何在Bot Commander Discord中使用webhooks功能",
+    "using": {
+      "title": "使用Webhooks",
+      "whatHeading": "您可以做什么?",
+      "whatText": "这些允许您使用Discord内置的webhooks集成向某个频道发送消息。您可以发送常规消息或嵌入消息。",
+      "howHeading": "如何为我的服务器创建webhook?",
+      "howText": "转到您想要的服务器并点击\"服务器设置\",然后点击\"集成\",再点击\"创建Webhook\"。这将为您创建webhook,您只需将webhook URL复制到Bot Commander应用即可。"
+    }
+  }
+}
