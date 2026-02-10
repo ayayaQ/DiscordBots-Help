@@ -5,28 +5,38 @@
 (function() {
     'use strict';
 
-    const SUPPORTED_LANGS = ['en', 'es', 'ja', 'ko', 'ru', 'zh-CN'];
+    const SUPPORTED_LANGS = ['en', 'de', 'es', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'zh-CN', 'zh-rTW'];
     const DEFAULT_LANG = 'en';
     const STORAGE_KEY = 'bc-help-lang';
 
     // Language display names
     const LANG_NAMES = {
         'en': 'English',
+        'de': 'Deutsch',
         'es': 'Español',
+        'fr': 'Français',
+        'it': 'Italiano',
         'ja': '日本語',
         'ko': '한국어',
+        'pt': 'Português',
         'ru': 'Русский',
-        'zh-CN': '中文'
+        'zh-CN': '简体中文',
+        'zh-rTW': '繁體中文'
     };
 
     // Short codes for badges
     const LANG_CODES = {
         'en': 'EN',
+        'de': 'DE',
         'es': 'ES',
+        'fr': 'FR',
+        'it': 'IT',
         'ja': 'JP',
         'ko': 'KO',
+        'pt': 'PT',
         'ru': 'RU',
-        'zh-CN': 'CN'
+        'zh-CN': 'CN',
+        'zh-rTW': 'TW'
     };
 
     // Detect user's preferred language
@@ -39,10 +49,15 @@
 
         // Check browser language
         const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (browserLang.startsWith('de')) return 'de';
+        if (browserLang.startsWith('es')) return 'es';
+        if (browserLang.startsWith('fr')) return 'fr';
+        if (browserLang.startsWith('it')) return 'it';
         if (browserLang.startsWith('ja')) return 'ja';
         if (browserLang.startsWith('ko')) return 'ko';
+        if (browserLang.startsWith('pt')) return 'pt';
         if (browserLang.startsWith('ru')) return 'ru';
-        if (browserLang.startsWith('es')) return 'es';
+        if (browserLang === 'zh-tw' || browserLang === 'zh-hant') return 'zh-rTW';
         if (browserLang.startsWith('zh')) return 'zh-CN';
 
         return DEFAULT_LANG;

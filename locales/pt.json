@@ -1,0 +1,663 @@
+{
+  "common": {
+    "home": "Início",
+    "commands": "Comandos",
+    "keywords": "Palavras-chave",
+    "startingOut": "Começando com o bot",
+    "tutorials": "Tutoriais",
+    "webhooks": "Webhooks",
+    "privacyPolicy": "Política de Privacidade",
+    "myPage": "Minha página",
+    "help": "Ajuda",
+    "menuAlt": "Imagem do menu",
+    "expandAlt": "Expandir conteúdo",
+    "compatibleWith": "Compatível com: "
+  },
+  "index": {
+    "title": "Ajuda do Bot Commander",
+    "pageTitle": "Ajuda do Bot Commander para Discord",
+    "metaDesc": "A página de ajuda do hospedador de bots Android para Discord",
+    "supportDiscord": {
+      "title": "Entre no Discord de suporte",
+      "heading": "Receba ajuda de outros usuários!",
+      "text": "Visite o servidor oficial de suporte no Discord e receba ajuda ou simplesmente converse com outros usuários do Bot Commander.",
+      "button": "ENTRAR"
+    },
+    "battery": {
+      "title": "Desativar otimizações de bateria",
+      "whyHeading": "Por quê?",
+      "whyText": "Algumas versões do Android de diferentes fabricantes podem ser muito rígidas com o gerenciamento de bateria e a vida útil dos aplicativos. Isso pode fazer com que seu bot não responda quando você sair do aplicativo. Geralmente isso pode ser resolvido desativando as otimizações de bateria, embora possa haver mais configurações para impedir que seu sistema operacional feche seus aplicativos. É recomendável pesquisar no Google como impedir que aplicativos sejam fechados no seu dispositivo específico.",
+      "howHeading": "Como?",
+      "howText": "Visite <a href=\"https://dontkillmyapp.com/\">este site</a> e selecione o fabricante do seu dispositivo. De lá, consulte a seção \"solução para usuários\" sobre como impedir que o aplicativo seja fechado."
+    },
+    "importExport": {
+      "title": "Importação e Exportação",
+      "exportHeading": "Exportação",
+      "exportText": "Você pode exportar um comando pressionando o botão \"Exportar\" quando tiver um comando selecionado na lista de comandos. Isso copiará uma string JSON para sua área de transferência contendo todas as informações sobre seu comando.",
+      "importHeading": "Importação",
+      "importText": "Para importar um comando, vá para a área de adicionar novo comando. A partir daqui, selecione o tipo de comando \"Import\" e cole sua string JSON da exportação."
+    },
+    "intents": {
+      "title": "Ativar Gateway Intents",
+      "whyHeading": "Por quê?",
+      "whyText": "Algumas mudanças recentes na API do Discord exigem que você ative certos intents para receber certas ações no seu bot. Algumas ações como entrada e saída de membros não funcionarão sem um certo intent ativado no site de desenvolvedores do Discord.",
+      "whyText2": "Se você não quer se preocupar com isso, pode ir nas configurações do Bot Commander e marcar \"Desativar Server Member Intent\" e não precisará ativá-lo para seu bot. A desvantagem é que os comandos de entrada, saída e banimento de membros não funcionarão.",
+      "howHeading": "Como?",
+      "howText": "Vá ao seu bot no site de desenvolvedores do Discord e role para baixo até os Gateway Intents privilegiados. Ative o Server Members Intent. Isso permitirá que seu bot seja hospedado no aplicativo."
+    },
+    "russian": {
+      "title": "Nota sobre o russo",
+      "creditHeading": "Créditos",
+      "creditText": "Obrigado ao PadowYT2 por dedicar tempo para traduzir o conteúdo do aplicativo para o russo, tornando o Bot Commander mais acessível.",
+      "noteHeading": "Nota do PadowYT2",
+      "noteText": "Если нужна помощь по приложение, пожалуйста зайдите на сервер и спросите в канале #non-english-support . Буду рад помочь. -S | PadowYT2 (Server Supporter, App Supporter)"
+    },
+    "whatsNew": {
+      "title": "O que há de novo?",
+      "v112": {
+        "title": "1.12",
+        "items": ["Adicionado estado persistente para permitir que bots lembrem informações entre sessões.", "Corrigidos vários bugs."]
+      },
+      "v1111": {
+        "title": "1.11.1",
+        "items": ["Corrigidos vários bugs."]
+      },
+      "v1111b": {
+        "title": "1.11.1",
+        "items": ["O tema do site de ajuda foi alterado para cores neutras.", "Corrigidos vários bugs."]
+      },
+      "v111": {
+        "title": "1.11",
+        "items": [
+          "Os comandos agora também são atualizados durante a hospedagem, o que significa que você não precisará mais reiniciar o bot para obter e testar suas últimas alterações.",
+          "As mudanças de status agora também são atualizadas durante a hospedagem.",
+          "Além disso, novas opções de status foram adicionadas. Agora você pode definir o status online (Online, Ausente, Não Perturbe, Invisível) bem como outros status de atividade como \"Competindo\".",
+          "O sistema de importação/exportação foi reformulado. O antigo era bastante confuso e difícil de usar, então foi substituído por um sistema mais simples e fácil de usar. Na lista de comandos, você pode clicar no botão de exportação de um comando e ele será copiado para sua área de transferência. Para importar, vá ao menu de adicionar comando e defina o tipo como import, depois cole o comando que deseja importar.",
+          "Várias novas palavras-chave foram adicionadas relacionadas a tempo e membros. Estas incluem palavras-chave como $hour, $memberTimeJoined, $memberHasBoosted e mais.",
+          "A interface foi atualizada para Material 3. Em geral, isso dá ao aplicativo uma aparência nova e mais moderna. Uma nova adição para usuários com dispositivos compatíveis é a Cor Dinâmica. Com a Cor Dinâmica, a interface do aplicativo se adaptará à paleta de cores do seu dispositivo.",
+          "As propagandas foram completamente removidas do aplicativo. Você não verá mais anúncios na seção de ajuda.",
+          "Corrigido um bug onde o aplicativo travava se você tentasse fazer login com um token incorreto.",
+          "Corrigido um bug onde algumas palavras-chave não apareciam no buscador de palavras-chave."
+        ]
+      },
+      "v1106": {
+        "title": "1.10.6",
+        "items": ["Ativado o gateway intent MESSAGE_CONTENT."]
+      },
+      "v1105": {
+        "title": "1.10.5",
+        "items": ["Bibliotecas importantes atualizadas."]
+      },
+      "v1104": {
+        "title": "1.10.4",
+        "items": ["Adicionada a palavra-chave $setStatus.", "Corrigidos alguns travamentos."]
+      },
+      "v1103": {
+        "title": "1.10.3",
+        "items": ["Adicionado um buscador de palavras-chave no menu de criação de comando.", "Melhorada a barra de pesquisa de comandos.", "Várias correções e pequenas alterações."]
+      },
+      "v1102": {
+        "title": "1.10.2",
+        "items": ["Removida a seleção de idioma, deixada para o sistema.", "Várias correções."]
+      },
+      "v1101": {
+        "title": "1.10.1",
+        "items": ["Idioma russo, graças ao PadowYT2.", "Idioma japonês", "Adicionada seleção de idioma nas configurações."]
+      },
+      "v110": {
+        "title": "1.10",
+        "items": ["Adicionada a capacidade de usar webhooks."]
+      },
+      "v197": {
+        "title": "1.9.7",
+        "items": ["Palavra-chave $sum.", "Várias correções."]
+      },
+      "v196": {
+        "title": "1.9.6",
+        "items": ["Cor para embeds.", "Correções de bugs."]
+      },
+      "v195": {
+        "title": "1.9.5",
+        "items": ["Adicionado \"requer privilégio de administrador\" para comandos.", "Adicionada opção para ocultar a saída na lista de comandos.", "Adicionada opção para remover a necessidade de ativar os server member intents ao custo de não poder usar alguns comandos.", "Correções de desempenho e bugs"]
+      },
+      "v19": {
+        "title": "1.9",
+        "items": ["Adicionada barra de pesquisa à lista de comandos.", "Adicionada capacidade de deslizar em ambas as direções para excluir um comando.", "Adicionada opção para ocultar o texto do token.", "Adicionado botão de exportação para exportar seus comandos em um arquivo.", "Adicionado botão de importação para carregar comandos de um arquivo.", "Corrigidos muitos bugs como a navegação inferior subindo com o teclado, alguns bugs da lista de comandos e alguns bugs do serviço do bot."]
+      },
+      "v18": {
+        "title": "1.8",
+        "items": ["Reformulada a aparência da seção de ajuda e do site de ajuda.", "Adicionadas e ajustadas abas para a seção de ajuda.", "Removidas opções de botões de ajuda e tutorial do outro menu."]
+      },
+      "v17": {
+        "title": "1.7",
+        "items": ["Adicionadas as palavras-chave $eval e $halt para permitir o uso de JavaScript.", "Adicionadas as palavras-chave $get() e $set() para definir e recuperar valores.", "Alterado o tipo de texto do campo de token."]
+      },
+      "v16": {
+        "title": "1.6",
+        "items": ["Novas ações de exclusão incluindo excluir comando depois, excluir X mensagens e excluir se contém.", "24 novas palavras-chave adicionadas incluindo $ping e $inviteURL.", "Ação para filtrar comandos impróprios.", "Suporte multilinha para alguns campos."]
+      },
+      "v15": {
+        "title": "1.5",
+        "items": ["Adicionado requisito de ID de mensagem específica para eventos de adição de reação.", "Adicionada opção de ignorar mensagens de erro para comandos.", "Adicionada palavra-chave $random{} para selecionar uma string aleatória.", "Adicionado ícone para o tipo de recebimento de MP."]
+      },
+      "v14": {
+        "title": "1.4",
+        "items": ["Adicionado requisito de cargo para comandos de certos tipos.", "Adicionado envio em canal específico para comandos de certos tipos.", "Adicionadas palavras-chave relacionadas a informações do usuário mencionado, do bot, do servidor e mais algumas."]
+      },
+      "v13": {
+        "title": "1.3",
+        "items": ["Adicionado suporte para os tipos de status \"Transmitindo...\" e \"Assistindo...\".", "Capacidade de enviar mensagens embed.", "Adicionada capacidade de reagir a mensagens.", "Adicionado botão de ajuda na tela de criação de comando."]
+      },
+      "v12": {
+        "title": "1.2",
+        "items": ["Reformulada a tela de criação de comando para facilidade de uso.", "Adicionada função de atribuição de cargo.", "Adicionados links para tutorial e um Discord no outro menu."]
+      },
+      "v11": {
+        "title": "1.1",
+        "items": ["Moderação: expulsão, banimento, silenciar voz. Estes funcionam de forma especial, veja <a href=\"#moderation\">aqui.</a>", "Palavra-chave curinga. * no campo de comando significa que qualquer coisa acionará o comando.", "Tipo de comando adição de reação. Este tipo é acionado quando alguém adiciona uma reação a uma mensagem. Para emojis personalizados no tipo adição de reação, você usará o nome do emoji (ex: seu emote se chama WeirdChamp, você colocaria WeirdChamp), e emojis normais usarão simplesmente o emoji no campo de comando.", "Diálogos de tutorial para mencionar alguns detalhes importantes.", "Nova palavra-chave $avatar que adiciona o avatar do usuário à mensagem."]
+      }
+    }
+  },
+  "commands": {
+    "title": "Comandos",
+    "pageTitle": "Comandos Bot Commander",
+    "metaDesc": "Todos os fundamentos dos comandos no Bot Commander para Discord",
+    "types": {
+      "title": "Tipos de comando",
+      "messageReceive": {
+        "name": "Recebimento de mensagem",
+        "desc": "Indica que o comando será acionado quando uma mensagem for recebida em um servidor onde o bot está."
+      },
+      "privateMessage": {
+        "name": "Mensagem privada",
+        "desc": "Indica que o comando será acionado quando uma mensagem for recebida por mensagem direta com o bot."
+      },
+      "memberJoin": {
+        "name": "Entrada de membro",
+        "desc": "Indica que o comando será acionado quando um membro entrar em um servidor onde o bot está."
+      },
+      "memberLeave": {
+        "name": "Saída de membro",
+        "desc": "Indica que o comando será acionado quando um membro sair de um servidor onde o bot está."
+      },
+      "memberBan": {
+        "name": "Banimento de membro",
+        "desc": "Indica que o comando será acionado quando um membro for banido de um servidor onde o bot está."
+      },
+      "reactionAdd": {
+        "name": "Adição de reação",
+        "desc": "Indica que o comando será acionado quando uma reação for adicionada a uma mensagem em um servidor onde o bot está. O campo de comando para este tipo deve ser preenchido com um emoji ou nome de um emoji personalizado para acionar, ou * pode ser usado para acionar sempre."
+      }
+    },
+    "commandDesc": {
+      "title": "Comando e descrição",
+      "command": {
+        "name": "Comando",
+        "desc": "A string (ou emoji para Adição de reação) que causará a execução das ações do comando. Se * for colocado neste campo, as ações do comando sempre serão executadas."
+      },
+      "description": {
+        "name": "Descrição do comando",
+        "desc": "Uma descrição opcional que você pode escrever para lembrar o que seu comando faz."
+      }
+    },
+    "actions": {
+      "title": "Ações",
+      "phrase": {
+        "name": "Frase",
+        "compat": "Message Receive, Private Message",
+        "desc": "A string do comando pode estar em qualquer lugar na mensagem para ativar o comando."
+      },
+      "requiresRole": {
+        "name": "Requer cargo",
+        "compat": "Message Receive, Reaction Add",
+        "desc": "O comando só será ativado com o cargo indicado."
+      },
+      "requiresAdmin": {
+        "name": "Requer privilégio de administrador",
+        "compat": "Message Receive, Reaction Add",
+        "desc": "O comando só será ativado se o usuário que o chamar tiver privilégios de administrador."
+      },
+      "sendChannel": {
+        "name": "Enviar mensagem no canal",
+        "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add",
+        "desc": "Envia uma mensagem no canal onde o comando foi chamado."
+      },
+      "sendChannelEmbed": {
+        "name": "Enviar embed no canal",
+        "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add",
+        "desc": "Cria um embed. A URL da imagem e a URL da miniatura devem ser válidas se usadas."
+      },
+      "sendSpecificChannel": {
+        "name": "Enviar em canal específico",
+        "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add",
+        "desc": "Substitui o canal para onde as ações de mensagem e embed são enviadas."
+      },
+      "sendPrivate": {
+        "name": "Enviar mensagem privada",
+        "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add",
+        "desc": "Envia uma mensagem privada para o usuário que chamou o comando."
+      },
+      "sendPrivateEmbed": {
+        "name": "Enviar embed privado",
+        "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add",
+        "desc": "Cria um embed. A URL da imagem e a URL da miniatura devem ser válidas se usadas."
+      },
+      "react": {
+        "name": "Reagir à mensagem recebida",
+        "compat": "Message Receive, Private Message",
+        "desc": "Reage à mensagem que acionou o comando. Se estiver usando um emoji personalizado, use apenas o nome dele."
+      },
+      "ignoreError": {
+        "name": "Ignorar mensagens de erro",
+        "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add",
+        "desc": "Ignora a maioria das mensagens de erro que não são fatais para as funções do comando."
+      },
+      "requireMessageId": {
+        "name": "Requer ID de mensagem específica",
+        "compat": "Reaction Add",
+        "desc": "Requer um ID de mensagem específico para que o comando de tipo adição de reação funcione."
+      },
+      "deleteIfContains": {
+        "name": "Excluir se contém",
+        "compat": "Message Receive",
+        "desc": "Remove a mensagem se contiver uma certa string. Diferentes strings devem ser separadas com |."
+      },
+      "deleteAfter": {
+        "name": "Excluir mensagem do comando depois",
+        "compat": "Message Receive",
+        "desc": "Exclui a mensagem que chamou o comando."
+      },
+      "deleteX": {
+        "name": "Excluir X mensagens",
+        "compat": "Message Receive",
+        "desc": "Exclui o número indicado no campo de mensagens."
+      },
+      "nsfw": {
+        "name": "Apenas NSFW",
+        "compat": "Message Receive, Reaction Add",
+        "desc": "O comando só pode ser chamado em canais NSFW."
+      },
+      "kick": {
+        "name": "Expulsar",
+        "compat": "Message Receive",
+        "desc": "Expulsa um usuário. Requer permissões de expulsão. Uso: se o comando é \"kick\" o uso é \"kick @usuário\""
+      },
+      "ban": {
+        "name": "Banir",
+        "compat": "Message Receive",
+        "desc": "Bane um usuário. Requer permissões de banimento. Uso: se o comando é \"ban\" o uso é \"ban @usuário\""
+      },
+      "voiceMute": {
+        "name": "Silenciar voz",
+        "compat": "Message Receive",
+        "desc": "Silencia um usuário na primeira chamada, senão remove o silenciamento. Requer permissões de silenciamento. Uso: se o comando é \"mute\" o uso é \"mute @usuário\""
+      },
+      "assignRole": {
+        "name": "Atribuir/Remover cargo",
+        "compat": "Message Receive, Member Join, Reaction Add",
+        "desc": "Atribui um cargo quando chamado, se o usuário já tem o cargo, ele o remove."
+      }
+    },
+    "json": {
+      "title": "commands.json",
+      "whatIs": {
+        "name": "O que é?",
+        "desc": "Este é o arquivo gerado quando você exporta seus comandos. Você pode enviá-lo para outras pessoas usarem com o aplicativo, mas também pode usar esses comandos como base para um bot que decida escrever sozinho. Tentei descrever o que cada valor é e para que é usado aqui."
+      },
+      "actionArr": {
+        "name": "actionArr[bool, bool]",
+        "desc": "Este é um array. O primeiro índice representa se o comando deve enviar uma mensagem no canal. O segundo representa se uma mensagem privada deve ser enviada."
+      },
+      "channelMessage": {
+        "name": "channelMessage",
+        "desc": "A mensagem do canal que será enviada."
+      },
+      "command": {
+        "name": "command",
+        "desc": "O comando ao qual a mensagem deve corresponder para acionar o comando. Será um emoji ou nome de emoji personalizado para o tipo adição de reação."
+      },
+      "commandDescription": {
+        "name": "commandDescription",
+        "desc": "Uma descrição do comando."
+      },
+      "deleteAfter": {
+        "name": "deleteAfter",
+        "desc": "Se a mensagem que acionou o comando deve ser excluída depois."
+      },
+      "deleteIf": {
+        "name": "deleteIf",
+        "desc": "Um booleano usado para determinar se o comando deve ser excluído se contiver certas strings."
+      },
+      "commandIfStrings": {
+        "name": "commandIfStrings",
+        "desc": "As strings que serão usadas se deleteIf for verdadeiro para excluir uma mensagem."
+      },
+      "commandNum": {
+        "name": "commandNum",
+        "desc": "O número de mensagens a excluir se deleteX for verdadeiro."
+      },
+      "deleteX": {
+        "name": "deleteX",
+        "desc": "Se este é um comando de exclusão em massa."
+      },
+      "ignoreErrorMessage": {
+        "name": "ignoreErrorMessage",
+        "desc": "Se o comando deve ignorar mensagens de erro."
+      },
+      "isBan": {
+        "name": "isBan",
+        "desc": "Se o comando deve banir alguém."
+      },
+      "isKick": {
+        "name": "isKick",
+        "desc": "Se o comando deve expulsar alguém."
+      },
+      "isNSFW": {
+        "name": "isNSFW",
+        "desc": "Se o comando é NSFW e deve ser enviado apenas em canais NSFW."
+      },
+      "isReact": {
+        "name": "isReact",
+        "desc": "Se o comando deve reagir à mensagem recebida."
+      },
+      "isRequiredRole": {
+        "name": "isRequiredRole",
+        "desc": "Se o comando deve requerer um cargo para ser usado."
+      },
+      "isRoleAssigner": {
+        "name": "isRoleAssigner",
+        "desc": "Se o comando deve atribuir um cargo."
+      },
+      "isSpecificChannel": {
+        "name": "isSpecificChannel",
+        "desc": "Se o comando deve enviar mensagens de canal ou embed em um canal específico."
+      },
+      "isSpecificMessage": {
+        "name": "isSpecificMessage",
+        "desc": "Se o comando, do tipo adição de reação, deve funcionar apenas em um ID de mensagem específico."
+      },
+      "isVoiceMute": {
+        "name": "isVoiceMute",
+        "desc": "Se o comando deve silenciar um usuário na voz."
+      },
+      "phrase": {
+        "name": "phrase",
+        "desc": "Se o comando deve ativar se houver mais do que apenas o comando na mensagem recebida."
+      },
+      "privateMessage": {
+        "name": "privateMessage",
+        "desc": "O conteúdo da mensagem privada que será enviada."
+      },
+      "reaction": {
+        "name": "reaction",
+        "desc": "O emote que será usado para reagir se isReact for verdadeiro."
+      },
+      "requiredRole": {
+        "name": "requiredRole",
+        "desc": "O cargo necessário para enviar certas mensagens se isRoleRequired for verdadeiro."
+      },
+      "roleToAssign": {
+        "name": "roleToAssign",
+        "desc": "O cargo que será atribuído se isRoleAssigner for verdadeiro."
+      },
+      "sendChannelEmbed": {
+        "name": "sendChannelEmbed",
+        "desc": "Se um embed de canal deve ser enviado."
+      },
+      "sendPrivateEmbed": {
+        "name": "sendPrivateEmbed",
+        "desc": "Se um embed privado deve ser enviado."
+      },
+      "specificChannel": {
+        "name": "specificChannel",
+        "desc": "O nome do canal específico para enviar uma mensagem."
+      },
+      "specificMessage": {
+        "name": "specificMessage",
+        "desc": "O ID de uma certa mensagem que deve ser reagida."
+      },
+      "type": {
+        "name": "type",
+        "desc": "O tipo de comando.<br>TYPE_MESSAGE_RECEIVED = 0<br>TYPE_PM_RECEIVED = 1<br>TYPE_MEMBER_JOIN = 2<br>TYPE_MEMBER_LEAVE = 3<br>TYPE_MEMBER_BAN = 4<br>TYPE_REACTION_ADD = 5"
+      },
+      "channelEmbed": {
+        "name": "channelEmbed",
+        "desc": "O embed de canal a ser enviado, inclui um título, uma descrição, um rodapé, uma imagem e uma miniatura."
+      },
+      "privateEmbed": {
+        "name": "privateEmbed",
+        "desc": "O embed privado a ser enviado, inclui um título, uma descrição, um rodapé, uma imagem e uma miniatura."
+      }
+    }
+  },
+  "keywords": {
+    "title": "Palavras-chave",
+    "pageTitle": "Palavras-chave Bot Commander",
+    "metaDesc": "Documentação de todas as palavras-chave no Bot Commander para Discord e como usá-las",
+    "userInfo": {
+      "title": "Info do usuário",
+      "name": { "name": "$name", "compat": "Message Receive, Private Message, Member Join, Reaction Add", "desc": "Insere uma menção do usuário que chamou o comando." },
+      "avatar": { "name": "$avatar", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do avatar do usuário que chamou o comando." },
+      "defaultAvatar": { "name": "$defaultAvatar", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do avatar padrão do usuário que chamou o comando." },
+      "namePlain": { "name": "$namePlain", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o nome de usuário em texto simples do usuário que chamou o comando." },
+      "discriminator": { "name": "$discriminator", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o discriminador (os números após o #) do usuário que chamou o comando." },
+      "tag": { "name": "$tag", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a tag (na forma NomeUsuário#1234) do usuário que chamou o comando." },
+      "id": { "name": "$ID", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o número de ID único do usuário que chamou o comando." },
+      "serversShared": { "name": "$serversSharedWithBot", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o número de servidores compartilhados com o bot pelo usuário que chamou o comando." },
+      "timeCreated": { "name": "$timeCreated", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a data de criação da conta do usuário que chamou o comando." }
+    },
+    "memberInfo": {
+      "title": "Info do membro",
+      "isOwner": { "name": "$memberIsOwner", "compat": "Message Receive", "desc": "Se o membro do evento é o dono do servidor." },
+      "effectiveName": { "name": "$memberEffectiveName", "compat": "Message Receive", "desc": "Este é o nome pelo qual o membro é conhecido dentro do servidor." },
+      "effectiveAvatar": { "name": "$memberEffectiveAvatar", "compat": "Message Receive", "desc": "Este é o avatar que o usuário exibe neste servidor específico." },
+      "memberId": { "name": "$memberID", "compat": "Message Receive", "desc": "O ID único do membro." },
+      "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "Message Receive", "desc": "Retorna \"true\" ou \"false\" indicando se o usuário tem uma data de entrada no servidor." },
+      "timeJoined": { "name": "$memberTimeJoined", "compat": "Message Receive", "desc": "A data em que o membro entrou no servidor." },
+      "hasBoosted": { "name": "$memberHasBoosted", "compat": "Message Receive", "desc": "Este membro impulsionou o servidor? Retorna \"true\" ou \"false\"." },
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Message Receive", "desc": "Quando o usuário impulsionou o servidor? Se não houver data, obteremos \"null\"." }
+    },
+    "mentionedInfo": {
+      "title": "Info do usuário mencionado",
+      "name": { "name": "$mentionedName", "compat": "Message Receive", "desc": "Insere uma menção do usuário mencionado na chamada do comando." },
+      "avatar": { "name": "$mentionedAvatar", "compat": "Message Receive", "desc": "Insere a URL do avatar do usuário mencionado na chamada do comando." },
+      "defaultAvatar": { "name": "$mentionedDefaultAvatar", "compat": "Message Receive", "desc": "Insere a URL do avatar padrão do usuário mencionado na chamada do comando." },
+      "namePlain": { "name": "$mentionedNamePlain", "compat": "Message Receive", "desc": "Insere o nome de usuário em texto simples do usuário mencionado na chamada do comando." },
+      "discriminator": { "name": "$mentionedDiscriminator", "compat": "Message Receive", "desc": "Insere o discriminador (os números após o #) do usuário mencionado na chamada do comando." },
+      "tag": { "name": "$mentionedTag", "compat": "Message Receive", "desc": "Insere a tag (na forma NomeUsuário#1234) do usuário mencionado na chamada do comando." },
+      "id": { "name": "$mentionedID", "compat": "Message Receive", "desc": "Insere o número de ID único do usuário mencionado na chamada do comando." },
+      "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "Message Receive", "desc": "Insere o número de servidores compartilhados com o bot pelo usuário mencionado na chamada do comando." },
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Message Receive", "desc": "Insere a data de criação da conta do usuário mencionado na chamada do comando." }
+    },
+    "botInfo": {
+      "title": "Info do bot",
+      "name": { "name": "$botName", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere uma menção do seu bot." },
+      "avatar": { "name": "$botAvatar", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do avatar do seu bot." },
+      "defaultAvatar": { "name": "$botDefaultAvatar", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do avatar padrão do seu bot." },
+      "namePlain": { "name": "$botNamePlain", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o nome de usuário em texto simples do seu bot." },
+      "discriminator": { "name": "$botDiscriminator", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o discriminador (os números após o #) do seu bot." },
+      "tag": { "name": "$botTag", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a tag (na forma NomeUsuário#1234) do seu bot." },
+      "id": { "name": "$botID", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o número de ID único do seu bot." },
+      "timeCreated": { "name": "$botTimeCreated", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a data de criação da conta do seu bot." }
+    },
+    "serverInfo": {
+      "title": "Info do servidor",
+      "server": { "name": "$server", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o nome do servidor onde o comando foi chamado." },
+      "serverCount": { "name": "$serverCount", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o número de servidores em que o bot está." },
+      "memberCount": { "name": "$memberCount", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o número de usuários no servidor onde o comando foi chamado." },
+      "allMemberCount": { "name": "$allMemberCount", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o número de usuários em todos os servidores onde o bot está." },
+      "icon": { "name": "$serverIcon", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do ícone do servidor onde o comando foi chamado." },
+      "banner": { "name": "$serverBanner", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do banner do servidor onde o comando foi chamado." },
+      "description": { "name": "$serverDescription", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a descrição do servidor onde o comando foi chamado." },
+      "splash": { "name": "$serverSplash", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL do splash do servidor onde o comando foi chamado." }
+    },
+    "channelInfo": {
+      "title": "Info do canal",
+      "channel": { "name": "$channel", "compat": "Message Receive, Private Message, Reaction Add", "desc": "Insere o nome do canal onde a mensagem foi enviada." },
+      "channelId": { "name": "$channelID", "compat": "Message Receive, Reaction Add", "desc": "Insere o ID do canal onde a mensagem foi enviada." },
+      "createDate": { "name": "$channelCreateDate", "compat": "Message Receive, Reaction Add", "desc": "Insere a data de criação do canal onde a mensagem foi enviada." },
+      "asMention": { "name": "$channelAsMention", "compat": "Message Receive, Reaction Add", "desc": "Insere a menção do canal onde a mensagem foi enviada." }
+    },
+    "message": {
+      "title": "Mensagem",
+      "message": { "name": "$message", "compat": "Message Receive, Private Message", "desc": "Insere a mensagem inteira do comando chamado." },
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "Message Receive, Private Message", "desc": "Insere a mensagem após a parte do comando do comando chamado." }
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "eval": { "name": "$eval", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Usado para marcar o início de um bloco de código JS. Deve ser seguido por uma instrução $halt após o código terminar." },
+      "halt": { "name": "$halt", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Usado para marcar o fim de um bloco de código JS." },
+      "get": { "name": "$get(name)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o valor da variável JS com esse nome." },
+      "set": { "name": "$set(name,value)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Usado para definir uma variável JS. Suporta booleanos \"true\" e \"false\" bem como números e strings." }
+    },
+    "misc": {
+      "title": "Diversos",
+      "date": { "name": "$date", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a data atual." },
+      "hour": { "name": "$hour", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a hora atual." },
+      "minute": { "name": "$minute", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o minuto atual." },
+      "second": { "name": "$second", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o segundo atual." },
+      "random": { "name": "$random{a|b|c}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere uma string selecionada aleatoriamente dos argumentos nas chaves {}. As strings devem ser separadas usando |." },
+      "sum": { "name": "$sum{1|2|3}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a soma de seus argumentos nas chaves {}. Os números devem ser separados usando |." },
+      "commandCount": { "name": "$commandCount", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a quantidade de comandos que o bot tem." },
+      "rollnum": { "name": "$rollnum(min,max)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere um número aleatório entre min e max inclusive." },
+      "ping": { "name": "$ping", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere o ping do gateway." },
+      "inviteUrl": { "name": "$inviteURL", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Insere a URL para convidar o bot para um servidor." },
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Usado para definir o status nos comandos. Os valores do primeiro parâmetro incluem online, idle, dnd. Os valores do segundo parâmetro são watching, playing, listening. O terceiro parâmetro é a string desejada. Nota importante: isso é avaliado antes de $eval, então você não pode usar palavras-chave do tipo $eval." }
+    }
+  },
+  "creating": {
+    "title": "Começando com o bot",
+    "pageTitle": "Bot Commander - Primeiros passos",
+    "metaDesc": "Como criar e configurar um bot para o aplicativo Bot Commander para Discord",
+    "creatingBot": {
+      "title": "Criando o bot",
+      "step1": "1. Vá <a href=\"https://discordapp.com/developers/applications/\">aqui</a> e faça login.",
+      "step2": "2. Uma vez no painel, clique no botão \"Nova Aplicação\".",
+      "step3": "3. Dê o nome que quiser à aplicação.",
+      "step4": "4. No painel do aplicativo, pressione o botão de menu e selecione \"Bot\".",
+      "step5": "5. Pressione \"Adicionar Bot\".",
+      "step6": "6. Agora você pode copiar seu token e alterar outros aspectos da conta do bot.",
+      "step7": "7. IMPORTANTE: role para baixo e ative o Server Members Intent no seu bot. Se não fizer isso, seu bot pode não funcionar corretamente ou não ser hospedado no aplicativo."
+    },
+    "invitingBot": {
+      "title": "Convidando o bot",
+      "step1": "Convidar o bot também é feito a partir <a href=\"https://discordapp.com/developers/applications/\">daqui!</a>",
+      "step2": "Clique no botão OAuth2 no menu.",
+      "step3": "Nos escopos, marque \"bot\".",
+      "step4": "Role para baixo e selecione as permissões do seu bot. \"Administrador\" conta para todas as permissões se você precisar de todas.",
+      "step5": "Role de volta para os escopos e copie e depois abra o link. Nota: você deve ter a permissão \"Gerenciar Servidor\" no servidor ao qual deseja adicionar o bot."
+    }
+  },
+  "tutorial": {
+    "title": "Tutoriais",
+    "pageTitle": "Tutoriais Bot Commander",
+    "metaDesc": "Tutoriais sobre como usar algumas funções e criar comandos no Bot Commander para Discord",
+    "persistState": {
+      "title": "Persistência de estado",
+      "heading": "O básico",
+      "intro": "Se você tem informações que quer salvar entre sessões do bot e que são calculadas em tempo de execução, existe uma solução. É algo que decidi chamar de \"botState\". É muito simples de usar.",
+      "step1": "Vá para a tela de criação de comando e crie um comando que usará JS. Se ainda não sabe como fazer isso, veja o tutorial sobre <b>\"Usando Javascript em mensagens\"</b>.",
+      "step2": "Se quisermos armazenar alguma informação, definimos em uma variável chamada <b>\"botState\"</b>. Esta variável já está definida quando você começa a hospedar seu bot. Para armazenar algo, basta definir uma propriedade como faria em JS, por exemplo <b>\"botState.x = 'minha string salva'\"</b>.",
+      "step3": "Para ler alguma informação e inseri-la em uma mensagem, você pode simplesmente fazer <b>$get(botState.x)</b> como exemplo baseado em nosso exemplo de salvamento anterior. Isso imprimirá <b>\"minha string salva\"</b> em sua resposta.",
+      "step4": "Isso é tudo com que você precisa se preocupar. A partir daqui, o aplicativo cuidará de salvar o <b>\"botState\"</b> ao fechar o aplicativo ou ao cancelar a hospedagem."
+    },
+    "dice": {
+      "title": "Comando de dado",
+      "intro": "Este comando simulará um lançamento de dado que poderia ser usado para algo como D&D.",
+      "step1": "Vá para a tela de criação de comando e defina o tipo como \"Message Receive\".",
+      "step2": "Vamos nomear o comando \"!dice\".",
+      "step3": "No campo de mensagem do canal, colocaremos \"Você tirou um $rollnum(1,6)\".",
+      "step4": "Salve o comando, hospede seu bot e teste o comando.",
+      "commandHeading": "Comando",
+      "outputHeading": "Exemplo de saída"
+    },
+    "kick": {
+      "title": "Comando de expulsão",
+      "intro": "Este comando permitirá que alguém com privilégio de expulsão expulse usuários com o bot.",
+      "step1": "Vá para a tela de criação de comando e defina o tipo como \"Message Receive\".",
+      "step2": "Vamos nomear o comando \"!kick\".",
+      "step3": "Na seção de moderação, marque a caixa \"kick\".",
+      "step4": "Salve o comando, hospede seu bot e teste o comando. O uso para comandos de moderação é o nome do seu comando e uma menção do usuário recebendo a ação como \"!kick @usuário\".",
+      "commandHeading": "Comando",
+      "usageHeading": "Exemplo de uso"
+    },
+    "phrase": {
+      "title": "Comando de frase",
+      "intro": "Este comando mostrará como usar a caixa de seleção frase.",
+      "step1": "Vá para a tela de criação de comando e defina o tipo como \"Message Receive\".",
+      "step2": "Vamos nomear o comando \"cachorro\".",
+      "step3": "No campo de mensagem do canal, colocaremos \"Eu gosto de cachorros!\".",
+      "step4": "Salve o comando, hospede seu bot e teste o comando. Agora quando alguém mencionar a palavra cachorro, o bot reagirá.",
+      "commandHeading": "Comando",
+      "outputHeading": "Exemplo de saída"
+    },
+    "keywords": {
+      "title": "Comando usando palavras-chave",
+      "intro": "Este comando mostrará o uso de algumas palavras-chave.",
+      "step1": "Vá para a tela de criação de comando e defina o tipo como \"Message Receive\".",
+      "step2": "Vamos nomear o comando \"!date\".",
+      "step3": "No campo de mensagem do canal, colocaremos \"Olá $name, hoje é $date\".",
+      "step4": "Salve o comando, hospede seu bot e teste o comando.",
+      "commandHeading": "Comando",
+      "outputHeading": "Exemplo de saída"
+    },
+    "roleOnJoin": {
+      "title": "Adicionar cargo ao entrar",
+      "intro": "Este comando adicionará um cargo a um usuário quando ele entrar no servidor Discord.",
+      "step1": "Vá para a tela de criação de comando e defina o tipo como \"Member Join\". Este tipo é usado quando um usuário entra em um servidor.",
+      "step2": "Vamos marcar a caixa \"Atribuir/Remover cargo\". Esta ação atribui um cargo quando ativada pela primeira vez e o remove se ativada novamente. Com \"Member Join\" é ativada apenas uma vez.",
+      "step3": "Coloque nosso cargo no campo \"Nome do cargo\", meu cargo se chama Novo usuário. Isso é sensível a maiúsculas/minúsculas.",
+      "step4": "Teste o comando com alguém entrando no seu servidor!",
+      "commandHeading": "Comando"
+    },
+    "embed": {
+      "title": "Criando mensagens embed",
+      "intro": "Mensagens embed são um tipo especial de mensagem. Isso mostrará como criá-las.",
+      "step1": "Vá para a tela de criação de comando, defina o tipo como \"Message Receive\" e o comando como \"!embed\".",
+      "step2": "Marque a caixa \"Enviar embed no canal\".",
+      "step3": "Agora temos 5 campos para preencher. Todos são opcionais desde que você preencha pelo menos um deles.",
+      "step4": "Coloque \"Meu Embed\" no campo de título.",
+      "step5": "\"$name é quem chamou este comando\" irá no campo de descrição.",
+      "step6": "\"$date\" irá no rodapé. Isso pode funcionar como um timestamp.",
+      "step7": "Vou colocar \"https://i.redd.it/9hs5qf7qulz41.png\" no campo de URL da imagem. Você pode colocar qualquer link para uma imagem.",
+      "step8": "No campo de miniatura, vamos colocar \"$avatar\" pois isso insere a URL do avatar da pessoa que chamou este comando. Mas você pode colocar qualquer link para uma imagem.",
+      "step9": "Salve e teste o comando.",
+      "commandHeading": "Comando",
+      "outputHeading": "Exemplo de saída"
+    },
+    "reactionRoles": {
+      "title": "Cargos por reação",
+      "intro": "Este comando usará uma mensagem específica para permitir que usuários reajam para ganhar e remover cargos.",
+      "step1": "Crie um comando com tipo adição de reação.",
+      "step2": "No campo de comando, colocaremos o emoji que será usado para ganhar o cargo. Vou usar o rosto sorridente. Nota: se quiser usar emojis personalizados, coloque apenas o nome sem os : ao redor.",
+      "step3": "Marque \"Requer ID de mensagem específica\" e coloque o ID da mensagem que gostaria de usar para as pessoas ganharem cargos.",
+      "step4": "Marque \"Atribuir/Remover cargo\" e coloque o nome do cargo que vai atribuir. Para o meu, vou colocar \"Tester\".",
+      "step5": "Teste seu comando para ver se funciona e depois repita para quaisquer outros cargos que gostaria de atribuir desta forma.",
+      "commandHeading": "Comando"
+    },
+    "javascript": {
+      "title": "Usando Javascript em mensagens",
+      "intro": "Para usar JavaScript, devemos usar palavras-chave como $eval e $halt.",
+      "step1": "Crie um comando com qualquer nome, talvez chame de \"Olá mundo\".",
+      "step2": "Marque envio no canal.",
+      "step3": "Insira a palavra-chave $eval com a palavra-chave $halt depois.",
+      "step4": "No meio, colocaremos nosso código. Para este exemplo simples, vamos colocar \"var hello = \"Olá mundo\";\".",
+      "step5": "Após a palavra-chave $halt ou antes do $eval, podemos colocar o resto da nossa mensagem. Vamos colocar \"Nossa saída é $get(hello)\".",
+      "step6": "Execute o bot e teste o comando.",
+      "commandHeading": "Comando",
+      "outputHeading": "Exemplo de saída"
+    }
+  },
+  "webhooks": {
+    "title": "Webhooks",
+    "pageTitle": "Webhooks Bot Commander",
+    "metaDesc": "Como usar o recurso de webhooks no Bot Commander para Discord",
+    "using": {
+      "title": "Usando webhooks",
+      "whatHeading": "O que você pode fazer?",
+      "whatText": "Estes permitem que você envie mensagens para um certo canal usando a integração de webhooks integrada do Discord. Você pode enviar uma mensagem normal ou um embed.",
+      "howHeading": "Como crio um webhook para meu servidor?",
+      "howText": "Vá ao servidor desejado e clique em \"Configurações do servidor\", de lá clique em \"Integrações\" e depois em \"Criar Webhook\". Isso criará o webhook para você e tudo que precisa fazer é copiar a URL do webhook para o aplicativo Bot Commander."
+    }
+  }
+}
