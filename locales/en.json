@@ -444,7 +444,9 @@
       "tag": { "name": "$tag", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the tag (in the form Username#1234) of the user who called the command." },
       "id": { "name": "$ID", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the unique ID number of the user who called the command." },
       "serversShared": { "name": "$serversSharedWithBot", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the number of servers shared with the bot the user who called the command has." },
-      "timeCreated": { "name": "$timeCreated", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the account creation time of the user who called the command." }
+      "timeCreated": { "name": "$timeCreated", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the account creation time of the user who called the command." },
+      "isBot": { "name": "$isBot", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Returns \"true\" or \"false\" indicating whether the user who called the command is a bot." },
+      "globalName": { "name": "$globalName", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the global display name of the user who called the command." }
     },
     "memberInfo": {
       "title": "Member Info",
@@ -455,7 +457,14 @@
       "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "Message Receive", "desc": "Gives \"true\" or \"false\" denoting whether the user has a time they joined the server." },
       "timeJoined": { "name": "$memberTimeJoined", "compat": "Message Receive", "desc": "The time the member joined the server." },
       "hasBoosted": { "name": "$memberHasBoosted", "compat": "Message Receive", "desc": "Has this member boosted the server?. Returns \"true\" or \"false\"." },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Message Receive", "desc": "What is the time the user boosted the server? If there is none we will get \"null\"." }
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Message Receive", "desc": "What is the time the user boosted the server? If there is none we will get \"null\"." },
+      "nickname": { "name": "$memberNickname", "compat": "Message Receive", "desc": "Inserts the member's server nickname, if one is set." },
+      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "Message Receive", "desc": "Inserts the tag (in the form Username#1234) of the member." },
+      "effectiveId": { "name": "$memberEffectiveID", "compat": "Message Receive", "desc": "Inserts the unique ID of the member's underlying user account." },
+      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "Message Receive", "desc": "Inserts the account creation time of the member's underlying user account." },
+      "color": { "name": "$memberColor", "compat": "Message Receive", "desc": "Inserts the hex color code of the member's display color in the server." },
+      "roles": { "name": "$memberRoles", "compat": "Message Receive", "desc": "Inserts a comma-separated list of the member's role names in the server." },
+      "roleCount": { "name": "$memberRoleCount", "compat": "Message Receive", "desc": "Inserts the number of roles the member has in the server." }
     },
     "mentionedInfo": {
       "title": "Mentioned User Info",
@@ -467,7 +476,9 @@
       "tag": { "name": "$mentionedTag", "compat": "Message Receive", "desc": "Inserts the tag (in the form Username#1234) of the user mentioned in the call of the command." },
       "id": { "name": "$mentionedID", "compat": "Message Receive", "desc": "Inserts the unique ID number of the user mentioned in the call of the command." },
       "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "Message Receive", "desc": "Inserts the number of servers shared with the bot the user mentioned in the call of the command." },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Message Receive", "desc": "Inserts the account creation time of the user mentioned in the call of the command." }
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Message Receive", "desc": "Inserts the account creation time of the user mentioned in the call of the command." },
+      "isBot": { "name": "$mentionedIsBot", "compat": "Message Receive", "desc": "Returns \"true\" or \"false\" indicating whether the mentioned user is a bot." },
+      "globalName": { "name": "$mentionedGlobalName", "compat": "Message Receive", "desc": "Inserts the global display name of the user mentioned in the call of the command." }
     },
     "botInfo": {
       "title": "Bot Info",
@@ -489,19 +500,31 @@
       "icon": { "name": "$serverIcon", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the URL of the icon of the server where the command was called." },
       "banner": { "name": "$serverBanner", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the URL of the server banner of the server where the command was called." },
       "description": { "name": "$serverDescription", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the description of the server where the command was called." },
-      "splash": { "name": "$serverSplash", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the URL of the splash of the server where the command was called." }
+      "splash": { "name": "$serverSplash", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the URL of the splash of the server where the command was called." },
+      "createTime": { "name": "$serverCreateTime", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the creation time of the server where the command was called." },
+      "serverId": { "name": "$serverID", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the unique ID of the server where the command was called." },
+      "owner": { "name": "$serverOwner", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts a mention of the server owner." },
+      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the plain text display name of the server owner." },
+      "boostCount": { "name": "$serverBoostCount", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the number of boosts the server has." },
+      "boostTier": { "name": "$serverBoostTier", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the boost tier level of the server (0, 1, 2, or 3)." },
+      "vanityCode": { "name": "$serverVanityCode", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the vanity invite code of the server, if one exists." }
     },
     "channelInfo": {
       "title": "Channel Info",
       "channel": { "name": "$channel", "compat": "Message Receive, Private Message, Reaction Add", "desc": "Inserts the name of the channel where the message was sent." },
       "channelId": { "name": "$channelID", "compat": "Message Receive, Reaction Add", "desc": "Inserts the ID of the channel where the message was sent." },
       "createDate": { "name": "$channelCreateDate", "compat": "Message Receive, Reaction Add", "desc": "Inserts the time of creation of the channel where the message was sent." },
-      "asMention": { "name": "$channelAsMention", "compat": "Message Receive, Reaction Add", "desc": "Inserts the mention of the channel where the message was sent." }
+      "asMention": { "name": "$channelAsMention", "compat": "Message Receive, Reaction Add", "desc": "Inserts the mention of the channel where the message was sent." },
+      "topic": { "name": "$channelTopic", "compat": "Message Receive, Reaction Add", "desc": "Inserts the topic of the channel where the message was sent." },
+      "isNSFW": { "name": "$channelIsNSFW", "compat": "Message Receive, Reaction Add", "desc": "Returns \"true\" or \"false\" indicating whether the channel is marked as NSFW." }
     },
     "message": {
       "title": "Message",
       "message": { "name": "$message", "compat": "Message Receive, Private Message", "desc": "Inserts the whole message of the called command." },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "Message Receive, Private Message", "desc": "Inserts the message after the command part of the called command." }
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "Message Receive, Private Message", "desc": "Inserts the message after the command part of the called command." },
+      "args": { "name": "$args(index)", "compat": "Message Receive, Private Message", "desc": "Inserts a specific argument from the message by its index (0-based)." },
+      "argsCount": { "name": "$argsCount", "compat": "Message Receive, Private Message", "desc": "Inserts the number of arguments in the message." },
+      "option": { "name": "$option(name)", "compat": "Interaction Commands", "desc": "Inserts the value of a slash command option by its name." }
     },
     "javascript": {
       "title": "JavaScript",
@@ -522,7 +545,21 @@
       "rollnum": { "name": "$rollnum(min,max)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts a random number between min and max inclusive." },
       "ping": { "name": "$ping", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts the gateway ping." },
       "inviteUrl": { "name": "$inviteURL", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts URL to invite the bot to a server." },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Use to set status in commands. Values for first parameter include online, idle, dnd. Second parameter values are watching, playing, listening. The third parameter is the string of whatever. Important note is this is evaluated before $eval so you can not use $eval type keywords this." }
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Use to set status in commands. Values for first parameter include online, idle, dnd. Second parameter values are watching, playing, listening. The third parameter is the string of whatever. Important note is this is evaluated before $eval so you can not use $eval type keywords this." },
+      "randomInt": { "name": "$randomInt", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts a random integer between 0 and 99." },
+      "randomFloat": { "name": "$randomFloat", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts a random decimal number between 0 and 1." },
+      "randomBoolean": { "name": "$randomBoolean", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Inserts a random \"true\" or \"false\" value." },
+      "chat": { "name": "$chat(prompt)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Sends the given prompt to an AI and inserts the response." }
+    },
+    "stringManip": {
+      "title": "String Manipulation",
+      "upper": { "name": "$upper(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Converts the given text to uppercase." },
+      "lower": { "name": "$lower(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Converts the given text to lowercase." },
+      "length": { "name": "$length(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Returns the number of characters in the given text." },
+      "replace": { "name": "$replace(text,find,replacement)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Replaces all occurrences of \"find\" with \"replacement\" in the given text." },
+      "substring": { "name": "$substring(text,start,end)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Extracts a portion of the text from the start index to the end index (0-based)." },
+      "trim": { "name": "$trim(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Removes whitespace from the beginning and end of the given text." },
+      "repeat": { "name": "$repeat(text,count)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Repeats the given text a specified number of times (max 100)." }
     }
   },
   "creating": {

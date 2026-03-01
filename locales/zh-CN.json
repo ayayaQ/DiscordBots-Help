@@ -444,7 +444,9 @@
       "tag": { "name": "$tag", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的标签(格式为用户名#1234)。" },
       "id": { "name": "$ID", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的唯一ID号。" },
       "serversShared": { "name": "$serversSharedWithBot", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户与机器人共享的服务器数量。" },
-      "timeCreated": { "name": "$timeCreated", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的账户创建时间。" }
+      "timeCreated": { "name": "$timeCreated", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的账户创建时间。" },
+      "isBot": { "name": "$isBot", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "返回\"true\"或\"false\",表示调用命令的用户是否为机器人。" },
+      "globalName": { "name": "$globalName", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的全局显示名称。" }
     },
     "memberInfo": {
       "title": "成员信息",
@@ -455,7 +457,14 @@
       "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "消息接收", "desc": "返回\"true\"或\"false\",表示用户是否有加入服务器的时间。" },
       "timeJoined": { "name": "$memberTimeJoined", "compat": "消息接收", "desc": "成员加入服务器的时间。" },
       "hasBoosted": { "name": "$memberHasBoosted", "compat": "消息接收", "desc": "此成员是否助力了服务器?返回\"true\"或\"false\"。" },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "消息接收", "desc": "用户助力服务器的时间是什么?如果没有,我们将得到\"null\"。" }
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "消息接收", "desc": "用户助力服务器的时间是什么?如果没有,我们将得到\"null\"。" },
+      "nickname": { "name": "$memberNickname", "compat": "消息接收", "desc": "插入成员在服务器中的昵称(如果已设置)。" },
+      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "消息接收", "desc": "插入成员的标签(格式为用户名#1234)。" },
+      "effectiveId": { "name": "$memberEffectiveID", "compat": "消息接收", "desc": "插入成员底层用户账户的唯一ID。" },
+      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "消息接收", "desc": "插入成员底层用户账户的创建时间。" },
+      "color": { "name": "$memberColor", "compat": "消息接收", "desc": "插入成员在服务器中显示颜色的十六进制颜色代码。" },
+      "roles": { "name": "$memberRoles", "compat": "消息接收", "desc": "插入成员在服务器中的角色名称列表,以逗号分隔。" },
+      "roleCount": { "name": "$memberRoleCount", "compat": "消息接收", "desc": "插入成员在服务器中拥有的角色数量。" }
     },
     "mentionedInfo": {
       "title": "被提及用户信息",
@@ -467,7 +476,9 @@
       "tag": { "name": "$mentionedTag", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的标签(格式为用户名#1234)。" },
       "id": { "name": "$mentionedID", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的唯一ID号。" },
       "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户与机器人共享的服务器数量。" },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的账户创建时间。" }
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的账户创建时间。" },
+      "isBot": { "name": "$mentionedIsBot", "compat": "消息接收", "desc": "返回\"true\"或\"false\",表示被提及的用户是否为机器人。" },
+      "globalName": { "name": "$mentionedGlobalName", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的全局显示名称。" }
     },
     "botInfo": {
       "title": "机器人信息",
@@ -489,19 +500,31 @@
       "icon": { "name": "$serverIcon", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器图标的URL。" },
       "banner": { "name": "$serverBanner", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器横幅的URL。" },
       "description": { "name": "$serverDescription", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的描述。" },
-      "splash": { "name": "$serverSplash", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器闪屏的URL。" }
+      "splash": { "name": "$serverSplash", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器闪屏的URL。" },
+      "createTime": { "name": "$serverCreateTime", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的创建时间。" },
+      "serverId": { "name": "$serverID", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的唯一ID。" },
+      "owner": { "name": "$serverOwner", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器所有者的提及。" },
+      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器所有者的纯文本显示名称。" },
+      "boostCount": { "name": "$serverBoostCount", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器拥有的助力数量。" },
+      "boostTier": { "name": "$serverBoostTier", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器的助力等级(0、1、2或3)。" },
+      "vanityCode": { "name": "$serverVanityCode", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器的自定义邀请代码(如果存在)。" }
     },
     "channelInfo": {
       "title": "频道信息",
       "channel": { "name": "$channel", "compat": "消息接收, 私信, 添加反应", "desc": "插入发送消息的频道名称。" },
       "channelId": { "name": "$channelID", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道ID。" },
       "createDate": { "name": "$channelCreateDate", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的创建时间。" },
-      "asMention": { "name": "$channelAsMention", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的提及。" }
+      "asMention": { "name": "$channelAsMention", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的提及。" },
+      "topic": { "name": "$channelTopic", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的主题。" },
+      "isNSFW": { "name": "$channelIsNSFW", "compat": "消息接收, 添加反应", "desc": "返回\"true\"或\"false\",表示频道是否被标记为NSFW。" }
     },
     "message": {
       "title": "消息",
       "message": { "name": "$message", "compat": "消息接收, 私信", "desc": "插入调用命令的整个消息。" },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "消息接收, 私信", "desc": "插入调用命令中命令部分之后的消息。" }
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "消息接收, 私信", "desc": "插入调用命令中命令部分之后的消息。" },
+      "args": { "name": "$args(index)", "compat": "消息接收, 私信", "desc": "按索引(从0开始)插入消息中的特定参数。" },
+      "argsCount": { "name": "$argsCount", "compat": "消息接收, 私信", "desc": "插入消息中的参数数量。" },
+      "option": { "name": "$option(name)", "compat": "交互命令", "desc": "按名称插入斜杠命令选项的值。" }
     },
     "javascript": {
       "title": "JavaScript",
@@ -522,7 +545,21 @@
       "rollnum": { "name": "$rollnum(min,max)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入min和max之间(包含)的随机数。" },
       "ping": { "name": "$ping", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入网关ping。" },
       "inviteUrl": { "name": "$inviteURL", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入邀请机器人到服务器的URL。" },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于在命令中设置状态。第一个参数的值包括online、idle、dnd。第二个参数的值是watching、playing、listening。第三个参数是任意字符串。重要提示:这在$eval之前计算,所以您不能在此使用$eval类型的关键词。" }
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于在命令中设置状态。第一个参数的值包括online、idle、dnd。第二个参数的值是watching、playing、listening。第三个参数是任意字符串。重要提示:这在$eval之前计算,所以您不能在此使用$eval类型的关键词。" },
+      "randomInt": { "name": "$randomInt", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入0到99之间的随机整数。" },
+      "randomFloat": { "name": "$randomFloat", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入0到1之间的随机小数。" },
+      "randomBoolean": { "name": "$randomBoolean", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入随机的\"true\"或\"false\"值。" },
+      "chat": { "name": "$chat(prompt)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定的提示发送到AI并插入响应。" }
+    },
+    "stringManip": {
+      "title": "字符串操作",
+      "upper": { "name": "$upper(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定的文本转换为大写。" },
+      "lower": { "name": "$lower(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定的文本转换为小写。" },
+      "length": { "name": "$length(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "返回给定文本的字符数。" },
+      "replace": { "name": "$replace(text,find,replacement)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定文本中所有出现的\"find\"替换为\"replacement\"。" },
+      "substring": { "name": "$substring(text,start,end)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "从起始索引到结束索引(从0开始)提取文本的一部分。" },
+      "trim": { "name": "$trim(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "移除给定文本开头和结尾的空白字符。" },
+      "repeat": { "name": "$repeat(text,count)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定文本重复指定次数(最多100次)。" }
     }
   },
   "creating": {

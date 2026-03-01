@@ -444,7 +444,9 @@
       "tag": { "name": "$tag", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la etiqueta (en formato Usuario#1234) del usuario que llamo el comando." },
       "id": { "name": "$ID", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el numero de ID unico del usuario que llamo el comando." },
       "serversShared": { "name": "$serversSharedWithBot", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el numero de servidores compartidos con el bot que tiene el usuario que llamo el comando." },
-      "timeCreated": { "name": "$timeCreated", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la hora de creacion de cuenta del usuario que llamo el comando." }
+      "timeCreated": { "name": "$timeCreated", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la hora de creacion de cuenta del usuario que llamo el comando." },
+      "isBot": { "name": "$isBot", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Devuelve \"true\" o \"false\" indicando si el usuario que llamo el comando es un bot." },
+      "globalName": { "name": "$globalName", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el nombre de visualizacion global del usuario que llamo el comando." }
     },
     "memberInfo": {
       "title": "Info de miembro",
@@ -455,7 +457,14 @@
       "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "Recepcion de mensaje", "desc": "Da \"true\" o \"false\" indicando si el usuario tiene una hora de cuando se unio al servidor." },
       "timeJoined": { "name": "$memberTimeJoined", "compat": "Recepcion de mensaje", "desc": "La hora en que el miembro se unio al servidor." },
       "hasBoosted": { "name": "$memberHasBoosted", "compat": "Recepcion de mensaje", "desc": "Ha impulsado este miembro el servidor? Devuelve \"true\" o \"false\"." },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Recepcion de mensaje", "desc": "Cual es la hora en que el usuario impulso el servidor? Si no hay ninguna obtendremos \"null\"." }
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Recepcion de mensaje", "desc": "Cual es la hora en que el usuario impulso el servidor? Si no hay ninguna obtendremos \"null\"." },
+      "nickname": { "name": "$memberNickname", "compat": "Recepcion de mensaje", "desc": "Inserta el apodo del miembro en el servidor, si tiene uno establecido." },
+      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "Recepcion de mensaje", "desc": "Inserta la etiqueta (en formato Usuario#1234) del miembro." },
+      "effectiveId": { "name": "$memberEffectiveID", "compat": "Recepcion de mensaje", "desc": "Inserta el ID unico de la cuenta de usuario subyacente del miembro." },
+      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "Recepcion de mensaje", "desc": "Inserta la hora de creacion de cuenta de la cuenta de usuario subyacente del miembro." },
+      "color": { "name": "$memberColor", "compat": "Recepcion de mensaje", "desc": "Inserta el codigo de color hexadecimal del color de visualizacion del miembro en el servidor." },
+      "roles": { "name": "$memberRoles", "compat": "Recepcion de mensaje", "desc": "Inserta una lista separada por comas de los nombres de roles del miembro en el servidor." },
+      "roleCount": { "name": "$memberRoleCount", "compat": "Recepcion de mensaje", "desc": "Inserta el numero de roles que tiene el miembro en el servidor." }
     },
     "mentionedInfo": {
       "title": "Info de usuario mencionado",
@@ -467,7 +476,9 @@
       "tag": { "name": "$mentionedTag", "compat": "Recepcion de mensaje", "desc": "Inserta la etiqueta (en formato Usuario#1234) del usuario mencionado en la llamada del comando." },
       "id": { "name": "$mentionedID", "compat": "Recepcion de mensaje", "desc": "Inserta el numero de ID unico del usuario mencionado en la llamada del comando." },
       "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "Recepcion de mensaje", "desc": "Inserta el numero de servidores compartidos con el bot del usuario mencionado en la llamada del comando." },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Recepcion de mensaje", "desc": "Inserta la hora de creacion de cuenta del usuario mencionado en la llamada del comando." }
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Recepcion de mensaje", "desc": "Inserta la hora de creacion de cuenta del usuario mencionado en la llamada del comando." },
+      "isBot": { "name": "$mentionedIsBot", "compat": "Recepcion de mensaje", "desc": "Devuelve \"true\" o \"false\" indicando si el usuario mencionado es un bot." },
+      "globalName": { "name": "$mentionedGlobalName", "compat": "Recepcion de mensaje", "desc": "Inserta el nombre de visualizacion global del usuario mencionado en la llamada del comando." }
     },
     "botInfo": {
       "title": "Info de bot",
@@ -489,19 +500,31 @@
       "icon": { "name": "$serverIcon", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la URL del icono del servidor donde se llamo el comando." },
       "banner": { "name": "$serverBanner", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la URL del banner del servidor donde se llamo el comando." },
       "description": { "name": "$serverDescription", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la descripcion del servidor donde se llamo el comando." },
-      "splash": { "name": "$serverSplash", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la URL del splash del servidor donde se llamo el comando." }
+      "splash": { "name": "$serverSplash", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la URL del splash del servidor donde se llamo el comando." },
+      "createTime": { "name": "$serverCreateTime", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta la hora de creacion del servidor donde se llamo el comando." },
+      "serverId": { "name": "$serverID", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el ID unico del servidor donde se llamo el comando." },
+      "owner": { "name": "$serverOwner", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta una mencion del propietario del servidor." },
+      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el nombre de visualizacion en texto plano del propietario del servidor." },
+      "boostCount": { "name": "$serverBoostCount", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el numero de impulsos que tiene el servidor." },
+      "boostTier": { "name": "$serverBoostTier", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el nivel de impulso del servidor (0, 1, 2 o 3)." },
+      "vanityCode": { "name": "$serverVanityCode", "compat": "Recepcion de mensaje, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el codigo de invitacion personalizado del servidor, si existe uno." }
     },
     "channelInfo": {
       "title": "Info de canal",
       "channel": { "name": "$channel", "compat": "Recepcion de mensaje, Mensaje privado, Agregar reaccion", "desc": "Inserta el nombre del canal donde se envio el mensaje." },
       "channelId": { "name": "$channelID", "compat": "Recepcion de mensaje, Agregar reaccion", "desc": "Inserta el ID del canal donde se envio el mensaje." },
       "createDate": { "name": "$channelCreateDate", "compat": "Recepcion de mensaje, Agregar reaccion", "desc": "Inserta la hora de creacion del canal donde se envio el mensaje." },
-      "asMention": { "name": "$channelAsMention", "compat": "Recepcion de mensaje, Agregar reaccion", "desc": "Inserta la mencion del canal donde se envio el mensaje." }
+      "asMention": { "name": "$channelAsMention", "compat": "Recepcion de mensaje, Agregar reaccion", "desc": "Inserta la mencion del canal donde se envio el mensaje." },
+      "topic": { "name": "$channelTopic", "compat": "Recepcion de mensaje, Agregar reaccion", "desc": "Inserta el tema del canal donde se envio el mensaje." },
+      "isNSFW": { "name": "$channelIsNSFW", "compat": "Recepcion de mensaje, Agregar reaccion", "desc": "Devuelve \"true\" o \"false\" indicando si el canal esta marcado como NSFW." }
     },
     "message": {
       "title": "Mensaje",
       "message": { "name": "$message", "compat": "Recepcion de mensaje, Mensaje privado", "desc": "Inserta el mensaje completo del comando llamado." },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "Recepcion de mensaje, Mensaje privado", "desc": "Inserta el mensaje despues de la parte del comando del comando llamado." }
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "Recepcion de mensaje, Mensaje privado", "desc": "Inserta el mensaje despues de la parte del comando del comando llamado." },
+      "args": { "name": "$args(index)", "compat": "Recepcion de mensaje, Mensaje privado", "desc": "Inserta un argumento especifico del mensaje por su indice (basado en 0)." },
+      "argsCount": { "name": "$argsCount", "compat": "Recepcion de mensaje, Mensaje privado", "desc": "Inserta el numero de argumentos en el mensaje." },
+      "option": { "name": "$option(name)", "compat": "Comandos de interaccion", "desc": "Inserta el valor de una opcion de comando slash por su nombre." }
     },
     "javascript": {
       "title": "JavaScript",
@@ -522,7 +545,21 @@
       "rollnum": { "name": "$rollnum(min,max)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta un numero aleatorio entre min y max inclusive." },
       "ping": { "name": "$ping", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta el ping del gateway." },
       "inviteUrl": { "name": "$inviteURL", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta URL para invitar al bot a un servidor." },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Usa para establecer estado en comandos. Valores para el primer parametro incluyen online, idle, dnd. Valores del segundo parametro son watching, playing, listening. El tercer parametro es la cadena de lo que sea. Nota importante: esto se evalua antes de $eval por lo que no puedes usar palabras clave tipo $eval en esto." }
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Usa para establecer estado en comandos. Valores para el primer parametro incluyen online, idle, dnd. Valores del segundo parametro son watching, playing, listening. El tercer parametro es la cadena de lo que sea. Nota importante: esto se evalua antes de $eval por lo que no puedes usar palabras clave tipo $eval en esto." },
+      "randomInt": { "name": "$randomInt", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta un numero entero aleatorio entre 0 y 99." },
+      "randomFloat": { "name": "$randomFloat", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta un numero decimal aleatorio entre 0 y 1." },
+      "randomBoolean": { "name": "$randomBoolean", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Inserta un valor aleatorio \"true\" o \"false\"." },
+      "chat": { "name": "$chat(prompt)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Envia el prompt dado a una IA e inserta la respuesta." }
+    },
+    "stringManip": {
+      "title": "Manipulacion de cadenas",
+      "upper": { "name": "$upper(text)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Convierte el texto dado a mayusculas." },
+      "lower": { "name": "$lower(text)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Convierte el texto dado a minusculas." },
+      "length": { "name": "$length(text)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Devuelve el numero de caracteres en el texto dado." },
+      "replace": { "name": "$replace(text,find,replacement)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Reemplaza todas las ocurrencias de \"find\" con \"replacement\" en el texto dado." },
+      "substring": { "name": "$substring(text,start,end)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Extrae una porcion del texto desde el indice de inicio hasta el indice de fin (basado en 0)." },
+      "trim": { "name": "$trim(text)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Elimina los espacios en blanco del inicio y final del texto dado." },
+      "repeat": { "name": "$repeat(text,count)", "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion", "desc": "Repite el texto dado un numero especificado de veces (maximo 100)." }
     }
   },
   "creating": {

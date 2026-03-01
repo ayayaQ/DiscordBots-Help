@@ -443,7 +443,9 @@
       "tag": { "name": "$tag", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのタグ（例：ユーザー名#1234）を挿入します。" },
       "id": { "name": "$ID", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーの固有ID番号を挿入します。" },
       "serversShared": { "name": "$serversSharedWithBot", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーがボットと共有しているサーバー数を挿入します。" },
-      "timeCreated": { "name": "$timeCreated", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのアカウント作成日時を挿入します。" }
+      "timeCreated": { "name": "$timeCreated", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのアカウント作成日時を挿入します。" },
+      "isBot": { "name": "$isBot", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーがボットかどうかを示す「true」または「false」を返します。" },
+      "globalName": { "name": "$globalName", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドを呼び出したユーザーのグローバル表示名を挿入します。" }
     },
     "memberInfo": {
       "title": "メンバー情報",
@@ -454,7 +456,14 @@
       "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "メッセージ受信", "desc": "ユーザーがサーバーに参加した日時があるかどうか（true/false）。" },
       "timeJoined": { "name": "$memberTimeJoined", "compat": "メッセージ受信", "desc": "メンバーがサーバーに参加した日時です。" },
       "hasBoosted": { "name": "$memberHasBoosted", "compat": "メッセージ受信", "desc": "メンバーがサーバーをブーストしたかどうか（true/false）。" },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "メッセージ受信", "desc": "ユーザーがサーバーをブーストした日時（なければnull）。" }
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "メッセージ受信", "desc": "ユーザーがサーバーをブーストした日時（なければnull）。" },
+      "nickname": { "name": "$memberNickname", "compat": "メッセージ受信", "desc": "メンバーのサーバーニックネームを挿入します（設定されている場合）。" },
+      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "メッセージ受信", "desc": "メンバーのタグ（例：ユーザー名#1234）を挿入します。" },
+      "effectiveId": { "name": "$memberEffectiveID", "compat": "メッセージ受信", "desc": "メンバーの元となるユーザーアカウントの固有IDを挿入します。" },
+      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "メッセージ受信", "desc": "メンバーの元となるユーザーアカウントの作成日時を挿入します。" },
+      "color": { "name": "$memberColor", "compat": "メッセージ受信", "desc": "サーバー内でのメンバーの表示色の16進カラーコードを挿入します。" },
+      "roles": { "name": "$memberRoles", "compat": "メッセージ受信", "desc": "メンバーのロール名をカンマ区切りのリストで挿入します。" },
+      "roleCount": { "name": "$memberRoleCount", "compat": "メッセージ受信", "desc": "メンバーが持つロールの数を挿入します。" }
     },
     "mentionedInfo": {
       "title": "メンションユーザー情報",
@@ -466,7 +475,9 @@
       "tag": { "name": "$mentionedTag", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのタグ（例：ユーザー名#1234）を挿入します。" },
       "id": { "name": "$mentionedID", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーの固有ID番号を挿入します。" },
       "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーがボットと共有しているサーバー数を挿入します。" },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのアカウント作成日時を挿入します。" }
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "メッセージ受信", "desc": "コマンドでメンションされたユーザーのアカウント作成日時を挿入します。" },
+      "isBot": { "name": "$mentionedIsBot", "compat": "メッセージ受信", "desc": "メンションされたユーザーがボットかどうかを示す「true」または「false」を返します。" },
+      "globalName": { "name": "$mentionedGlobalName", "compat": "メッセージ受信", "desc": "メンションされたユーザーのグローバル表示名を挿入します。" }
     },
     "botInfo": {
       "title": "ボット情報",
@@ -488,19 +499,31 @@
       "icon": { "name": "$serverIcon", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのアイコンURLを挿入します。" },
       "banner": { "name": "$serverBanner", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのバナーURLを挿入します。" },
       "description": { "name": "$serverDescription", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーの説明文を挿入します。" },
-      "splash": { "name": "$serverSplash", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのスプラッシュ画像URLを挿入します。" }
+      "splash": { "name": "$serverSplash", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーのスプラッシュ画像URLを挿入します。" },
+      "createTime": { "name": "$serverCreateTime", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーの作成日時を挿入します。" },
+      "serverId": { "name": "$serverID", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンドが呼び出されたサーバーの固有IDを挿入します。" },
+      "owner": { "name": "$serverOwner", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "サーバーオーナーへのメンションを挿入します。" },
+      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "サーバーオーナーのテキスト表示名を挿入します。" },
+      "boostCount": { "name": "$serverBoostCount", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "サーバーのブースト数を挿入します。" },
+      "boostTier": { "name": "$serverBoostTier", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "サーバーのブーストティアレベル（0〜3）を挿入します。" },
+      "vanityCode": { "name": "$serverVanityCode", "compat": "メッセージ受信、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "サーバーのバニティ招待コードを挿入します（存在する場合）。" }
     },
     "channelInfo": {
       "title": "チャンネル情報",
       "channel": { "name": "$channel", "compat": "メッセージ受信、プライベートメッセージ、リアクション追加", "desc": "メッセージが送信されたチャンネル名を挿入します。" },
       "channelId": { "name": "$channelID", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルのIDを挿入します。" },
       "createDate": { "name": "$channelCreateDate", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルの作成日時を挿入します。" },
-      "asMention": { "name": "$channelAsMention", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルへのメンションを挿入します。" }
+      "asMention": { "name": "$channelAsMention", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルへのメンションを挿入します。" },
+      "topic": { "name": "$channelTopic", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルのトピックを挿入します。" },
+      "isNSFW": { "name": "$channelIsNSFW", "compat": "メッセージ受信、リアクション追加", "desc": "チャンネルがNSFWかどうかを示す「true」または「false」を返します。" }
     },
     "message": {
       "title": "メッセージ",
       "message": { "name": "$message", "compat": "メッセージ受信、プライベートメッセージ", "desc": "コマンド呼び出し時の全メッセージ内容を挿入します。" },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "メッセージ受信、プライベートメッセージ", "desc": "コマンド部分以降のメッセージ内容を挿入します。" }
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "メッセージ受信、プライベートメッセージ", "desc": "コマンド部分以降のメッセージ内容を挿入します。" },
+      "args": { "name": "$args(index)", "compat": "メッセージ受信、プライベートメッセージ", "desc": "メッセージからインデックス（0始まり）で指定した引数を挿入します。" },
+      "argsCount": { "name": "$argsCount", "compat": "メッセージ受信、プライベートメッセージ", "desc": "メッセージ内の引数の数を挿入します。" },
+      "option": { "name": "$option(name)", "compat": "インタラクションコマンド", "desc": "スラッシュコマンドのオプションの値を名前で挿入します。" }
     },
     "javascript": {
       "title": "JavaScript",
@@ -521,7 +544,21 @@
       "rollnum": { "name": "$rollnum(min,max)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "minからmaxまでの範囲でランダムな数値を挿入します。" },
       "ping": { "name": "$ping", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ゲートウェイのping値を挿入します。" },
       "inviteUrl": { "name": "$inviteURL", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ボットをサーバーに招待するためのURLを挿入します。" },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンド内でステータスを設定します。第1引数はonline, idle, dnd、第2引数はwatching, playing, listening、第3引数は任意の文字列です。$evalより前に評価されるため、$eval系キーワードは使用できません。" }
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "コマンド内でステータスを設定します。第1引数はonline, idle, dnd、第2引数はwatching, playing, listening、第3引数は任意の文字列です。$evalより前に評価されるため、$eval系キーワードは使用できません。" },
+      "randomInt": { "name": "$randomInt", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "0から99までのランダムな整数を挿入します。" },
+      "randomFloat": { "name": "$randomFloat", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "0から1までのランダムな小数を挿入します。" },
+      "randomBoolean": { "name": "$randomBoolean", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "ランダムな「true」または「false」の値を挿入します。" },
+      "chat": { "name": "$chat(prompt)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したプロンプトをAIに送信し、レスポンスを挿入します。" }
+    },
+    "stringManip": {
+      "title": "文字列操作",
+      "upper": { "name": "$upper(text)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストを大文字に変換します。" },
+      "lower": { "name": "$lower(text)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストを小文字に変換します。" },
+      "length": { "name": "$length(text)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストの文字数を返します。" },
+      "replace": { "name": "$replace(text,find,replacement)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキスト内の「find」をすべて「replacement」に置換します。" },
+      "substring": { "name": "$substring(text,start,end)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "テキストの開始インデックスから終了インデックスまでの部分を抽出します（0始まり）。" },
+      "trim": { "name": "$trim(text)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストの先頭と末尾の空白を除去します。" },
+      "repeat": { "name": "$repeat(text,count)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストを指定回数繰り返します（最大100回）。" }
     }
   },
   "creating": {

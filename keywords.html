@@ -244,6 +244,36 @@
                 </p>
                 <!-- Description -->
             </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.userInfo.isBot.name">$isBot</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.userInfo.isBot.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.userInfo.isBot.desc">
+                    Returns "true" or "false" indicating whether the user who
+                    called the command is a bot.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.userInfo.globalName.name">$globalName</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.userInfo.globalName.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.userInfo.globalName.desc">
+                    Inserts the global display name of the user who called the
+                    command.
+                </p>
+                <!-- Description -->
+            </div>
         </div>
 
         <button class="collapsible" aria-expanded="false">
@@ -334,6 +364,87 @@
                 <p data-i18n="keywords.memberInfo.timeBoosted.desc">
                     What is the time the user boosted the server? If there is
                     none we will get "null".
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.nickname.name">$memberNickname</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.nickname.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.nickname.desc">
+                    Inserts the member's server nickname, if one is set.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.effectiveTag.name">$memberEffectiveTag</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.effectiveTag.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.effectiveTag.desc">
+                    Inserts the tag (in the form Username#1234) of the member.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.effectiveId.name">$memberEffectiveID</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.effectiveId.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.effectiveId.desc">
+                    Inserts the unique ID of the member's underlying user
+                    account.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.effectiveTimeCreated.name">$memberEffectiveTimeCreated</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.effectiveTimeCreated.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.effectiveTimeCreated.desc">
+                    Inserts the account creation time of the member's
+                    underlying user account.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.color.name">$memberColor</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.color.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.color.desc">
+                    Inserts the hex color code of the member's display color in
+                    the server.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.roles.name">$memberRoles</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.roles.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.roles.desc">
+                    Inserts a comma-separated list of the member's role names
+                    in the server.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.memberInfo.roleCount.name">$memberRoleCount</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.memberInfo.roleCount.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.memberInfo.roleCount.desc">
+                    Inserts the number of roles the member has in the server.
                 </p>
                 <!-- Description -->
             </div>
@@ -450,6 +561,30 @@
                 <!-- Compatibility -->
                 <p data-i18n="keywords.mentionedInfo.timeCreated.desc">
                     Inserts the account creation time of the user mentioned in
+                    the call of the command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.mentionedInfo.isBot.name">$mentionedIsBot</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.mentionedInfo.isBot.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.mentionedInfo.isBot.desc">
+                    Returns "true" or "false" indicating whether the mentioned
+                    user is a bot.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.mentionedInfo.globalName.name">$mentionedGlobalName</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.mentionedInfo.globalName.compat">Message Receive</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.mentionedInfo.globalName.desc">
+                    Inserts the global display name of the user mentioned in
                     the call of the command.
                 </p>
                 <!-- Description -->
@@ -686,6 +821,106 @@
                 </p>
                 <!-- Description -->
             </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.createTime.name">$serverCreateTime</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.createTime.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.createTime.desc">
+                    Inserts the creation time of the server where the command
+                    was called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.serverId.name">$serverID</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.serverId.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.serverId.desc">
+                    Inserts the unique ID of the server where the command was
+                    called.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.owner.name">$serverOwner</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.owner.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.owner.desc">
+                    Inserts a mention of the server owner.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.ownerPlain.name">$serverOwnerPlain</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.ownerPlain.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.ownerPlain.desc">
+                    Inserts the plain text display name of the server owner.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.boostCount.name">$serverBoostCount</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.boostCount.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.boostCount.desc">
+                    Inserts the number of boosts the server has.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.boostTier.name">$serverBoostTier</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.boostTier.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.boostTier.desc">
+                    Inserts the boost tier level of the server (0, 1, 2, or 3).
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.serverInfo.vanityCode.name">$serverVanityCode</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.serverInfo.vanityCode.compat">
+                    Message Receive, Member Join, Member Leave, Member Ban,
+                    Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.serverInfo.vanityCode.desc">
+                    Inserts the vanity invite code of the server, if one exists.
+                </p>
+                <!-- Description -->
+            </div>
         </div>
 
         <button class="collapsible" aria-expanded="false">
@@ -739,6 +974,29 @@
                 </p>
                 <!-- Description -->
             </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelInfo.topic.name">$channelTopic</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.channelInfo.topic.compat">Message Receive, Reaction Add</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.channelInfo.topic.desc">
+                    Inserts the topic of the channel where the message was sent.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelInfo.isNSFW.name">$channelIsNSFW</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.channelInfo.isNSFW.compat">Message Receive, Reaction Add</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.channelInfo.isNSFW.desc">
+                    Returns "true" or "false" indicating whether the channel is
+                    marked as NSFW.
+                </p>
+                <!-- Description -->
+            </div>
         </div>
 
         <button class="collapsible" aria-expanded="false">
@@ -766,6 +1024,40 @@
                 <p data-i18n="keywords.message.afterCommand.desc">
                     Inserts the message after the command part of the called
                     command.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.message.args.name">$args(index)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.message.args.compat">Message Receive, Private Message</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.message.args.desc">
+                    Inserts a specific argument from the message by its index
+                    (0-based).
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.message.argsCount.name">$argsCount</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.message.argsCount.compat">Message Receive, Private Message</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.message.argsCount.desc">
+                    Inserts the number of arguments in the message.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.message.option.name">$option(name)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.message.option.compat">Interaction Commands</h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.message.option.desc">
+                    Inserts the value of a slash command option by its name.
                 </p>
                 <!-- Description -->
             </div>
@@ -829,6 +1121,117 @@
                 <p data-i18n="keywords.javascript.set.desc">
                     Used to set a js variable. Supports boolean "true" and
                     "false" as well as numbers and strings.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.stringManip.title">String Manipulation</span><img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.upper.name">$upper(text)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.upper.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.upper.desc">
+                    Converts the given text to uppercase.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.lower.name">$lower(text)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.lower.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.lower.desc">
+                    Converts the given text to lowercase.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.length.name">$length(text)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.length.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.length.desc">
+                    Returns the number of characters in the given text.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.replace.name">$replace(text,find,replacement)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.replace.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.replace.desc">
+                    Replaces all occurrences of "find" with "replacement" in the
+                    given text.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.substring.name">$substring(text,start,end)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.substring.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.substring.desc">
+                    Extracts a portion of the text from the start index to the
+                    end index (0-based).
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.trim.name">$trim(text)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.trim.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.trim.desc">
+                    Removes whitespace from the beginning and end of the given
+                    text.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.repeat.name">$repeat(text,count)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.repeat.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.repeat.desc">
+                    Repeats the given text a specified number of times (max
+                    100).
                 </p>
                 <!-- Description -->
             </div>
@@ -983,6 +1386,56 @@
                     watching, playing, listening. The third parameter is the
                     string of whatever. Important note is this is evaluated
                     before $eval so you can not use $eval type keywords this.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.misc.randomInt.name">$randomInt</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.misc.randomInt.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.misc.randomInt.desc">Inserts a random integer between 0 and 99.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.misc.randomFloat.name">$randomFloat</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.misc.randomFloat.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.misc.randomFloat.desc">Inserts a random decimal number between 0 and 1.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.misc.randomBoolean.name">$randomBoolean</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.misc.randomBoolean.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.misc.randomBoolean.desc">Inserts a random "true" or "false" value.</p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.misc.chat.name">$chat(prompt)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.misc.chat.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.misc.chat.desc">
+                    Sends the given prompt to an AI and inserts the response.
                 </p>
                 <!-- Description -->
             </div>

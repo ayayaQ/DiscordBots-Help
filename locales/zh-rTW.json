@@ -444,7 +444,9 @@
       "tag": { "name": "$tag", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的使用者的標籤（格式為 使用者名稱#1234）。" },
       "id": { "name": "$ID", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的使用者的唯一 ID 號碼。" },
       "serversShared": { "name": "$serversSharedWithBot", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的使用者與機器人共同的伺服器數量。" },
-      "timeCreated": { "name": "$timeCreated", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的使用者的帳戶建立時間。" }
+      "timeCreated": { "name": "$timeCreated", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的使用者的帳戶建立時間。" },
+      "isBot": { "name": "$isBot", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "回傳 \"true\" 或 \"false\"，表示呼叫指令的使用者是否為機器人。" },
+      "globalName": { "name": "$globalName", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的使用者的全域顯示名稱。" }
     },
     "memberInfo": {
       "title": "成員資訊",
@@ -455,7 +457,14 @@
       "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "Message Receive", "desc": "回傳 \"true\" 或 \"false\"，表示使用者是否有加入伺服器的時間。" },
       "timeJoined": { "name": "$memberTimeJoined", "compat": "Message Receive", "desc": "成員加入伺服器的時間。" },
       "hasBoosted": { "name": "$memberHasBoosted", "compat": "Message Receive", "desc": "此成員是否已加成伺服器？回傳 \"true\" 或 \"false\"。" },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Message Receive", "desc": "使用者何時加成了伺服器？如果沒有則回傳 \"null\"。" }
+      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "Message Receive", "desc": "使用者何時加成了伺服器？如果沒有則回傳 \"null\"。" },
+      "nickname": { "name": "$memberNickname", "compat": "Message Receive", "desc": "插入成員的伺服器暱稱（如果有設定的話）。" },
+      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "Message Receive", "desc": "插入成員的標籤（格式為 使用者名稱#1234）。" },
+      "effectiveId": { "name": "$memberEffectiveID", "compat": "Message Receive", "desc": "插入成員底層使用者帳戶的唯一 ID。" },
+      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "Message Receive", "desc": "插入成員底層使用者帳戶的建立時間。" },
+      "color": { "name": "$memberColor", "compat": "Message Receive", "desc": "插入成員在伺服器中顯示顏色的十六進位色碼。" },
+      "roles": { "name": "$memberRoles", "compat": "Message Receive", "desc": "插入成員角色名稱的逗號分隔列表。" },
+      "roleCount": { "name": "$memberRoleCount", "compat": "Message Receive", "desc": "插入成員擁有的角色數量。" }
     },
     "mentionedInfo": {
       "title": "被提及使用者資訊",
@@ -467,7 +476,9 @@
       "tag": { "name": "$mentionedTag", "compat": "Message Receive", "desc": "插入在指令呼叫中被提及的使用者的標籤（格式為 使用者名稱#1234）。" },
       "id": { "name": "$mentionedID", "compat": "Message Receive", "desc": "插入在指令呼叫中被提及的使用者的唯一 ID 號碼。" },
       "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "Message Receive", "desc": "插入在指令呼叫中被提及的使用者與機器人共同的伺服器數量。" },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Message Receive", "desc": "插入在指令呼叫中被提及的使用者的帳戶建立時間。" }
+      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "Message Receive", "desc": "插入在指令呼叫中被提及的使用者的帳戶建立時間。" },
+      "isBot": { "name": "$mentionedIsBot", "compat": "Message Receive", "desc": "回傳 \"true\" 或 \"false\"，表示被提及的使用者是否為機器人。" },
+      "globalName": { "name": "$mentionedGlobalName", "compat": "Message Receive", "desc": "插入在指令呼叫中被提及的使用者的全域顯示名稱。" }
     },
     "botInfo": {
       "title": "機器人資訊",
@@ -489,19 +500,31 @@
       "icon": { "name": "$serverIcon", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器圖示的 URL。" },
       "banner": { "name": "$serverBanner", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器橫幅的 URL。" },
       "description": { "name": "$serverDescription", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器的說明。" },
-      "splash": { "name": "$serverSplash", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器啟動畫面的 URL。" }
+      "splash": { "name": "$serverSplash", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器啟動畫面的 URL。" },
+      "createTime": { "name": "$serverCreateTime", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器的建立時間。" },
+      "serverId": { "name": "$serverID", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入呼叫指令的伺服器的唯一 ID。" },
+      "owner": { "name": "$serverOwner", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入伺服器擁有者的提及。" },
+      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入伺服器擁有者的純文字顯示名稱。" },
+      "boostCount": { "name": "$serverBoostCount", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入伺服器擁有的加成數量。" },
+      "boostTier": { "name": "$serverBoostTier", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入伺服器的加成等級（0、1、2 或 3）。" },
+      "vanityCode": { "name": "$serverVanityCode", "compat": "Message Receive, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入伺服器的自訂邀請碼（如果存在的話）。" }
     },
     "channelInfo": {
       "title": "頻道資訊",
       "channel": { "name": "$channel", "compat": "Message Receive, Private Message, Reaction Add", "desc": "插入訊息發送所在頻道的名稱。" },
       "channelId": { "name": "$channelID", "compat": "Message Receive, Reaction Add", "desc": "插入訊息發送所在頻道的 ID。" },
       "createDate": { "name": "$channelCreateDate", "compat": "Message Receive, Reaction Add", "desc": "插入訊息發送所在頻道的建立時間。" },
-      "asMention": { "name": "$channelAsMention", "compat": "Message Receive, Reaction Add", "desc": "插入訊息發送所在頻道的提及。" }
+      "asMention": { "name": "$channelAsMention", "compat": "Message Receive, Reaction Add", "desc": "插入訊息發送所在頻道的提及。" },
+      "topic": { "name": "$channelTopic", "compat": "Message Receive, Reaction Add", "desc": "插入訊息發送所在頻道的主題。" },
+      "isNSFW": { "name": "$channelIsNSFW", "compat": "Message Receive, Reaction Add", "desc": "回傳 \"true\" 或 \"false\"，表示該頻道是否被標記為 NSFW。" }
     },
     "message": {
       "title": "訊息",
       "message": { "name": "$message", "compat": "Message Receive, Private Message", "desc": "插入所呼叫指令的完整訊息。" },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "Message Receive, Private Message", "desc": "插入所呼叫指令的指令部分之後的訊息。" }
+      "afterCommand": { "name": "$messageAfterCommand", "compat": "Message Receive, Private Message", "desc": "插入所呼叫指令的指令部分之後的訊息。" },
+      "args": { "name": "$args(index)", "compat": "Message Receive, Private Message", "desc": "依索引（從 0 開始）插入訊息中的特定引數。" },
+      "argsCount": { "name": "$argsCount", "compat": "Message Receive, Private Message", "desc": "插入訊息中的引數數量。" },
+      "option": { "name": "$option(name)", "compat": "互動指令", "desc": "依名稱插入斜線指令選項的值。" }
     },
     "javascript": {
       "title": "JavaScript",
@@ -522,7 +545,21 @@
       "rollnum": { "name": "$rollnum(min,max)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入 min 和 max 之間（包含）的隨機數字。" },
       "ping": { "name": "$ping", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入閘道延遲。" },
       "inviteUrl": { "name": "$inviteURL", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入邀請機器人加入伺服器的 URL。" },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "用於在指令中設定狀態。第一個參數的值包括 online、idle、dnd。第二個參數的值為 watching、playing、listening。第三個參數是任意字串。重要提示：這會在 $eval 之前被評估，因此您無法使用 $eval 類型的關鍵字。" }
+      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "用於在指令中設定狀態。第一個參數的值包括 online、idle、dnd。第二個參數的值為 watching、playing、listening。第三個參數是任意字串。重要提示：這會在 $eval 之前被評估，因此您無法使用 $eval 類型的關鍵字。" },
+      "randomInt": { "name": "$randomInt", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入 0 到 99 之間的隨機整數。" },
+      "randomFloat": { "name": "$randomFloat", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入 0 到 1 之間的隨機小數。" },
+      "randomBoolean": { "name": "$randomBoolean", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "插入隨機的 \"true\" 或 \"false\" 值。" },
+      "chat": { "name": "$chat(prompt)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定的提示傳送給 AI 並插入回應內容。" }
+    },
+    "stringManip": {
+      "title": "字串操作",
+      "upper": { "name": "$upper(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定的文字轉換為大寫。" },
+      "lower": { "name": "$lower(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定的文字轉換為小寫。" },
+      "length": { "name": "$length(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "回傳指定文字的字元數。" },
+      "replace": { "name": "$replace(text,find,replacement)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定文字中所有出現的「find」替換為「replacement」。" },
+      "substring": { "name": "$substring(text,start,end)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "從文字中擷取從起始索引到結束索引的部分（從 0 開始）。" },
+      "trim": { "name": "$trim(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "移除指定文字開頭和結尾的空白字元。" },
+      "repeat": { "name": "$repeat(text,count)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定的文字重複指定的次數（最多 100 次）。" }
     }
   },
   "creating": {
