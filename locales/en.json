@@ -518,6 +518,29 @@
       "topic": { "name": "$channelTopic", "compat": "Message Receive, Reaction Add", "desc": "Inserts the topic of the channel where the message was sent." },
       "isNSFW": { "name": "$channelIsNSFW", "compat": "Message Receive, Reaction Add", "desc": "Returns \"true\" or \"false\" indicating whether the channel is marked as NSFW." }
     },
+    "channelManagement": {
+      "title": "Channel Management",
+      "createChannel": { "name": "$createChannel(name, type)", "compat": "Message Receive, Reaction Add", "desc": "Creates a new channel with the given name and type (text, voice, category, announcement, stage, forum). Returns the new channel's ID. Defaults to text if type is omitted." },
+      "createChannelIn": { "name": "$createChannelIn(name, type, categoryID)", "compat": "Message Receive, Reaction Add", "desc": "Creates a new channel with the given name and type inside the specified category. Returns the new channel's ID." },
+      "cloneChannel": { "name": "$cloneChannel(channelID)", "compat": "Message Receive, Reaction Add", "desc": "Clones an existing channel, copying its settings and permissions. Returns the new channel's ID." },
+      "deleteChannel": { "name": "$deleteChannel(channelID, reason)", "compat": "Message Receive, Reaction Add", "desc": "Deletes the specified channel. An optional reason can be provided for the audit log. Returns \"true\" on success." },
+      "setChannelName": { "name": "$setChannelName(channelID, name)", "compat": "Message Receive, Reaction Add", "desc": "Changes the name of the specified channel. Returns \"true\" on success." },
+      "setChannelTopic": { "name": "$setChannelTopic(channelID, topic)", "compat": "Message Receive, Reaction Add", "desc": "Sets the topic of the specified channel. Returns \"true\" on success." },
+      "setChannelNSFW": { "name": "$setChannelNSFW(channelID, enabled)", "compat": "Message Receive, Reaction Add", "desc": "Sets whether the specified channel is marked as NSFW. Use \"true\" or \"false\". Returns \"true\" on success." },
+      "setChannelSlowmode": { "name": "$setChannelSlowmode(channelID, seconds)", "compat": "Message Receive, Reaction Add", "desc": "Sets the slowmode delay for the specified channel in seconds (0–21600). Use 0 to disable. Returns \"true\" on success." },
+      "setChannelPosition": { "name": "$setChannelPosition(channelID, position)", "compat": "Message Receive, Reaction Add", "desc": "Sets the position of the specified channel in the channel list. Returns \"true\" on success." },
+      "setChannelParent": { "name": "$setChannelParent(channelID, categoryID)", "compat": "Message Receive, Reaction Add", "desc": "Moves the specified channel into a category. Pass an empty categoryID to remove from any category. Returns \"true\" on success." },
+      "findChannel": { "name": "$findChannel(name)", "compat": "Message Receive, Reaction Add", "desc": "Finds a channel by name (case-insensitive) and returns its ID. Returns empty string if not found." },
+      "getChannelName": { "name": "$getChannelName(channelID)", "compat": "Message Receive, Reaction Add", "desc": "Returns the name of the specified channel, or empty string if not found." },
+      "getChannelType": { "name": "$getChannelType(channelID)", "compat": "Message Receive, Reaction Add", "desc": "Returns the type of the specified channel (text, voice, category, announcement, stage, or forum)." },
+      "getChannelParent": { "name": "$getChannelParent(channelID)", "compat": "Message Receive, Reaction Add", "desc": "Returns the ID of the parent category of the specified channel, or empty string if none." },
+      "channelCount": { "name": "$channelCount", "compat": "Message Receive, Reaction Add", "desc": "Returns the total number of channels in the server." },
+      "listChannels": { "name": "$listChannels(type)", "compat": "Message Receive, Reaction Add", "desc": "Returns a comma-separated list of channel names. Optionally filter by type (text, voice, category, etc.)." },
+      "listChannelIDs": { "name": "$listChannelIDs(type)", "compat": "Message Receive, Reaction Add", "desc": "Returns a comma-separated list of channel IDs. Optionally filter by type (text, voice, category, etc.)." },
+      "lockChannel": { "name": "$lockChannel(channelID, roleID)", "compat": "Message Receive, Reaction Add", "desc": "Locks a channel by denying Send Messages for a role. Defaults to @everyone if roleID is omitted. Returns \"true\" on success." },
+      "unlockChannel": { "name": "$unlockChannel(channelID, roleID)", "compat": "Message Receive, Reaction Add", "desc": "Unlocks a channel by resetting Send Messages permission for a role. Defaults to @everyone if roleID is omitted. Returns \"true\" on success." },
+      "channelMention": { "name": "$channelMention(channelID)", "compat": "Message Receive, Reaction Add", "desc": "Returns a clickable channel mention for the specified channel ID (e.g. <#123456>)." }
+    },
     "message": {
       "title": "Message",
       "message": { "name": "$message", "compat": "Message Receive, Private Message", "desc": "Inserts the whole message of the called command." },
@@ -559,7 +582,17 @@
       "replace": { "name": "$replace(text,find,replacement)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Replaces all occurrences of \"find\" with \"replacement\" in the given text." },
       "substring": { "name": "$substring(text,start,end)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Extracts a portion of the text from the start index to the end index (0-based)." },
       "trim": { "name": "$trim(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Removes whitespace from the beginning and end of the given text." },
-      "repeat": { "name": "$repeat(text,count)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Repeats the given text a specified number of times (max 100)." }
+      "repeat": { "name": "$repeat(text,count)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Repeats the given text a specified number of times (max 100)." },
+      "contains": { "name": "$contains(text,search)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Returns \"true\" if the text contains the search string, \"false\" otherwise. Case-sensitive." },
+      "startsWith": { "name": "$startsWith(text,prefix)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Returns \"true\" if the text starts with the given prefix, \"false\" otherwise. Case-sensitive." },
+      "endsWith": { "name": "$endsWith(text,suffix)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Returns \"true\" if the text ends with the given suffix, \"false\" otherwise. Case-sensitive." }
+    },
+    "controlFlow": {
+      "title": "Control Flow",
+      "if": { "name": "$if(condition)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Starts a conditional block. Content between $if and $endif (or $else/$elseif) is only included if the condition is true. Supports operators: == (equals), != (not equals), > < >= <= (numeric comparison), & (and), | (or), ! (not), and () for grouping. A value is true if it is not empty, not \"false\", and not \"0\"." },
+      "elseif": { "name": "$elseif(condition)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Adds an alternative branch to an $if block. If the previous condition was false, this condition is checked. You can chain multiple $elseif blocks." },
+      "else": { "name": "$else", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Adds a fallback branch to an $if block. The content after $else is used when all previous conditions were false." },
+      "endif": { "name": "$endif", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "Ends an $if block. Every $if must have a matching $endif." }
     }
   },
   "creating": {

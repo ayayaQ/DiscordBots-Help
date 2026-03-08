@@ -517,6 +517,29 @@
       "topic": { "name": "$channelTopic", "compat": "メッセージ受信、リアクション追加", "desc": "メッセージが送信されたチャンネルのトピックを挿入します。" },
       "isNSFW": { "name": "$channelIsNSFW", "compat": "メッセージ受信、リアクション追加", "desc": "チャンネルがNSFWかどうかを示す「true」または「false」を返します。" }
     },
+    "channelManagement": {
+      "title": "チャンネル管理",
+      "createChannel": { "name": "$createChannel(name, type)", "compat": "メッセージ受信、リアクション追加", "desc": "指定した名前とタイプ（text、voice、category、announcement、stage、forum）で新しいチャンネルを作成します。新しいチャンネルのIDを返します。タイプを省略するとtextがデフォルトになります。" },
+      "createChannelIn": { "name": "$createChannelIn(name, type, categoryID)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したカテゴリ内に、指定した名前とタイプで新しいチャンネルを作成します。新しいチャンネルのIDを返します。" },
+      "cloneChannel": { "name": "$cloneChannel(channelID)", "compat": "メッセージ受信、リアクション追加", "desc": "既存のチャンネルをクローンし、設定と権限をコピーします。新しいチャンネルのIDを返します。" },
+      "deleteChannel": { "name": "$deleteChannel(channelID, reason)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルを削除します。監査ログ用にオプションの理由を提供できます。成功時に\"true\"を返します。" },
+      "setChannelName": { "name": "$setChannelName(channelID, name)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルの名前を変更します。成功時に\"true\"を返します。" },
+      "setChannelTopic": { "name": "$setChannelTopic(channelID, topic)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルのトピックを設定します。成功時に\"true\"を返します。" },
+      "setChannelNSFW": { "name": "$setChannelNSFW(channelID, enabled)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルがNSFWとしてマークされるかどうかを設定します。\"true\"または\"false\"を使用してください。成功時に\"true\"を返します。" },
+      "setChannelSlowmode": { "name": "$setChannelSlowmode(channelID, seconds)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルの低速モード遅延を秒単位で設定します（0〜21600）。無効にするには0を使用してください。成功時に\"true\"を返します。" },
+      "setChannelPosition": { "name": "$setChannelPosition(channelID, position)", "compat": "メッセージ受信、リアクション追加", "desc": "チャンネルリスト内の指定したチャンネルの位置を設定します。成功時に\"true\"を返します。" },
+      "setChannelParent": { "name": "$setChannelParent(channelID, categoryID)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルをカテゴリに移動します。カテゴリから削除するには空のcategoryIDを渡してください。成功時に\"true\"を返します。" },
+      "findChannel": { "name": "$findChannel(name)", "compat": "メッセージ受信、リアクション追加", "desc": "名前でチャンネルを検索し（大文字小文字を区別しない）、そのIDを返します。見つからない場合は空の文字列を返します。" },
+      "getChannelName": { "name": "$getChannelName(channelID)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルの名前を返します。見つからない場合は空の文字列を返します。" },
+      "getChannelType": { "name": "$getChannelType(channelID)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルのタイプを返します（text、voice、category、announcement、stage、またはforum）。" },
+      "getChannelParent": { "name": "$getChannelParent(channelID)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルの親カテゴリのIDを返します。ない場合は空の文字列を返します。" },
+      "channelCount": { "name": "$channelCount", "compat": "メッセージ受信、リアクション追加", "desc": "サーバー内のチャンネルの総数を返します。" },
+      "listChannels": { "name": "$listChannels(type)", "compat": "メッセージ受信、リアクション追加", "desc": "チャンネル名のカンマ区切りリストを返します。オプションでタイプ（text、voice、categoryなど）でフィルタリングできます。" },
+      "listChannelIDs": { "name": "$listChannelIDs(type)", "compat": "メッセージ受信、リアクション追加", "desc": "チャンネルIDのカンマ区切りリストを返します。オプションでタイプ（text、voice、categoryなど）でフィルタリングできます。" },
+      "lockChannel": { "name": "$lockChannel(channelID, roleID)", "compat": "メッセージ受信、リアクション追加", "desc": "ロールのメッセージ送信を拒否してチャンネルをロックします。roleIDを省略すると@everyoneがデフォルトになります。成功時に\"true\"を返します。" },
+      "unlockChannel": { "name": "$unlockChannel(channelID, roleID)", "compat": "メッセージ受信、リアクション追加", "desc": "ロールのメッセージ送信権限をリセットしてチャンネルのロックを解除します。roleIDを省略すると@everyoneがデフォルトになります。成功時に\"true\"を返します。" },
+      "channelMention": { "name": "$channelMention(channelID)", "compat": "メッセージ受信、リアクション追加", "desc": "指定したチャンネルIDのクリック可能なチャンネルメンションを返します（例：<#123456>）。" }
+    },
     "message": {
       "title": "メッセージ",
       "message": { "name": "$message", "compat": "メッセージ受信、プライベートメッセージ", "desc": "コマンド呼び出し時の全メッセージ内容を挿入します。" },
@@ -558,7 +581,17 @@
       "replace": { "name": "$replace(text,find,replacement)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキスト内の「find」をすべて「replacement」に置換します。" },
       "substring": { "name": "$substring(text,start,end)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "テキストの開始インデックスから終了インデックスまでの部分を抽出します（0始まり）。" },
       "trim": { "name": "$trim(text)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストの先頭と末尾の空白を除去します。" },
-      "repeat": { "name": "$repeat(text,count)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストを指定回数繰り返します（最大100回）。" }
+      "repeat": { "name": "$repeat(text,count)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "指定したテキストを指定回数繰り返します（最大100回）。" },
+      "contains": { "name": "$contains(text,search)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "テキストに検索文字列が含まれている場合は\"true\"、含まれていない場合は\"false\"を返します。大文字小文字を区別します。" },
+      "startsWith": { "name": "$startsWith(text,prefix)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "テキストが指定されたプレフィックスで始まる場合は\"true\"、そうでない場合は\"false\"を返します。大文字小文字を区別します。" },
+      "endsWith": { "name": "$endsWith(text,suffix)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "テキストが指定されたサフィックスで終わる場合は\"true\"、そうでない場合は\"false\"を返します。大文字小文字を区別します。" }
+    },
+    "controlFlow": {
+      "title": "制御フロー",
+      "if": { "name": "$if(condition)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "条件付きブロックを開始します。$ifと$endif（または$else/$elseif）の間のコンテンツは、条件がtrueの場合にのみ含まれます。サポートされる演算子：==（等しい）、!=（等しくない）、> < >= <=（数値比較）、&（かつ）、|（または）、!（否定）、()（グループ化）。値が空でなく、\"false\"でなく、\"0\"でない場合にtrueとなります。" },
+      "elseif": { "name": "$elseif(condition)", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "$ifブロックに代替分岐を追加します。前の条件がfalseの場合、この条件が評価されます。複数の$elseifブロックを連鎖させることができます。" },
+      "else": { "name": "$else", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "$ifブロックにフォールバック分岐を追加します。$else以降のコンテンツは、すべての前の条件がfalseだった場合に使用されます。" },
+      "endif": { "name": "$endif", "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加", "desc": "$ifブロックを終了します。すべての$ifには対応する$endifが必要です。" }
     }
   },
   "creating": {

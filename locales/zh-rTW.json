@@ -518,6 +518,29 @@
       "topic": { "name": "$channelTopic", "compat": "Message Receive, Reaction Add", "desc": "插入訊息發送所在頻道的主題。" },
       "isNSFW": { "name": "$channelIsNSFW", "compat": "Message Receive, Reaction Add", "desc": "回傳 \"true\" 或 \"false\"，表示該頻道是否被標記為 NSFW。" }
     },
+    "channelManagement": {
+      "title": "頻道管理",
+      "createChannel": { "name": "$createChannel(name, type)", "compat": "Message Receive, Reaction Add", "desc": "使用指定的名稱和類型（text、voice、category、announcement、stage、forum）建立新頻道。回傳新頻道的 ID。若省略類型，預設為 text。" },
+      "createChannelIn": { "name": "$createChannelIn(name, type, categoryID)", "compat": "Message Receive, Reaction Add", "desc": "在指定分類中使用指定的名稱和類型建立新頻道。回傳新頻道的 ID。" },
+      "cloneChannel": { "name": "$cloneChannel(channelID)", "compat": "Message Receive, Reaction Add", "desc": "複製現有頻道，包括其設定和權限。回傳新頻道的 ID。" },
+      "deleteChannel": { "name": "$deleteChannel(channelID, reason)", "compat": "Message Receive, Reaction Add", "desc": "刪除指定的頻道。可提供選擇性的原因用於稽核日誌。成功時回傳 \"true\"。" },
+      "setChannelName": { "name": "$setChannelName(channelID, name)", "compat": "Message Receive, Reaction Add", "desc": "變更指定頻道的名稱。成功時回傳 \"true\"。" },
+      "setChannelTopic": { "name": "$setChannelTopic(channelID, topic)", "compat": "Message Receive, Reaction Add", "desc": "設定指定頻道的主題。成功時回傳 \"true\"。" },
+      "setChannelNSFW": { "name": "$setChannelNSFW(channelID, enabled)", "compat": "Message Receive, Reaction Add", "desc": "設定指定頻道是否標記為 NSFW。使用 \"true\" 或 \"false\"。成功時回傳 \"true\"。" },
+      "setChannelSlowmode": { "name": "$setChannelSlowmode(channelID, seconds)", "compat": "Message Receive, Reaction Add", "desc": "設定指定頻道的慢速模式延遲（秒）（0–21600）。使用 0 來停用。成功時回傳 \"true\"。" },
+      "setChannelPosition": { "name": "$setChannelPosition(channelID, position)", "compat": "Message Receive, Reaction Add", "desc": "設定指定頻道在頻道列表中的位置。成功時回傳 \"true\"。" },
+      "setChannelParent": { "name": "$setChannelParent(channelID, categoryID)", "compat": "Message Receive, Reaction Add", "desc": "將指定頻道移動到分類中。傳入空的 categoryID 以從任何分類中移除。成功時回傳 \"true\"。" },
+      "findChannel": { "name": "$findChannel(name)", "compat": "Message Receive, Reaction Add", "desc": "依名稱搜尋頻道（不區分大小寫）並回傳其 ID。若未找到則回傳空字串。" },
+      "getChannelName": { "name": "$getChannelName(channelID)", "compat": "Message Receive, Reaction Add", "desc": "回傳指定頻道的名稱，若未找到則回傳空字串。" },
+      "getChannelType": { "name": "$getChannelType(channelID)", "compat": "Message Receive, Reaction Add", "desc": "回傳指定頻道的類型（text、voice、category、announcement、stage 或 forum）。" },
+      "getChannelParent": { "name": "$getChannelParent(channelID)", "compat": "Message Receive, Reaction Add", "desc": "回傳指定頻道的父分類 ID，若沒有則回傳空字串。" },
+      "channelCount": { "name": "$channelCount", "compat": "Message Receive, Reaction Add", "desc": "回傳伺服器中的頻道總數。" },
+      "listChannels": { "name": "$listChannels(type)", "compat": "Message Receive, Reaction Add", "desc": "回傳以逗號分隔的頻道名稱清單。可選擇依類型篩選（text、voice、category 等）。" },
+      "listChannelIDs": { "name": "$listChannelIDs(type)", "compat": "Message Receive, Reaction Add", "desc": "回傳以逗號分隔的頻道 ID 清單。可選擇依類型篩選（text、voice、category 等）。" },
+      "lockChannel": { "name": "$lockChannel(channelID, roleID)", "compat": "Message Receive, Reaction Add", "desc": "透過拒絕角色的傳送訊息權限來鎖定頻道。若省略 roleID，預設為 @everyone。成功時回傳 \"true\"。" },
+      "unlockChannel": { "name": "$unlockChannel(channelID, roleID)", "compat": "Message Receive, Reaction Add", "desc": "透過重設角色的傳送訊息權限來解鎖頻道。若省略 roleID，預設為 @everyone。成功時回傳 \"true\"。" },
+      "channelMention": { "name": "$channelMention(channelID)", "compat": "Message Receive, Reaction Add", "desc": "回傳指定頻道 ID 的可點擊頻道提及（例如 <#123456>）。" }
+    },
     "message": {
       "title": "訊息",
       "message": { "name": "$message", "compat": "Message Receive, Private Message", "desc": "插入所呼叫指令的完整訊息。" },
@@ -559,7 +582,17 @@
       "replace": { "name": "$replace(text,find,replacement)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定文字中所有出現的「find」替換為「replacement」。" },
       "substring": { "name": "$substring(text,start,end)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "從文字中擷取從起始索引到結束索引的部分（從 0 開始）。" },
       "trim": { "name": "$trim(text)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "移除指定文字開頭和結尾的空白字元。" },
-      "repeat": { "name": "$repeat(text,count)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定的文字重複指定的次數（最多 100 次）。" }
+      "repeat": { "name": "$repeat(text,count)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "將指定的文字重複指定的次數（最多 100 次）。" },
+      "contains": { "name": "$contains(text,search)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "如果文字包含搜尋字串則回傳 \"true\"，否則回傳 \"false\"。區分大小寫。" },
+      "startsWith": { "name": "$startsWith(text,prefix)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "如果文字以指定前綴開頭則回傳 \"true\"，否則回傳 \"false\"。區分大小寫。" },
+      "endsWith": { "name": "$endsWith(text,suffix)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "如果文字以指定後綴結尾則回傳 \"true\"，否則回傳 \"false\"。區分大小寫。" }
+    },
+    "controlFlow": {
+      "title": "控制流程",
+      "if": { "name": "$if(condition)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "開始一個條件區塊。$if 和 $endif（或 $else/$elseif）之間的內容僅在條件為真時包含。支援的運算子：==（等於）、!=（不等於）、> < >= <=（數值比較）、&（且）、|（或）、!（非）和()（分組）。值不為空、不為 \"false\" 且不為 \"0\" 時為真。" },
+      "elseif": { "name": "$elseif(condition)", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "為 $if 區塊新增替代分支。如果前一個條件為假，則檢查此條件。可以串接多個 $elseif 區塊。" },
+      "else": { "name": "$else", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "為 $if 區塊新增備用分支。$else 之後的內容在所有先前條件為假時使用。" },
+      "endif": { "name": "$endif", "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add", "desc": "結束一個 $if 區塊。每個 $if 必須有對應的 $endif。" }
     }
   },
   "creating": {

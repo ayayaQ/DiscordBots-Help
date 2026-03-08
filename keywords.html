@@ -1000,6 +1000,175 @@
         </div>
 
         <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.channelManagement.title">Channel Management</span><img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.createChannel.name">$createChannel(name, type)</h2>
+                <h3 data-i18n="keywords.channelManagement.createChannel.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.createChannel.desc">
+                    Creates a new channel with the given name and type. Type defaults to "text". Valid types: text, voice, category, announcement, stage, forum. Returns the new channel's ID.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.createChannelIn.name">$createChannelIn(name, type, categoryID)</h2>
+                <h3 data-i18n="keywords.channelManagement.createChannelIn.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.createChannelIn.desc">
+                    Creates a new channel under a specific category. Returns the new channel's ID.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.cloneChannel.name">$cloneChannel(channelID)</h2>
+                <h3 data-i18n="keywords.channelManagement.cloneChannel.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.cloneChannel.desc">
+                    Clones an existing channel, copying all its properties including permissions. Returns the new channel's ID.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.deleteChannel.name">$deleteChannel(channelID, reason)</h2>
+                <h3 data-i18n="keywords.channelManagement.deleteChannel.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.deleteChannel.desc">
+                    Deletes a channel by its ID. The reason is optional and appears in the audit log. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.setChannelName.name">$setChannelName(channelID, name)</h2>
+                <h3 data-i18n="keywords.channelManagement.setChannelName.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.setChannelName.desc">
+                    Renames a channel. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.setChannelTopic.name">$setChannelTopic(channelID, topic)</h2>
+                <h3 data-i18n="keywords.channelManagement.setChannelTopic.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.setChannelTopic.desc">
+                    Sets the topic of a text channel. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.setChannelNSFW.name">$setChannelNSFW(channelID, true/false)</h2>
+                <h3 data-i18n="keywords.channelManagement.setChannelNSFW.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.setChannelNSFW.desc">
+                    Toggles the NSFW flag on a channel. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.setChannelSlowmode.name">$setChannelSlowmode(channelID, seconds)</h2>
+                <h3 data-i18n="keywords.channelManagement.setChannelSlowmode.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.setChannelSlowmode.desc">
+                    Sets the slowmode delay on a channel in seconds (0-21600). Use 0 to disable. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.setChannelPosition.name">$setChannelPosition(channelID, position)</h2>
+                <h3 data-i18n="keywords.channelManagement.setChannelPosition.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.setChannelPosition.desc">
+                    Sets the position of a channel in the channel list. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.setChannelParent.name">$setChannelParent(channelID, categoryID)</h2>
+                <h3 data-i18n="keywords.channelManagement.setChannelParent.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.setChannelParent.desc">
+                    Moves a channel to a category. Use an empty category ID to remove it from its current category. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.findChannel.name">$findChannel(name)</h2>
+                <h3 data-i18n="keywords.channelManagement.findChannel.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.findChannel.desc">
+                    Finds a channel by name (case-insensitive). Returns the channel ID, or empty if not found.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.getChannelName.name">$getChannelName(channelID)</h2>
+                <h3 data-i18n="keywords.channelManagement.getChannelName.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.getChannelName.desc">
+                    Gets a channel's name by its ID. Returns empty if the channel is not found.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.getChannelType.name">$getChannelType(channelID)</h2>
+                <h3 data-i18n="keywords.channelManagement.getChannelType.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.getChannelType.desc">
+                    Gets a channel's type as a friendly string (text, voice, category, announcement, stage, forum).
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.getChannelParent.name">$getChannelParent(channelID)</h2>
+                <h3 data-i18n="keywords.channelManagement.getChannelParent.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.getChannelParent.desc">
+                    Gets the parent category ID of a channel. Returns empty if the channel has no parent category.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.channelCount.name">$channelCount</h2>
+                <h3 data-i18n="keywords.channelManagement.channelCount.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.channelCount.desc">
+                    Inserts the total number of channels in the server.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.listChannels.name">$listChannels(type)</h2>
+                <h3 data-i18n="keywords.channelManagement.listChannels.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.listChannels.desc">
+                    Lists all channel names as a comma-separated string. Optionally filter by type (text, voice, category, etc.).
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.listChannelIDs.name">$listChannelIDs(type)</h2>
+                <h3 data-i18n="keywords.channelManagement.listChannelIDs.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.listChannelIDs.desc">
+                    Lists all channel IDs as a comma-separated string. Optionally filter by type.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.lockChannel.name">$lockChannel(channelID, roleID)</h2>
+                <h3 data-i18n="keywords.channelManagement.lockChannel.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.lockChannel.desc">
+                    Denies the Send Messages permission for a role in a channel. Defaults to @everyone if no role ID is provided. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.unlockChannel.name">$unlockChannel(channelID, roleID)</h2>
+                <h3 data-i18n="keywords.channelManagement.unlockChannel.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.unlockChannel.desc">
+                    Resets the Send Messages permission for a role in a channel (inherits from server). Defaults to @everyone if no role ID is provided. Returns "true" on success.
+                </p>
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.channelManagement.channelMention.name">$channelMention(channelID)</h2>
+                <h3 data-i18n="keywords.channelManagement.channelMention.compat">Message Receive, Reaction Add</h3>
+                <p data-i18n="keywords.channelManagement.channelMention.desc">
+                    Formats a channel ID as a clickable channel mention.
+                </p>
+            </div>
+        </div>
+
+        <button class="collapsible" aria-expanded="false">
             <span data-i18n="keywords.message.title">Message</span><img
                 class="expand"
                 src="images/expand_more.svg"
@@ -1232,6 +1401,124 @@
                 <p data-i18n="keywords.stringManip.repeat.desc">
                     Repeats the given text a specified number of times (max
                     100).
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.contains.name">$contains(text,search)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.contains.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.contains.desc">
+                    Returns "true" if the text contains the search string,
+                    "false" otherwise. Case-sensitive.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.startsWith.name">$startsWith(text,prefix)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.startsWith.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.startsWith.desc">
+                    Returns "true" if the text starts with the given prefix,
+                    "false" otherwise. Case-sensitive.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.stringManip.endsWith.name">$endsWith(text,suffix)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.stringManip.endsWith.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.stringManip.endsWith.desc">
+                    Returns "true" if the text ends with the given suffix,
+                    "false" otherwise. Case-sensitive.
+                </p>
+                <!-- Description -->
+            </div>
+        </div>
+
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="keywords.controlFlow.title">Control Flow</span><img
+                class="expand"
+                src="images/expand_more.svg"
+                alt="Expand Content"
+            />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2 data-i18n="keywords.controlFlow.if.name">$if(condition)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.controlFlow.if.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.controlFlow.if.desc">
+                    Starts a conditional block. The content between $if and $endif
+                    (or $else/$elseif) is only included if the condition is true.
+                    Conditions support operators: == (equals), != (not equals),
+                    &gt; &lt; &gt;= &lt;= (numeric comparison),
+                    &amp; (and), | (or), ! (not), and () for grouping.
+                    A value is considered true if it is not empty, not "false", and not "0".
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.controlFlow.elseif.name">$elseif(condition)</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.controlFlow.elseif.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.controlFlow.elseif.desc">
+                    Adds an alternative branch to an $if block. If the previous
+                    condition was false, this condition is checked. You can chain
+                    multiple $elseif blocks.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.controlFlow.else.name">$else</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.controlFlow.else.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.controlFlow.else.desc">
+                    Adds a fallback branch to an $if block. The content after
+                    $else is used when all previous conditions were false.
+                </p>
+                <!-- Description -->
+            </div>
+
+            <div class="keyword">
+                <h2 data-i18n="keywords.controlFlow.endif.name">$endif</h2>
+                <!-- Keyword -->
+                <h3 data-i18n="keywords.controlFlow.endif.compat">
+                    Message Receive, Private Message, Member Join, Member Leave,
+                    Member Ban, Reaction Add
+                </h3>
+                <!-- Compatibility -->
+                <p data-i18n="keywords.controlFlow.endif.desc">
+                    Ends an $if block. Every $if must have a matching $endif.
                 </p>
                 <!-- Description -->
             </div>
