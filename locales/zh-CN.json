@@ -56,15 +56,23 @@
       "title": "新功能",
       "v112": {
         "title": "1.12",
-        "items": ["添加持久状态以允许机器人在会话之间记住信息。", "修复了各种错误。"]
+        "items": [
+          "添加持久状态以允许机器人在会话之间记住信息。",
+          "修复了各种错误。"
+        ]
       },
       "v1111": {
         "title": "1.11.1",
-        "items": ["修复了各种错误。"]
+        "items": [
+          "修复了各种错误。"
+        ]
       },
       "v1111b": {
         "title": "1.11.1",
-        "items": ["帮助网站主题更改为中性色。", "修复了各种错误。"]
+        "items": [
+          "帮助网站主题更改为中性色。",
+          "修复了各种错误。"
+        ]
       },
       "v111": {
         "title": "1.11",
@@ -82,79 +90,154 @@
       },
       "v1106": {
         "title": "1.10.6",
-        "items": ["启用了MESSAGE_CONTENT gateway intent。"]
+        "items": [
+          "启用了MESSAGE_CONTENT gateway intent。"
+        ]
       },
       "v1105": {
         "title": "1.10.5",
-        "items": ["更新了重要库。"]
+        "items": [
+          "更新了重要库。"
+        ]
       },
       "v1104": {
         "title": "1.10.4",
-        "items": ["添加了$setStatus关键词。", "修复了一些崩溃。"]
+        "items": [
+          "添加了$setStatus关键词。",
+          "修复了一些崩溃。"
+        ]
       },
       "v1103": {
         "title": "1.10.3",
-        "items": ["在创建命令菜单中添加了关键词搜索器。", "改进了命令搜索栏。", "各种修复和小改动。"]
+        "items": [
+          "在创建命令菜单中添加了关键词搜索器。",
+          "改进了命令搜索栏。",
+          "各种修复和小改动。"
+        ]
       },
       "v1102": {
         "title": "1.10.2",
-        "items": ["移除了语言选择,改为由系统决定。", "各种修复。"]
+        "items": [
+          "移除了语言选择,改为由系统决定。",
+          "各种修复。"
+        ]
       },
       "v1101": {
         "title": "1.10.1",
-        "items": ["俄语,感谢PadowYT2。", "日语", "在设置中添加了语言选择。"]
+        "items": [
+          "俄语,感谢PadowYT2。",
+          "日语",
+          "在设置中添加了语言选择。"
+        ]
       },
       "v110": {
         "title": "1.10",
-        "items": ["添加了使用webhooks的功能。"]
+        "items": [
+          "添加了使用webhooks的功能。"
+        ]
       },
       "v197": {
         "title": "1.9.7",
-        "items": ["$sum关键词。", "各种修复。"]
+        "items": [
+          "$sum关键词。",
+          "各种修复。"
+        ]
       },
       "v196": {
         "title": "1.9.6",
-        "items": ["嵌入消息颜色。", "错误修复。"]
+        "items": [
+          "嵌入消息颜色。",
+          "错误修复。"
+        ]
       },
       "v195": {
         "title": "1.9.5",
-        "items": ["为命令添加了\"需要管理员权限\"。", "添加了在命令列表中隐藏输出的选项。", "添加了无需启用server member intents的选项,但代价是无法使用某些命令。", "性能和错误修复"]
+        "items": [
+          "为命令添加了\"需要管理员权限\"。",
+          "添加了在命令列表中隐藏输出的选项。",
+          "添加了无需启用server member intents的选项,但代价是无法使用某些命令。",
+          "性能和错误修复"
+        ]
       },
       "v19": {
         "title": "1.9",
-        "items": ["在命令列表中添加了搜索栏。", "添加了向任意方向滑动删除命令的功能。", "添加了隐藏token文本的选项。", "添加了导出按钮以将命令导出到文件。", "添加了导入按钮以从文件加载命令。", "修复了许多错误,如底部导航随键盘移动、一些命令列表错误以及一些机器人服务错误。"]
+        "items": [
+          "在命令列表中添加了搜索栏。",
+          "添加了向任意方向滑动删除命令的功能。",
+          "添加了隐藏token文本的选项。",
+          "添加了导出按钮以将命令导出到文件。",
+          "添加了导入按钮以从文件加载命令。",
+          "修复了许多错误,如底部导航随键盘移动、一些命令列表错误以及一些机器人服务错误。"
+        ]
       },
       "v18": {
         "title": "1.8",
-        "items": ["改进了帮助部分和帮助网站的外观。", "添加和调整了帮助部分的标签。", "从其他菜单中移除了帮助和教程按钮选项。"]
+        "items": [
+          "改进了帮助部分和帮助网站的外观。",
+          "添加和调整了帮助部分的标签。",
+          "从其他菜单中移除了帮助和教程按钮选项。"
+        ]
       },
       "v17": {
         "title": "1.7",
-        "items": ["添加了$eval和$halt关键词以允许使用JavaScript。", "添加了$get()和$set()关键词来设置和检索值。", "更改了token字段文本类型。"]
+        "items": [
+          "添加了$eval和$halt关键词以允许使用JavaScript。",
+          "添加了$get()和$set()关键词来设置和检索值。",
+          "更改了token字段文本类型。"
+        ]
       },
       "v16": {
         "title": "1.6",
-        "items": ["新的删除操作,包括延后删除命令、删除x条消息和包含时删除。", "添加了24个新关键词,包括$ping和$inviteURL。", "过滤不适宜内容命令的操作。", "某些字段支持多行。"]
+        "items": [
+          "新的删除操作,包括延后删除命令、删除x条消息和包含时删除。",
+          "添加了24个新关键词,包括$ping和$inviteURL。",
+          "过滤不适宜内容命令的操作。",
+          "某些字段支持多行。"
+        ]
       },
       "v15": {
         "title": "1.5",
-        "items": ["为添加反应事件添加了需要特定消息ID。", "为命令添加了忽略错误消息。", "添加了$random{}关键词以选择随机字符串。", "添加了PM接收类型的图标。"]
+        "items": [
+          "为添加反应事件添加了需要特定消息ID。",
+          "为命令添加了忽略错误消息。",
+          "添加了$random{}关键词以选择随机字符串。",
+          "添加了PM接收类型的图标。"
+        ]
       },
       "v14": {
         "title": "1.4",
-        "items": ["为某些类型的命令添加了需要角色。", "为某些类型的命令添加了在特定频道发送。", "添加了与提及用户信息、机器人信息、服务器信息等相关的关键词。"]
+        "items": [
+          "为某些类型的命令添加了需要角色。",
+          "为某些类型的命令添加了在特定频道发送。",
+          "添加了与提及用户信息、机器人信息、服务器信息等相关的关键词。"
+        ]
       },
       "v13": {
         "title": "1.3",
-        "items": ["添加了对\"直播中...\"和\"观看中...\"状态类型的支持。", "发送嵌入消息的功能。", "添加了对消息做出反应的功能。", "在命令创建屏幕中添加了帮助按钮。"]
+        "items": [
+          "添加了对\"直播中...\"和\"观看中...\"状态类型的支持。",
+          "发送嵌入消息的功能。",
+          "添加了对消息做出反应的功能。",
+          "在命令创建屏幕中添加了帮助按钮。"
+        ]
       },
       "v12": {
         "title": "1.2",
-        "items": ["改进了命令创建屏幕以便于使用。", "添加了角色分配功能。", "在其他菜单中添加了教程和Discord链接。"]
+        "items": [
+          "改进了命令创建屏幕以便于使用。",
+          "添加了角色分配功能。",
+          "在其他菜单中添加了教程和Discord链接。"
+        ]
       },
       "v11": {
         "title": "1.1",
-        "items": ["管理功能:踢出、封禁、语音静音。这些以特殊方式工作,见<a href=\"#moderation\">这里。</a>", "通配符关键词。命令字段中的*表示任何内容都会触发命令。", "添加反应命令类型。当有人给消息添加反应时触发此类型。对于添加反应类型中的自定义表情,您将使用表情的名称(例如:您的表情名为WeirdChamp,您就输入WeirdChamp),常规表情只需在命令字段中使用表情本身。", "教程对话框提及一些重要细节。", "新关键词$avatar将用户头像添加到消息中。"]
+        "items": [
+          "管理功能:踢出、封禁、语音静音。这些以特殊方式工作,见<a href=\"#moderation\">这里。</a>",
+          "通配符关键词。命令字段中的*表示任何内容都会触发命令。",
+          "添加反应命令类型。当有人给消息添加反应时触发此类型。对于添加反应类型中的自定义表情,您将使用表情的名称(例如:您的表情名为WeirdChamp,您就输入WeirdChamp),常规表情只需在命令字段中使用表情本身。",
+          "教程对话框提及一些重要细节。",
+          "新关键词$avatar将用户头像添加到消息中。"
+        ]
       }
     }
   },
@@ -436,163 +519,747 @@
     "metaDesc": "Bot Commander Discord中所有关键词的文档及其使用方法",
     "userInfo": {
       "title": "用户信息",
-      "name": { "name": "$name", "compat": "消息接收, 私信, 成员加入, 添加反应", "desc": "插入调用命令的用户的提及。" },
-      "avatar": { "name": "$avatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的头像URL。" },
-      "defaultAvatar": { "name": "$defaultAvatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的默认头像URL。" },
-      "namePlain": { "name": "$namePlain", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的纯文本用户名。" },
-      "discriminator": { "name": "$discriminator", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的识别码(#后的数字)。" },
-      "tag": { "name": "$tag", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的标签(格式为用户名#1234)。" },
-      "id": { "name": "$ID", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的唯一ID号。" },
-      "serversShared": { "name": "$serversSharedWithBot", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户与机器人共享的服务器数量。" },
-      "timeCreated": { "name": "$timeCreated", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的账户创建时间。" },
-      "isBot": { "name": "$isBot", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "返回\"true\"或\"false\",表示调用命令的用户是否为机器人。" },
-      "globalName": { "name": "$globalName", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的用户的全局显示名称。" }
+      "name": {
+        "name": "$name",
+        "compat": "消息接收, 私信, 成员加入, 添加反应",
+        "desc": "插入调用命令的用户的提及。"
+      },
+      "avatar": {
+        "name": "$avatar",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的头像URL。"
+      },
+      "defaultAvatar": {
+        "name": "$defaultAvatar",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的默认头像URL。"
+      },
+      "namePlain": {
+        "name": "$namePlain",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的纯文本用户名。"
+      },
+      "discriminator": {
+        "name": "$discriminator",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的识别码(#后的数字)。"
+      },
+      "tag": {
+        "name": "$tag",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的标签(格式为用户名#1234)。"
+      },
+      "id": {
+        "name": "$ID",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的唯一ID号。"
+      },
+      "serversShared": {
+        "name": "$serversSharedWithBot",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户与机器人共享的服务器数量。"
+      },
+      "timeCreated": {
+        "name": "$timeCreated",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的账户创建时间。"
+      },
+      "isBot": {
+        "name": "$isBot",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回\"true\"或\"false\",表示调用命令的用户是否为机器人。"
+      },
+      "globalName": {
+        "name": "$globalName",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的用户的全局显示名称。"
+      }
     },
     "memberInfo": {
       "title": "成员信息",
-      "isOwner": { "name": "$memberIsOwner", "compat": "消息接收", "desc": "事件的成员是否是服务器所有者。" },
-      "effectiveName": { "name": "$memberEffectiveName", "compat": "消息接收", "desc": "这是成员在服务器中使用的名称。" },
-      "effectiveAvatar": { "name": "$memberEffectiveAvatar", "compat": "消息接收", "desc": "这是用户在此特定服务器中显示的头像。" },
-      "memberId": { "name": "$memberID", "compat": "消息接收", "desc": "成员的唯一ID。" },
-      "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "消息接收", "desc": "返回\"true\"或\"false\",表示用户是否有加入服务器的时间。" },
-      "timeJoined": { "name": "$memberTimeJoined", "compat": "消息接收", "desc": "成员加入服务器的时间。" },
-      "hasBoosted": { "name": "$memberHasBoosted", "compat": "消息接收", "desc": "此成员是否助力了服务器?返回\"true\"或\"false\"。" },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "消息接收", "desc": "用户助力服务器的时间是什么?如果没有,我们将得到\"null\"。" },
-      "nickname": { "name": "$memberNickname", "compat": "消息接收", "desc": "插入成员在服务器中的昵称(如果已设置)。" },
-      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "消息接收", "desc": "插入成员的标签(格式为用户名#1234)。" },
-      "effectiveId": { "name": "$memberEffectiveID", "compat": "消息接收", "desc": "插入成员底层用户账户的唯一ID。" },
-      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "消息接收", "desc": "插入成员底层用户账户的创建时间。" },
-      "color": { "name": "$memberColor", "compat": "消息接收", "desc": "插入成员在服务器中显示颜色的十六进制颜色代码。" },
-      "roles": { "name": "$memberRoles", "compat": "消息接收", "desc": "插入成员在服务器中的角色名称列表,以逗号分隔。" },
-      "roleCount": { "name": "$memberRoleCount", "compat": "消息接收", "desc": "插入成员在服务器中拥有的角色数量。" }
+      "isOwner": {
+        "name": "$memberIsOwner",
+        "compat": "消息接收",
+        "desc": "事件的成员是否是服务器所有者。"
+      },
+      "effectiveName": {
+        "name": "$memberEffectiveName",
+        "compat": "消息接收",
+        "desc": "这是成员在服务器中使用的名称。"
+      },
+      "effectiveAvatar": {
+        "name": "$memberEffectiveAvatar",
+        "compat": "消息接收",
+        "desc": "这是用户在此特定服务器中显示的头像。"
+      },
+      "memberId": {
+        "name": "$memberID",
+        "compat": "消息接收",
+        "desc": "成员的唯一ID。"
+      },
+      "hasTimeJoined": {
+        "name": "$memberHasTimeJoined",
+        "compat": "消息接收",
+        "desc": "返回\"true\"或\"false\",表示用户是否有加入服务器的时间。"
+      },
+      "timeJoined": {
+        "name": "$memberTimeJoined",
+        "compat": "消息接收",
+        "desc": "成员加入服务器的时间。"
+      },
+      "hasBoosted": {
+        "name": "$memberHasBoosted",
+        "compat": "消息接收",
+        "desc": "此成员是否助力了服务器?返回\"true\"或\"false\"。"
+      },
+      "timeBoosted": {
+        "name": "$memberTimeBoosted",
+        "compat": "消息接收",
+        "desc": "用户助力服务器的时间是什么?如果没有,我们将得到\"null\"。"
+      },
+      "nickname": {
+        "name": "$memberNickname",
+        "compat": "消息接收",
+        "desc": "插入成员在服务器中的昵称(如果已设置)。"
+      },
+      "effectiveTag": {
+        "name": "$memberEffectiveTag",
+        "compat": "消息接收",
+        "desc": "插入成员的标签(格式为用户名#1234)。"
+      },
+      "effectiveId": {
+        "name": "$memberEffectiveID",
+        "compat": "消息接收",
+        "desc": "插入成员底层用户账户的唯一ID。"
+      },
+      "effectiveTimeCreated": {
+        "name": "$memberEffectiveTimeCreated",
+        "compat": "消息接收",
+        "desc": "插入成员底层用户账户的创建时间。"
+      },
+      "color": {
+        "name": "$memberColor",
+        "compat": "消息接收",
+        "desc": "插入成员在服务器中显示颜色的十六进制颜色代码。"
+      },
+      "roles": {
+        "name": "$memberRoles",
+        "compat": "消息接收",
+        "desc": "插入成员在服务器中的角色名称列表,以逗号分隔。"
+      },
+      "roleCount": {
+        "name": "$memberRoleCount",
+        "compat": "消息接收",
+        "desc": "插入成员在服务器中拥有的角色数量。"
+      }
     },
     "mentionedInfo": {
       "title": "被提及用户信息",
-      "name": { "name": "$mentionedName", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的提及。" },
-      "avatar": { "name": "$mentionedAvatar", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的头像URL。" },
-      "defaultAvatar": { "name": "$mentionedDefaultAvatar", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的默认头像URL。" },
-      "namePlain": { "name": "$mentionedNamePlain", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的纯文本用户名。" },
-      "discriminator": { "name": "$mentionedDiscriminator", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的识别码(#后的数字)。" },
-      "tag": { "name": "$mentionedTag", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的标签(格式为用户名#1234)。" },
-      "id": { "name": "$mentionedID", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的唯一ID号。" },
-      "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户与机器人共享的服务器数量。" },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的账户创建时间。" },
-      "isBot": { "name": "$mentionedIsBot", "compat": "消息接收", "desc": "返回\"true\"或\"false\",表示被提及的用户是否为机器人。" },
-      "globalName": { "name": "$mentionedGlobalName", "compat": "消息接收", "desc": "插入在命令调用中被提及的用户的全局显示名称。" }
+      "name": {
+        "name": "$mentionedName",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的提及。"
+      },
+      "avatar": {
+        "name": "$mentionedAvatar",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的头像URL。"
+      },
+      "defaultAvatar": {
+        "name": "$mentionedDefaultAvatar",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的默认头像URL。"
+      },
+      "namePlain": {
+        "name": "$mentionedNamePlain",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的纯文本用户名。"
+      },
+      "discriminator": {
+        "name": "$mentionedDiscriminator",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的识别码(#后的数字)。"
+      },
+      "tag": {
+        "name": "$mentionedTag",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的标签(格式为用户名#1234)。"
+      },
+      "id": {
+        "name": "$mentionedID",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的唯一ID号。"
+      },
+      "serversShared": {
+        "name": "$mentionedServersSharedWithBot",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户与机器人共享的服务器数量。"
+      },
+      "timeCreated": {
+        "name": "$mentionedTimeCreated",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的账户创建时间。"
+      },
+      "isBot": {
+        "name": "$mentionedIsBot",
+        "compat": "消息接收",
+        "desc": "返回\"true\"或\"false\",表示被提及的用户是否为机器人。"
+      },
+      "globalName": {
+        "name": "$mentionedGlobalName",
+        "compat": "消息接收",
+        "desc": "插入在命令调用中被提及的用户的全局显示名称。"
+      }
     },
     "botInfo": {
       "title": "机器人信息",
-      "name": { "name": "$botName", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的提及。" },
-      "avatar": { "name": "$botAvatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的头像URL。" },
-      "defaultAvatar": { "name": "$botDefaultAvatar", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的默认头像URL。" },
-      "namePlain": { "name": "$botNamePlain", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的纯文本用户名。" },
-      "discriminator": { "name": "$botDiscriminator", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的识别码(#后的数字)。" },
-      "tag": { "name": "$botTag", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的标签(格式为用户名#1234)。" },
-      "id": { "name": "$botID", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的唯一ID号。" },
-      "timeCreated": { "name": "$botTimeCreated", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入您的机器人的账户创建时间。" }
+      "name": {
+        "name": "$botName",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的提及。"
+      },
+      "avatar": {
+        "name": "$botAvatar",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的头像URL。"
+      },
+      "defaultAvatar": {
+        "name": "$botDefaultAvatar",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的默认头像URL。"
+      },
+      "namePlain": {
+        "name": "$botNamePlain",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的纯文本用户名。"
+      },
+      "discriminator": {
+        "name": "$botDiscriminator",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的识别码(#后的数字)。"
+      },
+      "tag": {
+        "name": "$botTag",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的标签(格式为用户名#1234)。"
+      },
+      "id": {
+        "name": "$botID",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的唯一ID号。"
+      },
+      "timeCreated": {
+        "name": "$botTimeCreated",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入您的机器人的账户创建时间。"
+      }
     },
     "serverInfo": {
       "title": "服务器信息",
-      "server": { "name": "$server", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器名称。" },
-      "serverCount": { "name": "$serverCount", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入机器人所在的服务器数量。" },
-      "memberCount": { "name": "$memberCount", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器中的用户数量。" },
-      "allMemberCount": { "name": "$allMemberCount", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入机器人所在所有服务器中的用户数量。" },
-      "icon": { "name": "$serverIcon", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器图标的URL。" },
-      "banner": { "name": "$serverBanner", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器横幅的URL。" },
-      "description": { "name": "$serverDescription", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的描述。" },
-      "splash": { "name": "$serverSplash", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器闪屏的URL。" },
-      "createTime": { "name": "$serverCreateTime", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的创建时间。" },
-      "serverId": { "name": "$serverID", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入调用命令的服务器的唯一ID。" },
-      "owner": { "name": "$serverOwner", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器所有者的提及。" },
-      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器所有者的纯文本显示名称。" },
-      "boostCount": { "name": "$serverBoostCount", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器拥有的助力数量。" },
-      "boostTier": { "name": "$serverBoostTier", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器的助力等级(0、1、2或3)。" },
-      "vanityCode": { "name": "$serverVanityCode", "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入服务器的自定义邀请代码(如果存在)。" }
+      "server": {
+        "name": "$server",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器名称。"
+      },
+      "serverCount": {
+        "name": "$serverCount",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入机器人所在的服务器数量。"
+      },
+      "memberCount": {
+        "name": "$memberCount",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器中的用户数量。"
+      },
+      "allMemberCount": {
+        "name": "$allMemberCount",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入机器人所在所有服务器中的用户数量。"
+      },
+      "icon": {
+        "name": "$serverIcon",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器图标的URL。"
+      },
+      "banner": {
+        "name": "$serverBanner",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器横幅的URL。"
+      },
+      "description": {
+        "name": "$serverDescription",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器的描述。"
+      },
+      "splash": {
+        "name": "$serverSplash",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器闪屏的URL。"
+      },
+      "createTime": {
+        "name": "$serverCreateTime",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器的创建时间。"
+      },
+      "serverId": {
+        "name": "$serverID",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入调用命令的服务器的唯一ID。"
+      },
+      "owner": {
+        "name": "$serverOwner",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入服务器所有者的提及。"
+      },
+      "ownerPlain": {
+        "name": "$serverOwnerPlain",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入服务器所有者的纯文本显示名称。"
+      },
+      "boostCount": {
+        "name": "$serverBoostCount",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入服务器拥有的助力数量。"
+      },
+      "boostTier": {
+        "name": "$serverBoostTier",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入服务器的助力等级(0、1、2或3)。"
+      },
+      "vanityCode": {
+        "name": "$serverVanityCode",
+        "compat": "消息接收, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入服务器的自定义邀请代码(如果存在)。"
+      }
     },
     "channelInfo": {
       "title": "频道信息",
-      "channel": { "name": "$channel", "compat": "消息接收, 私信, 添加反应", "desc": "插入发送消息的频道名称。" },
-      "channelId": { "name": "$channelID", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道ID。" },
-      "createDate": { "name": "$channelCreateDate", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的创建时间。" },
-      "asMention": { "name": "$channelAsMention", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的提及。" },
-      "topic": { "name": "$channelTopic", "compat": "消息接收, 添加反应", "desc": "插入发送消息的频道的主题。" },
-      "isNSFW": { "name": "$channelIsNSFW", "compat": "消息接收, 添加反应", "desc": "返回\"true\"或\"false\",表示频道是否被标记为NSFW。" }
+      "channel": {
+        "name": "$channel",
+        "compat": "消息接收, 私信, 添加反应",
+        "desc": "插入发送消息的频道名称。"
+      },
+      "channelId": {
+        "name": "$channelID",
+        "compat": "消息接收, 添加反应",
+        "desc": "插入发送消息的频道ID。"
+      },
+      "createDate": {
+        "name": "$channelCreateDate",
+        "compat": "消息接收, 添加反应",
+        "desc": "插入发送消息的频道的创建时间。"
+      },
+      "asMention": {
+        "name": "$channelAsMention",
+        "compat": "消息接收, 添加反应",
+        "desc": "插入发送消息的频道的提及。"
+      },
+      "topic": {
+        "name": "$channelTopic",
+        "compat": "消息接收, 添加反应",
+        "desc": "插入发送消息的频道的主题。"
+      },
+      "isNSFW": {
+        "name": "$channelIsNSFW",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回\"true\"或\"false\",表示频道是否被标记为NSFW。"
+      }
     },
     "channelManagement": {
       "title": "频道管理",
-      "createChannel": { "name": "$createChannel(name, type)", "compat": "消息接收, 添加反应", "desc": "使用给定的名称和类型（text、voice、category、announcement、stage、forum）创建新频道。返回新频道的ID。如果省略类型，默认为text。" },
-      "createChannelIn": { "name": "$createChannelIn(name, type, categoryID)", "compat": "消息接收, 添加反应", "desc": "在指定分类中使用给定的名称和类型创建新频道。返回新频道的ID。" },
-      "cloneChannel": { "name": "$cloneChannel(channelID)", "compat": "消息接收, 添加反应", "desc": "克隆现有频道，复制其设置和权限。返回新频道的ID。" },
-      "deleteChannel": { "name": "$deleteChannel(channelID, reason)", "compat": "消息接收, 添加反应", "desc": "删除指定的频道。可以提供可选的原因用于审核日志。成功时返回\"true\"。" },
-      "setChannelName": { "name": "$setChannelName(channelID, name)", "compat": "消息接收, 添加反应", "desc": "更改指定频道的名称。成功时返回\"true\"。" },
-      "setChannelTopic": { "name": "$setChannelTopic(channelID, topic)", "compat": "消息接收, 添加反应", "desc": "设置指定频道的主题。成功时返回\"true\"。" },
-      "setChannelNSFW": { "name": "$setChannelNSFW(channelID, enabled)", "compat": "消息接收, 添加反应", "desc": "设置指定频道是否标记为NSFW。使用\"true\"或\"false\"。成功时返回\"true\"。" },
-      "setChannelSlowmode": { "name": "$setChannelSlowmode(channelID, seconds)", "compat": "消息接收, 添加反应", "desc": "设置指定频道的慢速模式延迟（秒）（0–21600）。使用0禁用。成功时返回\"true\"。" },
-      "setChannelPosition": { "name": "$setChannelPosition(channelID, position)", "compat": "消息接收, 添加反应", "desc": "设置指定频道在频道列表中的位置。成功时返回\"true\"。" },
-      "setChannelParent": { "name": "$setChannelParent(channelID, categoryID)", "compat": "消息接收, 添加反应", "desc": "将指定频道移动到分类中。传入空的categoryID以从任何分类中移除。成功时返回\"true\"。" },
-      "findChannel": { "name": "$findChannel(name)", "compat": "消息接收, 添加反应", "desc": "按名称（不区分大小写）查找频道并返回其ID。如果未找到则返回空字符串。" },
-      "getChannelName": { "name": "$getChannelName(channelID)", "compat": "消息接收, 添加反应", "desc": "返回指定频道的名称，如果未找到则返回空字符串。" },
-      "getChannelType": { "name": "$getChannelType(channelID)", "compat": "消息接收, 添加反应", "desc": "返回指定频道的类型（text、voice、category、announcement、stage或forum）。" },
-      "getChannelParent": { "name": "$getChannelParent(channelID)", "compat": "消息接收, 添加反应", "desc": "返回指定频道的父分类ID，如果没有则返回空字符串。" },
-      "channelCount": { "name": "$channelCount", "compat": "消息接收, 添加反应", "desc": "返回服务器中的频道总数。" },
-      "listChannels": { "name": "$listChannels(type)", "compat": "消息接收, 添加反应", "desc": "返回以逗号分隔的频道名称列表。可选按类型过滤（text、voice、category等）。" },
-      "listChannelIDs": { "name": "$listChannelIDs(type)", "compat": "消息接收, 添加反应", "desc": "返回以逗号分隔的频道ID列表。可选按类型过滤（text、voice、category等）。" },
-      "lockChannel": { "name": "$lockChannel(channelID, roleID)", "compat": "消息接收, 添加反应", "desc": "通过拒绝角色的发送消息权限来锁定频道。如果省略roleID，默认为@everyone。成功时返回\"true\"。" },
-      "unlockChannel": { "name": "$unlockChannel(channelID, roleID)", "compat": "消息接收, 添加反应", "desc": "通过重置角色的发送消息权限来解锁频道。如果省略roleID，默认为@everyone。成功时返回\"true\"。" },
-      "channelMention": { "name": "$channelMention(channelID)", "compat": "消息接收, 添加反应", "desc": "返回指定频道ID的可点击频道提及（例如<#123456>）。" }
+      "createChannel": {
+        "name": "$createChannel(name, type)",
+        "compat": "消息接收, 添加反应",
+        "desc": "使用给定的名称和类型（text、voice、category、announcement、stage、forum）创建新频道。返回新频道的ID。如果省略类型，默认为text。"
+      },
+      "createChannelIn": {
+        "name": "$createChannelIn(name, type, categoryID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "在指定分类中使用给定的名称和类型创建新频道。返回新频道的ID。"
+      },
+      "cloneChannel": {
+        "name": "$cloneChannel(channelID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "克隆现有频道，复制其设置和权限。返回新频道的ID。"
+      },
+      "deleteChannel": {
+        "name": "$deleteChannel(channelID, reason)",
+        "compat": "消息接收, 添加反应",
+        "desc": "删除指定的频道。可以提供可选的原因用于审核日志。成功时返回\"true\"。"
+      },
+      "setChannelName": {
+        "name": "$setChannelName(channelID, name)",
+        "compat": "消息接收, 添加反应",
+        "desc": "更改指定频道的名称。成功时返回\"true\"。"
+      },
+      "setChannelTopic": {
+        "name": "$setChannelTopic(channelID, topic)",
+        "compat": "消息接收, 添加反应",
+        "desc": "设置指定频道的主题。成功时返回\"true\"。"
+      },
+      "setChannelNSFW": {
+        "name": "$setChannelNSFW(channelID, enabled)",
+        "compat": "消息接收, 添加反应",
+        "desc": "设置指定频道是否标记为NSFW。使用\"true\"或\"false\"。成功时返回\"true\"。"
+      },
+      "setChannelSlowmode": {
+        "name": "$setChannelSlowmode(channelID, seconds)",
+        "compat": "消息接收, 添加反应",
+        "desc": "设置指定频道的慢速模式延迟（秒）（0–21600）。使用0禁用。成功时返回\"true\"。"
+      },
+      "setChannelPosition": {
+        "name": "$setChannelPosition(channelID, position)",
+        "compat": "消息接收, 添加反应",
+        "desc": "设置指定频道在频道列表中的位置。成功时返回\"true\"。"
+      },
+      "setChannelParent": {
+        "name": "$setChannelParent(channelID, categoryID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "将指定频道移动到分类中。传入空的categoryID以从任何分类中移除。成功时返回\"true\"。"
+      },
+      "findChannel": {
+        "name": "$findChannel(name)",
+        "compat": "消息接收, 添加反应",
+        "desc": "按名称（不区分大小写）查找频道并返回其ID。如果未找到则返回空字符串。"
+      },
+      "getChannelName": {
+        "name": "$getChannelName(channelID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回指定频道的名称，如果未找到则返回空字符串。"
+      },
+      "getChannelType": {
+        "name": "$getChannelType(channelID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回指定频道的类型（text、voice、category、announcement、stage或forum）。"
+      },
+      "getChannelParent": {
+        "name": "$getChannelParent(channelID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回指定频道的父分类ID，如果没有则返回空字符串。"
+      },
+      "channelCount": {
+        "name": "$channelCount",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回服务器中的频道总数。"
+      },
+      "listChannels": {
+        "name": "$listChannels(type)",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回以逗号分隔的频道名称列表。可选按类型过滤（text、voice、category等）。"
+      },
+      "listChannelIDs": {
+        "name": "$listChannelIDs(type)",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回以逗号分隔的频道ID列表。可选按类型过滤（text、voice、category等）。"
+      },
+      "lockChannel": {
+        "name": "$lockChannel(channelID, roleID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "通过拒绝角色的发送消息权限来锁定频道。如果省略roleID，默认为@everyone。成功时返回\"true\"。"
+      },
+      "unlockChannel": {
+        "name": "$unlockChannel(channelID, roleID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "通过重置角色的发送消息权限来解锁频道。如果省略roleID，默认为@everyone。成功时返回\"true\"。"
+      },
+      "channelMention": {
+        "name": "$channelMention(channelID)",
+        "compat": "消息接收, 添加反应",
+        "desc": "返回指定频道ID的可点击频道提及（例如<#123456>）。"
+      }
     },
     "message": {
       "title": "消息",
-      "message": { "name": "$message", "compat": "消息接收, 私信", "desc": "插入调用命令的整个消息。" },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "消息接收, 私信", "desc": "插入调用命令中命令部分之后的消息。" },
-      "args": { "name": "$args(index)", "compat": "消息接收, 私信", "desc": "按索引(从0开始)插入消息中的特定参数。" },
-      "argsCount": { "name": "$argsCount", "compat": "消息接收, 私信", "desc": "插入消息中的参数数量。" },
-      "option": { "name": "$option(name)", "compat": "交互命令", "desc": "按名称插入斜杠命令选项的值。" }
+      "message": {
+        "name": "$message",
+        "compat": "消息接收, 私信",
+        "desc": "插入调用命令的整个消息。"
+      },
+      "afterCommand": {
+        "name": "$messageAfterCommand",
+        "compat": "消息接收, 私信",
+        "desc": "插入调用命令中命令部分之后的消息。"
+      },
+      "args": {
+        "name": "$args(index)",
+        "compat": "消息接收, 私信",
+        "desc": "按索引(从0开始)插入消息中的特定参数。"
+      },
+      "argsCount": {
+        "name": "$argsCount",
+        "compat": "消息接收, 私信",
+        "desc": "插入消息中的参数数量。"
+      },
+      "option": {
+        "name": "$option(name)",
+        "compat": "交互命令",
+        "desc": "按名称插入斜杠命令选项的值。"
+      }
     },
     "javascript": {
       "title": "JavaScript",
-      "eval": { "name": "$eval", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于标记js代码块的开始。代码完成后必须跟随$halt语句" },
-      "halt": { "name": "$halt", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于标记js代码块的结束。" },
-      "get": { "name": "$get(name)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入具有该名称的js变量的值。" },
-      "set": { "name": "$set(name,value)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于设置js变量。支持布尔值\"true\"和\"false\"以及数字和字符串。" }
+      "eval": {
+        "name": "$eval",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "用于标记js代码块的开始。代码完成后必须跟随$halt语句"
+      },
+      "halt": {
+        "name": "$halt",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "用于标记js代码块的结束。"
+      },
+      "get": {
+        "name": "$get(name)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入具有该名称的js变量的值。"
+      },
+      "set": {
+        "name": "$set(name,value)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "用于设置js变量。支持布尔值\"true\"和\"false\"以及数字和字符串。"
+      }
     },
     "misc": {
       "title": "杂项",
-      "date": { "name": "$date", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前日期。" },
-      "hour": { "name": "$hour", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前小时。" },
-      "minute": { "name": "$minute", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前分钟。" },
-      "second": { "name": "$second", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入当前秒。" },
-      "random": { "name": "$random{a|b|c}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "从大括号{}中的参数随机选择一个字符串插入。字符串必须用|分隔。" },
-      "sum": { "name": "$sum{1|2|3}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入大括号{}中参数的总和。数字必须用|分隔。" },
-      "commandCount": { "name": "$commandCount", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入机器人拥有的命令数量。" },
-      "rollnum": { "name": "$rollnum(min,max)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入min和max之间(包含)的随机数。" },
-      "ping": { "name": "$ping", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入网关ping。" },
-      "inviteUrl": { "name": "$inviteURL", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入邀请机器人到服务器的URL。" },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "用于在命令中设置状态。第一个参数的值包括online、idle、dnd。第二个参数的值是watching、playing、listening。第三个参数是任意字符串。重要提示:这在$eval之前计算,所以您不能在此使用$eval类型的关键词。" },
-      "randomInt": { "name": "$randomInt", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入0到99之间的随机整数。" },
-      "randomFloat": { "name": "$randomFloat", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入0到1之间的随机小数。" },
-      "randomBoolean": { "name": "$randomBoolean", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "插入随机的\"true\"或\"false\"值。" },
-      "chat": { "name": "$chat(prompt)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定的提示发送到AI并插入响应。" }
+      "date": {
+        "name": "$date",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入当前日期。"
+      },
+      "hour": {
+        "name": "$hour",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入当前小时。"
+      },
+      "minute": {
+        "name": "$minute",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入当前分钟。"
+      },
+      "second": {
+        "name": "$second",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入当前秒。"
+      },
+      "random": {
+        "name": "$random{a|b|c}",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "从大括号{}中的参数随机选择一个字符串插入。字符串必须用|分隔。"
+      },
+      "sum": {
+        "name": "$sum{1|2|3}",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入大括号{}中参数的总和。数字必须用|分隔。"
+      },
+      "commandCount": {
+        "name": "$commandCount",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入机器人拥有的命令数量。"
+      },
+      "rollnum": {
+        "name": "$rollnum(min,max)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入min和max之间(包含)的随机数。"
+      },
+      "ping": {
+        "name": "$ping",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入网关ping。"
+      },
+      "inviteUrl": {
+        "name": "$inviteURL",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入邀请机器人到服务器的URL。"
+      },
+      "setStatus": {
+        "name": "$setStatus{online|playing|games}",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "用于在命令中设置状态。第一个参数的值包括online、idle、dnd。第二个参数的值是watching、playing、listening。第三个参数是任意字符串。重要提示:这在$eval之前计算,所以您不能在此使用$eval类型的关键词。"
+      },
+      "randomInt": {
+        "name": "$randomInt",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入0到99之间的随机整数。"
+      },
+      "randomFloat": {
+        "name": "$randomFloat",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入0到1之间的随机小数。"
+      },
+      "randomBoolean": {
+        "name": "$randomBoolean",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "插入随机的\"true\"或\"false\"值。"
+      },
+      "chat": {
+        "name": "$chat(prompt)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将给定的提示发送到AI并插入响应。"
+      }
     },
     "stringManip": {
       "title": "字符串操作",
-      "upper": { "name": "$upper(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定的文本转换为大写。" },
-      "lower": { "name": "$lower(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定的文本转换为小写。" },
-      "length": { "name": "$length(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "返回给定文本的字符数。" },
-      "replace": { "name": "$replace(text,find,replacement)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定文本中所有出现的\"find\"替换为\"replacement\"。" },
-      "substring": { "name": "$substring(text,start,end)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "从起始索引到结束索引(从0开始)提取文本的一部分。" },
-      "trim": { "name": "$trim(text)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "移除给定文本开头和结尾的空白字符。" },
-      "repeat": { "name": "$repeat(text,count)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "将给定文本重复指定次数(最多100次)。" },
-      "contains": { "name": "$contains(text,search)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "如果文本包含搜索字符串则返回\"true\"，否则返回\"false\"。区分大小写。" },
-      "startsWith": { "name": "$startsWith(text,prefix)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "如果文本以给定前缀开头则返回\"true\"，否则返回\"false\"。区分大小写。" },
-      "endsWith": { "name": "$endsWith(text,suffix)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "如果文本以给定后缀结尾则返回\"true\"，否则返回\"false\"。区分大小写。" }
+      "upper": {
+        "name": "$upper(text)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将给定的文本转换为大写。"
+      },
+      "lower": {
+        "name": "$lower(text)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将给定的文本转换为小写。"
+      },
+      "length": {
+        "name": "$length(text)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回给定文本的字符数。"
+      },
+      "replace": {
+        "name": "$replace(text,find,replacement)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将给定文本中所有出现的\"find\"替换为\"replacement\"。"
+      },
+      "substring": {
+        "name": "$substring(text,start,end)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "从起始索引到结束索引(从0开始)提取文本的一部分。"
+      },
+      "trim": {
+        "name": "$trim(text)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "移除给定文本开头和结尾的空白字符。"
+      },
+      "repeat": {
+        "name": "$repeat(text,count)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将给定文本重复指定次数(最多100次)。"
+      },
+      "contains": {
+        "name": "$contains(text,search)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "如果文本包含搜索字符串则返回\"true\"，否则返回\"false\"。区分大小写。"
+      },
+      "startsWith": {
+        "name": "$startsWith(text,prefix)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "如果文本以给定前缀开头则返回\"true\"，否则返回\"false\"。区分大小写。"
+      },
+      "endsWith": {
+        "name": "$endsWith(text,suffix)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "如果文本以给定后缀结尾则返回\"true\"，否则返回\"false\"。区分大小写。"
+      }
+    },
+    "math": {
+      "title": "数学",
+      "sub": {
+        "name": "$sub(a,b)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "从a中减去b并返回结果。"
+      },
+      "mul": {
+        "name": "$mul(n1,n2,...)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将所有给定的数字相乘并返回结果。"
+      },
+      "div": {
+        "name": "$div(a,b)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将a除以b并返回结果。如果b为零则返回错误。"
+      },
+      "mod": {
+        "name": "$mod(a,b)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回a除以b的余数。如果b为零则返回错误。"
+      },
+      "round": {
+        "name": "$round(n,decimals)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将n四舍五入到最接近的整数，或到指定的小数位数。"
+      },
+      "floor": {
+        "name": "$floor(n)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将n向下取整到最接近的整数。"
+      },
+      "ceil": {
+        "name": "$ceil(n)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将n向上取整到最接近的整数。"
+      },
+      "abs": {
+        "name": "$abs(n)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回n的绝对值。"
+      },
+      "toFixed": {
+        "name": "$toFixed(n,decimals)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将n格式化为固定小数位数（默认2位，最多20位）。"
+      },
+      "min": {
+        "name": "$min(n1,n2,...)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回给定数字中的最小值。"
+      },
+      "max": {
+        "name": "$max(n1,n2,...)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回给定数字中的最大值。"
+      },
+      "clamp": {
+        "name": "$clamp(n,min,max)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "将n限制在不小于min且不大于max的范围内。"
+      },
+      "pow": {
+        "name": "$pow(base,exp)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回base的exp次方。"
+      },
+      "sqrt": {
+        "name": "$sqrt(n)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回n的平方根。如果n为负数则返回错误。"
+      },
+      "log": {
+        "name": "$log(n)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回n的自然对数。如果n为零或负数则返回错误。"
+      },
+      "pi": {
+        "name": "$pi",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "返回圆周率的值（3.141592653589793）。"
+      },
+      "isNumber": {
+        "name": "$isNumber(text)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "如果文本是有效数字则返回\"true\"，否则返回\"false\"。"
+      }
     },
     "controlFlow": {
       "title": "控制流",
-      "if": { "name": "$if(condition)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "开始一个条件块。$if和$endif（或$else/$elseif）之间的内容仅在条件为真时包含。支持的运算符：==（等于）、!=（不等于）、> < >= <=（数值比较）、&（与）、|（或）、!（非）和()（分组）。值不为空、不为\"false\"且不为\"0\"时为真。" },
-      "elseif": { "name": "$elseif(condition)", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "为$if块添加替代分支。如果前一个条件为假，则检查此条件。可以链接多个$elseif块。" },
-      "else": { "name": "$else", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "为$if块添加后备分支。$else之后的内容在所有先前条件为假时使用。" },
-      "endif": { "name": "$endif", "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应", "desc": "结束一个$if块。每个$if必须有对应的$endif。" }
+      "if": {
+        "name": "$if(condition)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "开始一个条件块。$if和$endif（或$else/$elseif）之间的内容仅在条件为真时包含。支持的运算符：==（等于）、!=（不等于）、> < >= <=（数值比较）、&（与）、|（或）、!（非）和()（分组）。值不为空、不为\"false\"且不为\"0\"时为真。"
+      },
+      "elseif": {
+        "name": "$elseif(condition)",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "为$if块添加替代分支。如果前一个条件为假，则检查此条件。可以链接多个$elseif块。"
+      },
+      "else": {
+        "name": "$else",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "为$if块添加后备分支。$else之后的内容在所有先前条件为假时使用。"
+      },
+      "endif": {
+        "name": "$endif",
+        "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
+        "desc": "结束一个$if块。每个$if必须有对应的$endif。"
+      }
     }
   },
   "creating": {
@@ -620,102 +1287,202 @@
   },
   "tutorial": {
     "title": "教程",
-    "pageTitle": "Bot Commander 教程",
-    "metaDesc": "关于如何使用Bot Commander Discord中的某些功能和创建命令的教程",
+    "searchPlaceholder": "搜索教程...",
+    "noResults": "没有匹配的教程。",
+    "firstCommand": {
+      "title": "你的第一个命令",
+      "heading": "入门",
+      "intro": "让我们创建你的第一个机器人命令。我们将制作一个简单的问候语，当有人在你的服务器中输入 <b>!hello</b> 时进行回复。",
+      "step1": "打开 Bot Commander 并转到 <b>Commands</b> 标签页。",
+      "step2": "点击 <b>+</b> 按钮创建新命令。",
+      "step3": "将类型设置为 <b>Message Received</b>。",
+      "step4": "将命令名称设置为 <b>!hello</b>。",
+      "step5": "在频道消息字段中，输入下面显示的回复模板。",
+      "step6": "保存命令，托管你的机器人，然后在 Discord 频道中输入 <b>!hello</b> 进行测试。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
+    },
+    "usingKeywords": {
+      "title": "使用 Keywords",
+      "heading": "变量和函数",
+      "intro": "Keywords 让你可以在机器人的回复中插入动态信息。像 <b>$name</b> 和 <b>$server</b> 这样的变量会被替换为实际值，而 <b>$rollnum()</b> 和 <b>$random{}</b> 等函数会动态生成内容。",
+      "step1": "创建一个名为 <b>!info</b> 的 <b>Message Received</b> 命令。",
+      "step2": "在频道消息字段中输入下面的回复模板。",
+      "step3": "保存，托管你的机器人，然后输入 <b>!info</b> 查看 Keywords 的效果。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
+    },
+    "slashCommands": {
+      "title": "斜杠命令",
+      "heading": "交互命令",
+      "intro": "斜杠命令是 Discord 与机器人交互的现代方式。用户输入 <b>/</b> 后跟命令名称，Discord 会显示自动补全选项。你可以定义 Discord 为你验证的类型化参数。",
+      "step1": "转到 <b>Interactions</b> 标签页，点击 <b>+</b> 创建新的交互命令。",
+      "step2": "将命令名称设置为 <b>greet</b>（斜杠命令不需要前缀）。",
+      "step3": "将描述设置为 <b>Greet someone</b>。",
+      "step4": "添加一个选项：类型 <b>String</b>，名称 <b>person</b>，描述 <b>Who to greet</b>。",
+      "step5": "设置下面显示的回复模板。",
+      "step6": "保存，托管你的机器人，然后在 Discord 中输入 <b>/greet</b>。填写 <b>person</b> 选项并发送。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
+    },
+    "buttons": {
+      "title": "交互按钮",
+      "heading": "消息上的按钮",
+      "intro": "你可以在斜杠命令的回复中添加可点击的按钮。每个按钮可以触发自己的回复、分配角色或显示只有点击者才能看到的临时消息。",
+      "step1": "创建一个名为 <b>menu</b>、描述为 <b>Show the menu</b> 的新交互命令。",
+      "step2": "将回复消息设置为下面显示的模板。",
+      "step3": "添加一个标签为 <b>Info</b>、样式为 <b>Primary</b>、ID 为 <b>info_btn</b> 的按钮。将其回复设置为 <b>Here is some info about our server!</b>",
+      "step4": "添加另一个标签为 <b>Help</b>、样式为 <b>Secondary</b>、ID 为 <b>help_btn</b> 的按钮。将其回复设置为 <b>Need help? Ask in #support!</b>",
+      "step5": "可选地，在按钮回复上勾选 <b>Ephemeral</b>，这样只有点击的人才能看到回复。",
+      "step6": "保存、托管并在 Discord 中使用 <b>/menu</b> 测试。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
+    },
+    "conditionals": {
+      "title": "条件回复",
+      "heading": "If / Else 逻辑",
+      "intro": "使用 <b>$if</b>、<b>$elseif</b>、<b>$else</b> 和 <b>$endif</b> 让你的机器人根据条件做出不同的回复。你可以检查参数、用户属性、服务器信息等。",
+      "step1": "创建一个名为 <b>!role</b> 的 <b>Message Received</b> 命令。",
+      "step2": "在频道消息字段中输入下面的条件模板。",
+      "step3": "保存并测试。尝试 <b>!role admin</b>、<b>!role mod</b> 和 <b>!role anything</b> 查看不同的回复。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出",
+      "outputHeading2": "备选输出"
+    },
+    "embeds": {
+      "title": "Embed 消息",
+      "heading": "Rich Embed",
+      "intro": "Embed 是带有彩色侧边栏、标题、描述、页脚、图片和缩略图的富格式消息。它们让你的机器人回复看起来精致而专业。",
+      "step1": "创建一个名为 <b>!profile</b> 的 <b>Message Received</b> 命令。",
+      "step2": "启用 <b>Send Embed</b> 选项。",
+      "step3": "按下面所示填写 Embed 字段。只要你至少填写一个，所有字段都是可选的。",
+      "step4": "保存、托管并输入 <b>!profile</b> 查看你的 Embed。",
+      "codeHeading": "Embed 字段",
+      "outputHeading": "Discord 输出"
+    },
+    "welcome": {
+      "title": "欢迎消息",
+      "heading": "成员加入事件",
+      "intro": "你可以让机器人在新成员加入服务器时自动迎接他们。将此与角色分配结合，给新成员一个默认角色。",
+      "step1": "创建一个新命令，将类型设置为 <b>Member Join</b>。",
+      "step2": "在频道消息字段中输入下面的回复模板。",
+      "step3": "启用 <b>Assign/Remove Role</b> 并输入角色名称（例如 <b>Member</b>）。区分大小写。",
+      "step4": "保存并托管。当有人加入你的服务器时，机器人将自动迎接并分配角色。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
+    },
     "persistState": {
       "title": "持久化状态",
-      "heading": "基础",
-      "intro": "如果您有想要在机器人会话之间保存的运行时计算的信息,有一个可以使用的解决方案。我决定称之为\"botState\"。它非常简单易用。",
-      "step1": "转到创建命令屏幕并创建一个使用JS的命令。如果您还不知道如何做到这一点,请参阅<b>\"在消息中使用Javascript\"</b>教程。",
-      "step2": "如果我们想存储一些信息,我们将其设置在名为<b>\"botState\"</b>的变量上。当您开始托管机器人时,此变量已经定义。要在其中存储内容,只需像在JS中那样设置属性,例如我们可以做<b>\"botState.x = '我保存的字符串'\"</b>。",
-      "step3": "要读取一些信息并将其插入消息中,您可以根据我们之前的保存示例做<b>$get(botState.x)</b>。这将在您的响应中打印<b>\"我保存的字符串\"</b>。",
-      "step4": "这就是您需要担心的全部。从这里开始,应用程序应该在应用程序关闭或取消托管时处理保存<b>\"botState\"</b>。"
+      "heading": "在会话间保存数据",
+      "intro": "<b>botState</b> 对象让你存储即使停止和重启机器人也能保留的数据。你可以在 <b>$eval...$halt</b> 块中修改它，并用 <b>$get()</b> 读取其属性。你也可以在 eval 块外使用 <b>$set()</b> 和 <b>$get()</b> 直接在 VM 上下文中存储和检索值。",
+      "step1": "创建一个名为 <b>!count</b> 的 <b>Message Received</b> 命令。",
+      "step2": "输入下面的模板。<b>$eval</b> 块执行 JavaScript，其 <b>return</b> 值替换消息中的块。<b>botState</b> 对象在机器人重启后仍然保留。",
+      "step3": "保存并测试。计数器每次递增，并在机器人重启后保留。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
     },
-    "dice": {
-      "title": "骰子命令",
-      "intro": "此命令将模拟骰子掷骰,可用于D&D等游戏。",
-      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
-      "step2": "我们将命名命令为\"!dice\"",
-      "step3": "在频道消息字段中我们将输入\"你掷出了 $rollnum(1,6)\"",
-      "step4": "保存命令,托管您的机器人并测试命令",
-      "commandHeading": "命令",
-      "outputHeading": "输出示例"
+    "channels": {
+      "title": "频道管理",
+      "heading": "管理频道",
+      "intro": "Bot Commander 包含直接从命令回复中创建、删除和管理 Discord 频道的功能。你的机器人需要 <b>Manage Channels</b> 权限才能使这些功能正常工作。",
+      "step1": "创建一个名为 <b>!setup</b> 的 <b>Message Received</b> 命令。",
+      "step2": "输入下面的模板。它创建一个新的文本频道并列出服务器中的所有频道。",
+      "step3": "保存并测试。确保你的机器人在服务器中拥有 <b>Manage Channels</b> 权限。",
+      "codeHeading": "回复模板",
+      "outputHeading": "Discord 输出"
     },
-    "kick": {
-      "title": "踢出命令",
-      "intro": "此命令将允许拥有踢出用户权限的人使用机器人踢出用户。",
-      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
-      "step2": "我们将命名命令为\"!kick\"",
-      "step3": "在管理部分勾选\"kick\"复选框",
-      "step4": "保存命令,托管您的机器人并测试命令。使用管理的命令的用法是您的命令名称和接收该操作的用户的提及,如\"!kick @用户\"",
-      "commandHeading": "命令",
-      "usageHeading": "用法示例"
+    "aiChat": {
+      "title": "AI 驱动的回复",
+      "heading": "在命令中使用 AI",
+      "intro": "<b>$chat()</b> 函数向 AI 发送提示并返回回复。将它与 <b>$messageAfterCommand</b> 结合，让用户可以问你的机器人任何问题。你需要在机器人设置中配置 API 密钥。",
+      "step1": "创建一个名为 <b>!ask</b> 的 <b>Message Received</b> 命令。",
+      "step2": "输入下面的回复模板之一。简单版本将用户的问题直接传递给 AI。高级版本添加格式化。",
+      "step3": "保存并测试。输入 <b>!ask</b> 后跟任何问题。",
+      "codeHeading": "简单模板",
+      "advancedHeading": "高级模板",
+      "outputHeading": "Discord 输出"
     },
-    "phrase": {
-      "title": "短语命令",
-      "intro": "此命令将展示如何使用短语复选框。",
-      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
-      "step2": "我们将命名命令为\"狗\"",
-      "step3": "在频道消息字段中我们将输入\"我喜欢狗!\"",
-      "step4": "保存命令,托管您的机器人并测试命令。现在当任何人提到狗这个词时,机器人就会做出反应。",
-      "commandHeading": "命令",
-      "outputHeading": "输出示例"
+    "triggerModes": {
+      "title": "触发模式",
+      "heading": "仅命令、前缀匹配和短语",
+      "intro": "创建 \"Message Received\" 命令时，你可以选择机器人如何匹配传入消息。默认情况下，消息必须与命令名称完全匹配。<b>Starts With</b> 和 <b>Phrase</b> 选项可以改变此行为。",
+      "commandOnlyHeading": "仅命令（默认）",
+      "commandOnlyDesc": "消息必须完全是命令名称，不能多余。例如，名为 <b>!hello</b> 的命令只有在有人输入 <b>!hello</b> 时才会触发。输入 <b>!hello world</b> 或 <b>say !hello</b> 不会触发它。",
+      "startsWithHeading": "前缀匹配",
+      "startsWithDesc": "启用 <b>Starts With</b> 以在消息以命令名称开头时触发命令。这对于接受参数的命令很有用。使用 <b>$args(0)</b>、<b>$args(1)</b> 等访问命令后的单词，或使用 <b>$messageAfterCommand</b> 获取命令名称之后的所有内容。",
+      "phraseHeading": "短语",
+      "phraseDesc": "启用 <b>Phrase</b> 以在命令名称出现在消息的任何位置时触发命令。匹配不区分大小写。非常适合对某些词语或主题的自动回复。"
     },
-    "keywords": {
-      "title": "使用关键词的命令",
-      "intro": "此命令将展示几个关键词的用法。",
-      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\"",
-      "step2": "我们将命名命令为\"!date\"",
-      "step3": "在频道消息字段中我们将输入\"你好 $name 现在是 $date\"",
-      "step4": "保存命令,托管您的机器人并测试命令",
-      "commandHeading": "命令",
-      "outputHeading": "输出示例"
+    "moderation": {
+      "title": "管理命令",
+      "heading": "踢出、封禁和语音静音",
+      "intro": "Bot Commander 具有内置的管理操作。当你在命令上启用踢出、封禁或语音静音时，机器人对被提及的用户执行该操作。执行命令的用户必须拥有相应的 Discord 权限（Kick Members、Ban Members 或 Mute Members）。用法始终是：<b>command @user</b>。",
+      "kickHeading": "踢出命令",
+      "kickDesc": "创建一个将被提及的用户踢出服务器的命令。",
+      "kickStep1": "创建一个名为 <b>!kick</b> 的 <b>Message Received</b> 命令。",
+      "kickStep2": "在管理部分启用 <b>Kick</b> 选项。",
+      "kickStep3": "可选地添加如下面模板所示的频道消息以确认操作。",
+      "kickStep4": "保存并使用 <b>!kick @user</b> 测试。你和机器人都需要 <b>Kick Members</b> 权限。",
+      "banHeading": "封禁命令",
+      "banDesc": "与踢出相同，但会永久封禁用户。",
+      "banStep1": "创建一个名为 <b>!ban</b> 的 <b>Message Received</b> 命令。",
+      "banStep2": "在管理部分启用 <b>Ban</b> 选项。",
+      "banStep3": "保存并使用 <b>!ban @user</b> 测试。你和机器人都需要 <b>Ban Members</b> 权限。",
+      "muteHeading": "语音静音命令",
+      "muteDesc": "切换语音频道中用户的服务器静音状态。如果未静音，机器人将其静音。如果已静音，则取消静音。",
+      "muteStep1": "创建一个名为 <b>!mute</b> 的 <b>Message Received</b> 命令。",
+      "muteStep2": "在管理部分启用 <b>Voice Mute</b> 选项。",
+      "muteStep3": "保存并使用 <b>!mute @user</b> 测试。你需要 <b>Mute Members</b> 权限，目标必须在语音频道中。"
     },
-    "roleOnJoin": {
-      "title": "用户加入时添加角色",
-      "intro": "此命令将在用户加入Discord服务器时为其添加角色",
-      "step1": "转到创建命令屏幕并将类型设置为\"成员加入\"。此类型用于用户加入服务器时。",
-      "step2": "我们将勾选\"分配/移除角色\"复选框。此操作在第一次激活时分配角色,如果再次激活则移除它。由于我们使用\"成员加入\",它只会激活一次。",
-      "step3": "让我们将角色放入\"角色名称\"字段,我的角色叫做新用户。这区分大小写。",
-      "step4": "用某人加入您的服务器来测试命令!",
-      "commandHeading": "命令"
+    "roles": {
+      "title": "角色分配",
+      "heading": "分配和移除角色",
+      "intro": "<b>Assign/Remove Role</b> 选项切换触发命令的用户的角色。如果没有该角色则添加，如果已有则移除。适用于消息命令、交互按钮和 Member Join 等基于事件的命令。",
+      "toggleHeading": "切换角色命令",
+      "toggleDesc": "允许用户给自己添加（或移除）角色的命令。",
+      "toggleStep1": "创建一个名为 <b>!color-red</b> 的 <b>Message Received</b> 命令。",
+      "toggleStep2": "启用 <b>Assign/Remove Role</b> 并在 <b>Role</b> 字段中输入角色名称或 ID（例如 <b>Red</b>）。区分大小写。",
+      "toggleStep3": "添加频道消息以确认操作。",
+      "toggleStep4": "保存并测试。机器人需要 <b>Manage Roles</b> 权限，且其角色必须高于要分配的角色。",
+      "joinHeading": "加入时自动分配角色",
+      "joinDesc": "你也可以在有人加入服务器时自动分配角色。创建一个启用了 <b>Assign/Remove Role</b> 的 <b>Member Join</b> 命令。由于加入的成员还没有该角色，所以总会被添加。完整设置请参见<b>欢迎消息</b>教程。",
+      "buttonHeading": "通过按钮分配角色",
+      "buttonDesc": "如需更现代的方式，可使用带按钮的交互命令。每个按钮可以在点击时分配不同的角色。在每个按钮的操作上启用 <b>Assign/Remove Role</b> 并设置相应的角色名称。按钮设置方法请参见<b>交互按钮</b>教程。"
     },
-    "embed": {
-      "title": "创建嵌入消息",
-      "intro": "嵌入消息是一种特殊类型的消息。这将向您展示如何制作它们。",
-      "step1": "转到创建命令屏幕并将类型设置为\"消息接收\",命令设置为\"!embed\"",
-      "step2": "勾选\"发送频道消息嵌入\"复选框。",
-      "step3": "现在我们有5个字段要填写。只要您至少填写其中一个,它们都是可选的。",
-      "step4": "让我们在标题字段中输入\"我的嵌入\"。",
-      "step5": "\"$name 是调用此命令的人\"将放入描述字段。",
-      "step6": "\"$date\"将放入页脚。这可以像时间戳一样工作。",
-      "step7": "我将在图片URL字段中输入\"https://i.redd.it/9hs5qf7qulz41.png\"。您可以放入任何您想要的图片链接。",
-      "step8": "在缩略图字段中让我们输入\"$avatar\",因为这会将调用此命令的人的头像URL放在那里。不过您也可以放入任何您想要的图片链接。",
-      "step9": "保存并测试命令。",
-      "commandHeading": "命令",
-      "outputHeading": "输出示例"
-    },
-    "reactionRoles": {
-      "title": "反应角色",
-      "intro": "此命令将使用特定消息允许用户通过反应来获取和移除角色。",
-      "step1": "创建一个类型为添加反应的命令。",
-      "step2": "在命令字段中我们将放入用于获取角色的表情。我将使用笑脸。注意:如果您想使用自定义表情,只需输入名称,不要包含周围的:。",
-      "step3": "勾选\"需要特定消息ID\"并输入您想用于人们获取角色的消息ID。",
-      "step4": "勾选\"分配/移除角色\"并输入您要分配的角色名称。我的就输入\"Tester\"。",
-      "step5": "测试您的命令看看是否有效,然后对您想以这种方式分配的任何其他角色重复此操作。",
-      "commandHeading": "命令"
+    "reactions": {
+      "title": "表情反应",
+      "heading": "添加和响应表情反应",
+      "intro": "在 Bot Commander 中使用表情反应有两种方式：让机器人在命令回复中<b>添加表情反应</b>，以及创建当用户对消息<b>做出表情反应时触发</b>的命令。",
+      "addHeading": "机器人添加表情反应",
+      "addDesc": "任何命令都可以让机器人对触发命令的消息做出反应。这对于确认或有趣的回复很有用。",
+      "addStep1": "创建一个 <b>Message Received</b> 命令（例如 <b>!thumbs</b>）。",
+      "addStep2": "启用 <b>React</b> 选项并输入表情名称。对于默认表情，直接使用表情符号。对于自定义服务器表情，使用不带冒号的表情名称。",
+      "addStep3": "保存并测试。机器人将在触发命令的消息上添加表情反应。",
+      "roleHeading": "表情反应角色",
+      "roleDesc": "一个受欢迎的功能，允许用户对特定消息做出反应以获取或移除角色。使用 <b>Reaction Add</b> 命令类型。",
+      "roleStep1": "创建一个命令并将类型设置为 <b>Reaction Add</b>。",
+      "roleStep2": "将命令名称设置为触发角色的表情。对于默认表情，使用表情本身（例如 ⭐）。对于自定义表情，使用不带冒号的名称。",
+      "roleStep3": "启用 <b>Require Specific Message</b> 并粘贴用户将要反应的消息 ID。要获取消息 ID，请在 Discord 设置中启用开发者模式，然后右键点击消息并选择 <b>Copy Message ID</b>。",
+      "roleStep4": "启用 <b>Assign/Remove Role</b> 并输入角色名称（例如 <b>Announcements</b>）。",
+      "roleStep5": "保存并托管。用表情对消息做出反应以获取角色，再次反应以移除。",
+      "roleStep6": "对每个要分配的角色重复此操作。每个表情/角色组合创建一个命令。"
     },
     "javascript": {
-      "title": "在消息中使用Javascript",
-      "intro": "要使用JavaScript,我们必须使用$eval和$halt等关键词",
-      "step1": "创建一个任意名称的命令,也许叫它\"Hello world\"",
-      "step2": "勾选频道发送",
-      "step3": "插入$eval关键词,后面跟着$halt关键词。",
-      "step4": "在中间我们将放入我们的代码。对于这个简单的例子,让我们输入\"var hello = \"Hello world\";\"",
-      "step5": "在$halt关键词之后或$eval之前,我们可以放入消息的其余部分。让我们输入\"我们的输出是 $get(hello)\"。",
-      "step6": "运行机器人,并测试命令。",
-      "commandHeading": "命令",
-      "outputHeading": "输出示例"
+      "title": "使用 JavaScript",
+      "heading": "JavaScript Eval 块",
+      "intro": "对于超出 Keywords 和条件语句所能提供的高级逻辑，你可以使用 <b>$eval...$halt</b> 块在回复中运行 JavaScript 代码。代码在沙盒环境中作为异步函数运行，可访问 <b>Math</b>、<b>Date</b> 和持久化的 <b>botState</b> 对象。块的 <b>return</b> 值替换消息中的块。",
+      "howHeading": "工作原理",
+      "howDesc": "<b>$eval</b> 和 <b>$halt</b> 之间的代码被包装在函数中并执行。块内的任何 BCFD Keywords（如 <b>$name</b> 或 <b>$messageAfterCommand</b>）在 JavaScript 执行之前就会被解析，因此你可以在代码中将它们用作值。使用 <b>return</b> 输出结果——返回的值替换消息中的整个 <b>$eval...$halt</b> 块。",
+      "howNote": "<b>重要：</b>在块内用 <b>var</b> 或 <b>let</b> 声明的变量是该函数的局部变量，无法通过外部的 <b>$get()</b> 访问。要在 eval 块之间或与消息的其余部分共享数据，请使用 <b>botState</b>（在命令和重启之间持久化）或 <b>$set()/$get()</b>（直接在 VM 上下文中存储值）。",
+      "basicHeading": "基本示例",
+      "basicDesc": "一个使用 JavaScript 构建回复的简单问候命令。",
+      "step1": "创建一个名为 <b>!greetme</b> 的 <b>Message Received</b> 命令。",
+      "step2": "输入下面的模板。<b>return</b> 值替换 eval 块。",
+      "step3": "保存并测试。",
+      "mixHeading": "将 Eval 与普通文本混合",
+      "mixDesc": "eval 块只是消息的一部分。你可以在它前后放置普通文本和 Keywords。<b>return</b> 值会插入到块所在的位置。",
+      "advancedHeading": "高级：使用 botState",
+      "advancedDesc": "<b>botState</b> 对象在 eval 块内可用，并在命令和机器人重启之间持久化。使用它来跟踪用户数据、计数器或机器人需要记住的任何状态。"
     }
   },
   "webhooks": {

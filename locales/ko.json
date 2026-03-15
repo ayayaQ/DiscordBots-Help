@@ -56,15 +56,23 @@
       "title": "새로운 기능",
       "v112": {
         "title": "1.12",
-        "items": ["세션 간 정보를 기억할 수 있는 영구 상태 추가.", "다양한 버그 수정."]
+        "items": [
+          "세션 간 정보를 기억할 수 있는 영구 상태 추가.",
+          "다양한 버그 수정."
+        ]
       },
       "v1111": {
         "title": "1.11.1",
-        "items": ["다양한 버그 수정."]
+        "items": [
+          "다양한 버그 수정."
+        ]
       },
       "v1111b": {
         "title": "1.11.1",
-        "items": ["도움말 사이트 테마가 중립 색상으로 변경됨.", "다양한 버그 수정."]
+        "items": [
+          "도움말 사이트 테마가 중립 색상으로 변경됨.",
+          "다양한 버그 수정."
+        ]
       },
       "v111": {
         "title": "1.11",
@@ -82,79 +90,154 @@
       },
       "v1106": {
         "title": "1.10.6",
-        "items": ["MESSAGE_CONTENT gateway intent 활성화."]
+        "items": [
+          "MESSAGE_CONTENT gateway intent 활성화."
+        ]
       },
       "v1105": {
         "title": "1.10.5",
-        "items": ["중요 라이브러리 업데이트."]
+        "items": [
+          "중요 라이브러리 업데이트."
+        ]
       },
       "v1104": {
         "title": "1.10.4",
-        "items": ["$setStatus 키워드 추가.", "일부 충돌 수정."]
+        "items": [
+          "$setStatus 키워드 추가.",
+          "일부 충돌 수정."
+        ]
       },
       "v1103": {
         "title": "1.10.3",
-        "items": ["명령어 생성 메뉴에 키워드 검색기 추가.", "명령어 검색 바 개선.", "다양한 수정 및 작은 변경."]
+        "items": [
+          "명령어 생성 메뉴에 키워드 검색기 추가.",
+          "명령어 검색 바 개선.",
+          "다양한 수정 및 작은 변경."
+        ]
       },
       "v1102": {
         "title": "1.10.2",
-        "items": ["언어 선택 제거, 대신 시스템에 맡김.", "다양한 수정."]
+        "items": [
+          "언어 선택 제거, 대신 시스템에 맡김.",
+          "다양한 수정."
+        ]
       },
       "v1101": {
         "title": "1.10.1",
-        "items": ["러시아어, PadowYT2님 감사합니다.", "일본어", "설정에 언어 선택 추가."]
+        "items": [
+          "러시아어, PadowYT2님 감사합니다.",
+          "일본어",
+          "설정에 언어 선택 추가."
+        ]
       },
       "v110": {
         "title": "1.10",
-        "items": ["웹훅 사용 기능 추가."]
+        "items": [
+          "웹훅 사용 기능 추가."
+        ]
       },
       "v197": {
         "title": "1.9.7",
-        "items": ["$sum 키워드.", "다양한 수정."]
+        "items": [
+          "$sum 키워드.",
+          "다양한 수정."
+        ]
       },
       "v196": {
         "title": "1.9.6",
-        "items": ["임베드 색상.", "버그 수정."]
+        "items": [
+          "임베드 색상.",
+          "버그 수정."
+        ]
       },
       "v195": {
         "title": "1.9.5",
-        "items": ["명령어에 \"관리자 권한 필요\" 추가.", "명령어 목록에서 출력 숨기기 옵션 추가.", "일부 명령어를 사용할 수 없는 대신 server member intents 활성화 필요 없이 사용할 수 있는 옵션 추가.", "성능 및 버그 수정"]
+        "items": [
+          "명령어에 \"관리자 권한 필요\" 추가.",
+          "명령어 목록에서 출력 숨기기 옵션 추가.",
+          "일부 명령어를 사용할 수 없는 대신 server member intents 활성화 필요 없이 사용할 수 있는 옵션 추가.",
+          "성능 및 버그 수정"
+        ]
       },
       "v19": {
         "title": "1.9",
-        "items": ["명령어 목록에 검색 바 추가.", "어느 방향으로든 스와이프하여 명령어 삭제 기능 추가.", "토큰 텍스트 숨기기 옵션 추가.", "명령어를 파일로 내보내는 내보내기 버튼 추가.", "파일에서 명령어를 로드하는 가져오기 버튼 추가.", "하단 네비게이션이 키보드와 함께 움직이는 문제, 일부 명령어 목록 버그, 일부 봇 서비스 버그 등 많은 버그 수정."]
+        "items": [
+          "명령어 목록에 검색 바 추가.",
+          "어느 방향으로든 스와이프하여 명령어 삭제 기능 추가.",
+          "토큰 텍스트 숨기기 옵션 추가.",
+          "명령어를 파일로 내보내는 내보내기 버튼 추가.",
+          "파일에서 명령어를 로드하는 가져오기 버튼 추가.",
+          "하단 네비게이션이 키보드와 함께 움직이는 문제, 일부 명령어 목록 버그, 일부 봇 서비스 버그 등 많은 버그 수정."
+        ]
       },
       "v18": {
         "title": "1.8",
-        "items": ["도움말 섹션 및 도움말 웹사이트 디자인 개선.", "도움말 섹션의 탭 추가 및 조정.", "다른 메뉴에서 도움말 및 튜토리얼 버튼 옵션 제거."]
+        "items": [
+          "도움말 섹션 및 도움말 웹사이트 디자인 개선.",
+          "도움말 섹션의 탭 추가 및 조정.",
+          "다른 메뉴에서 도움말 및 튜토리얼 버튼 옵션 제거."
+        ]
       },
       "v17": {
         "title": "1.7",
-        "items": ["JavaScript 사용을 허용하는 $eval 및 $halt 키워드 추가.", "값을 설정하고 검색하는 $get() 및 $set() 키워드 추가.", "토큰 필드 텍스트 유형 변경."]
+        "items": [
+          "JavaScript 사용을 허용하는 $eval 및 $halt 키워드 추가.",
+          "값을 설정하고 검색하는 $get() 및 $set() 키워드 추가.",
+          "토큰 필드 텍스트 유형 변경."
+        ]
       },
       "v16": {
         "title": "1.6",
-        "items": ["이후 명령어 삭제, x개 메시지 삭제, 포함 시 삭제를 포함한 새로운 삭제 작업.", "$ping 및 $inviteURL을 포함한 24개의 새 키워드 추가.", "성인 콘텐츠 명령어를 필터링하는 작업.", "일부 필드에 대한 여러 줄 지원."]
+        "items": [
+          "이후 명령어 삭제, x개 메시지 삭제, 포함 시 삭제를 포함한 새로운 삭제 작업.",
+          "$ping 및 $inviteURL을 포함한 24개의 새 키워드 추가.",
+          "성인 콘텐츠 명령어를 필터링하는 작업.",
+          "일부 필드에 대한 여러 줄 지원."
+        ]
       },
       "v15": {
         "title": "1.5",
-        "items": ["반응 추가 이벤트에 특정 메시지 ID 필요 추가.", "명령어에 오류 메시지 무시 추가.", "무작위 문자열을 선택하는 $random{} 키워드 추가.", "PM 수신 유형 아이콘 추가."]
+        "items": [
+          "반응 추가 이벤트에 특정 메시지 ID 필요 추가.",
+          "명령어에 오류 메시지 무시 추가.",
+          "무작위 문자열을 선택하는 $random{} 키워드 추가.",
+          "PM 수신 유형 아이콘 추가."
+        ]
       },
       "v14": {
         "title": "1.4",
-        "items": ["특정 유형의 명령어에 역할 필요 추가.", "특정 유형의 명령어에 특정 채널에서 보내기 추가.", "언급된 사용자 정보, 봇 정보, 서버 정보 등과 관련된 키워드 추가."]
+        "items": [
+          "특정 유형의 명령어에 역할 필요 추가.",
+          "특정 유형의 명령어에 특정 채널에서 보내기 추가.",
+          "언급된 사용자 정보, 봇 정보, 서버 정보 등과 관련된 키워드 추가."
+        ]
       },
       "v13": {
         "title": "1.3",
-        "items": ["\"스트리밍 중...\" 및 \"시청 중...\" 상태 유형 지원 추가.", "임베드 메시지 보내기 기능.", "메시지에 반응하는 기능 추가.", "명령어 생성 화면에 도움말 버튼 추가."]
+        "items": [
+          "\"스트리밍 중...\" 및 \"시청 중...\" 상태 유형 지원 추가.",
+          "임베드 메시지 보내기 기능.",
+          "메시지에 반응하는 기능 추가.",
+          "명령어 생성 화면에 도움말 버튼 추가."
+        ]
       },
       "v12": {
         "title": "1.2",
-        "items": ["사용 편의를 위해 명령어 생성 화면 개선.", "역할 할당 기능 추가.", "다른 메뉴에 튜토리얼 및 Discord 링크 추가."]
+        "items": [
+          "사용 편의를 위해 명령어 생성 화면 개선.",
+          "역할 할당 기능 추가.",
+          "다른 메뉴에 튜토리얼 및 Discord 링크 추가."
+        ]
       },
       "v11": {
         "title": "1.1",
-        "items": ["관리 기능: 추방, 차단, 음성 음소거. 특별한 방식으로 작동하며 <a href=\"#moderation\">여기</a>를 참조하세요.", "와일드카드 키워드. 명령어 필드의 *는 모든 것이 명령어를 트리거함을 의미합니다.", "반응 추가 명령어 유형. 이 유형은 누군가가 메시지에 반응을 추가할 때 트리거됩니다. 반응 추가 유형의 사용자 지정 이모지에는 이모지 이름을 사용합니다(예: 이모티콘 이름이 WeirdChamp이면 WeirdChamp를 입력). 일반 이모지는 명령어 필드에 이모지를 그대로 사용합니다.", "중요한 세부 사항을 설명하는 튜토리얼 대화 상자.", "메시지에 사용자 아바타를 추가하는 새 키워드 $avatar."]
+        "items": [
+          "관리 기능: 추방, 차단, 음성 음소거. 특별한 방식으로 작동하며 <a href=\"#moderation\">여기</a>를 참조하세요.",
+          "와일드카드 키워드. 명령어 필드의 *는 모든 것이 명령어를 트리거함을 의미합니다.",
+          "반응 추가 명령어 유형. 이 유형은 누군가가 메시지에 반응을 추가할 때 트리거됩니다. 반응 추가 유형의 사용자 지정 이모지에는 이모지 이름을 사용합니다(예: 이모티콘 이름이 WeirdChamp이면 WeirdChamp를 입력). 일반 이모지는 명령어 필드에 이모지를 그대로 사용합니다.",
+          "중요한 세부 사항을 설명하는 튜토리얼 대화 상자.",
+          "메시지에 사용자 아바타를 추가하는 새 키워드 $avatar."
+        ]
       }
     }
   },
@@ -436,163 +519,747 @@
     "metaDesc": "Bot Commander for Discord의 모든 키워드 문서 및 사용 방법",
     "userInfo": {
       "title": "사용자 정보",
-      "name": { "name": "$name", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 반응 추가", "desc": "명령어를 호출한 사용자의 멘션을 삽입합니다." },
-      "avatar": { "name": "$avatar", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 아바타 URL을 삽입합니다." },
-      "defaultAvatar": { "name": "$defaultAvatar", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 기본 아바타 URL을 삽입합니다." },
-      "namePlain": { "name": "$namePlain", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 일반 텍스트 사용자 이름을 삽입합니다." },
-      "discriminator": { "name": "$discriminator", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 식별자(# 뒤의 숫자)를 삽입합니다." },
-      "tag": { "name": "$tag", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 태그(사용자이름#1234 형식)를 삽입합니다." },
-      "id": { "name": "$ID", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 고유 ID 번호를 삽입합니다." },
-      "serversShared": { "name": "$serversSharedWithBot", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자가 봇과 공유하는 서버 수를 삽입합니다." },
-      "timeCreated": { "name": "$timeCreated", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 계정 생성 시간을 삽입합니다." },
-      "isBot": { "name": "$isBot", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자가 봇인지 여부를 나타내는 \"true\" 또는 \"false\"를 반환합니다." },
-      "globalName": { "name": "$globalName", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어를 호출한 사용자의 글로벌 표시 이름을 삽입합니다." }
+      "name": {
+        "name": "$name",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 멘션을 삽입합니다."
+      },
+      "avatar": {
+        "name": "$avatar",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 아바타 URL을 삽입합니다."
+      },
+      "defaultAvatar": {
+        "name": "$defaultAvatar",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 기본 아바타 URL을 삽입합니다."
+      },
+      "namePlain": {
+        "name": "$namePlain",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 일반 텍스트 사용자 이름을 삽입합니다."
+      },
+      "discriminator": {
+        "name": "$discriminator",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 식별자(# 뒤의 숫자)를 삽입합니다."
+      },
+      "tag": {
+        "name": "$tag",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 태그(사용자이름#1234 형식)를 삽입합니다."
+      },
+      "id": {
+        "name": "$ID",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 고유 ID 번호를 삽입합니다."
+      },
+      "serversShared": {
+        "name": "$serversSharedWithBot",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자가 봇과 공유하는 서버 수를 삽입합니다."
+      },
+      "timeCreated": {
+        "name": "$timeCreated",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 계정 생성 시간을 삽입합니다."
+      },
+      "isBot": {
+        "name": "$isBot",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자가 봇인지 여부를 나타내는 \"true\" 또는 \"false\"를 반환합니다."
+      },
+      "globalName": {
+        "name": "$globalName",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어를 호출한 사용자의 글로벌 표시 이름을 삽입합니다."
+      }
     },
     "memberInfo": {
       "title": "멤버 정보",
-      "isOwner": { "name": "$memberIsOwner", "compat": "메시지 수신", "desc": "이벤트의 멤버가 서버 소유자인지." },
-      "effectiveName": { "name": "$memberEffectiveName", "compat": "메시지 수신", "desc": "서버 내에서 멤버가 사용하는 이름입니다." },
-      "effectiveAvatar": { "name": "$memberEffectiveAvatar", "compat": "메시지 수신", "desc": "이 특정 서버 내에서 사용자가 표시하는 아바타입니다." },
-      "memberId": { "name": "$memberID", "compat": "메시지 수신", "desc": "멤버의 고유 ID." },
-      "hasTimeJoined": { "name": "$memberHasTimeJoined", "compat": "메시지 수신", "desc": "사용자에게 서버에 참가한 시간이 있는지 나타내는 \"true\" 또는 \"false\"를 제공합니다." },
-      "timeJoined": { "name": "$memberTimeJoined", "compat": "메시지 수신", "desc": "멤버가 서버에 참가한 시간." },
-      "hasBoosted": { "name": "$memberHasBoosted", "compat": "메시지 수신", "desc": "이 멤버가 서버를 부스트했나요? \"true\" 또는 \"false\"를 반환합니다." },
-      "timeBoosted": { "name": "$memberTimeBoosted", "compat": "메시지 수신", "desc": "사용자가 서버를 부스트한 시간은 언제인가요? 없으면 \"null\"이 됩니다." },
-      "nickname": { "name": "$memberNickname", "compat": "메시지 수신", "desc": "멤버의 서버 닉네임을 삽입합니다 (설정된 경우)." },
-      "effectiveTag": { "name": "$memberEffectiveTag", "compat": "메시지 수신", "desc": "멤버의 태그(사용자이름#1234 형식)를 삽입합니다." },
-      "effectiveId": { "name": "$memberEffectiveID", "compat": "메시지 수신", "desc": "멤버의 기본 사용자 계정의 고유 ID를 삽입합니다." },
-      "effectiveTimeCreated": { "name": "$memberEffectiveTimeCreated", "compat": "메시지 수신", "desc": "멤버의 기본 사용자 계정의 생성 시간을 삽입합니다." },
-      "color": { "name": "$memberColor", "compat": "메시지 수신", "desc": "서버에서 멤버의 표시 색상의 16진수 색상 코드를 삽입합니다." },
-      "roles": { "name": "$memberRoles", "compat": "메시지 수신", "desc": "멤버의 역할 이름을 쉼표로 구분한 목록을 삽입합니다." },
-      "roleCount": { "name": "$memberRoleCount", "compat": "메시지 수신", "desc": "멤버가 가진 역할 수를 삽입합니다." }
+      "isOwner": {
+        "name": "$memberIsOwner",
+        "compat": "메시지 수신",
+        "desc": "이벤트의 멤버가 서버 소유자인지."
+      },
+      "effectiveName": {
+        "name": "$memberEffectiveName",
+        "compat": "메시지 수신",
+        "desc": "서버 내에서 멤버가 사용하는 이름입니다."
+      },
+      "effectiveAvatar": {
+        "name": "$memberEffectiveAvatar",
+        "compat": "메시지 수신",
+        "desc": "이 특정 서버 내에서 사용자가 표시하는 아바타입니다."
+      },
+      "memberId": {
+        "name": "$memberID",
+        "compat": "메시지 수신",
+        "desc": "멤버의 고유 ID."
+      },
+      "hasTimeJoined": {
+        "name": "$memberHasTimeJoined",
+        "compat": "메시지 수신",
+        "desc": "사용자에게 서버에 참가한 시간이 있는지 나타내는 \"true\" 또는 \"false\"를 제공합니다."
+      },
+      "timeJoined": {
+        "name": "$memberTimeJoined",
+        "compat": "메시지 수신",
+        "desc": "멤버가 서버에 참가한 시간."
+      },
+      "hasBoosted": {
+        "name": "$memberHasBoosted",
+        "compat": "메시지 수신",
+        "desc": "이 멤버가 서버를 부스트했나요? \"true\" 또는 \"false\"를 반환합니다."
+      },
+      "timeBoosted": {
+        "name": "$memberTimeBoosted",
+        "compat": "메시지 수신",
+        "desc": "사용자가 서버를 부스트한 시간은 언제인가요? 없으면 \"null\"이 됩니다."
+      },
+      "nickname": {
+        "name": "$memberNickname",
+        "compat": "메시지 수신",
+        "desc": "멤버의 서버 닉네임을 삽입합니다 (설정된 경우)."
+      },
+      "effectiveTag": {
+        "name": "$memberEffectiveTag",
+        "compat": "메시지 수신",
+        "desc": "멤버의 태그(사용자이름#1234 형식)를 삽입합니다."
+      },
+      "effectiveId": {
+        "name": "$memberEffectiveID",
+        "compat": "메시지 수신",
+        "desc": "멤버의 기본 사용자 계정의 고유 ID를 삽입합니다."
+      },
+      "effectiveTimeCreated": {
+        "name": "$memberEffectiveTimeCreated",
+        "compat": "메시지 수신",
+        "desc": "멤버의 기본 사용자 계정의 생성 시간을 삽입합니다."
+      },
+      "color": {
+        "name": "$memberColor",
+        "compat": "메시지 수신",
+        "desc": "서버에서 멤버의 표시 색상의 16진수 색상 코드를 삽입합니다."
+      },
+      "roles": {
+        "name": "$memberRoles",
+        "compat": "메시지 수신",
+        "desc": "멤버의 역할 이름을 쉼표로 구분한 목록을 삽입합니다."
+      },
+      "roleCount": {
+        "name": "$memberRoleCount",
+        "compat": "메시지 수신",
+        "desc": "멤버가 가진 역할 수를 삽입합니다."
+      }
     },
     "mentionedInfo": {
       "title": "멘션된 사용자 정보",
-      "name": { "name": "$mentionedName", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 멘션을 삽입합니다." },
-      "avatar": { "name": "$mentionedAvatar", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 아바타 URL을 삽입합니다." },
-      "defaultAvatar": { "name": "$mentionedDefaultAvatar", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 기본 아바타 URL을 삽입합니다." },
-      "namePlain": { "name": "$mentionedNamePlain", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 일반 텍스트 사용자 이름을 삽입합니다." },
-      "discriminator": { "name": "$mentionedDiscriminator", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 식별자(# 뒤의 숫자)를 삽입합니다." },
-      "tag": { "name": "$mentionedTag", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 태그(사용자이름#1234 형식)를 삽입합니다." },
-      "id": { "name": "$mentionedID", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 고유 ID 번호를 삽입합니다." },
-      "serversShared": { "name": "$mentionedServersSharedWithBot", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자가 봇과 공유하는 서버 수를 삽입합니다." },
-      "timeCreated": { "name": "$mentionedTimeCreated", "compat": "메시지 수신", "desc": "명령어 호출에서 멘션된 사용자의 계정 생성 시간을 삽입합니다." },
-      "isBot": { "name": "$mentionedIsBot", "compat": "메시지 수신", "desc": "멘션된 사용자가 봇인지 여부를 나타내는 \"true\" 또는 \"false\"를 반환합니다." },
-      "globalName": { "name": "$mentionedGlobalName", "compat": "메시지 수신", "desc": "멘션된 사용자의 글로벌 표시 이름을 삽입합니다." }
+      "name": {
+        "name": "$mentionedName",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 멘션을 삽입합니다."
+      },
+      "avatar": {
+        "name": "$mentionedAvatar",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 아바타 URL을 삽입합니다."
+      },
+      "defaultAvatar": {
+        "name": "$mentionedDefaultAvatar",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 기본 아바타 URL을 삽입합니다."
+      },
+      "namePlain": {
+        "name": "$mentionedNamePlain",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 일반 텍스트 사용자 이름을 삽입합니다."
+      },
+      "discriminator": {
+        "name": "$mentionedDiscriminator",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 식별자(# 뒤의 숫자)를 삽입합니다."
+      },
+      "tag": {
+        "name": "$mentionedTag",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 태그(사용자이름#1234 형식)를 삽입합니다."
+      },
+      "id": {
+        "name": "$mentionedID",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 고유 ID 번호를 삽입합니다."
+      },
+      "serversShared": {
+        "name": "$mentionedServersSharedWithBot",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자가 봇과 공유하는 서버 수를 삽입합니다."
+      },
+      "timeCreated": {
+        "name": "$mentionedTimeCreated",
+        "compat": "메시지 수신",
+        "desc": "명령어 호출에서 멘션된 사용자의 계정 생성 시간을 삽입합니다."
+      },
+      "isBot": {
+        "name": "$mentionedIsBot",
+        "compat": "메시지 수신",
+        "desc": "멘션된 사용자가 봇인지 여부를 나타내는 \"true\" 또는 \"false\"를 반환합니다."
+      },
+      "globalName": {
+        "name": "$mentionedGlobalName",
+        "compat": "메시지 수신",
+        "desc": "멘션된 사용자의 글로벌 표시 이름을 삽입합니다."
+      }
     },
     "botInfo": {
       "title": "봇 정보",
-      "name": { "name": "$botName", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 멘션을 삽입합니다." },
-      "avatar": { "name": "$botAvatar", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 아바타 URL을 삽입합니다." },
-      "defaultAvatar": { "name": "$botDefaultAvatar", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 기본 아바타 URL을 삽입합니다." },
-      "namePlain": { "name": "$botNamePlain", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 일반 텍스트 사용자 이름을 삽입합니다." },
-      "discriminator": { "name": "$botDiscriminator", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 식별자(# 뒤의 숫자)를 삽입합니다." },
-      "tag": { "name": "$botTag", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 태그(사용자이름#1234 형식)를 삽입합니다." },
-      "id": { "name": "$botID", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 고유 ID 번호를 삽입합니다." },
-      "timeCreated": { "name": "$botTimeCreated", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇의 계정 생성 시간을 삽입합니다." }
+      "name": {
+        "name": "$botName",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 멘션을 삽입합니다."
+      },
+      "avatar": {
+        "name": "$botAvatar",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 아바타 URL을 삽입합니다."
+      },
+      "defaultAvatar": {
+        "name": "$botDefaultAvatar",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 기본 아바타 URL을 삽입합니다."
+      },
+      "namePlain": {
+        "name": "$botNamePlain",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 일반 텍스트 사용자 이름을 삽입합니다."
+      },
+      "discriminator": {
+        "name": "$botDiscriminator",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 식별자(# 뒤의 숫자)를 삽입합니다."
+      },
+      "tag": {
+        "name": "$botTag",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 태그(사용자이름#1234 형식)를 삽입합니다."
+      },
+      "id": {
+        "name": "$botID",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 고유 ID 번호를 삽입합니다."
+      },
+      "timeCreated": {
+        "name": "$botTimeCreated",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇의 계정 생성 시간을 삽입합니다."
+      }
     },
     "serverInfo": {
       "title": "서버 정보",
-      "server": { "name": "$server", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버 이름을 삽입합니다." },
-      "serverCount": { "name": "$serverCount", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇이 있는 서버 수를 삽입합니다." },
-      "memberCount": { "name": "$memberCount", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버의 사용자 수를 삽입합니다." },
-      "allMemberCount": { "name": "$allMemberCount", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇이 있는 모든 서버의 사용자 수를 삽입합니다." },
-      "icon": { "name": "$serverIcon", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버 아이콘의 URL을 삽입합니다." },
-      "banner": { "name": "$serverBanner", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버 배너의 URL을 삽입합니다." },
-      "description": { "name": "$serverDescription", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버의 설명을 삽입합니다." },
-      "splash": { "name": "$serverSplash", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버 스플래시의 URL을 삽입합니다." },
-      "createTime": { "name": "$serverCreateTime", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버의 생성 시간을 삽입합니다." },
-      "serverId": { "name": "$serverID", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어가 호출된 서버의 고유 ID를 삽입합니다." },
-      "owner": { "name": "$serverOwner", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "서버 소유자의 멘션을 삽입합니다." },
-      "ownerPlain": { "name": "$serverOwnerPlain", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "서버 소유자의 일반 텍스트 표시 이름을 삽입합니다." },
-      "boostCount": { "name": "$serverBoostCount", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "서버가 받은 부스트 수를 삽입합니다." },
-      "boostTier": { "name": "$serverBoostTier", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "서버의 부스트 티어 레벨(0, 1, 2 또는 3)을 삽입합니다." },
-      "vanityCode": { "name": "$serverVanityCode", "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "서버의 꾸미기 초대 코드를 삽입합니다 (존재하는 경우)." }
+      "server": {
+        "name": "$server",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버 이름을 삽입합니다."
+      },
+      "serverCount": {
+        "name": "$serverCount",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇이 있는 서버 수를 삽입합니다."
+      },
+      "memberCount": {
+        "name": "$memberCount",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버의 사용자 수를 삽입합니다."
+      },
+      "allMemberCount": {
+        "name": "$allMemberCount",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇이 있는 모든 서버의 사용자 수를 삽입합니다."
+      },
+      "icon": {
+        "name": "$serverIcon",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버 아이콘의 URL을 삽입합니다."
+      },
+      "banner": {
+        "name": "$serverBanner",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버 배너의 URL을 삽입합니다."
+      },
+      "description": {
+        "name": "$serverDescription",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버의 설명을 삽입합니다."
+      },
+      "splash": {
+        "name": "$serverSplash",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버 스플래시의 URL을 삽입합니다."
+      },
+      "createTime": {
+        "name": "$serverCreateTime",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버의 생성 시간을 삽입합니다."
+      },
+      "serverId": {
+        "name": "$serverID",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어가 호출된 서버의 고유 ID를 삽입합니다."
+      },
+      "owner": {
+        "name": "$serverOwner",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "서버 소유자의 멘션을 삽입합니다."
+      },
+      "ownerPlain": {
+        "name": "$serverOwnerPlain",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "서버 소유자의 일반 텍스트 표시 이름을 삽입합니다."
+      },
+      "boostCount": {
+        "name": "$serverBoostCount",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "서버가 받은 부스트 수를 삽입합니다."
+      },
+      "boostTier": {
+        "name": "$serverBoostTier",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "서버의 부스트 티어 레벨(0, 1, 2 또는 3)을 삽입합니다."
+      },
+      "vanityCode": {
+        "name": "$serverVanityCode",
+        "compat": "메시지 수신, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "서버의 꾸미기 초대 코드를 삽입합니다 (존재하는 경우)."
+      }
     },
     "channelInfo": {
       "title": "채널 정보",
-      "channel": { "name": "$channel", "compat": "메시지 수신, 개인 메시지, 반응 추가", "desc": "메시지가 전송된 채널 이름을 삽입합니다." },
-      "channelId": { "name": "$channelID", "compat": "메시지 수신, 반응 추가", "desc": "메시지가 전송된 채널의 ID를 삽입합니다." },
-      "createDate": { "name": "$channelCreateDate", "compat": "메시지 수신, 반응 추가", "desc": "메시지가 전송된 채널의 생성 시간을 삽입합니다." },
-      "asMention": { "name": "$channelAsMention", "compat": "메시지 수신, 반응 추가", "desc": "메시지가 전송된 채널의 멘션을 삽입합니다." },
-      "topic": { "name": "$channelTopic", "compat": "메시지 수신, 반응 추가", "desc": "메시지가 전송된 채널의 주제를 삽입합니다." },
-      "isNSFW": { "name": "$channelIsNSFW", "compat": "메시지 수신, 반응 추가", "desc": "채널이 NSFW로 표시되어 있는지 여부를 나타내는 \"true\" 또는 \"false\"를 반환합니다." }
+      "channel": {
+        "name": "$channel",
+        "compat": "메시지 수신, 개인 메시지, 반응 추가",
+        "desc": "메시지가 전송된 채널 이름을 삽입합니다."
+      },
+      "channelId": {
+        "name": "$channelID",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "메시지가 전송된 채널의 ID를 삽입합니다."
+      },
+      "createDate": {
+        "name": "$channelCreateDate",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "메시지가 전송된 채널의 생성 시간을 삽입합니다."
+      },
+      "asMention": {
+        "name": "$channelAsMention",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "메시지가 전송된 채널의 멘션을 삽입합니다."
+      },
+      "topic": {
+        "name": "$channelTopic",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "메시지가 전송된 채널의 주제를 삽입합니다."
+      },
+      "isNSFW": {
+        "name": "$channelIsNSFW",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "채널이 NSFW로 표시되어 있는지 여부를 나타내는 \"true\" 또는 \"false\"를 반환합니다."
+      }
     },
     "channelManagement": {
       "title": "채널 관리",
-      "createChannel": { "name": "$createChannel(name, type)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 이름과 유형(text, voice, category, announcement, stage, forum)으로 새 채널을 생성합니다. 새 채널의 ID를 반환합니다. 유형을 생략하면 기본값은 text입니다." },
-      "createChannelIn": { "name": "$createChannelIn(name, type, categoryID)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 카테고리 내에 지정한 이름과 유형으로 새 채널을 생성합니다. 새 채널의 ID를 반환합니다." },
-      "cloneChannel": { "name": "$cloneChannel(channelID)", "compat": "메시지 수신, 반응 추가", "desc": "기존 채널을 복제하여 설정과 권한을 복사합니다. 새 채널의 ID를 반환합니다." },
-      "deleteChannel": { "name": "$deleteChannel(channelID, reason)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널을 삭제합니다. 감사 로그용 선택적 사유를 제공할 수 있습니다. 성공 시 \"true\"를 반환합니다." },
-      "setChannelName": { "name": "$setChannelName(channelID, name)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 이름을 변경합니다. 성공 시 \"true\"를 반환합니다." },
-      "setChannelTopic": { "name": "$setChannelTopic(channelID, topic)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 주제를 설정합니다. 성공 시 \"true\"를 반환합니다." },
-      "setChannelNSFW": { "name": "$setChannelNSFW(channelID, enabled)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 NSFW 표시 여부를 설정합니다. \"true\" 또는 \"false\"를 사용하세요. 성공 시 \"true\"를 반환합니다." },
-      "setChannelSlowmode": { "name": "$setChannelSlowmode(channelID, seconds)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 슬로우 모드 지연을 초 단위로 설정합니다(0–21600). 비활성화하려면 0을 사용하세요. 성공 시 \"true\"를 반환합니다." },
-      "setChannelPosition": { "name": "$setChannelPosition(channelID, position)", "compat": "메시지 수신, 반응 추가", "desc": "채널 목록에서 지정한 채널의 위치를 설정합니다. 성공 시 \"true\"를 반환합니다." },
-      "setChannelParent": { "name": "$setChannelParent(channelID, categoryID)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널을 카테고리로 이동합니다. 카테고리에서 제거하려면 빈 categoryID를 전달하세요. 성공 시 \"true\"를 반환합니다." },
-      "findChannel": { "name": "$findChannel(name)", "compat": "메시지 수신, 반응 추가", "desc": "이름으로 채널을 검색하고(대소문자 구분 없음) ID를 반환합니다. 찾을 수 없으면 빈 문자열을 반환합니다." },
-      "getChannelName": { "name": "$getChannelName(channelID)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 이름을 반환합니다. 찾을 수 없으면 빈 문자열을 반환합니다." },
-      "getChannelType": { "name": "$getChannelType(channelID)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 유형을 반환합니다(text, voice, category, announcement, stage 또는 forum)." },
-      "getChannelParent": { "name": "$getChannelParent(channelID)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널의 상위 카테고리 ID를 반환합니다. 없으면 빈 문자열을 반환합니다." },
-      "channelCount": { "name": "$channelCount", "compat": "메시지 수신, 반응 추가", "desc": "서버의 총 채널 수를 반환합니다." },
-      "listChannels": { "name": "$listChannels(type)", "compat": "메시지 수신, 반응 추가", "desc": "쉼표로 구분된 채널 이름 목록을 반환합니다. 선택적으로 유형(text, voice, category 등)으로 필터링할 수 있습니다." },
-      "listChannelIDs": { "name": "$listChannelIDs(type)", "compat": "메시지 수신, 반응 추가", "desc": "쉼표로 구분된 채널 ID 목록을 반환합니다. 선택적으로 유형(text, voice, category 등)으로 필터링할 수 있습니다." },
-      "lockChannel": { "name": "$lockChannel(channelID, roleID)", "compat": "메시지 수신, 반응 추가", "desc": "역할의 메시지 보내기를 거부하여 채널을 잠급니다. roleID를 생략하면 기본값은 @everyone입니다. 성공 시 \"true\"를 반환합니다." },
-      "unlockChannel": { "name": "$unlockChannel(channelID, roleID)", "compat": "메시지 수신, 반응 추가", "desc": "역할의 메시지 보내기 권한을 재설정하여 채널 잠금을 해제합니다. roleID를 생략하면 기본값은 @everyone입니다. 성공 시 \"true\"를 반환합니다." },
-      "channelMention": { "name": "$channelMention(channelID)", "compat": "메시지 수신, 반응 추가", "desc": "지정한 채널 ID에 대한 클릭 가능한 채널 멘션을 반환합니다(예: <#123456>)." }
+      "createChannel": {
+        "name": "$createChannel(name, type)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 이름과 유형(text, voice, category, announcement, stage, forum)으로 새 채널을 생성합니다. 새 채널의 ID를 반환합니다. 유형을 생략하면 기본값은 text입니다."
+      },
+      "createChannelIn": {
+        "name": "$createChannelIn(name, type, categoryID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 카테고리 내에 지정한 이름과 유형으로 새 채널을 생성합니다. 새 채널의 ID를 반환합니다."
+      },
+      "cloneChannel": {
+        "name": "$cloneChannel(channelID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "기존 채널을 복제하여 설정과 권한을 복사합니다. 새 채널의 ID를 반환합니다."
+      },
+      "deleteChannel": {
+        "name": "$deleteChannel(channelID, reason)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널을 삭제합니다. 감사 로그용 선택적 사유를 제공할 수 있습니다. 성공 시 \"true\"를 반환합니다."
+      },
+      "setChannelName": {
+        "name": "$setChannelName(channelID, name)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 이름을 변경합니다. 성공 시 \"true\"를 반환합니다."
+      },
+      "setChannelTopic": {
+        "name": "$setChannelTopic(channelID, topic)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 주제를 설정합니다. 성공 시 \"true\"를 반환합니다."
+      },
+      "setChannelNSFW": {
+        "name": "$setChannelNSFW(channelID, enabled)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 NSFW 표시 여부를 설정합니다. \"true\" 또는 \"false\"를 사용하세요. 성공 시 \"true\"를 반환합니다."
+      },
+      "setChannelSlowmode": {
+        "name": "$setChannelSlowmode(channelID, seconds)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 슬로우 모드 지연을 초 단위로 설정합니다(0–21600). 비활성화하려면 0을 사용하세요. 성공 시 \"true\"를 반환합니다."
+      },
+      "setChannelPosition": {
+        "name": "$setChannelPosition(channelID, position)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "채널 목록에서 지정한 채널의 위치를 설정합니다. 성공 시 \"true\"를 반환합니다."
+      },
+      "setChannelParent": {
+        "name": "$setChannelParent(channelID, categoryID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널을 카테고리로 이동합니다. 카테고리에서 제거하려면 빈 categoryID를 전달하세요. 성공 시 \"true\"를 반환합니다."
+      },
+      "findChannel": {
+        "name": "$findChannel(name)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "이름으로 채널을 검색하고(대소문자 구분 없음) ID를 반환합니다. 찾을 수 없으면 빈 문자열을 반환합니다."
+      },
+      "getChannelName": {
+        "name": "$getChannelName(channelID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 이름을 반환합니다. 찾을 수 없으면 빈 문자열을 반환합니다."
+      },
+      "getChannelType": {
+        "name": "$getChannelType(channelID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 유형을 반환합니다(text, voice, category, announcement, stage 또는 forum)."
+      },
+      "getChannelParent": {
+        "name": "$getChannelParent(channelID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널의 상위 카테고리 ID를 반환합니다. 없으면 빈 문자열을 반환합니다."
+      },
+      "channelCount": {
+        "name": "$channelCount",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "서버의 총 채널 수를 반환합니다."
+      },
+      "listChannels": {
+        "name": "$listChannels(type)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "쉼표로 구분된 채널 이름 목록을 반환합니다. 선택적으로 유형(text, voice, category 등)으로 필터링할 수 있습니다."
+      },
+      "listChannelIDs": {
+        "name": "$listChannelIDs(type)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "쉼표로 구분된 채널 ID 목록을 반환합니다. 선택적으로 유형(text, voice, category 등)으로 필터링할 수 있습니다."
+      },
+      "lockChannel": {
+        "name": "$lockChannel(channelID, roleID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "역할의 메시지 보내기를 거부하여 채널을 잠급니다. roleID를 생략하면 기본값은 @everyone입니다. 성공 시 \"true\"를 반환합니다."
+      },
+      "unlockChannel": {
+        "name": "$unlockChannel(channelID, roleID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "역할의 메시지 보내기 권한을 재설정하여 채널 잠금을 해제합니다. roleID를 생략하면 기본값은 @everyone입니다. 성공 시 \"true\"를 반환합니다."
+      },
+      "channelMention": {
+        "name": "$channelMention(channelID)",
+        "compat": "메시지 수신, 반응 추가",
+        "desc": "지정한 채널 ID에 대한 클릭 가능한 채널 멘션을 반환합니다(예: <#123456>)."
+      }
     },
     "message": {
       "title": "메시지",
-      "message": { "name": "$message", "compat": "메시지 수신, 개인 메시지", "desc": "호출된 명령어의 전체 메시지를 삽입합니다." },
-      "afterCommand": { "name": "$messageAfterCommand", "compat": "메시지 수신, 개인 메시지", "desc": "호출된 명령어의 명령어 부분 이후 메시지를 삽입합니다." },
-      "args": { "name": "$args(index)", "compat": "메시지 수신, 개인 메시지", "desc": "메시지에서 인덱스(0부터 시작)로 특정 인수를 삽입합니다." },
-      "argsCount": { "name": "$argsCount", "compat": "메시지 수신, 개인 메시지", "desc": "메시지의 인수 수를 삽입합니다." },
-      "option": { "name": "$option(name)", "compat": "인터랙션 명령어", "desc": "이름으로 슬래시 명령어 옵션의 값을 삽입합니다." }
+      "message": {
+        "name": "$message",
+        "compat": "메시지 수신, 개인 메시지",
+        "desc": "호출된 명령어의 전체 메시지를 삽입합니다."
+      },
+      "afterCommand": {
+        "name": "$messageAfterCommand",
+        "compat": "메시지 수신, 개인 메시지",
+        "desc": "호출된 명령어의 명령어 부분 이후 메시지를 삽입합니다."
+      },
+      "args": {
+        "name": "$args(index)",
+        "compat": "메시지 수신, 개인 메시지",
+        "desc": "메시지에서 인덱스(0부터 시작)로 특정 인수를 삽입합니다."
+      },
+      "argsCount": {
+        "name": "$argsCount",
+        "compat": "메시지 수신, 개인 메시지",
+        "desc": "메시지의 인수 수를 삽입합니다."
+      },
+      "option": {
+        "name": "$option(name)",
+        "compat": "인터랙션 명령어",
+        "desc": "이름으로 슬래시 명령어 옵션의 값을 삽입합니다."
+      }
     },
     "javascript": {
       "title": "JavaScript",
-      "eval": { "name": "$eval", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "js 코드 블록의 시작을 표시하는 데 사용됩니다. 코드가 완료된 후 $halt 문이 뒤따라야 합니다" },
-      "halt": { "name": "$halt", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "js 코드 블록의 끝을 표시하는 데 사용됩니다." },
-      "get": { "name": "$get(name)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "해당 이름의 js 변수 값을 삽입합니다." },
-      "set": { "name": "$set(name,value)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "js 변수를 설정하는 데 사용됩니다. 불리언 \"true\" 및 \"false\"는 물론 숫자와 문자열을 지원합니다." }
+      "eval": {
+        "name": "$eval",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "js 코드 블록의 시작을 표시하는 데 사용됩니다. 코드가 완료된 후 $halt 문이 뒤따라야 합니다"
+      },
+      "halt": {
+        "name": "$halt",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "js 코드 블록의 끝을 표시하는 데 사용됩니다."
+      },
+      "get": {
+        "name": "$get(name)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "해당 이름의 js 변수 값을 삽입합니다."
+      },
+      "set": {
+        "name": "$set(name,value)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "js 변수를 설정하는 데 사용됩니다. 불리언 \"true\" 및 \"false\"는 물론 숫자와 문자열을 지원합니다."
+      }
     },
     "misc": {
       "title": "기타",
-      "date": { "name": "$date", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "현재 날짜를 삽입합니다." },
-      "hour": { "name": "$hour", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "현재 시간을 삽입합니다." },
-      "minute": { "name": "$minute", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "현재 분을 삽입합니다." },
-      "second": { "name": "$second", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "현재 초를 삽입합니다." },
-      "random": { "name": "$random{a|b|c}", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "대괄호 {}에 있는 인수에서 무작위로 선택된 문자열을 삽입합니다. 문자열은 |를 사용하여 구분해야 합니다." },
-      "sum": { "name": "$sum{1|2|3}", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "대괄호 {}에 있는 인수의 합계를 삽입합니다. 숫자는 |를 사용하여 구분해야 합니다." },
-      "commandCount": { "name": "$commandCount", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "봇이 가진 명령어 수를 삽입합니다." },
-      "rollnum": { "name": "$rollnum(min,max)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "min과 max 사이(포함)의 무작위 숫자를 삽입합니다." },
-      "ping": { "name": "$ping", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "게이트웨이 핑을 삽입합니다." },
-      "inviteUrl": { "name": "$inviteURL", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "서버에 봇을 초대하는 URL을 삽입합니다." },
-      "setStatus": { "name": "$setStatus{online|playing|games}", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "명령어에서 상태를 설정하는 데 사용합니다. 첫 번째 매개변수 값은 online, idle, dnd를 포함합니다. 두 번째 매개변수 값은 watching, playing, listening입니다. 세 번째 매개변수는 무엇이든 문자열입니다. 중요한 참고: 이것은 $eval 이전에 평가되므로 여기에 $eval 유형 키워드를 사용할 수 없습니다." },
-      "randomInt": { "name": "$randomInt", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "0에서 99 사이의 무작위 정수를 삽입합니다." },
-      "randomFloat": { "name": "$randomFloat", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "0에서 1 사이의 무작위 소수를 삽입합니다." },
-      "randomBoolean": { "name": "$randomBoolean", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "무작위 \"true\" 또는 \"false\" 값을 삽입합니다." },
-      "chat": { "name": "$chat(prompt)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 프롬프트를 AI에 전송하고 응답을 삽입합니다." }
+      "date": {
+        "name": "$date",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "현재 날짜를 삽입합니다."
+      },
+      "hour": {
+        "name": "$hour",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "현재 시간을 삽입합니다."
+      },
+      "minute": {
+        "name": "$minute",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "현재 분을 삽입합니다."
+      },
+      "second": {
+        "name": "$second",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "현재 초를 삽입합니다."
+      },
+      "random": {
+        "name": "$random{a|b|c}",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "대괄호 {}에 있는 인수에서 무작위로 선택된 문자열을 삽입합니다. 문자열은 |를 사용하여 구분해야 합니다."
+      },
+      "sum": {
+        "name": "$sum{1|2|3}",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "대괄호 {}에 있는 인수의 합계를 삽입합니다. 숫자는 |를 사용하여 구분해야 합니다."
+      },
+      "commandCount": {
+        "name": "$commandCount",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "봇이 가진 명령어 수를 삽입합니다."
+      },
+      "rollnum": {
+        "name": "$rollnum(min,max)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "min과 max 사이(포함)의 무작위 숫자를 삽입합니다."
+      },
+      "ping": {
+        "name": "$ping",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "게이트웨이 핑을 삽입합니다."
+      },
+      "inviteUrl": {
+        "name": "$inviteURL",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "서버에 봇을 초대하는 URL을 삽입합니다."
+      },
+      "setStatus": {
+        "name": "$setStatus{online|playing|games}",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "명령어에서 상태를 설정하는 데 사용합니다. 첫 번째 매개변수 값은 online, idle, dnd를 포함합니다. 두 번째 매개변수 값은 watching, playing, listening입니다. 세 번째 매개변수는 무엇이든 문자열입니다. 중요한 참고: 이것은 $eval 이전에 평가되므로 여기에 $eval 유형 키워드를 사용할 수 없습니다."
+      },
+      "randomInt": {
+        "name": "$randomInt",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "0에서 99 사이의 무작위 정수를 삽입합니다."
+      },
+      "randomFloat": {
+        "name": "$randomFloat",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "0에서 1 사이의 무작위 소수를 삽입합니다."
+      },
+      "randomBoolean": {
+        "name": "$randomBoolean",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "무작위 \"true\" 또는 \"false\" 값을 삽입합니다."
+      },
+      "chat": {
+        "name": "$chat(prompt)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 프롬프트를 AI에 전송하고 응답을 삽입합니다."
+      }
     },
     "stringManip": {
       "title": "문자열 조작",
-      "upper": { "name": "$upper(text)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 텍스트를 대문자로 변환합니다." },
-      "lower": { "name": "$lower(text)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 텍스트를 소문자로 변환합니다." },
-      "length": { "name": "$length(text)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 텍스트의 문자 수를 반환합니다." },
-      "replace": { "name": "$replace(text,find,replacement)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 텍스트에서 \"find\"의 모든 항목을 \"replacement\"로 바꿉니다." },
-      "substring": { "name": "$substring(text,start,end)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "시작 인덱스부터 끝 인덱스까지 텍스트의 일부를 추출합니다 (0부터 시작)." },
-      "trim": { "name": "$trim(text)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 텍스트의 시작과 끝에서 공백을 제거합니다." },
-      "repeat": { "name": "$repeat(text,count)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "주어진 텍스트를 지정된 횟수만큼 반복합니다 (최대 100)." },
-      "contains": { "name": "$contains(text,search)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "텍스트에 검색 문자열이 포함되어 있으면 \"true\", 그렇지 않으면 \"false\"를 반환합니다. 대소문자를 구분합니다." },
-      "startsWith": { "name": "$startsWith(text,prefix)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "텍스트가 주어진 접두사로 시작하면 \"true\", 그렇지 않으면 \"false\"를 반환합니다. 대소문자를 구분합니다." },
-      "endsWith": { "name": "$endsWith(text,suffix)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "텍스트가 주어진 접미사로 끝나면 \"true\", 그렇지 않으면 \"false\"를 반환합니다. 대소문자를 구분합니다." }
+      "upper": {
+        "name": "$upper(text)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 텍스트를 대문자로 변환합니다."
+      },
+      "lower": {
+        "name": "$lower(text)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 텍스트를 소문자로 변환합니다."
+      },
+      "length": {
+        "name": "$length(text)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 텍스트의 문자 수를 반환합니다."
+      },
+      "replace": {
+        "name": "$replace(text,find,replacement)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 텍스트에서 \"find\"의 모든 항목을 \"replacement\"로 바꿉니다."
+      },
+      "substring": {
+        "name": "$substring(text,start,end)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "시작 인덱스부터 끝 인덱스까지 텍스트의 일부를 추출합니다 (0부터 시작)."
+      },
+      "trim": {
+        "name": "$trim(text)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 텍스트의 시작과 끝에서 공백을 제거합니다."
+      },
+      "repeat": {
+        "name": "$repeat(text,count)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 텍스트를 지정된 횟수만큼 반복합니다 (최대 100)."
+      },
+      "contains": {
+        "name": "$contains(text,search)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "텍스트에 검색 문자열이 포함되어 있으면 \"true\", 그렇지 않으면 \"false\"를 반환합니다. 대소문자를 구분합니다."
+      },
+      "startsWith": {
+        "name": "$startsWith(text,prefix)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "텍스트가 주어진 접두사로 시작하면 \"true\", 그렇지 않으면 \"false\"를 반환합니다. 대소문자를 구분합니다."
+      },
+      "endsWith": {
+        "name": "$endsWith(text,suffix)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "텍스트가 주어진 접미사로 끝나면 \"true\", 그렇지 않으면 \"false\"를 반환합니다. 대소문자를 구분합니다."
+      }
+    },
+    "math": {
+      "title": "수학",
+      "sub": {
+        "name": "$sub(a,b)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "a에서 b를 빼고 결과를 반환합니다."
+      },
+      "mul": {
+        "name": "$mul(n1,n2,...)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 모든 숫자를 곱하고 결과를 반환합니다."
+      },
+      "div": {
+        "name": "$div(a,b)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "a를 b로 나누고 결과를 반환합니다. b가 0이면 오류를 반환합니다."
+      },
+      "mod": {
+        "name": "$mod(a,b)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "a를 b로 나눈 나머지를 반환합니다. b가 0이면 오류를 반환합니다."
+      },
+      "round": {
+        "name": "$round(n,decimals)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n을 가장 가까운 정수로 반올림하거나, 지정된 소수점 자릿수로 반올림합니다."
+      },
+      "floor": {
+        "name": "$floor(n)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n을 가장 가까운 정수로 내림합니다."
+      },
+      "ceil": {
+        "name": "$ceil(n)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n을 가장 가까운 정수로 올림합니다."
+      },
+      "abs": {
+        "name": "$abs(n)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n의 절대값을 반환합니다."
+      },
+      "toFixed": {
+        "name": "$toFixed(n,decimals)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n을 고정 소수점 자릿수로 포맷합니다 (기본값 2, 최대 20)."
+      },
+      "min": {
+        "name": "$min(n1,n2,...)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 숫자 중 가장 작은 값을 반환합니다."
+      },
+      "max": {
+        "name": "$max(n1,n2,...)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "주어진 숫자 중 가장 큰 값을 반환합니다."
+      },
+      "clamp": {
+        "name": "$clamp(n,min,max)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n을 min 이상 max 이하로 제한합니다."
+      },
+      "pow": {
+        "name": "$pow(base,exp)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "base의 exp 거듭제곱을 반환합니다."
+      },
+      "sqrt": {
+        "name": "$sqrt(n)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n의 제곱근을 반환합니다. n이 음수이면 오류를 반환합니다."
+      },
+      "log": {
+        "name": "$log(n)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "n의 자연 로그를 반환합니다. n이 0이거나 음수이면 오류를 반환합니다."
+      },
+      "pi": {
+        "name": "$pi",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "원주율 값을 반환합니다 (3.141592653589793)."
+      },
+      "isNumber": {
+        "name": "$isNumber(text)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "텍스트가 유효한 숫자이면 \"true\", 그렇지 않으면 \"false\"를 반환합니다."
+      }
     },
     "controlFlow": {
       "title": "제어 흐름",
-      "if": { "name": "$if(condition)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "조건부 블록을 시작합니다. $if와 $endif (또는 $else/$elseif) 사이의 내용은 조건이 참인 경우에만 포함됩니다. 지원되는 연산자: == (같음), != (같지 않음), > < >= <= (숫자 비교), & (그리고), | (또는), ! (부정), () (그룹화). 값이 비어 있지 않고, \"false\"가 아니며, \"0\"이 아니면 참입니다." },
-      "elseif": { "name": "$elseif(condition)", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "$if 블록에 대체 분기를 추가합니다. 이전 조건이 거짓이면 이 조건이 확인됩니다. 여러 $elseif 블록을 연결할 수 있습니다." },
-      "else": { "name": "$else", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "$if 블록에 대체 분기를 추가합니다. $else 이후의 내용은 이전의 모든 조건이 거짓일 때 사용됩니다." },
-      "endif": { "name": "$endif", "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가", "desc": "$if 블록을 종료합니다. 모든 $if에는 대응하는 $endif가 있어야 합니다." }
+      "if": {
+        "name": "$if(condition)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "조건부 블록을 시작합니다. $if와 $endif (또는 $else/$elseif) 사이의 내용은 조건이 참인 경우에만 포함됩니다. 지원되는 연산자: == (같음), != (같지 않음), > < >= <= (숫자 비교), & (그리고), | (또는), ! (부정), () (그룹화). 값이 비어 있지 않고, \"false\"가 아니며, \"0\"이 아니면 참입니다."
+      },
+      "elseif": {
+        "name": "$elseif(condition)",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "$if 블록에 대체 분기를 추가합니다. 이전 조건이 거짓이면 이 조건이 확인됩니다. 여러 $elseif 블록을 연결할 수 있습니다."
+      },
+      "else": {
+        "name": "$else",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "$if 블록에 대체 분기를 추가합니다. $else 이후의 내용은 이전의 모든 조건이 거짓일 때 사용됩니다."
+      },
+      "endif": {
+        "name": "$endif",
+        "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
+        "desc": "$if 블록을 종료합니다. 모든 $if에는 대응하는 $endif가 있어야 합니다."
+      }
     }
   },
   "creating": {
@@ -620,102 +1287,202 @@
   },
   "tutorial": {
     "title": "튜토리얼",
-    "pageTitle": "Bot Commander 튜토리얼",
-    "metaDesc": "Bot Commander for Discord에서 일부 기능을 사용하고 명령어를 만드는 방법에 대한 튜토리얼",
+    "searchPlaceholder": "튜토리얼 검색...",
+    "noResults": "검색과 일치하는 튜토리얼이 없습니다.",
+    "firstCommand": {
+      "title": "첫 번째 명령어",
+      "heading": "시작하기",
+      "intro": "첫 번째 봇 명령어를 만들어 봅시다. 서버에서 누군가가 <b>!hello</b>를 입력하면 응답하는 간단한 인사를 만들겠습니다.",
+      "step1": "Bot Commander를 열고 <b>Commands</b> 탭으로 이동합니다.",
+      "step2": "<b>+</b> 버튼을 눌러 새 명령어를 만듭니다.",
+      "step3": "유형을 <b>Message Received</b>로 설정합니다.",
+      "step4": "명령어 이름을 <b>!hello</b>로 설정합니다.",
+      "step5": "채널 메시지 필드에 아래 표시된 응답 템플릿을 입력합니다.",
+      "step6": "명령어를 저장하고 봇을 호스팅한 다음 Discord 채널에서 <b>!hello</b>를 입력하여 테스트합니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
+    },
+    "usingKeywords": {
+      "title": "Keywords 사용하기",
+      "heading": "변수 및 함수",
+      "intro": "Keywords를 사용하면 봇 응답에 동적 정보를 삽입할 수 있습니다. <b>$name</b>과 <b>$server</b> 같은 변수는 실제 값으로 대체되고, <b>$rollnum()</b>과 <b>$random{}</b> 같은 함수는 즉석에서 콘텐츠를 생성합니다.",
+      "step1": "<b>!info</b>라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "채널 메시지 필드에 아래 응답 템플릿을 입력합니다.",
+      "step3": "저장하고 봇을 호스팅한 다음 <b>!info</b>를 입력하여 Keywords가 작동하는 것을 확인합니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
+    },
+    "slashCommands": {
+      "title": "슬래시 명령어",
+      "heading": "상호작용 명령어",
+      "intro": "슬래시 명령어는 봇과 상호작용하는 Discord의 최신 방법입니다. 사용자가 <b>/</b> 다음에 명령어 이름을 입력하면 Discord가 자동완성 옵션을 표시합니다. Discord가 검증하는 타입이 지정된 매개변수를 정의할 수 있습니다.",
+      "step1": "<b>Interactions</b> 탭으로 이동하고 <b>+</b>를 눌러 새 상호작용 명령어를 만듭니다.",
+      "step2": "명령어 이름을 <b>greet</b>로 설정합니다 (슬래시 명령어에는 접두사가 필요하지 않습니다).",
+      "step3": "설명을 <b>Greet someone</b>으로 설정합니다.",
+      "step4": "옵션 추가: 유형 <b>String</b>, 이름 <b>person</b>, 설명 <b>Who to greet</b>.",
+      "step5": "아래 표시된 응답 템플릿을 설정합니다.",
+      "step6": "저장하고 봇을 호스팅한 다음 Discord에서 <b>/greet</b>를 입력합니다. <b>person</b> 옵션을 채우고 보냅니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
+    },
+    "buttons": {
+      "title": "대화형 버튼",
+      "heading": "메시지의 버튼",
+      "intro": "슬래시 명령어 응답에 클릭 가능한 버튼을 추가할 수 있습니다. 각 버튼은 자체 응답을 트리거하거나, 역할을 할당하거나, 클릭한 사람만 볼 수 있는 임시 메시지를 표시할 수 있습니다.",
+      "step1": "<b>menu</b>라는 이름과 <b>Show the menu</b> 설명으로 새 상호작용 명령어를 만듭니다.",
+      "step2": "응답 메시지를 아래 표시된 템플릿으로 설정합니다.",
+      "step3": "라벨 <b>Info</b>, 스타일 <b>Primary</b>, ID <b>info_btn</b>인 버튼을 추가합니다. 응답을 <b>Here is some info about our server!</b>로 설정합니다.",
+      "step4": "라벨 <b>Help</b>, 스타일 <b>Secondary</b>, ID <b>help_btn</b>인 또 다른 버튼을 추가합니다. 응답을 <b>Need help? Ask in #support!</b>로 설정합니다.",
+      "step5": "선택적으로 버튼 응답에서 <b>Ephemeral</b>을 체크하여 클릭한 사람만 답변을 볼 수 있게 합니다.",
+      "step6": "저장, 호스팅하고 Discord에서 <b>/menu</b>로 테스트합니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
+    },
+    "conditionals": {
+      "title": "조건부 응답",
+      "heading": "If / Else 로직",
+      "intro": "<b>$if</b>, <b>$elseif</b>, <b>$else</b>, <b>$endif</b>를 사용하여 조건에 따라 봇이 다르게 응답하도록 할 수 있습니다. 인수, 사용자 속성, 서버 정보 등을 확인할 수 있습니다.",
+      "step1": "<b>!role</b>이라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "채널 메시지 필드에 아래 조건 템플릿을 입력합니다.",
+      "step3": "저장하고 테스트합니다. <b>!role admin</b>, <b>!role mod</b>, <b>!role anything</b>을 시도하여 다른 응답을 확인합니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력",
+      "outputHeading2": "대체 출력"
+    },
+    "embeds": {
+      "title": "Embed 메시지",
+      "heading": "Rich Embed",
+      "intro": "Embed는 색상 사이드바, 제목, 설명, 푸터, 이미지, 썸네일이 포함된 풍부한 서식의 메시지입니다. 봇의 응답을 세련되고 전문적으로 보이게 합니다.",
+      "step1": "<b>!profile</b>이라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "<b>Send Embed</b> 옵션을 활성화합니다.",
+      "step3": "아래 표시된 대로 Embed 필드를 채웁니다. 하나 이상만 채우면 모든 필드는 선택사항입니다.",
+      "step4": "저장, 호스팅하고 <b>!profile</b>을 입력하여 Embed를 확인합니다.",
+      "codeHeading": "Embed 필드",
+      "outputHeading": "Discord 출력"
+    },
+    "welcome": {
+      "title": "환영 메시지",
+      "heading": "멤버 입장 이벤트",
+      "intro": "새 멤버가 서버에 입장할 때 봇이 자동으로 인사하도록 설정할 수 있습니다. 역할 할당과 결합하여 새 멤버에게 기본 역할을 부여할 수 있습니다.",
+      "step1": "새 명령어를 만들고 유형을 <b>Member Join</b>으로 설정합니다.",
+      "step2": "채널 메시지 필드에 아래 응답 템플릿을 입력합니다.",
+      "step3": "<b>Assign/Remove Role</b>을 활성화하고 역할 이름을 입력합니다 (예: <b>Member</b>). 대소문자를 구분합니다.",
+      "step4": "저장하고 호스팅합니다. 누군가 서버에 입장하면 봇이 인사하고 자동으로 역할을 할당합니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
+    },
     "persistState": {
       "title": "상태 유지",
-      "heading": "기본 사항",
-      "intro": "런타임에 계산된 정보를 봇 세션 간에 저장하려면 사용할 수 있는 솔루션이 있습니다. 저는 이것을 \"botState\"라고 부르기로 했습니다. 사용하기 매우 간단합니다.",
-      "step1": "명령어 생성 화면으로 이동하여 JS를 사용하는 명령어를 만드세요. 아직 이 작업을 수행하는 방법을 모른다면 <b>\"메시지에서 Javascript 사용하기\"</b> 튜토리얼을 참조하세요.",
-      "step2": "일부 정보를 저장하려면 <b>\"botState\"</b>라는 변수에 설정합니다. 이 변수는 봇을 호스팅하기 시작할 때 이미 정의되어 있습니다. 내부에 무언가를 저장하려면 JS에서 하듯이 속성을 설정하면 됩니다. 예를 들어 <b>\"botState.x = '저장된 문자열'\"</b>을 할 수 있습니다.",
-      "step3": "일부 정보를 읽고 메시지에 삽입하려면 이전 저장 예를 기반으로 <b>$get(botState.x)</b>를 수행할 수 있습니다. 이렇게 하면 응답에 <b>\"저장된 문자열\"</b>이 출력됩니다.",
-      "step4": "이것이 걱정해야 할 전부입니다. 여기서부터 앱은 애플리케이션 종료 또는 호스팅 취소 시 <b>\"botState\"</b> 저장을 처리해야 합니다."
+      "heading": "세션 간 데이터 저장",
+      "intro": "<b>botState</b> 객체를 사용하면 봇을 중지하고 재시작해도 유지되는 데이터를 저장할 수 있습니다. <b>$eval...$halt</b> 블록 내에서 수정하고 <b>$get()</b>으로 속성을 읽을 수 있습니다. eval 블록 외부에서도 <b>$set()</b>과 <b>$get()</b>을 사용하여 VM 컨텍스트에 직접 값을 저장하고 검색할 수 있습니다.",
+      "step1": "<b>!count</b>라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "아래 템플릿을 입력합니다. <b>$eval</b> 블록은 JavaScript를 실행하고 <b>return</b> 값이 메시지의 블록을 대체합니다. <b>botState</b> 객체는 봇 재시작 후에도 유지됩니다.",
+      "step3": "저장하고 테스트합니다. 카운터는 매번 증가하며 봇 재시작 후에도 유지됩니다.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
     },
-    "dice": {
-      "title": "주사위 명령어",
-      "intro": "이 명령어는 D&D와 같은 것에 사용할 수 있는 주사위 굴리기를 시뮬레이션합니다.",
-      "step1": "명령어 생성 화면으로 이동하여 유형을 \"메시지 수신\"으로 설정하세요.",
-      "step2": "명령어 이름을 \"!dice\"로 지정합니다.",
-      "step3": "채널 메시지 필드에 \"당신은 $rollnum(1,6)을(를) 굴렸습니다\"를 넣습니다.",
-      "step4": "명령어를 저장하고 봇을 호스팅하고 명령어를 테스트하세요.",
-      "commandHeading": "명령어",
-      "outputHeading": "출력 예시"
+    "channels": {
+      "title": "채널 관리",
+      "heading": "채널 관리하기",
+      "intro": "Bot Commander에는 명령어 응답에서 직접 Discord 채널을 생성, 삭제, 관리하는 기능이 포함되어 있습니다. 이 기능이 작동하려면 봇에 <b>Manage Channels</b> 권한이 필요합니다.",
+      "step1": "<b>!setup</b>이라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "아래 템플릿을 입력합니다. 새 텍스트 채널을 만들고 서버의 모든 채널을 나열합니다.",
+      "step3": "저장하고 테스트합니다. 봇이 서버에서 <b>Manage Channels</b> 권한을 가지고 있는지 확인하세요.",
+      "codeHeading": "응답 템플릿",
+      "outputHeading": "Discord 출력"
     },
-    "kick": {
-      "title": "추방 명령어",
-      "intro": "이 명령어는 사용자 추방 권한이 있는 사람이 봇으로 사용자를 추방할 수 있게 합니다.",
-      "step1": "명령어 생성 화면으로 이동하여 유형을 \"메시지 수신\"으로 설정하세요.",
-      "step2": "명령어 이름을 \"!kick\"으로 지정합니다.",
-      "step3": "관리 섹션에서 \"kick\" 체크박스를 체크하세요.",
-      "step4": "명령어를 저장하고 봇을 호스팅하고 명령어를 테스트하세요. 관리를 사용하는 명령어의 사용법은 명령어 이름과 해당 작업을 받는 사용자의 멘션입니다(예: \"!kick @사용자\")",
-      "commandHeading": "명령어",
-      "usageHeading": "사용 예시"
+    "aiChat": {
+      "title": "AI 기반 응답",
+      "heading": "명령어에서 AI 사용",
+      "intro": "<b>$chat()</b> 함수는 AI에 프롬프트를 보내고 응답을 반환합니다. <b>$messageAfterCommand</b>와 결합하여 사용자가 봇에 무엇이든 물어볼 수 있게 합니다. 봇 설정에서 API 키를 구성해야 합니다.",
+      "step1": "<b>!ask</b>라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "아래 응답 템플릿 중 하나를 입력합니다. 간단한 버전은 사용자의 질문을 AI에 직접 전달합니다. 고급 버전은 서식을 추가합니다.",
+      "step3": "저장하고 테스트합니다. <b>!ask</b> 다음에 아무 질문이나 입력합니다.",
+      "codeHeading": "간단한 템플릿",
+      "advancedHeading": "고급 템플릿",
+      "outputHeading": "Discord 출력"
     },
-    "phrase": {
-      "title": "구문 명령어",
-      "intro": "이 명령어는 구문 체크박스를 사용하는 방법을 보여줍니다.",
-      "step1": "명령어 생성 화면으로 이동하여 유형을 \"메시지 수신\"으로 설정하세요.",
-      "step2": "명령어 이름을 \"강아지\"로 지정합니다.",
-      "step3": "채널 메시지 필드에 \"저는 강아지를 좋아해요!\"를 넣습니다.",
-      "step4": "명령어를 저장하고 봇을 호스팅하고 명령어를 테스트하세요. 이제 누군가 강아지라는 단어를 언급하면 봇이 반응합니다.",
-      "commandHeading": "명령어",
-      "outputHeading": "출력 예시"
+    "triggerModes": {
+      "title": "트리거 모드",
+      "heading": "명령어만, 시작 문자 및 구문",
+      "intro": "\"Message Received\" 명령어를 만들 때 봇이 수신 메시지를 매칭하는 방법을 선택할 수 있습니다. 기본적으로 메시지는 명령어 이름과 정확히 일치해야 합니다. <b>Starts With</b>와 <b>Phrase</b> 옵션으로 이 동작을 변경할 수 있습니다.",
+      "commandOnlyHeading": "명령어만 (기본값)",
+      "commandOnlyDesc": "메시지는 정확히 명령어 이름이어야 하며 그 이상은 안 됩니다. 예를 들어, <b>!hello</b>라는 명령어는 누군가가 정확히 <b>!hello</b>를 입력할 때만 트리거됩니다. <b>!hello world</b>나 <b>say !hello</b>는 트리거하지 않습니다.",
+      "startsWithHeading": "시작 문자",
+      "startsWithDesc": "<b>Starts With</b>를 활성화하면 메시지가 명령어 이름으로 시작할 때 명령어가 트리거됩니다. 인수를 받는 명령어에 유용합니다. <b>$args(0)</b>, <b>$args(1)</b> 등으로 명령어 뒤의 단어에 접근하거나 <b>$messageAfterCommand</b>로 명령어 이름 뒤의 모든 것을 가져올 수 있습니다.",
+      "phraseHeading": "구문",
+      "phraseDesc": "<b>Phrase</b>를 활성화하면 메시지의 어디에든 명령어 이름이 나타날 때 명령어가 트리거됩니다. 매칭은 대소문자를 구분하지 않습니다. 특정 단어나 주제에 대한 자동 응답에 적합합니다."
     },
-    "keywords": {
-      "title": "키워드를 사용하는 명령어",
-      "intro": "이 명령어는 몇 가지 키워드의 사용법을 보여줍니다.",
-      "step1": "명령어 생성 화면으로 이동하여 유형을 \"메시지 수신\"으로 설정하세요.",
-      "step2": "명령어 이름을 \"!date\"로 지정합니다.",
-      "step3": "채널 메시지 필드에 \"안녕하세요 $name 오늘은 $date입니다\"를 넣습니다.",
-      "step4": "명령어를 저장하고 봇을 호스팅하고 명령어를 테스트하세요.",
-      "commandHeading": "명령어",
-      "outputHeading": "출력 예시"
+    "moderation": {
+      "title": "관리 명령어",
+      "heading": "추방, 차단 및 음성 음소거",
+      "intro": "Bot Commander에는 내장 관리 기능이 있습니다. 명령어에서 추방, 차단 또는 음성 음소거를 활성화하면 봇이 언급된 사용자에게 해당 작업을 수행합니다. 명령어를 실행하는 사용자는 해당 Discord 권한(Kick Members, Ban Members 또는 Mute Members)이 있어야 합니다. 사용법은 항상: <b>command @user</b>.",
+      "kickHeading": "추방 명령어",
+      "kickDesc": "언급된 사용자를 서버에서 추방하는 명령어를 만듭니다.",
+      "kickStep1": "<b>!kick</b>이라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "kickStep2": "관리 섹션에서 <b>Kick</b> 옵션을 활성화합니다.",
+      "kickStep3": "선택적으로 아래 템플릿과 같은 채널 메시지를 추가하여 작업을 확인합니다.",
+      "kickStep4": "저장하고 <b>!kick @user</b>로 테스트합니다. 당신과 봇 모두 <b>Kick Members</b> 권한이 필요합니다.",
+      "banHeading": "차단 명령어",
+      "banDesc": "추방과 같은 방식으로 작동하지만 사용자를 서버에서 영구적으로 차단합니다.",
+      "banStep1": "<b>!ban</b>이라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "banStep2": "관리 섹션에서 <b>Ban</b> 옵션을 활성화합니다.",
+      "banStep3": "저장하고 <b>!ban @user</b>로 테스트합니다. 당신과 봇 모두 <b>Ban Members</b> 권한이 필요합니다.",
+      "muteHeading": "음성 음소거 명령어",
+      "muteDesc": "음성 채널의 사용자에 대한 서버 음소거를 전환합니다. 음소거되지 않은 경우 봇이 음소거합니다. 이미 음소거된 경우 음소거를 해제합니다.",
+      "muteStep1": "<b>!mute</b>라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "muteStep2": "관리 섹션에서 <b>Voice Mute</b> 옵션을 활성화합니다.",
+      "muteStep3": "저장하고 <b>!mute @user</b>로 테스트합니다. <b>Mute Members</b> 권한이 필요하며 대상은 음성 채널에 있어야 합니다."
     },
-    "roleOnJoin": {
-      "title": "사용자 참가 시 역할 추가",
-      "intro": "이 명령어는 사용자가 Discord 서버에 참가할 때 역할을 추가합니다.",
-      "step1": "명령어 생성 화면으로 이동하여 유형을 \"멤버 참가\"로 설정하세요. 이 유형은 사용자가 서버에 참가할 때 사용됩니다.",
-      "step2": "\"역할 할당/제거\" 체크박스를 체크합니다. 이 작업은 처음 활성화될 때 역할을 할당하고 다시 활성화되면 제거합니다. \"멤버 참가\"를 사용하므로 한 번만 활성화됩니다.",
-      "step3": "\"역할 이름\" 필드에 역할을 넣으세요. 제 역할은 신규 사용자입니다. 대소문자를 구분합니다.",
-      "step4": "누군가 서버에 참가할 때 명령어를 테스트해 보세요!",
-      "commandHeading": "명령어"
+    "roles": {
+      "title": "역할 할당",
+      "heading": "역할 할당 및 제거",
+      "intro": "<b>Assign/Remove Role</b> 옵션은 명령어를 트리거한 사용자의 역할을 전환합니다. 역할이 없으면 추가되고, 이미 있으면 제거됩니다. 메시지 명령어, 상호작용 버튼, Member Join과 같은 이벤트 기반 명령어에서 작동합니다.",
+      "toggleHeading": "역할 전환 명령어",
+      "toggleDesc": "사용자가 스스로 역할을 부여(또는 제거)할 수 있는 명령어입니다.",
+      "toggleStep1": "<b>!color-red</b>라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "toggleStep2": "<b>Assign/Remove Role</b>을 활성화하고 <b>Role</b> 필드에 역할 이름 또는 ID를 입력합니다 (예: <b>Red</b>). 대소문자를 구분합니다.",
+      "toggleStep3": "작업을 확인하는 채널 메시지를 추가합니다.",
+      "toggleStep4": "저장하고 테스트합니다. 봇에는 <b>Manage Roles</b> 권한이 필요하며 봇의 역할은 할당하는 역할보다 높아야 합니다.",
+      "joinHeading": "입장 시 자동 역할",
+      "joinDesc": "서버에 누군가가 입장할 때 자동으로 역할을 할당할 수도 있습니다. <b>Assign/Remove Role</b>이 활성화된 <b>Member Join</b> 명령어를 만듭니다. 입장하는 멤버는 아직 역할이 없으므로 항상 추가됩니다. 전체 설정은 <b>환영 메시지</b> 튜토리얼을 참조하세요.",
+      "buttonHeading": "버튼으로 역할 부여",
+      "buttonDesc": "더 현대적인 접근 방식으로 버튼이 있는 상호작용 명령어를 사용합니다. 각 버튼은 클릭 시 다른 역할을 할당할 수 있습니다. 각 버튼의 동작에서 <b>Assign/Remove Role</b>을 활성화하고 해당 역할 이름을 설정합니다. 버튼 설정 방법은 <b>대화형 버튼</b> 튜토리얼을 참조하세요."
     },
-    "embed": {
-      "title": "임베드 메시지 만들기",
-      "intro": "임베드 메시지는 특별한 유형의 메시지입니다. 만드는 방법을 보여드리겠습니다.",
-      "step1": "명령어 생성 화면으로 이동하여 유형을 \"메시지 수신\"으로, 명령어를 \"!embed\"로 설정하세요.",
-      "step2": "\"채널 메시지 임베드 보내기\" 체크박스를 체크하세요.",
-      "step3": "이제 5개의 필드를 채워야 합니다. 최소 하나만 채우면 모두 선택 사항입니다.",
-      "step4": "제목 필드에 \"내 임베드\"를 넣으세요.",
-      "step5": "\"$name님이 이 명령어를 호출했습니다\"가 설명 필드에 들어갑니다.",
-      "step6": "\"$date\"가 바닥글에 들어갑니다. 타임스탬프처럼 작동할 수 있습니다.",
-      "step7": "이미지 URL 필드에 \"https://i.redd.it/9hs5qf7qulz41.png\"을 넣겠습니다. 원하는 이미지 링크를 넣을 수 있습니다.",
-      "step8": "썸네일 필드에 \"$avatar\"를 넣으세요. 이 명령어를 호출한 사람의 아바타 URL이 거기에 들어갑니다. 하지만 원하는 이미지 링크도 넣을 수 있습니다.",
-      "step9": "명령어를 저장하고 테스트하세요.",
-      "commandHeading": "명령어",
-      "outputHeading": "출력 예시"
-    },
-    "reactionRoles": {
-      "title": "반응 역할",
-      "intro": "이 명령어는 사용자가 반응하여 역할을 얻고 제거할 수 있도록 특정 메시지를 사용합니다.",
-      "step1": "반응 추가 유형으로 명령어를 만드세요.",
-      "step2": "명령어 필드에 역할을 얻는 데 사용할 이모지를 넣습니다. 웃는 얼굴을 사용하겠습니다. 참고: 사용자 지정 이모지를 사용하려면 이름만 넣고 주변의 :를 포함하지 마세요.",
-      "step3": "\"특정 메시지 ID 필요\"를 체크하고 사람들이 역할을 얻는 데 사용할 메시지의 ID를 넣으세요.",
-      "step4": "\"역할 할당/제거\"를 체크하고 할당할 역할 이름을 넣으세요. 저는 \"Tester\"를 넣겠습니다.",
-      "step5": "명령어가 작동하는지 테스트한 다음 이 방식으로 할당하려는 다른 역할에 대해 반복하세요.",
-      "commandHeading": "명령어"
+    "reactions": {
+      "title": "반응",
+      "heading": "반응 추가 및 응답",
+      "intro": "Bot Commander에서 반응을 사용하는 방법은 두 가지입니다: 명령어 응답의 일부로 봇이 메시지에 <b>반응을 추가</b>하게 하는 것과, 사용자가 메시지에 <b>반응할 때 트리거</b>되는 명령어를 만드는 것입니다.",
+      "addHeading": "봇이 반응 추가",
+      "addDesc": "모든 명령어는 트리거한 메시지에 봇이 반응하게 할 수 있습니다. 확인이나 재미있는 응답에 유용합니다.",
+      "addStep1": "<b>Message Received</b> 명령어를 만듭니다 (예: <b>!thumbs</b>).",
+      "addStep2": "<b>React</b> 옵션을 활성화하고 이모지 이름을 입력합니다. 기본 이모지의 경우 이모지를 직접 사용합니다. 커스텀 서버 이모지의 경우 콜론 없이 이모지 이름을 사용합니다.",
+      "addStep3": "저장하고 테스트합니다. 봇이 명령어를 트리거한 메시지에 반응을 추가합니다.",
+      "roleHeading": "반응 역할",
+      "roleDesc": "사용자가 특정 메시지에 반응하여 역할을 얻거나 제거할 수 있는 인기 기능입니다. <b>Reaction Add</b> 명령어 유형을 사용합니다.",
+      "roleStep1": "명령어를 만들고 유형을 <b>Reaction Add</b>로 설정합니다.",
+      "roleStep2": "역할을 트리거할 이모지로 명령어 이름을 설정합니다. 기본 이모지의 경우 이모지 자체를 사용합니다 (예: ⭐). 커스텀 이모지의 경우 콜론 없이 이름을 사용합니다.",
+      "roleStep3": "<b>Require Specific Message</b>를 활성화하고 사용자가 반응할 메시지의 ID를 붙여넣습니다. 메시지 ID를 얻으려면 Discord 설정에서 개발자 모드를 활성화한 다음 메시지를 마우스 오른쪽 버튼으로 클릭하고 <b>Copy Message ID</b>를 선택합니다.",
+      "roleStep4": "<b>Assign/Remove Role</b>을 활성화하고 역할 이름을 입력합니다 (예: <b>Announcements</b>).",
+      "roleStep5": "저장하고 호스팅합니다. 이모지로 메시지에 반응하여 역할을 얻고, 다시 반응하여 제거합니다.",
+      "roleStep6": "할당하려는 각 역할에 대해 반복합니다. 이모지/역할 조합당 하나의 명령어를 만듭니다."
     },
     "javascript": {
-      "title": "메시지에서 Javascript 사용하기",
-      "intro": "JavaScript를 사용하려면 $eval 및 $halt와 같은 키워드를 사용해야 합니다.",
-      "step1": "원하는 이름으로 명령어를 만드세요. \"Hello world\"라고 부를 수 있습니다.",
-      "step2": "채널 보내기를 체크하세요.",
-      "step3": "$eval 키워드와 그 뒤에 $halt 키워드를 삽입하세요.",
-      "step4": "사이에 코드를 넣습니다. 이 간단한 예에서는 \"var hello = \"Hello world\";\"를 넣겠습니다.",
-      "step5": "$halt 키워드 뒤 또는 $eval 앞에 나머지 메시지를 넣을 수 있습니다. \"출력은 $get(hello)입니다\"를 넣겠습니다.",
-      "step6": "봇을 실행하고 명령어를 테스트하세요.",
-      "commandHeading": "명령어",
-      "outputHeading": "출력 예시"
+      "title": "JavaScript 사용",
+      "heading": "JavaScript Eval 블록",
+      "intro": "Keywords와 조건문이 제공하는 것 이상의 고급 로직을 위해 <b>$eval...$halt</b> 블록을 사용하여 응답 내에서 JavaScript 코드를 실행할 수 있습니다. 코드는 <b>Math</b>, <b>Date</b>, 영속적인 <b>botState</b> 객체에 접근할 수 있는 샌드박스 환경에서 비동기 함수로 실행됩니다. 블록의 <b>return</b> 값이 메시지에서 블록을 대체합니다.",
+      "howHeading": "작동 방식",
+      "howDesc": "<b>$eval</b>과 <b>$halt</b> 사이의 코드는 함수로 래핑되어 실행됩니다. 블록 내의 BCFD Keywords(<b>$name</b>이나 <b>$messageAfterCommand</b> 등)는 JavaScript 실행 전에 해석되므로 코드에서 값으로 사용할 수 있습니다. <b>return</b>을 사용하여 결과를 출력합니다 — 반환된 값이 메시지에서 전체 <b>$eval...$halt</b> 블록을 대체합니다.",
+      "howNote": "<b>중요:</b> 블록 내에서 <b>var</b> 또는 <b>let</b>으로 선언된 변수는 해당 함수에 로컬이며 외부에서 <b>$get()</b>으로 접근할 수 없습니다. eval 블록 간이나 메시지의 나머지 부분과 데이터를 공유하려면 <b>botState</b>(명령어와 재시작 간에 유지됨) 또는 VM 컨텍스트에 직접 값을 저장하는 <b>$set()/$get()</b>을 사용하세요.",
+      "basicHeading": "기본 예제",
+      "basicDesc": "JavaScript를 사용하여 응답을 만드는 간단한 인사 명령어입니다.",
+      "step1": "<b>!greetme</b>라는 이름의 <b>Message Received</b> 명령어를 만듭니다.",
+      "step2": "아래 템플릿을 입력합니다. <b>return</b> 값이 eval 블록을 대체합니다.",
+      "step3": "저장하고 테스트합니다.",
+      "mixHeading": "Eval과 일반 텍스트 혼합",
+      "mixDesc": "eval 블록은 메시지의 일부에 불과합니다. 그 앞뒤에 일반 텍스트와 Keywords를 넣을 수 있습니다. <b>return</b> 값은 블록이 있던 곳에 삽입됩니다.",
+      "advancedHeading": "고급: botState 사용",
+      "advancedDesc": "<b>botState</b> 객체는 eval 블록 내에서 사용 가능하며 명령어와 봇 재시작 간에 유지됩니다. 사용자별 데이터, 카운터 또는 봇이 기억해야 하는 모든 상태를 추적하는 데 사용하세요."
     }
   },
   "webhooks": {
