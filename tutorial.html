@@ -220,6 +220,141 @@ Fortune: $random{Good luck today!|Take it easy|Big things are coming}</code></pr
             </div>
         </div>
 
+        <!-- Tutorial 3: New vs Legacy Interpreter -->
+        <button class="collapsible" aria-expanded="false">
+            <span data-i18n="tutorial.interpreterComparison.title">New vs Legacy Interpreter</span>
+            <img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+        </button>
+        <div class="content">
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.heading">Choosing a Template Interpreter</h2>
+                <p data-i18n="tutorial.interpreterComparison.intro">
+                    Bot Commander uses the newer BCFD interpreter by default. The
+                    <b>Use legacy interpreter</b> setting switches back to the older
+                    template processor for commands that depend on old behavior. Changing
+                    this setting requires restarting the bot.
+                </p>
+                <ol>
+                    <li data-i18n="tutorial.interpreterComparison.step1">Keep <b>Use legacy interpreter</b> turned off for new commands.</li>
+                    <li data-i18n="tutorial.interpreterComparison.step2">Turn it on only if an older command stops working after an update.</li>
+                    <li data-i18n="tutorial.interpreterComparison.step3">When updating old commands, test nested keywords, conditionals, and JavaScript blocks with the newer interpreter before removing the fallback.</li>
+                </ol>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.differencesHeading">How They Differ</h2>
+                <p data-i18n="tutorial.interpreterComparison.differencesIntro">
+                    The legacy interpreter replaces keywords with a series of direct text
+                    replacements. The newer interpreter parses the whole template first,
+                    understands variables and functions as expressions, and evaluates nested
+                    expressions from the inside out.
+                </p>
+                <ul>
+                    <li data-i18n="tutorial.interpreterComparison.diff1"><b>Nested expressions:</b> the newer interpreter can resolve templates like <b>$sum($rollnum(1,10), $rollnum(1,10))</b>. The legacy interpreter is best for simple, flat replacements.</li>
+                    <li data-i18n="tutorial.interpreterComparison.diff2"><b>Conditional blocks:</b> <b>$if</b>, <b>$elseif</b>, <b>$else</b>, and <b>$endif</b> are part of the newer interpreter.</li>
+                    <li data-i18n="tutorial.interpreterComparison.diff3"><b>More functions:</b> the newer interpreter includes math and string helpers such as <b>$mul</b>, <b>$div</b>, <b>$round</b>, <b>$upper</b>, <b>$replace</b>, <b>$contains</b>, and <b>$cooldownRemaining</b>.</li>
+                    <li data-i18n="tutorial.interpreterComparison.diff4"><b>Escaping:</b> use <b>$$</b> when you want to send a literal dollar sign instead of starting a keyword.</li>
+                    <li data-i18n="tutorial.interpreterComparison.diff5"><b>Error handling:</b> newer interpreter errors are returned as <b>[BCFD Error: ...]</b> so the broken expression is easier to find.</li>
+                </ul>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.legacyHeading">Legacy-Style Template</h2>
+                <p data-i18n="tutorial.interpreterComparison.legacyDesc">
+                    Simple variable and function replacements work in both interpreters and
+                    are the safest pattern for older commands.
+                </p>
+                <pre><code>Hello $namePlain!
+You said: $messageAfterCommand
+Dice roll: $rollnum(1,20)
+Mood: $random{great|focused|sleepy}</code></pre>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.newHeading">New Interpreter Examples</h2>
+                <p data-i18n="tutorial.interpreterComparison.newDesc">
+                    These examples rely on the newer interpreter's parser, nested
+                    evaluation, and conditional logic.
+                </p>
+                <pre><code>Total of two dice: $sum($rollnum(1,6), $rollnum(1,6))
+Shout name: $upper($namePlain)
+
+$if($argsCount &gt; 0)
+You asked about: $messageAfterCommand
+$else
+Ask a question after the command.
+$endif</code></pre>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.evalHeading">JavaScript Eval Difference</h2>
+                <p data-i18n="tutorial.interpreterComparison.evalDesc">
+                    In the newer interpreter, keywords inside <b>$eval</b> blocks are resolved
+                    into JavaScript-safe temporary values before JavaScript runs, and the
+                    block's <b>return</b> value becomes the message output. The legacy interpreter
+                    runs the JavaScript block directly and removes it from the message, so
+                    keywords must be placed inside your own string literals when you need them
+                    as strings.
+                </p>
+                <pre><code>$eval
+var userName = $namePlain;
+return "Hello, " + userName + "!";
+$halt</code></pre>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.scopeHeading">Variable Scope and Startup JS</h2>
+                <p data-i18n="tutorial.interpreterComparison.scopeDesc">
+                    The newer interpreter runs each <b>$eval</b> block inside a temporary
+                    function. Variables declared with <b>var</b> or <b>let</b> inside the
+                    block are local to that one block, so later commands and later
+                    <b>$eval</b> blocks cannot read them with <b>$get()</b>. The legacy
+                    interpreter runs eval code directly in the shared JavaScript context, so
+                    top-level variables from one block may remain available to later blocks.
+                </p>
+                <pre><code>$eval
+var temporaryName = $namePlain;
+$halt
+
+After the block: $get(temporaryName)</code></pre>
+                <p data-i18n="tutorial.interpreterComparison.scopeResult">
+                    With the newer interpreter, <b>$get(temporaryName)</b> will not see the
+                    local variable from the eval block. With the legacy interpreter, direct
+                    eval variables can leak into the shared VM context, which is useful for
+                    some older commands but easier to break accidentally.
+                </p>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.startupHeading">When Startup JS Helps</h2>
+                <p data-i18n="tutorial.interpreterComparison.startupDesc">
+                    Startup JS runs once when the JavaScript engine starts, before command
+                    templates are processed. Use it to define helper functions or session-level
+                    variables that many commands should share. For data that must survive bot
+                    restarts, store it on <b>botState</b> instead.
+                </p>
+                <pre><code>// Startup JS
+function formatGreeting(name) {
+  return "Hello, " + name + "!";
+}
+
+var sessionUses = 0;</code></pre>
+                <pre><code>$eval
+sessionUses++;
+return formatGreeting($namePlain) + " Session uses: " + sessionUses;
+$halt</code></pre>
+                <p data-i18n="tutorial.interpreterComparison.startupNote">
+                    This pattern works well with the newer interpreter because commands can
+                    call shared startup helpers without leaking every temporary variable they
+                    create while building a response.
+                </p>
+            </div>
+            <div class="keyword">
+                <h2 data-i18n="tutorial.interpreterComparison.benefitsHeading">Benefits of the Newer Interpreter</h2>
+                <ul>
+                    <li data-i18n="tutorial.interpreterComparison.benefit1">More predictable command output because templates are parsed before they are evaluated.</li>
+                    <li data-i18n="tutorial.interpreterComparison.benefit2">Cleaner advanced commands with conditionals instead of putting all logic in JavaScript.</li>
+                    <li data-i18n="tutorial.interpreterComparison.benefit3">Better composition because functions can be nested inside other functions.</li>
+                    <li data-i18n="tutorial.interpreterComparison.benefit4">A larger built-in function set for math, text formatting, channel management, AI, cooldowns, and lookups.</li>
+                    <li data-i18n="tutorial.interpreterComparison.benefit5">Clearer error messages when a template cannot be evaluated.</li>
+                </ul>
+            </div>
+        </div>
+
         <!-- Tutorial 3: Slash Commands -->
         <button class="collapsible" aria-expanded="false">
             <span data-i18n="tutorial.slashCommands.title">Slash Commands</span>
@@ -992,9 +1127,15 @@ with the matching role name.</code></pre>
                     The code between <b>$eval</b> and <b>$halt</b> is wrapped in a function
                     and executed. Any BCFD keywords inside the block (like <b>$name</b> or
                     <b>$messageAfterCommand</b>) are resolved before the JavaScript runs, so
-                    you can use them as values in your code. Use <b>return</b> to output a
-                    result — the returned value replaces the entire <b>$eval...$halt</b>
-                    block in the message.
+                    you can use them directly as JavaScript values, such as
+                    <b>var name = $namePlain;</b>. Use <b>return</b> to output a result —
+                    the returned value replaces the entire <b>$eval...$halt</b> block in
+                    the message.
+                </p>
+                <p data-i18n="tutorial.javascript.legacyNote">
+                    In legacy interpreter mode, keywords are plain text replacement. If you
+                    need a keyword as a JavaScript string there, write your own quotes, such
+                    as <b>var name = "$namePlain";</b>.
                 </p>
                 <p data-i18n="tutorial.javascript.howNote">
                     <b>Important:</b> Variables declared with <b>var</b> or <b>let</b> inside
@@ -1017,11 +1158,11 @@ with the matching role name.</code></pre>
                 <pre><code>$eval
 var hour = new Date().getHours();
 if (hour < 12) {
-  return "Good morning, $namePlain!";
+  return "Good morning, " + $namePlain + "!";
 } else if (hour < 18) {
-  return "Good afternoon, $namePlain!";
+  return "Good afternoon, " + $namePlain + "!";
 } else {
-  return "Good evening, $namePlain!";
+  return "Good evening, " + $namePlain + "!";
 }
 $halt</code></pre>
                 <div class="discord-messages">
@@ -1079,14 +1220,14 @@ $halt Have a great day!</code></pre>
                 </p>
                 <pre><code>$eval
 if (!botState.users) botState.users = {};
-var id = "$id";
+var id = $id;
 if (!botState.users[id]) botState.users[id] = 0;
 botState.users[id]++;
 var uses = botState.users[id];
 if (uses === 1) {
-  return "Welcome, $namePlain! This is your first time using this command.";
+  return "Welcome, " + $namePlain + "! This is your first time using this command.";
 } else {
-  return "Welcome back, $namePlain! You've used this command " + uses + " times.";
+  return "Welcome back, " + $namePlain + "! You've used this command " + uses + " times.";
 }
 $halt</code></pre>
             </div>
