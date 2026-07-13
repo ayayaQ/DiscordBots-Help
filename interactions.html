@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Android, Desktop, Discord, Bot, Bots, Help, Documentation, Slash Commands, Interactions, Buttons"
+    />
+    <meta
+      name="description"
+      content="Create slash commands, responses, options, and buttons with Bot Commander for Discord"
+    />
+    <title data-i18n="interactions.pageTitle">Bot Commander Interactions</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+  </head>
+
+  <body>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav class="nav-drawer" id="navDrawer" aria-label="Main navigation">
+      <div class="nav-drawer-header">
+        <span class="nav-drawer-title">Navigation</span>
+        <button
+          class="nav-drawer-close"
+          id="navClose"
+          aria-label="Close navigation"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-drawer-content">
+        <div class="nav-drawer-items">
+          <a href="index.html" class="nav-drawer-item" data-i18n="common.home">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+          </a>
+          <a
+            href="commands.html"
+            class="nav-drawer-item"
+            data-i18n="common.commands"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span>Commands</span>
+          </a>
+          <a
+            href="interactions.html"
+            class="nav-drawer-item active"
+            data-i18n="common.interactions"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span>Interactions</span>
+          </a>
+          <a
+            href="keywords.html"
+            class="nav-drawer-item"
+            data-i18n="common.keywords"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" y1="9" x2="20" y2="9"></line>
+              <line x1="4" y1="15" x2="20" y2="15"></line>
+              <line x1="10" y1="3" x2="8" y2="21"></line>
+              <line x1="16" y1="3" x2="14" y2="21"></line>
+            </svg>
+            <span>Keywords</span>
+          </a>
+          <a
+            href="creating.html"
+            class="nav-drawer-item"
+            data-i18n="common.startingOut"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+            </svg>
+            <span>Getting Started</span>
+          </a>
+          <a
+            href="tutorial.html"
+            class="nav-drawer-item"
+            data-i18n="common.tutorials"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path
+                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+              ></path>
+            </svg>
+            <span>Tutorials</span>
+          </a>
+          <a
+            href="webhooks.html"
+            class="nav-drawer-item"
+            data-i18n="common.webhooks"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+              ></path>
+              <path
+                d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+              ></path>
+            </svg>
+            <span>Webhooks</span>
+          </a>
+          <a
+            href="privacypolicy.html"
+            class="nav-drawer-item"
+            data-i18n="common.privacyPolicy"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Privacy Policy</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-drawer-footer">
+        <button
+          class="nav-drawer-lang lang-toggle"
+          aria-label="Switch language"
+        >
+          <span>Language</span>
+          <span class="nav-drawer-lang-badge">EN</span>
+        </button>
+      </div>
+    </nav>
+
+    <header>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <h1 id="headingMargin" data-i18n="interactions.title">Interactions</h1>
+      <button class="lang-toggle" aria-label="Switch language">EN</button>
+    </header>
+
+    <button
+      class="collapsible"
+      aria-expanded="false"
+      data-doc-id="interactions.overview"
+    >
+      <span data-i18n="interactions.overview.title"
+        >Overview and Registration</span
+      ><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+    </button>
+    <div class="content">
+      <div class="keyword" data-doc-id="interactions.overview.about">
+        <h2 data-i18n="interactions.overview.about.name">
+          What interactions are
+        </h2>
+        <p data-i18n="interactions.overview.about.desc">
+          Interactions are Discord slash commands. A user types <code>/</code>,
+          chooses your command, fills in any options, and Discord sends the
+          interaction to Bot Commander. The bot must be hosted for the command
+          and its buttons to respond.
+        </p>
+        <p data-i18n="interactions.overview.about.tutorial">
+          For a guided example, see the
+          <a href="tutorial.html">Slash Commands</a> and
+          <a href="tutorial.html">Interactive Buttons</a> tutorials.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.overview.workflow">
+        <h2 data-i18n="interactions.overview.workflow.name">
+          Create and publish an interaction
+        </h2>
+        <ol>
+          <li data-i18n="interactions.overview.workflow.step1">
+            Open the <b>Interactions</b> tab and create a new interaction.
+          </li>
+          <li data-i18n="interactions.overview.workflow.step2">
+            Enter its command name, description, options, and root response
+            action.
+          </li>
+          <li data-i18n="interactions.overview.workflow.step3">
+            Save the interaction and host the bot.
+          </li>
+          <li data-i18n="interactions.overview.workflow.step4">
+            Register the interaction, or use <b>Sync All</b> to make Discord
+            match the app's interaction list.
+          </li>
+          <li data-i18n="interactions.overview.workflow.step5">
+            Run the slash command in Discord and verify its response.
+          </li>
+        </ol>
+      </div>
+      <div class="keyword" data-doc-id="interactions.overview.registration">
+        <h2 data-i18n="interactions.overview.registration.name">
+          Registration and propagation
+        </h2>
+        <p data-i18n="interactions.overview.registration.desc">
+          The bot must be connected before an interaction can be registered,
+          unregistered, or synced. Global interactions can take up to an hour to
+          appear in Discord. A guild interaction uses <code>guildId</code> to
+          register in one server and normally appears immediately.
+        </p>
+        <p data-i18n="interactions.overview.registration.changes">
+          Changing <code>commandName</code>, <code>commandDescription</code>, or
+          <code>options</code> changes Discord's command definition and requires
+          registration again. Response actions, buttons, and cooldown behavior
+          run locally and can be changed without re-registering the Discord
+          command.
+        </p>
+        <p data-i18n="interactions.overview.registration.sync">
+          Sync All replaces the bot's registered global commands with the
+          current interaction list, so removed interactions are also removed
+          from Discord. The app manages <code>isRegistered</code>; it is a local
+          status indicator, not confirmation from Discord on every launch.
+        </p>
+      </div>
+    </div>
+
+    <button
+      class="collapsible"
+      aria-expanded="false"
+      data-doc-id="interactions.command"
+    >
+      <span data-i18n="interactions.command.title"
+        >Command Details and Options</span
+      ><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+    </button>
+    <div class="content">
+      <div class="keyword" data-doc-id="interactions.command.details">
+        <h2 data-i18n="interactions.command.details.name">
+          Name and description
+        </h2>
+        <p data-i18n="interactions.command.details.desc">
+          <code>commandName</code> is the text users type after <code>/</code>.
+          It must be 1-32 characters and follow Discord's slash-command naming
+          rules; lowercase letters, numbers, hyphens, and underscores are the
+          safest choices. Do not include the slash.
+          <code>commandDescription</code> is required and must be 1-100
+          characters.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.command.options">
+        <h2 data-i18n="interactions.command.options.name">Command options</h2>
+        <p data-i18n="interactions.command.options.desc">
+          <code>options</code> are typed inputs Discord collects before running
+          the command. Each option has a unique <code>name</code>, a
+          <code>description</code>, a numeric <code>type</code>, and a
+          <code>required</code> setting. Required options must be completed
+          before Discord will submit the command.
+        </p>
+        <p data-i18n="interactions.command.options.types">
+          Supported option types are 3 String, 4 Integer, 5 Boolean, 6 User, 7
+          Channel, 8 Role, and 10 Number. The optional
+          <code>choices</code> array can restrict String, Integer, or Number
+          options to named values when using JSON or agent editing.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.command.optionTemplate">
+        <h2 data-i18n="interactions.command.optionTemplate.name">
+          Using option values
+        </h2>
+        <p data-i18n="interactions.command.optionTemplate.desc">
+          Use <code>$option(name)</code> in any interaction response template,
+          replacing <code>name</code> with the exact option name. User, Channel,
+          and Role options produce the selected Discord ID, while other option
+          types produce their submitted value.
+        </p>
+        <pre><code>Hello $option(person)! Your topic is $option(topic).</code></pre>
+      </div>
+    </div>
+
+    <button
+      class="collapsible"
+      aria-expanded="false"
+      data-doc-id="interactions.actions"
+    >
+      <span data-i18n="interactions.actions.title">Response Actions</span
+      ><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+    </button>
+    <div class="content">
+      <div class="keyword" data-doc-id="interactions.actions.messages">
+        <h2 data-i18n="interactions.actions.messages.name">
+          Messages and embeds
+        </h2>
+        <p data-i18n="interactions.actions.messages.desc">
+          The root action can send a channel message, channel embed, private
+          message, private embed, or any useful combination. Channel responses
+          become the Discord interaction reply. Private responses are sent
+          separately by direct message and can fail if the user blocks DMs.
+        </p>
+        <p data-i18n="interactions.actions.messages.embed">
+          Embed templates support a title, description, hex color, image URL,
+          thumbnail URL, and footer. At least one visible embed field must be
+          filled in. Interaction templates support the same BCFD keywords and
+          functions as other commands when the required user, server, or channel
+          context is available.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.actions.replySettings">
+        <h2 data-i18n="interactions.actions.replySettings.name">
+          Ephemeral and deferred replies
+        </h2>
+        <p data-i18n="interactions.actions.replySettings.ephemeral">
+          <code>ephemeral</code> makes the channel response visible only to the
+          person who ran the command or clicked the button. It does not change
+          separate direct messages.
+        </p>
+        <p data-i18n="interactions.actions.replySettings.defer">
+          <code>deferReply</code> acknowledges the interaction before longer
+          template or Discord work finishes, avoiding Discord's short initial
+          response deadline. The completed response keeps the configured
+          ephemeral setting.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.actions.roles">
+        <h2 data-i18n="interactions.actions.roles.name">
+          Assign or remove a role
+        </h2>
+        <p data-i18n="interactions.actions.roles.desc">
+          <code>isRoleAssigner</code> toggles <code>roleToAssign</code> on the
+          member who ran the command or clicked the button. The bot needs Manage
+          Roles, and its highest role must be above the target role. This action
+          only works in a server.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.actions.moderation">
+        <h2 data-i18n="interactions.actions.moderation.name">
+          Moderation actions
+        </h2>
+        <p data-i18n="interactions.actions.moderation.desc">
+          <code>isKick</code>, <code>isBan</code>, and
+          <code>isVoiceMute</code> target the User option named by
+          <code>targetUserOptionName</code>. The caller and bot need the
+          matching Discord permission. <code>deleteX</code> and
+          <code>deleteNum</code> bulk-delete up to 100 messages and require
+          Manage Messages in a text channel.
+        </p>
+        <p data-i18n="interactions.actions.moderation.rootOnly">
+          Moderation and bulk deletion are supported only on the interaction's
+          root action. Button actions can send responses, send DMs, toggle
+          roles, and show more buttons.
+        </p>
+      </div>
+    </div>
+
+    <button
+      class="collapsible"
+      aria-expanded="false"
+      data-doc-id="interactions.buttons"
+    >
+      <span data-i18n="interactions.buttons.title">Buttons</span
+      ><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+    </button>
+    <div class="content">
+      <div class="keyword" data-doc-id="interactions.buttons.fields">
+        <h2 data-i18n="interactions.buttons.fields.name">
+          Button fields and styles
+        </h2>
+        <p data-i18n="interactions.buttons.fields.desc">
+          Each button has a <code>label</code>, numeric <code>style</code>,
+          optional <code>emoji</code>, <code>disabled</code> state, and either a
+          <code>customId</code> with an action or a link <code>url</code>.
+          Styles are 1 Primary, 2 Secondary, 3 Success, 4 Danger, and 5 Link.
+        </p>
+        <p data-i18n="interactions.buttons.fields.ids">
+          Every non-link button needs a unique <code>customId</code> so Bot
+          Commander can find its action. Link buttons require a valid URL, open
+          that URL directly, and do not run a Bot Commander action.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.buttons.actions">
+        <h2 data-i18n="interactions.buttons.actions.name">
+          Button actions and nesting
+        </h2>
+        <p data-i18n="interactions.buttons.actions.desc">
+          A non-link button has its own reusable interaction action. It can
+          reply with text or an embed, send a DM, toggle a role, and include
+          another set of buttons. Ephemeral and deferred reply settings apply
+          separately to each button action.
+        </p>
+        <p data-i18n="interactions.buttons.actions.limits">
+          Each response supports up to five buttons in one row. The editor
+          allows three levels of nested button responses. Keep button labels and
+          response paths short so users can understand where each click leads.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.buttons.inactive">
+        <h2 data-i18n="interactions.buttons.inactive.name">
+          Inactive and outdated buttons
+        </h2>
+        <p data-i18n="interactions.buttons.inactive.desc">
+          Buttons work only while the bot is hosted and the interaction still
+          contains their custom IDs. If a button on an older Discord message can
+          no longer be found, Bot Commander replies that the button is no longer
+          active. Disabled buttons remain visible but cannot be clicked.
+        </p>
+      </div>
+    </div>
+
+    <button
+      class="collapsible"
+      aria-expanded="false"
+      data-doc-id="interactions.cooldowns"
+    >
+      <span data-i18n="interactions.cooldowns.title">Cooldowns</span
+      ><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+    </button>
+    <div class="content">
+      <div class="keyword" data-doc-id="interactions.cooldowns.settings">
+        <h2 data-i18n="interactions.cooldowns.settings.name">
+          Cooldown settings
+        </h2>
+        <p data-i18n="interactions.cooldowns.settings.desc">
+          <code>cooldown</code> is the duration in seconds. Zero or an omitted
+          value disables it. <code>cooldownType</code> can be User, Server, or
+          Global to track usage per person, per server, or across every server.
+        </p>
+        <p data-i18n="interactions.cooldowns.settings.message">
+          <code>cooldownMessage</code> is an optional BCFD template returned
+          ephemerally when a user is blocked. Use
+          <code>$cooldownRemaining()</code> to include the remaining seconds.
+          Without a custom message, Bot Commander sends its standard
+          remaining-time response.
+        </p>
+        <p data-i18n="interactions.cooldowns.settings.scope">
+          The cooldown applies when the slash command runs and is recorded after
+          its root action succeeds. Button clicks do not start or check the
+          command cooldown.
+        </p>
+      </div>
+    </div>
+
+    <button
+      class="collapsible"
+      aria-expanded="false"
+      data-doc-id="interactions.reference"
+    >
+      <span data-i18n="interactions.reference.title">JSON Reference</span
+      ><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+    </button>
+    <div class="content">
+      <div class="keyword" data-doc-id="interactions.reference.resource">
+        <h2 data-i18n="interactions.reference.resource.name">
+          Interaction resource fields
+        </h2>
+        <p data-i18n="interactions.reference.resource.desc">
+          <code>commandName</code>, <code>commandDescription</code>, and
+          <code>options</code> define the Discord slash command.
+          <code>rootAction</code> defines its local response.
+          <code>guildId</code> optionally limits registration to one server.
+          <code>cooldown</code>, <code>cooldownType</code>, and
+          <code>cooldownMessage</code> control rate limits.
+        </p>
+        <p data-i18n="interactions.reference.resource.managed">
+          <code>id</code> is assigned by the app and identifies the local
+          resource. <code>isRegistered</code> is managed by the app. Preserve
+          both fields when editing an existing interaction; new interactions
+          should let the app assign them.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.reference.action">
+        <h2 data-i18n="interactions.reference.action.name">
+          Interaction action fields
+        </h2>
+        <p data-i18n="interactions.reference.action.responses">
+          Response toggles and templates are <code>sendChannelMessage</code>,
+          <code>channelMessage</code>, <code>sendPrivateMessage</code>,
+          <code>privateMessage</code>, <code>sendChannelEmbed</code>,
+          <code>channelEmbed</code>, <code>sendPrivateEmbed</code>, and
+          <code>privateEmbed</code>.
+        </p>
+        <p data-i18n="interactions.reference.action.other">
+          Other fields are <code>isRoleAssigner</code>,
+          <code>roleToAssign</code>, <code>isKick</code>, <code>isBan</code>,
+          <code>isVoiceMute</code>, <code>targetUserOptionName</code>,
+          <code>deleteX</code>, <code>deleteNum</code>, <code>ephemeral</code>,
+          <code>deferReply</code>, and <code>buttons</code>.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.reference.button">
+        <h2 data-i18n="interactions.reference.button.name">
+          Interaction button fields
+        </h2>
+        <p data-i18n="interactions.reference.button.desc">
+          Button resources contain <code>customId</code>, <code>label</code>,
+          <code>style</code>, optional <code>emoji</code>, optional
+          <code>url</code>, <code>disabled</code>, and a nested
+          <code>action</code>. Button actions use the same action shape
+          recursively.
+        </p>
+      </div>
+      <div class="keyword" data-doc-id="interactions.reference.example">
+        <h2 data-i18n="interactions.reference.example.name">
+          Canonical interaction JSON example
+        </h2>
+        <pre><code>{
+  "id": "app-assigned",
+  "commandName": "greet",
+  "commandDescription": "Greet a member",
+  "options": [
+    { "name": "person", "description": "Who to greet", "type": 6, "required": true }
+  ],
+  "rootAction": {
+    "sendChannelMessage": true,
+    "channelMessage": "Hello $option(person)!",
+    "sendPrivateMessage": false,
+    "privateMessage": "",
+    "sendChannelEmbed": false,
+    "channelEmbed": { "title": "", "description": "", "hexColor": "", "imageURL": "", "thumbnailURL": "", "footer": "" },
+    "sendPrivateEmbed": false,
+    "privateEmbed": { "title": "", "description": "", "hexColor": "", "imageURL": "", "thumbnailURL": "", "footer": "" },
+    "isRoleAssigner": false,
+    "roleToAssign": "",
+    "isKick": false,
+    "isBan": false,
+    "isVoiceMute": false,
+    "targetUserOptionName": "",
+    "deleteX": false,
+    "deleteNum": 0,
+    "ephemeral": false,
+    "deferReply": false,
+    "buttons": []
+  },
+  "isRegistered": false,
+  "cooldown": 0,
+  "cooldownType": "",
+  "cooldownMessage": ""
+}</code></pre>
+        <p data-i18n="interactions.reference.example.note">
+          Omit <code>guildId</code> for global registration or set it to one
+          server ID for guild registration. Choices and nested buttons can be
+          added to the corresponding arrays.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://ayayaQ.github.io" data-i18n="common.myPage">My page</a
+      ><a
+        href="https://ayayaq.github.io/DiscordBots-Help/"
+        data-i18n="common.help"
+        >Help</a
+      >
+    </footer>
+
+    <script src="scripts/i18n.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      (function () {
+        const navToggle = document.getElementById("navToggle");
+        const navClose = document.getElementById("navClose");
+        const navOverlay = document.getElementById("navOverlay");
+        const navDrawer = document.getElementById("navDrawer");
+
+        function openNav() {
+          navDrawer.classList.add("active");
+          navOverlay.classList.add("active");
+          document.body.classList.add("nav-open");
+          navToggle.setAttribute("aria-expanded", "true");
+        }
+
+        function closeNav() {
+          navDrawer.classList.remove("active");
+          navOverlay.classList.remove("active");
+          document.body.classList.remove("nav-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+
+        navToggle.addEventListener("click", openNav);
+        navClose.addEventListener("click", closeNav);
+        navOverlay.addEventListener("click", closeNav);
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && navDrawer.classList.contains("active")) {
+            closeNav();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
