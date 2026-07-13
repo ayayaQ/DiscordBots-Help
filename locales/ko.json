@@ -1072,7 +1072,7 @@
         "desc": "서버에 봇을 초대하는 URL을 삽입합니다."
       },
       "setStatus": {
-        "name": "$setStatus{online|playing|games}",
+        "name": "$setStatus{online|playing|Activity text}",
         "compat": "메시지 수신, 개인 메시지, 멤버 참가, 멤버 탈퇴, 멤버 차단, 반응 추가",
         "desc": "명령어에서 상태를 설정하는 데 사용합니다. 첫 번째 매개변수 값은 online, idle, dnd를 포함합니다. 두 번째 매개변수 값은 watching, playing, listening입니다. 세 번째 매개변수는 무엇이든 문자열입니다. 중요한 참고: 이것은 $eval 이전에 평가되므로 여기에 $eval 유형 키워드를 사용할 수 없습니다."
       },

@@ -400,17 +400,8 @@
             </div>
 
             <div class="keyword">
-                <h2 data-i18n="commands.json.actionArr.name">actionArr[bool, bool]</h2>
-                <p data-i18n="commands.json.actionArr.desc">
-                    This is an array. The first index represents if the command
-                    should send a channel message. The second represents if a
-                    private message should be sent.
-                </p>
-            </div>
-
-            <div class="keyword">
                 <h2 data-i18n="commands.json.channelMessage.name">channelMessage</h2>
-                <p data-i18n="commands.json.channelMessage.desc">The channel message that will be sent.</p>
+                <p>A nonempty channel message is sent when the command runs. An empty value disables this action.</p>
             </div>
 
             <div class="keyword">
@@ -436,29 +427,13 @@
             </div>
 
             <div class="keyword">
-                <h2 data-i18n="commands.json.deleteIf.name">deleteIf</h2>
-                <p data-i18n="commands.json.deleteIf.desc">
-                    A boolean that is used to determine if the command should be
-                    deleted if it contains certain strings.
-                </p>
+                <h2>deleteIfStrings</h2>
+                <p>A nonempty pipe-separated list of strings enables conditional deletion of matching messages.</p>
             </div>
 
             <div class="keyword">
-                <h2 data-i18n="commands.json.commandIfStrings.name">commandIfStrings</h2>
-                <p data-i18n="commands.json.commandIfStrings.desc">
-                    The strings that will be used if deleteIf is true to delete
-                    a message.
-                </p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.commandNum.name">commandNum</h2>
-                <p data-i18n="commands.json.commandNum.desc">The number of messages to delete if deleteX is true.</p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.deleteX.name">deleteX</h2>
-                <p data-i18n="commands.json.deleteX.desc">If this is a mass delete command.</p>
+                <h2>deleteNum</h2>
+                <p>A positive number enables bulk deletion and determines how many messages are deleted. Zero disables it.</p>
             </div>
 
             <div class="keyword">
@@ -485,37 +460,6 @@
             </div>
 
             <div class="keyword">
-                <h2 data-i18n="commands.json.isReact.name">isReact</h2>
-                <p data-i18n="commands.json.isReact.desc">If the command should react to the message received.</p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.isRequiredRole.name">isRequiredRole</h2>
-                <p data-i18n="commands.json.isRequiredRole.desc">If the command should require a role to be used.</p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.isRoleAssigner.name">isRoleAssigner</h2>
-                <p data-i18n="commands.json.isRoleAssigner.desc">If the command should assign a role.</p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.isSpecificChannel.name">isSpecificChannel</h2>
-                <p data-i18n="commands.json.isSpecificChannel.desc">
-                    If the command should send channel or embed messages into a
-                    specific channel.
-                </p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.isSpecificMessage.name">isSpecificMessage</h2>
-                <p data-i18n="commands.json.isSpecificMessage.desc">
-                    If the command should, if react add type, only work on a
-                    specific message ID.
-                </p>
-            </div>
-
-            <div class="keyword">
                 <h2 data-i18n="commands.json.isVoiceMute.name">isVoiceMute</h2>
                 <p data-i18n="commands.json.isVoiceMute.desc">If the command should voice mute a user.</p>
             </div>
@@ -530,45 +474,32 @@
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.privateMessage.name">privateMessage</h2>
-                <p data-i18n="commands.json.privateMessage.desc">The content of the private message that will send.</p>
+                <p>A nonempty private message is sent to the relevant user when the command runs. An empty value disables this action.</p>
             </div>
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.reaction.name">reaction</h2>
-                <p data-i18n="commands.json.reaction.desc">The emote that will be used to react if isReact is true.</p>
+                <p>A nonempty emoji ID, name, or Unicode emoji enables the reaction action.</p>
             </div>
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.requiredRole.name">requiredRole</h2>
-                <p data-i18n="commands.json.requiredRole.desc">
-                    The role that is required to send certain messages if
-                    isRoleRequired is true.
-                </p>
+                <p>A nonempty role ID or name restricts the command to members with that role.</p>
             </div>
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.roleToAssign.name">roleToAssign</h2>
-                <p data-i18n="commands.json.roleToAssign.desc">The role that will be assigned if isRoleAssigner is true.</p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.sendChannelEmbed.name">sendChannelEmbed</h2>
-                <p data-i18n="commands.json.sendChannelEmbed.desc">If a channel embed should be sent.</p>
-            </div>
-
-            <div class="keyword">
-                <h2 data-i18n="commands.json.sendPrivateEmbed.name">sendPrivateEmbed</h2>
-                <p data-i18n="commands.json.sendPrivateEmbed.desc">If a private embed should be sent.</p>
+                <p>A nonempty role ID or name enables the role-assignment action.</p>
             </div>
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.specificChannel.name">specificChannel</h2>
-                <p data-i18n="commands.json.specificChannel.desc">The name of the specific channel to send a message to.</p>
+                <p>A nonempty channel ID or name routes channel messages and embeds to that channel.</p>
             </div>
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.specificMessage.name">specificMessage</h2>
-                <p data-i18n="commands.json.specificMessage.desc">The ID of a certain message that must be reacted to.</p>
+                <p>For Reaction Add commands, a nonempty message ID restricts the trigger to that message.</p>
             </div>
 
             <div class="keyword">
@@ -585,18 +516,156 @@
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.channelEmbed.name">channelEmbed</h2>
-                <p data-i18n="commands.json.channelEmbed.desc">
-                    The channel embed to be sent, includes a title, description,
-                    footer, image, and thumbnail.
-                </p>
+                <p>A channel embed template. At least one title, description, footer, image, or thumbnail field enables this action; color alone does not.</p>
             </div>
 
             <div class="keyword">
                 <h2 data-i18n="commands.json.privateEmbed.name">privateEmbed</h2>
-                <p data-i18n="commands.json.privateEmbed.desc">
-                    The private embed to be sent, includes a title, description,
-                    footer, image, and thumbnail.
-                </p>
+                <p>A private embed template. At least one title, description, footer, image, or thumbnail field enables this action; color alone does not.</p>
+            </div>
+        </div>
+
+        <button class="collapsible" aria-expanded="false" data-doc-id="commands.modernFields">
+            <span>Modern Command Fields</span><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+        </button>
+        <div class="content">
+            <div class="keyword" data-doc-id="commands.modernFields.cooldowns">
+                <h2>Cooldown fields</h2>
+                <p><code>cooldown?: number</code> is the duration in seconds. Zero or an omitted value disables the cooldown.</p>
+                <p><code>cooldownType?: "User" | "Server" | "Global"</code> selects whether usage is tracked per user, per server, or across every server.</p>
+                <p><code>cooldownMessage?: string</code> is an optional BCFD template used when blocked. It can include <code>$cooldownRemaining()</code>. Without a custom message, the app sends its standard remaining-time response.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.modernFields.delivery">
+                <h2>Reply and typing fields</h2>
+                <p><code>channelMessageAsReply?: boolean</code> and <code>channelEmbedAsReply?: boolean</code> send the corresponding response as a Discord reply when a triggering message exists.</p>
+                <p><code>channelMessageTyping?: boolean</code> and <code>channelEmbedTyping?: boolean</code> keep the typing indicator active while that response is being prepared.</p>
+                <p>These fields apply to channel responses. Event commands without a triggering message fall back to a normal channel send.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.modernFields.whitelists">
+                <h2>channelWhitelist and serverWhitelist</h2>
+                <p><code>channelWhitelist?: string</code> and <code>serverWhitelist?: string</code> contain comma-separated Discord IDs. When nonempty, the command runs only in a listed channel or server.</p>
+                <p>Use numeric Discord IDs, not names or mentions. Enable Developer Mode in Discord to copy IDs.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.modernFields.triggerModes">
+                <h2>startsWith and phrase</h2>
+                <p><code>startsWith: true</code> matches when a message begins with the command and allows arguments after it. <code>phrase: true</code> matches the command text anywhere in a message. With both false, the message must equal the command.</p>
+                <p>Use <code>$args(index)</code>, <code>$argsCount</code>, or <code>$messageAfterCommand</code> with Starts With commands.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.modernFields.example">
+                <h2>Canonical command JSON example</h2>
+                <pre><code>{
+  "id": "app-assigned",
+  "channelMessage": "Hello $name!",
+  "command": "!hello",
+  "commandDescription": "Greets the caller",
+  "deleteAfter": false,
+  "deleteIfStrings": "",
+  "deleteNum": 0,
+  "ignoreErrorMessage": false,
+  "isBan": false,
+  "isKick": false,
+  "isNSFW": false,
+  "requiredRole": "",
+  "roleToAssign": "",
+  "specificChannel": "",
+  "specificMessage": "",
+  "isVoiceMute": false,
+  "isAdmin": false,
+  "phrase": false,
+  "startsWith": false,
+  "privateMessage": "",
+  "reaction": "",
+  "type": 0,
+  "channelEmbed": { "title": "", "description": "", "hexColor": "", "imageURL": "", "thumbnailURL": "", "footer": "" },
+  "privateEmbed": { "title": "", "description": "", "hexColor": "", "imageURL": "", "thumbnailURL": "", "footer": "" },
+  "cooldown": 0,
+  "cooldownType": "",
+  "cooldownMessage": "",
+  "channelMessageAsReply": false,
+  "channelEmbedAsReply": false,
+  "channelMessageTyping": false,
+  "channelEmbedTyping": false,
+  "channelWhitelist": "",
+  "serverWhitelist": ""
+}</code></pre>
+                <p>The app assigns <code>id</code> during creation. Existing IDs cannot be edited.</p>
+                <p>Payload-backed actions are enabled by their content: nonempty message, role, reaction, channel, message-ID, or delete-filter fields; a positive <code>deleteNum</code>; or an embed with visible content. Clear the payload (or set <code>deleteNum</code> to zero) to disable that action.</p>
+            </div>
+        </div>
+
+        <button class="collapsible" aria-expanded="false" data-doc-id="commands.interactionReference">
+            <span>Interaction Command Reference</span><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+        </button>
+        <div class="content">
+            <div class="keyword" data-doc-id="commands.interactionReference.resource">
+                <h2>Interaction resource fields</h2>
+                <p><code>commandName: string</code> must be 1-32 lowercase letters, numbers, hyphens, or underscores. <code>commandDescription: string</code> must be 1-100 characters.</p>
+                <p><code>options: array</code> defines slash-command inputs. Each option has <code>name</code>, <code>description</code>, numeric <code>type</code>, <code>required</code>, and optional <code>choices</code>.</p>
+                <p>Supported option types are 3 String, 4 Integer, 5 Boolean, 6 User, 7 Channel, 8 Role, and 10 Number. Each choice has a display <code>name</code> and string or numeric <code>value</code>.</p>
+                <p><code>rootAction</code> is the response action. <code>guildId?: string</code> limits registration to one server; omit it for a global interaction. <code>isRegistered</code> is app-managed state and should not be set when creating an interaction.</p>
+                <p>Interactions also support <code>cooldown</code>, <code>cooldownType</code>, and <code>cooldownMessage</code> with the same behavior as message commands.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.interactionReference.action">
+                <h2>Interaction action fields</h2>
+                <p>Response toggles and templates are <code>sendChannelMessage</code>, <code>channelMessage</code>, <code>sendPrivateMessage</code>, <code>privateMessage</code>, <code>sendChannelEmbed</code>, <code>channelEmbed</code>, <code>sendPrivateEmbed</code>, and <code>privateEmbed</code>.</p>
+                <p><code>ephemeral: boolean</code> makes the interaction response visible only to its caller. <code>deferReply: boolean</code> acknowledges the interaction before long-running template work; the eventual reply keeps the configured ephemeral setting.</p>
+                <p>Moderation fields are <code>isKick</code>, <code>isBan</code>, <code>isVoiceMute</code>, and <code>targetUserOptionName</code>. The target name must match a User option. Both the caller and bot require the relevant Discord permission.</p>
+                <p>Other actions include <code>isRoleAssigner</code>, <code>roleToAssign</code>, <code>deleteX</code>, and <code>deleteNum</code>. <code>buttons</code> contains button resources.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.interactionReference.buttons">
+                <h2>Interaction button fields</h2>
+                <p>Each button has <code>customId</code>, <code>label</code>, numeric <code>style</code>, optional <code>emoji</code>, optional <code>url</code>, <code>disabled</code>, and a nested <code>action</code>.</p>
+                <p>Styles are 1 Primary, 2 Secondary, 3 Success, 4 Danger, and 5 Link. Link buttons require <code>url</code> and do not use a custom action. Non-link buttons require a unique <code>customId</code>.</p>
+            </div>
+            <div class="keyword" data-doc-id="commands.interactionReference.example">
+                <h2>Canonical interaction JSON example</h2>
+                <pre><code>{
+  "id": "app-assigned",
+  "commandName": "greet",
+  "commandDescription": "Greet a member",
+  "options": [
+    { "name": "person", "description": "Who to greet", "type": 6, "required": true }
+  ],
+  "rootAction": {
+    "sendChannelMessage": true,
+    "channelMessage": "Hello $option(person)!",
+    "sendPrivateMessage": false,
+    "privateMessage": "",
+    "sendChannelEmbed": false,
+    "channelEmbed": { "title": "", "description": "", "hexColor": "", "imageURL": "", "thumbnailURL": "", "footer": "" },
+    "sendPrivateEmbed": false,
+    "privateEmbed": { "title": "", "description": "", "hexColor": "", "imageURL": "", "thumbnailURL": "", "footer": "" },
+    "isRoleAssigner": false,
+    "roleToAssign": "",
+    "isKick": false,
+    "isBan": false,
+    "isVoiceMute": false,
+    "targetUserOptionName": "",
+    "deleteX": false,
+    "deleteNum": 0,
+    "ephemeral": false,
+    "deferReply": false,
+    "buttons": []
+  },
+  "isRegistered": false,
+  "cooldown": 0,
+  "cooldownType": "",
+  "cooldownMessage": ""
+}</code></pre>
+                <p>The app assigns <code>id</code> and manages <code>isRegistered</code>. Omit <code>guildId</code> for global registration or set it to one server ID for guild registration. Use the exact read tool before editing an existing interaction.</p>
+            </div>
+        </div>
+
+        <button class="collapsible" aria-expanded="false" data-doc-id="commands.contextAndErrors">
+            <span>Context, Permissions, and Errors</span><img class="expand" src="images/expand_more.svg" alt="Expand Content" />
+        </button>
+        <div class="content">
+            <div class="keyword" data-doc-id="commands.contextAndErrors.guide">
+                <h2>Template context and failure behavior</h2>
+                <p>User values require a caller, member values require server membership, mentioned values require a mention, and server or channel values require the corresponding Discord context. A value normally becomes empty when its context is unavailable.</p>
+                <p>Channel management requires Manage Channels. Role assignment requires Manage Roles and the bot's role must be above the target role. Kick, ban, and voice mute require their matching Discord permissions and valid targets.</p>
+                <p>Functions that reject invalid arguments or Discord operations return text beginning with <code>[BCFD Error:</code>. Lint templates before saving, but also account for runtime permission and context failures.</p>
+                <p>The current interpreter uses exact, case-sensitive keyword names. The optional legacy interpreter can have older spelling and behavior; check the app's interpreter setting when maintaining older commands.</p>
             </div>
         </div>
 

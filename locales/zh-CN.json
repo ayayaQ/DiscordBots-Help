@@ -1072,7 +1072,7 @@
         "desc": "插入邀请机器人到服务器的URL。"
       },
       "setStatus": {
-        "name": "$setStatus{online|playing|games}",
+        "name": "$setStatus{online|playing|Activity text}",
         "compat": "消息接收, 私信, 成员加入, 成员离开, 成员封禁, 添加反应",
         "desc": "用于在命令中设置状态。第一个参数的值包括online、idle、dnd。第二个参数的值是watching、playing、listening。第三个参数是任意字符串。重要提示:这在$eval之前计算,所以您不能在此使用$eval类型的关键词。"
       },

@@ -1072,7 +1072,7 @@
         "desc": "Inserta URL para invitar al bot a un servidor."
       },
       "setStatus": {
-        "name": "$setStatus{online|playing|games}",
+        "name": "$setStatus{online|playing|Activity text}",
         "compat": "Recepcion de mensaje, Mensaje privado, Entrada de miembro, Salida de miembro, Baneo de miembro, Agregar reaccion",
         "desc": "Usa para establecer estado en comandos. Valores para el primer parametro incluyen online, idle, dnd. Valores del segundo parametro son watching, playing, listening. El tercer parametro es la cadena de lo que sea. Nota importante: esto se evalua antes de $eval por lo que no puedes usar palabras clave tipo $eval en esto."
       },

@@ -1070,7 +1070,7 @@
         "desc": "ボットをサーバーに招待するためのURLを挿入します。"
       },
       "setStatus": {
-        "name": "$setStatus{online|playing|games}",
+        "name": "$setStatus{online|playing|Activity text}",
         "compat": "メッセージ受信、プライベートメッセージ、メンバー参加、メンバー退出、メンバーBAN、リアクション追加",
         "desc": "コマンド内でステータスを設定します。第1引数はonline, idle, dnd、第2引数はwatching, playing, listening、第3引数は任意の文字列です。$evalより前に評価されるため、$eval系キーワードは使用できません。"
       },

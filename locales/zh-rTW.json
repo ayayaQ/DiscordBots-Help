@@ -1072,7 +1072,7 @@
         "desc": "插入邀請機器人加入伺服器的 URL。"
       },
       "setStatus": {
-        "name": "$setStatus{online|playing|games}",
+        "name": "$setStatus{online|playing|Activity text}",
         "compat": "Message Receive, Private Message, Member Join, Member Leave, Member Ban, Reaction Add",
         "desc": "用於在指令中設定狀態。第一個參數的值包括 online、idle、dnd。第二個參數的值為 watching、playing、listening。第三個參數是任意字串。重要提示：這會在 $eval 之前被評估，因此您無法使用 $eval 類型的關鍵字。"
       },
